@@ -13,12 +13,12 @@ This section provides help with using the web-based console application for mana
 	    </p>
 		<ol class="lesson-list">
 	     <li>
-	        <a href="pcf_console.html.md.erb">
+	        <a href="pcf_console.html">
 	        Getting Started with the Cloud Foundry Console
 	        </a>
 	     </li>
 		<li>
-	        <a href="manage_spaces.html.md.erb">
+	        <a href="manage_spaces.html">
 	        Managing Spaces Using the Console
 	        </a>
 	     </li>
