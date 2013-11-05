@@ -1,3 +1,47 @@
 ---
 title: Managing Spaces Using the Developer Console
 ---
+
+Browse to run.pivotal.io and log in to view the Developer Console.
+
+**Note**: If you do not see any of the buttons or workflows described in this document, you may not have administrator privileges for the current org.
+
+ <%= image_tag("manage_spaces/console.png") %>
+
+## <a id='orgs'></a>Organizations ##
+
+At the top of the Developer Console window, the **ORG** drop-down menu displays the current org. Use this menu to switch between orgs.
+
+ <%= image_tag("manage_spaces/select_org.png") %>
+
+## <a id='app_spaces'></a>App Spaces Bar ##
+
+This bar lists the application spaces in the current org. The current space appears highlighted and displays a configuration gear icon.
+
+ <%= image_tag("manage_spaces/app_spaces.png") %>
+
+ * **Add a Space**: Click the **Add+** button on the right side of the App Spaces bar.
+ * **Switch Space**: Select a different space on the App Spaces bar.
+
+## <a id='settings_view'></a>App Space Settings View ##
+
+From the App Spaces bar, click the gear icon next to the current space to access the App Space Settings view.
+
+ <%= image_tag("manage_spaces/space_settings.png") %>
+
+ * **Delete a Space**: Click the **Delete App Space** button on the right side of the App Space Settings view.
+ * **Rename a Space**: Change the text in the **Name** field, then click **Save**.
+
+## <a id='apps'></a>Apps List ##
+
+The Apps List displays information about the **Status**, **Name**, number of **Instances**, and amount of **Memory** for each app in the current space.
+
+ <% image_tag('manage_spaces/apps_in_space.png') %>
+
+## <a id='services'></a>Services View ##
+
+The Services view lists services bound to apps in the current space.
+
+ <% image_tag('manage_spaces/services_space.png') %>
+
+ * **Add a service**: Click the **Add+** button on the right side of the Services view. Clicking the **Add+** button takes you to the Services Marketplace.
