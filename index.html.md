@@ -9,7 +9,7 @@ This section provides help with using the web-based console application for mana
 	      <h2>Using the Developer Console</h2>
 	      <span></span>
 	    <p class="description">
-	      Refer to this section for help using the Developer Console
+	      Refer to this section for help using the Developer Console.
 	    </p>
 		<ol class="lesson-list">
 	     <li>
