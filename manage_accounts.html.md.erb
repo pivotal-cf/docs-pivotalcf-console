@@ -1,0 +1,69 @@
+---
+title: Managing User Accounts in Spaces Using the Developer Console
+---
+
+To manage user accounts in an application space, you must have space manager permissions in that space. Org managers have space manager permissions by default and can manage user accounts in all spaces associated with the org.
+
+## <a id='roles'></a>App Space Roles and Permissions ##
+
+The different user roles are described on the right side of the Users and Roles view. Each role is represented by a different icon. When you assign roles, hover over each icon to view a tooltip reminding you of the role permissions.
+
+ <%= image_tag("manage_accounts/space_manager.png") %>
+
+### <a id='manager'></a>Space Manager ###
+
+Space Managers can invite and manage users and enable features for a given space. Assign this role to managers or other users who need to administer the account.
+
+ <%= image_tag("manage_accounts/space_dev.png") %>
+
+### <a id='dev'></a>Space Developer ###
+
+Space Developers can create, delete, and manage applications and services, and have full access to all usage reports and logs. They can edit applications, including the number of instances and memory footprint. Assign this role to app developers or other users who need to interact with applications and services.
+
+ <%= image_tag("manage_accounts/space_auditor.png") %>
+
+### <a id='auditor'></a>Space Auditor ###
+
+Space Auditors have view-only access to all space information, settings, reports, and logs. Assign this role to users who need to view but not edit the application space.
+
+## <a id='invite'></a>Inviting New Users ##
+
+1. Under **Users In** **\[Your Space\]**, click **Edit**.
+
+	<%= image_tag("manage_accounts/space_users.png") %>
+
+1. Under **Users and Roles**, click **Add**.
+
+ <%= image_tag("manage_accounts/add_user.png") %>
+
+ The **Invite Users to Console** form appears.
+
+ <%= image_tag("manage_accounts/invite_page.png") %>
+
+1. In the **Emails** text field, enter the email addresses of the users you want to invite. Enter multiple email addresses as a comma-delimited list.
+
+1.  The **Roles** view lists the current org and available spaces with checkboxes corresponding to each possible user role. Select the checkboxes that correspond to the permissions you want to grant the invited users.
+
+ **Note**: By default, all of the permissions checkboxes contain checkmarks. To restrict a user’s access or abilities, uncheck the checkbox corresponding to the relevant user role.
+
+1. Click **Invite Users**. The Developer Console sends an email containing an invitation link to each email address you specified.
+
+## <a id='change_perm'></a>Changing User Permissions ##
+
+You can also change user permissions for existing users on the account. User permissions are handled on a per-space basis, so you must edit them for each user and each space you want to change.
+
+1. Under **Users In \[Your Space\]**, click **Edit**.
+
+	<%= image_tag("manage_accounts/space_users.png") %>
+
+1. Under **Users and Roles**, select the space you want to edit from the drop down menu.
+
+ <%= image_tag("manage_accounts/select_space_roles.png") %>
+
+3. Edit the permissions assigned to each user by checking or unchecking the checkboxes under each user role. Your changes are saved automatically.
+
+### <a id='removing'></a>Removing a User ###
+
+To remove a user from a particular space, revoke that user’s permissions for all user roles in that space. The user remains visible in the list unless you remove the user from the org.
+
+ <%= image_tag("manage_accounts/remove_user_space.png") %>
