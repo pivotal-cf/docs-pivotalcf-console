@@ -1,5 +1,5 @@
 ---
-title: Managing Users, Organizations, and Spaces with the Developer Console
+title: Using the Developer Console
 ---
 
 This section provides help with using the web-based console application for managing users, organizations, spaces, and applications.
