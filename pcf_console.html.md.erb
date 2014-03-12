@@ -28,11 +28,8 @@ The Developer Console is a tool to help manage organizations, users, application
 
     **Note**: When you invite a user, the console generates an invitation link, which is available on the Teams page for users with the Org Manager role. When SMTP is unavailable, you can include this link in an email to send an invitation manually.
 
-## <a id='known-issues'></a> Known Issues and Important Tips ##
-
-This version of the Developer Console includes the following known issues:
+## <a id='known-issues'></a>Important Tips ##
 
  * You can remove users from organizations, but not spaces. Instead, revoke the user's permissions in a space to effectively remove the user.
  * Console pages are not Ajax-enabled and sometimes show the wrong application status as a result. Refresh the page to see the latest information.
  * Changes to environment variables, as well as service bindings and unbindings, require a `cf push` to update the application.
- * To resend an invitation, re-invite the user.
