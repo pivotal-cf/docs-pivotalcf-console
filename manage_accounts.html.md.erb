@@ -2,9 +2,9 @@
 title: Managing User Accounts in Spaces Using the Developer Console
 ---
 
-To manage user accounts in an application space, you must have space manager permissions in that space. Org managers have space manager permissions by default and can manage user accounts in all spaces associated with the org.
+To manage user accounts in a space, you must have space manager permissions in that space. Org managers have space manager permissions by default and can manage user accounts in all spaces associated with the org.
 
-## <a id='roles'></a>App Space Roles and Permissions ##
+## <a id='roles'></a>Space Roles and Permissions ##
 
 The different user roles are described on the right side of the Teams view.
 
@@ -22,11 +22,11 @@ Space Auditors have view-only access to all space information, settings, reports
 
 ## <a id='invite'></a>Inviting New Users ##
 
-1. In the **Team** view, click **Invite**.
+1. On the Org dashboard, click the **Members** tab.
 
-	<%= image_tag("manage_accounts/space-users.png") %>
+	<%= image_tag("manage_accounts/org-members.png") %>
 
-    The **Invite New Team Member(s)** form appears.
+1. Click **Invite**. The **Invite New Team Member(s)** form appears.
 
     <%= image_tag("manage_accounts/invite-page.png") %>
 
@@ -34,17 +34,15 @@ Space Auditors have view-only access to all space information, settings, reports
 
 1. The **Assign Team Roles** view lists the current org and available spaces with checkboxes corresponding to each possible user role. Select the checkboxes that correspond to the permissions you want to grant the invited users.
 
-    **Note**: By default, all of the permissions checkboxes contain checkmarks. To restrict a user’s access or abilities, uncheck the checkbox corresponding to the relevant user role.
-
 1. Click **Send Invite**. The Developer Console sends an email containing an invitation link to each email address you specified.
 
 ## <a id='change_perm'></a>Changing User Permissions ##
 
 You can also change user permissions for existing users on the account. User permissions are handled on a per-space basis, so you must edit them for each user and each space you want to change.
 
-1. In the **Team** view, click **Edit**.
+1. On the Org dashboard, click the **Members** tab.
 
-    <%= image_tag("manage_accounts/space-users.png") %>
+	<%= image_tag("manage_accounts/org-members.png") %>
 
 1. Edit the permissions assigned to each user by checking or unchecking the checkboxes under each user role. Your changes are saved automatically.
 
