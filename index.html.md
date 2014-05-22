@@ -6,6 +6,6 @@ This section provides help with using the web-based console application for mana
 
 ## Table of Contents
 
-* [Getting Started with the Developer Console](./pcf_console.html)
+* [Getting Started with the Developer Console](./dev-console.html)
 * [Managing Spaces Using the Developer Console](./manage_spaces.html)
 * [Managing User Accounts in Spaces Using the Developer Console](./manage_accounts.html)
