@@ -2,34 +2,28 @@
 title: Getting Started with the Developer Console
 ---
 
-The Developer Console is a tool to help manage organizations, users, applications, and spaces. Complete the following steps to log in and invite users to the Developer Console.
+The Developer Console is a tool to help manage organizations, users,
+applications, and spaces.
+Complete the following steps to invite new users to the Developer Console.
 
-1. Browse to `console.<your-app-domain.com>`. Refer to **Pivotal Elastic Runtime > Settings > Cloud Controller** to locate your app domain.
-
-1. Login to the Developer Console using the UAA Administrator User credentials. Refer to **Pivotal Elastic Runtime > Credentials** for this login information.
+1. Log in to the Developer Console: <%=vars.console%>
 
 1. The Developer Console displays information for the system org and all of its spaces.
 
     <%= image_tag("console-org.png") %>
 
-1. From the org drop down menu, select **Create New Organization**.
-
-    <%= image_tag("create-org.png") %>
-
-1. Name your org and click **Create Organization**.
-
-    <%= image_tag("name-org.png") %>
-
 1. In the Members tab, click **Invite New Members**.
 
     <%= image_tag("images/manage_accounts/org-members.png") %>
 
-1. Invite a new user to join your org. If your SMTP server is configured correctly, the user will receive a confirmation email. Refer to the [Pivotal CF Getting Started Guide](../getstarted/index.html) to determine whether your SMTP server is configured correctly.
-
-    **Note**: When you invite a user, the console generates an invitation link, which is available on the Teams page for users with the Org Manager role. When SMTP is unavailable, you can include this link in an email to send an invitation manually.
+1. Add an email address, assign a team role or roles, then click **Send Invite** to invite a new user to join your org.
 
 ## <a id='known-issues'></a>Important Tips ##
 
- * You can remove users from orgs, but not spaces. Instead, revoke the user's permissions in a space to effectively remove the user.
- * Not all console pages are Ajax-enabled. Refresh the page to see the latest information.
- * Changes to environment variables, as well as service bindings and unbindings, require a `cf push` to update the application.
+* You can remove users from orgs, but not spaces.
+Instead, revoke the user's permissions in all spaces to effectively remove the
+user from the org.
+* Not all console pages are Ajax-enabled.
+Refresh the page to see the latest information.
+* Changes to environment variables, as well as service bindings and unbindings,
+require a `cf push` to update the application.

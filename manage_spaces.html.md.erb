@@ -2,26 +2,34 @@
 title: Managing Spaces Using the Developer Console
 ---
 
-Browse to `console.<your-app-domain.com>` and log in to view the Developer Console.
+To manage a space in an org, you must have org manager or space manager
+permissions in that space.
 
-**Note**: The workflows described in this document require org manager or space manager privileges.
+Org managers have space manager permissions by default and can manage user
+accounts in all spaces associated with the org.
+
+Log in to the Developer Console: <%=vars.console%>
 
  <%= image_tag("manage_spaces/console.png") %>
 
 ## <a id='orgs'></a>Orgs ##
 
-The current org is highlighted in the Developer Console navigation. The drop-down menu on the right displays other orgs. Use this menu to switch between them.
+The current org is highlighted in the Developer Console navigation.
+The drop-down menu on the right displays other orgs.
+Use this menu to switch between orgs.
 
  <%= image_tag("manage_spaces/select-org.png") %>
 
 ## <a id='app_spaces'></a>Spaces ##
 
-The Developer Console navigation also shows the spaces in the current org. The current space is highlighted.
+The Developer Console navigation also shows the spaces in the current org.
+The current space is highlighted.
 
  <%= image_tag("manage_spaces/app-spaces.png") %>
 
  * **Add a Space**: Click the **Add A Space** button.
- * **Switch Space**: Select a different space on the Org dashboard or from the navigation.
+ * **Switch Space**: Select a different space on the Org dashboard or from the
+ navigation.
 
 ## <a id='settings_view'></a>Edit Space ##
 
@@ -29,12 +37,16 @@ From the Space page, click the **Edit Space** link.
 
  <%= image_tag("manage_spaces/space-settings.png") %>
 
- * **Delete a Space**: Click the **Delete Space** button in the top right corner.
- * **Rename a Space**: Change the text in the **Space Name** field, then click **Save**.
+ * **Delete a Space**: Click the **Delete Space** button in the top right
+ corner.
+ * **Rename a Space**: Change the text in the **Space Name** field, then click
+ **Save**.
 
 ## <a id='apps'></a>Apps List ##
 
-The Apps List displays information about the **Status**, **Name**, **Route**, number of **Instances**, and amount of **Memory** for each app in the current space.
+The Apps List displays information about the **Status**, **Name**, **Route**,
+number of **Instances**, and amount of **Memory** for each app in the current
+space.
 
  <%= image_tag("manage_spaces/apps-in-space.png") %>
 
@@ -44,4 +56,6 @@ The Services view lists services bound to apps in the current space.
 
  <%= image_tag("manage_spaces/services-space.png") %>
 
- * **Add a service**: Click the **Add Service** button on the right side of the Services view. Clicking the **Add Service** button takes you to the Marketplace.
+ * **Add a Service**: Click the **Add Service** button on the right side of the
+ Services view.
+ Clicking the **Add Service** button takes you to the Marketplace.
