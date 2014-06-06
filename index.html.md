@@ -9,3 +9,4 @@ This section provides help with using the web-based console application for mana
 * [Getting Started with the Developer Console](./dev-console.html)
 * [Managing Spaces Using the Developer Console](./manage-spaces.html)
 * [Managing User Accounts in Spaces Using the Developer Console](./manage-accounts.html)
+* [Managing User Permissions Using the Developer Console](./console-roles.html)
