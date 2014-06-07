@@ -8,14 +8,16 @@ A user can have one or more roles.
 The combination of these roles defines the user’s overall permissions in the org
 and within specific app spaces in that org.
 
-Using the Developer Console, an administrator can manage user roles in orgs and
-spaces.
+An administrator can manage user roles in orgs and spaces using the Developer
+Console.
 
-For more information, see [Organizations, Spaces, Roles, and Permissions](../concepts/roles.html).
+To see which permissions each role grants, see [Organizations, Spaces, Roles, and Permissions](../concepts/roles.html).
 
-## <a id='orgs-roles'></a>Organizations and Org Roles ##
+## <a id='orgs-roles'></a>Managing Org Roles ##
 
 Valid [org roles](../concepts/roles.html#org-roles) are <%=vars.org_roles %>.
+
+To grant or revoke org roles, follow the steps below.
 
 1. In the Developer Console navigation on the left, the current org is
 highlighted.
@@ -29,15 +31,16 @@ Click the drop-down menu to view other orgs belonging to the account.
 
     ![Alt text]( <%=vars.org_members %> )
 
-1. The **Members** panel displays all members of the org, with checkboxes
-selected corresponding to their current org roles.
-Select a checkbox to give an org role to a user, or deselect a checkbox to
-remove a role from a user.
+1. The **Members** panel displays all members of the org.
+Select a checkbox to grant an org role to a user, or deselect a checkbox to
+revoke a role from a user.
 
-## <a id='orgs-roles'></a>App Spaces and App Space Roles ##
+## <a id='space-roles'></a>Managing App Space Roles ##
 
 Valid [app space roles](../concepts/roles.html#space-roles) are Space Manager,
 Space Developer, and Space Auditor.
+
+To grant or revoke app space roles, follow the steps below.
 
 1. In the **Members** tab of an org, click the drop-down menu to view spaces in
 the org.
@@ -46,9 +49,7 @@ the org.
 
 1. Use the drop-down menu to select a space.
 
-1. The **Members** panel displays all members of the org, with checkboxes
-selected corresponding to their current app space roles.
-Select a checkbox to give an app space role to a user, or deselect a checkbox to
-remove a role from a user.
+1. The **Members** panel displays all members of the org.
+Select a checkbox to grant an app space role to a user, or deselect a checkbox to revoke a role from a user.
 
     <%= image_tag("images/roles/space-members.png") %>
