@@ -1,12 +1,30 @@
-Using the Developer Console
-===========
+# Using the Developer Console
 
-This guide explains how to using the web-based console application for managing users, organizations, spaces, and applications. It is just one of the guides associated with the Pivotal CF release. The
-full doc set is:
+This guide explains how to using the web-based console application for managing users, organizations, spaces, and applications.
 
-*  [Getting Started](https://github.com/pivotal-cf/docs-pcf-gsg): a quickstart guide for preparing your vSphere environment and standing up Elastic Runtime using Pivotal CF
-*  [Pivotal CF Installation Guide](https://github.com/pivotal-cf/pcf-docs): how to use Pivotal CF to install and manage components
-*  [Operating Elastic Runtime](https://github.com/pivotal-cf/docs-ops-guide): a guide to operating and troubleshooting Elastic Runtime
-*  [Extending Cloud Foundry](https://github.com/cloudfoundry/docs-extend-cloudfoundry): a guide to extending your Cloud Foundry instance with user-supplied services and custom buildpacks. Note that this content is shared with the open source context and therefore will have the name Cloud Foundry throughout.
-*  [Using the Developer Console](https://github.com/pivotal-cf/docs-pivotalcf-console): a guide to using the web-based console application for managing users, organizations, spaces, and applications
-*  [Deploying Applications](https://github.com/cloudfoundry/docs-dev-guide): a guide for developers on deploying and troubleshooting applications running in Cloud Foundry. Note that this content is shared with the open source context and therefore will have the name Cloud Foundry throughout.
+This repo is one of several doc repositories that go into a complete documentation set.
+
+The contents here are structured as a topic repository intended to be
+compiled into a larger document with
+[Bookbinder](https://github.com/cloudfoundry-incubator/bookbinder).
+
+## Contributing to the Documentation
+
+The docs team prefers to receive documentation contributions as pull requests
+rather than having engineering teams push directly to the docs repos. This
+gives us a chance to review the changes for consistency and understand the new
+content.
+
+If you are planning to initiate a large documentation effort, please coordinate
+with the docs team in advance to make sure we're not going to step on each
+other. You can reach the docs team by email at
+[labs-cf-docs@pivotal.io](mailto:labs-cf-docs@pivotal.io).
+
+If you are trying to figure out where a particular bit of information should
+live, please reach out and ask. We're happy to help you ensure information
+goes to the right place.
+
+Note that content often lives in more than one context. Please make sure that
+any contribution you offer takes these multiple contexts into account. So, for
+example, if you are working on docs that are also used in open source,
+please do not refer to Pivotal's commercial offerings.
