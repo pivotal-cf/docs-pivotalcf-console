@@ -1,0 +1,57 @@
+---
+title: Understanding Developer Console Permissions
+---
+
+In most cases, the actions available to you on the Developer Console are a
+limited subset of the commands available through the CLI.
+However, depending on your user role, you might be able to perform certain org
+and space management actions on the Developer Console that usually only an Admin
+can perform.
+
+The table below shows the relationship between specific org and space management
+actions that you can perform with the Developer Console and the users that can
+perform these actions.
+
+Note that:
+
+* Admins and Org Managers can perform all actions.
+* Users of any role can create an org and view org and space users.
+* Space Managers, like Admins and Org Managers, can assign and remove users from
+spaces.
+
+<table border="1" class="nice">
+<tr>
+  <th><strong>Command</strong></th>
+  <th><strong>Admin</strong> or <strong>Org Manager</strong></th>
+  <th><strong>Space Manager</strong></th>
+  <th><strong>Org Auditor</strong> or <strong>Space Developer</strong> or <strong>Space Auditor</strong></th>
+</tr>
+<tr>
+  <td><code>create-org</code></td><td>X</td><td>X</td><td>X</td>
+</tr>
+<tr>
+  <td><code>delete-org</code></td><td>X</td><td></td><td></td>
+</tr>
+<tr>
+  <td><code>rename-org</code></td><td>X</td><td></td><td></td>
+</tr>
+<tr>
+  <td><code>org-users</code></td><td>X</td><td>X</td><td>X</td>
+</tr>
+<tr>
+  <td><code>set-org-role</code></td><td>X</td><td></td><td></td>
+</tr>
+<tr>
+  <td><code>unset-org-role</code></td><td>X</td><td></td><td></td>
+</tr>
+<tr>
+  <td><code>space-users</code></td><td>X</td><td>X</td><td>X</td>
+</tr>
+<tr>
+  <td><code>set-space-role</code></td><td>X</td><td>X</td><td></td>
+</tr>
+<tr>
+  <td><code>unset-space-role</code></td><td>X</td><td>X</td><td></td>
+</tr>
+
+</table>
