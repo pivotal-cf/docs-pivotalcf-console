@@ -1,0 +1,43 @@
+---
+title: Controlling Console User Activity with Environment Variables
+---
+
+This topic describes two environment variables you can use to manage users’ interactions with the Developer Console, and how to set these variables using the cf CLI.
+
+## <a id='understand-ev'></a>Understanding the Developer Console Environment Variables ##
+
+You can control which users can create orgs and perform user management actions on the Developer Console using the following environment variables.
+
+### ENABLE\_NON\_ADMIN\_ORG\_CREATION ###
+
+If set to `true`, a user of any role can create an org. 
+
+If set to `false`, only an Admin can create an org. This is the default value. On the Org Dashboard, the links to create a new org appear only for an Admin as follows:
+
+* The **Create a New Org** link in the drop-down menu in the left navigation panel
+* The **Create Org** link on the right side of the My Account page, which you access from the user name drop-down menu
+
+The image shows the link locations.
+
+<%= image_tag("images/ev_org_create_composite.png") %>
+	
+### ENABLE\_NON\_ADMIN\_USER\_MANAGEMENT ###
+
+If set to `true`, Org Managers and Space Managers can invite users and manage roles, and a user of any role can leave an org, provided at least one Org Manager exists in the org.
+
+If set to `false`, only an Admin can invite users and manage roles. This is the default value. Users cannot remove themselves from an org, and on the Org Dashboard, the Members tab appears as read-only for all users except Admins.
+
+## <a id='change-ev'></a>Changing an Environment Variable Value ##
+
+<p class="note"><strong>Note</strong>: To run the commands discussed in this section, you must be an administrator for your org and log into the cf CLI with your UAA Administrator user credentials. In Pivotal Operations Manager, refer to <strong>Elastic Runtime > Credentials</strong> for the UAA admin name and password.</p>
+
+To change an environment variable value:
+
+1. From a terminal window, run `cf api URL` and target your console URL.
+    For example: `cf api api.YOUR-SYSTEM-DOMAIN`.
+1. Run `cf login` and provide your UAA Administrator user credentials.
+1. Select the `system` org and the `console` space.
+1. Run `cf set-env APP NAME VALUE`.
+    For example: `cf set-env console ENABLE_NON_ADMIN_ORG_CREATION true`
+1. Run `cf restart console` to reinitialize the Developer Console with the new environment variable value.
+
