@@ -11,8 +11,7 @@ You can control which users can create orgs and perform user management actions 
 ### ENABLE\_NON\_ADMIN\_ORG\_CREATION ###
 
 If set to `true`, a user of any role can create an org. 
-
-If set to `false`, only an Admin can create an org. This is the default value. On the Org Dashboard, the links to create a new org appear only for an Admin as follows:
+On the Org Dashboard, the links to create a new org appear as follows:
 
 * The **Create a New Org** link in the drop-down menu in the left navigation panel
 * The **Create Org** link on the right side of the My Account page, which you access from the user name drop-down menu
@@ -20,7 +19,9 @@ If set to `false`, only an Admin can create an org. This is the default value. O
 The image shows the link locations.
 
 <%= image_tag("images/ev_org_create_composite.png") %>
-	
+
+If set to `false`, only an Admin can create an org. This is the default value. 
+
 ### ENABLE\_NON\_ADMIN\_USER\_MANAGEMENT ###
 
 If set to `true`, Org Managers and Space Managers can invite users and manage roles, and a user of any role can leave an org, provided at least one Org Manager exists in the org.
