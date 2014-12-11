@@ -1,4 +1,4 @@
-# Using the Developer Console
+# Using the Apps Manager
 
 This guide explains how to using the web-based console application for managing users, organizations, spaces, and applications.
 

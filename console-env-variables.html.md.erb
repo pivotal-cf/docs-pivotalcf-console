@@ -1,12 +1,12 @@
 ---
-title: Controlling Console User Activity with Environment Variables
+title: Controlling Apps Manager User Activity with Environment Variables
 ---
 
-This topic describes two environment variables you can use to manage users’ interactions with the Developer Console, and how to set these variables using the cf CLI.
+This topic describes two environment variables you can use to manage users’ interactions with the Apps Manager, and how to set these variables using the cf CLI.
 
-## <a id='understand-ev'></a>Understanding the Developer Console Environment Variables ##
+## <a id='understand-ev'></a>Understanding the Apps Manager Environment Variables ##
 
-You can control which users can create orgs and perform user management actions on the Developer Console using the following environment variables.
+You can control which users can create orgs and perform user management actions on the Apps Manager using the following environment variables.
 
 ### ENABLE\_NON\_ADMIN\_ORG\_CREATION ###
 
@@ -34,11 +34,11 @@ If set to `false`, only an Admin can invite users and manage roles. This is the 
 
 To change an environment variable value:
 
-1. From a terminal window, run `cf api URL` and target your console URL.
+1. From a terminal window, run `cf api URL` and target your Apps Manager URL.
     For example: `cf api api.YOUR-SYSTEM-DOMAIN`.
 1. Run `cf login` and provide your UAA Administrator user credentials.
 1. Select the `system` org and the `console` space.
 1. Run `cf set-env APP NAME VALUE`.
     For example: `cf set-env console ENABLE_NON_ADMIN_ORG_CREATION true`
-1. Run `cf restart console` to reinitialize the Developer Console with the new environment variable value.
+1. Run `cf restart console` to reinitialize the Apps Manager with the new environment variable value.
 
