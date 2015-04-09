@@ -11,3 +11,4 @@ This section provides help with using the web-based console application for mana
 * [Managing Spaces Using the Apps Manager](./manage-spaces.html)
 * [Managing User Accounts in Spaces Using the Apps Manager](./manage-accounts.html)
 * [Managing User Permissions Using the Apps Manager](./console-roles.html)
+
