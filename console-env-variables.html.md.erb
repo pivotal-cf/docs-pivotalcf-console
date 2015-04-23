@@ -37,8 +37,8 @@ To change an environment variable value:
 1. From a terminal window, run `cf api URL` and target your Apps Manager URL.
     For example: `cf api api.YOUR-SYSTEM-DOMAIN`.
 1. Run `cf login` and provide your UAA Administrator user credentials.
-1. Select the `system` org and the `console` space.
+1. Select the `system` org and the `apps_manager` space.
 1. Run `cf set-env APP NAME VALUE`.
-    For example: `cf set-env console ENABLE_NON_ADMIN_ORG_CREATION true`
-1. Run `cf restart console` to reinitialize the Apps Manager with the new environment variable value.
+    For example: `cf set-env apps_manager ENABLE_NON_ADMIN_ORG_CREATION true`
+1. Run `cf restart apps_manager` to reinitialize the Apps Manager with the new environment variable value.
 
