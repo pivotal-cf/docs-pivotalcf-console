@@ -10,7 +10,7 @@ You can control which users can create orgs and perform user management actions 
 
 ### ENABLE\_NON\_ADMIN\_ORG\_CREATION ###
 
-If set to `true`, a user of any role can create an org. 
+If set to `true`, a user of any role can create an org.
 On the Org Dashboard, the links to create a new org appear as follows:
 
 * The **Create a New Org** link in the drop-down menu in the left navigation panel
@@ -20,7 +20,7 @@ The image shows the link locations.
 
 <%= image_tag("images/ev_org_create_composite.png") %>
 
-If set to `false`, only an Admin can create an org. This is the default value. 
+If set to `false`, only an Admin can create an org. This is the default value.
 
 ### ENABLE\_NON\_ADMIN\_USER\_MANAGEMENT ###
 
@@ -37,8 +37,8 @@ To change an environment variable value:
 1. From a terminal window, run `cf api URL` and target your Apps Manager URL.
     For example: `cf api api.YOUR-SYSTEM-DOMAIN`.
 1. Run `cf login` and provide your UAA Administrator user credentials.
-1. Select the `system` org and the `apps_manager` space.
+1. Select the `system` org and the `apps-manager` space.
 1. Run `cf set-env APP NAME VALUE`.
-    For example: `cf set-env apps_manager ENABLE_NON_ADMIN_ORG_CREATION true`
-1. Run `cf restart apps_manager` to reinitialize the Apps Manager with the new environment variable value.
+    For example: `cf set-env apps-manager ENABLE_NON_ADMIN_ORG_CREATION true`
+1. Run `cf restart apps-manager` to reinitialize the Apps Manager with the new environment variable value.
 
