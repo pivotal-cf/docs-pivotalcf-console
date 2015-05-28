@@ -1,6 +1,7 @@
 # Using the Apps Manager
 
-This guide explains how to using the web-based console application for managing users, organizations, spaces, and applications.
+This guide explains how to using the web-based Apps Manager application for 
+managing users, organizations, spaces, and applications.
 
 This repo is one of several doc repositories that go into a complete documentation set.
 

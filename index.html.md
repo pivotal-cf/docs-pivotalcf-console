@@ -2,7 +2,8 @@
 title: Using the Apps Manager
 ---
 
-This section provides help with using the web-based console application for managing users, organizations, spaces, and applications.
+This section provides help with using the web-based Apps Manager application for 
+managing users, organizations, spaces, and applications.
 
 ## Table of Contents
 
