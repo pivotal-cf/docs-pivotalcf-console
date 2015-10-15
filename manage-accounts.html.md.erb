@@ -5,13 +5,13 @@ title: Managing User Accounts in Spaces Using the Apps Manager
 <% unless vars.book_title == "Pivotal Web Services Documentation" %>
 <!-- This ensures that the note below only appears in the PCF docs, not in the PWS docs.  -->
 
-<p class='note'><strong>Note</strong>: The procedures described here are not compatible with using LDAP for user identity management. To create and manage user accounts in an LDAP enabled Cloud Foundry deployment, see <a href='../adminguide/ldap-user-management.html'>Onboarding Existing LDAP Users to a PCF Deployment</a>.</p>
+<p class='note'><strong>Note</strong>: The procedures described here are not compatible with using LDAP for user identity management. To create and manage user accounts in an LDAP-enabled Cloud Foundry deployment, see <a href='../adminguide/ldap-user-management.html'>Onboarding Existing LDAP Users to a PCF Deployment</a>.</p>
 
 <% end %>
 
-To manage user accounts in a space, you must have space manager permissions in
+To manage user accounts in a space, you must have Space Manager permissions in
 that space.
-Org managers have space manager permissions by default and can manage user
+Org Managers have Space Manager permissions by default and can manage user
 accounts in all spaces associated with the org.
 
 ## <a id='roles'></a>Space Roles and Permissions ##
@@ -51,23 +51,22 @@ The **Invite New Team Member(s)** form appears.
     <%= image_tag("manage-accounts/invite-page.png") %>
 
 1. In the **Add Email Address(es)** text field, enter the email addresses of
-the users you want to invite.
+the users that you want to invite.
 Enter multiple email addresses as a comma-delimited list.
 
 1. The **Assign Team Roles** view lists the current org and available spaces
 with checkboxes corresponding to each possible user role.
-Select the checkboxes that correspond to the permissions you want to grant the
-invited users.
+Select the checkboxes that correspond to the permissions that you want to grant to the invited users.
 
 1. Click **Send Invite**.
 The Apps Manager sends an email containing an invitation link to each
-email address you specified.
+email address that you specified.
 
 ## <a id='change_perm'></a>Changing User Permissions ##
 
 You can also change user permissions for existing users on the account.
 User permissions are handled on a per-space basis, so you must edit them for
-each user and each space you want to change.
+each user and for each space that you want to change.
 
 1. On the Org dashboard, click the **Members** tab.
 
