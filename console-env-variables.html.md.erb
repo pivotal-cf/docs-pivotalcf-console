@@ -2,17 +2,19 @@
 title: Controlling Apps Manager User Activity with Environment Variables
 ---
 
-This topic describes three environment variables you can use to manage users’ interactions with the Apps Manager, and how to set these variables using the cf CLI.
+This topic describes three environment variables you can use to manage users’ interactions with Apps Manager, and how to set these variables using the cf CLI.
 
-## <a id='understand-ev'></a>Understanding the Apps Manager Environment Variables ##
+## <a id='understand-ev'></a>Understanding Apps Manager Environment Variables ##
 
-You can control which users can create orgs and perform user management actions on the Apps Manager using the following environment variables.
+You can control which users can create orgs and perform user management actions on Apps Manager using the following environment variables.
 
 ### <a id="ENABLE_INTERNAL_USER_STORE"></a> ENABLE\_INTERNAL\_USER\_STORE ###
 
-Set this variable to `true` to enable the internal user store. This setting lets any user invite new members into the Orgs they can access, by clicking an "Invite New Members" link. 
+The internal user store enables admins to create and manage users within a PCF installation's own local UAA. With this internal store enabled, admins do not need to configure an external user store, such as an LDAP or AD server, to create user accounts.
 
-Set this variable to `false` to disable the internal user store and designate an external LDAP / AD user store as the sole source of user accounts. This setting also restricts the ability to invite new members to admins only.
+Set this variable to `true` to enable the internal user store. This setting lets users register for new accounts, manage their account and password, and invite new members into the Orgs they can access, by clicking an “Invite New Members” link
+
+Set this variable to `false` to disable the internal user store. An admin must then designate an external LDAP / AD user store as the source of user accounts. This is the default value.
 
 ### <a id="ENABLE_NON_ADMIN_ORG_CREATION"></a> ENABLE\_NON\_ADMIN\_ORG\_CREATION ###
 
@@ -28,13 +30,11 @@ The image shows the link locations.
 
 Set this variable to `false` if you do not want to give non-admin users the ability create Orgs. This is the default value.
 
-
 ### <a id="ENABLE_NON_ADMIN_ROLE_MANAGEMENT"></a> ENABLE\_NON\_ADMIN\_ROLE\_MANAGEMENT ###
 
-Set this variable to `true` to allow non-admin users to define their own roles within the Orgs and Spaces they belong to. This setting enables self-management of Orgs and Spaces.
+Set this variable to `true` to allow users with the Org Manager or Space Manager role to manage existing users and roles within their Orgs and Spaces. This setting enables self-management of Orgs and Spaces.
 
-Set this variable to `false` to prevent non-admins from managing their own roles. This setting keeps the roles centrally managed by admins.
-
+Set this variable to `false` to prevent users with the Org Manager or Space Manager role from managing existing users and roles within their Orgs and Spaces. This setting allows users and roles to be centrally managed by admins. This is the default value.
 
 ## <a id='change-ev'></a>Changing an Environment Variable Value ##
 
@@ -54,6 +54,6 @@ If you are already logged in with UAA Administrator user credentials, you need n
 For example, to let users self-manage their org and space roles as described above, enter:
 <pre class="terminal">$ cf set-env apps-manager ENABLE\_NON\_ADMIN\_ROLE\_MANAGEMENT true</pre>
 
-1. Run `cf restart apps-manager` to reinitialize the Apps Manager with the new environment variable value.
+1. Run `cf restart apps-manager` to reinitialize Apps Manager with the new environment variable value.
 <pre class="terminal">$ cf restart apps-manager</pre>
 
