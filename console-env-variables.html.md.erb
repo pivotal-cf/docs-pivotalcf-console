@@ -2,16 +2,22 @@
 title: Controlling Apps Manager User Activity with Environment Variables
 ---
 
-This topic describes two environment variables you can use to manage users’ interactions with the Apps Manager, and how to set these variables using the cf CLI.
+This topic describes three environment variables you can use to manage users’ interactions with the Apps Manager, and how to set these variables using the cf CLI.
 
 ## <a id='understand-ev'></a>Understanding the Apps Manager Environment Variables ##
 
 You can control which users can create orgs and perform user management actions on the Apps Manager using the following environment variables.
 
-### ENABLE\_NON\_ADMIN\_ORG\_CREATION ###
+### <a id="ENABLE_INTERNAL_USER_STORE"></a> ENABLE\_INTERNAL\_USER\_STORE ###
 
-If set to `true`, a user of any role can create an org.
-On the Org Dashboard, the links to create a new org appear as follows:
+Set this variable to `true` to enable the internal user store. This setting lets any user invite new members into the Orgs they can access, by clicking an "Invite New Members" link. 
+
+Set this variable to `false` to disable the internal user store and designate an external LDAP / AD user store as the sole source of user accounts. This setting also restricts the ability to invite new members to admins only.
+
+### <a id="ENABLE_NON_ADMIN_ORG_CREATION"></a> ENABLE\_NON\_ADMIN\_ORG\_CREATION ###
+
+Set this variable to `true` to allow any user to create an Org.
+On the Org Dashboard, the links to create a new Org appear as follows:
 
 * The **Create a New Org** link in the drop-down menu in the left navigation panel
 * The **Create Org** link on the right side of the My Account page, which you access from the user name drop-down menu
@@ -20,13 +26,15 @@ The image shows the link locations.
 
 <%= image_tag("images/ev_org_create_composite.png") %>
 
-If set to `false`, only an Admin can create an org. This is the default value.
+Set this variable to `false` if you do not want to give non-admin users the ability create Orgs. This is the default value.
 
-### ENABLE\_NON\_ADMIN\_USER\_MANAGEMENT ###
 
-If set to `true`, Org Managers and Space Managers can invite users and manage roles, and a user of any role can leave an org, provided at least one Org Manager exists in the org.
+### <a id="ENABLE_NON_ADMIN_ROLE_MANAGEMENT"></a> ENABLE\_NON\_ADMIN\_ROLE\_MANAGEMENT ###
 
-If set to `false`, only an Admin can invite users and manage roles. This is the default value. Users cannot remove themselves from an org, and on the Org Dashboard, the Members tab appears as read-only for all users except Admins.
+Set this variable to `true` to allow non-admin users to define their own roles within the Orgs and Spaces they belong to. This setting enables self-management of Orgs and Spaces.
+
+Set this variable to `false` to prevent non-admins from managing their own roles. This setting keeps the roles centrally managed by admins.
+
 
 ## <a id='change-ev'></a>Changing an Environment Variable Value ##
 
@@ -34,11 +42,18 @@ If set to `false`, only an Admin can invite users and manage roles. This is the 
 
 To change an environment variable value:
 
-1. From a terminal window, run `cf api URL` and target your Apps Manager URL.
-    For example: `cf api api.YOUR-SYSTEM-DOMAIN`.
-1. Run `cf login` and provide your UAA Administrator user credentials.
-1. Select the `system` org and the `apps-manager` space.
-1. Run `cf set-env apps-manager ENVIRONMENT-VARIABLE VALUE`.
-    For example: `cf set-env apps-manager ENABLE_NON_ADMIN_ORG_CREATION true`
+1. From a terminal window, run `cf api` to set your target API to your Apps Manager URL.
+<pre class="terminal">$ cf api api.YOUR-SYSTEM-DOMAIN</pre>
+
+1. Run `cf login` to log in as an admin. When prompted, provide your UAA Administrator user credentials. When prompted further, select `system` as your org and `apps-manager` as your space.
+<p class="note"><strong>Note</strong>:
+If you are already logged in with UAA Administrator user credentials, you need not log in again. Instead, switch to the correct org and space by running `cf target -o system -s apps-manager`.
+</p>
+
+1. Run `cf set-env apps-manager ENVIRONMENT-VAR VALUE`, where ENVIRONMENT-VAR is the variable that you want to change and VALUE is `true` or `false`.
+For example, to let users self-manage their org and space roles as described above, enter:
+<pre class="terminal">$ cf set-env apps-manager ENABLE\_NON\_ADMIN\_ROLE\_MANAGEMENT true</pre>
+
 1. Run `cf restart apps-manager` to reinitialize the Apps Manager with the new environment variable value.
+<pre class="terminal">$ cf restart apps-manager</pre>
 
