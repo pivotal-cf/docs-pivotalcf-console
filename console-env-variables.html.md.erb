@@ -4,29 +4,27 @@ title: Controlling Apps Manager User Activity with Environment Variables
 
 <strong><%= modified_date %></strong>
 
-This topic describes three environment variables you can use to manage users’ interactions with Apps Manager, and how to set these variables using the cf CLI.
+This topic describes three environment variables you can use to manage user interactions with Apps Manager, and how to set these variables using the cf CLI.
 
 ## <a id='understand-ev'></a>Understanding Apps Manager Environment Variables ##
 
-You can control which users can create orgs and perform user management actions on Apps Manager using the following environment variables.
+The following environment variables control which users can create orgs and perform user management actions on Apps Manager.
 
 ### <a id="ENABLE_INTERNAL_USER_STORE"></a> ENABLE\_INTERNAL\_USER\_STORE ###
 
 The internal user store enables admins to create and manage users within a PCF installation's own local UAA. With this internal store enabled, admins do not need to configure an external user store, such as an LDAP or AD server, to create user accounts.
 
-Set this variable to `true` to enable the internal user store. This setting lets users register for new accounts, manage their account and password, and invite new members into the Orgs they can access, by clicking an “Invite New Members” link
+Set this variable to `true` to enable the internal user store. The true setting lets users register for new accounts, manage their account and password, and invite new members into their accessible Orgs, by clicking an “Invite New Members” link.
 
-Set this variable to `false` to disable the internal user store. An admin must then designate an external LDAP / AD user store as the source of user accounts. This is the default value.
+The default setting of this variable is `false`. This setting disables the internal user store, which means that an admin must designate an external LDAP / AD user store as the source of user accounts.
 
 ### <a id="ENABLE_NON_ADMIN_ORG_CREATION"></a> ENABLE\_NON\_ADMIN\_ORG\_CREATION ###
 
 Set this variable to `true` to allow any user to create an Org.
-On the Org Dashboard, the links to create a new Org appear as follows:
+This setting activates two links on the user's Org Dashboard:
 
 * The **Create a New Org** link in the drop-down menu in the left navigation panel
 * The **Create Org** link on the right side of the My Account page, which you access from the user name drop-down menu
-
-The image shows the link locations.
 
 <%= image_tag("images/ev_org_create_composite.png") %>
 
@@ -34,22 +32,22 @@ Set this variable to `false` if you do not want to give non-admin users the abil
 
 ### <a id="ENABLE_NON_ADMIN_ROLE_MANAGEMENT"></a> ENABLE\_NON\_ADMIN\_ROLE\_MANAGEMENT ###
 
-Set this variable to `true` to allow users with the Org Manager or Space Manager role to manage existing users and roles within their Orgs and Spaces. This setting enables self-management of Orgs and Spaces.
+Set this variable to `true` to allow users with the Org Manager or Space Manager role to manage existing users and roles within their Orgs or Spaces. This setting enables self-management of Orgs and Spaces.
 
-Set this variable to `false` to prevent users with the Org Manager or Space Manager role from managing existing users and roles within their Orgs and Spaces. This setting allows users and roles to be centrally managed by admins. This is the default value.
+Set this variable to `false` to prevent users with the Org Manager or Space Manager role from managing existing users and roles within their Orgs or Spaces. This setting allows users and roles to be centrally managed by admins. This is the default value.
 
 ## <a id='change-ev'></a>Changing an Environment Variable Value ##
 
-<p class="note"><strong>Note</strong>: To run the commands discussed in this section, you must be an administrator for your org and log in to the cf CLI with your UAA Administrator user credentials. In Pivotal Operations Manager, refer to <strong>Elastic Runtime > Credentials</strong> for the UAA admin name and password.</p>
+<p class="note"><strong>Note</strong>: To run the commands discussed in this section, you must be an administrator for your Org and log in to the CF CLI with your UAA Administrator user credentials. In Pivotal Operations Manager, refer to <strong>Elastic Runtime > Credentials</strong> for the UAA admin name and password.</p>
 
 To change an environment variable value:
 
 1. From a terminal window, run `cf api` to set your target API to your Apps Manager URL.
 <pre class="terminal">$ cf api api.YOUR-SYSTEM-DOMAIN</pre>
 
-1. Run `cf login` to log in as an admin. When prompted, provide your UAA Administrator user credentials. When prompted further, select `system` as your org and `apps-manager` as your space.
+1. Run `cf login` to log in as an admin. When prompted, provide your UAA Administrator user credentials. When prompted further, choose `system` as your org and `apps-manager` as your space.
 <p class="note"><strong>Note</strong>:
-If you are already logged in with UAA Administrator user credentials, you need not log in again. Instead, switch to the correct org and space by running `cf target -o system -s apps-manager`.
+If you are already logged in with UAA Administrator user credentials, switch to the correct org and space by running `cf target -o system -s apps-manager`. You do not need to log in again.
 </p>
 
 1. Run `cf set-env apps-manager ENVIRONMENT-VAR VALUE`, where ENVIRONMENT-VAR is the variable that you want to change and VALUE is `true` or `false`.
