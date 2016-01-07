@@ -4,45 +4,41 @@ title: Controlling Apps Manager User Activity with Environment Variables
 
 <strong><%= modified_date %></strong>
 
-This topic describes three environment variables you can use to manage user interactions with Apps Manager, and how to set these variables using the cf CLI.
+This topic describes three environment variables that you can use to manage user interactions with Pivotal Cloud Foundry&reg; Apps Manager, and how to set these variables using the cf CLI.
 
 ## <a id='understand-ev'></a>Understanding Apps Manager Environment Variables ##
 
-The following environment variables control which users can create orgs and perform user management actions on Apps Manager.
+The following environment variables control which users can create Orgs and perform user management actions on Apps Manager.
 
 ### <a id="ENABLE_INTERNAL_USER_STORE"></a> ENABLE\_INTERNAL\_USER\_STORE ###
 
-The internal user store enables admins to create and manage users within a PCF installation's own local UAA. With this internal store enabled, admins do not need to configure an external user store, such as an LDAP or AD server, to create user accounts.
+This variable defaults to `false`, which disables the internal user store. This means that an admin must designate an external LDAP / AD user store as the source of user accounts.
 
-Set this variable to `true` to enable the internal user store. The true setting lets users register for new accounts, manage their account and password, and invite new members into their accessible Orgs, by clicking an “Invite New Members” link.
-
-The default setting of this variable is `false`. This setting disables the internal user store, which means that an admin must designate an external LDAP / AD user store as the source of user accounts.
+Set this variable to `true` to let users register for new accounts, manage their account and password, and invite new members into their Orgs by clicking an “Invite New Members” link. This setting enables an internal user store within a <a href="../getstarted/pcf-docs.html">Pivotal Cloud Foundry&reg;</a> (PCF) installation's own local User Account and Authentication (UAA) Server. With the internal store enabled, Cloud Foundry admins do not need to configure an external user store, such as an LDAP / AD server, to create user accounts.
 
 ### <a id="ENABLE_NON_ADMIN_ORG_CREATION"></a> ENABLE\_NON\_ADMIN\_ORG\_CREATION ###
+
+This variable defaults to `false`, which prevents non-admin users from being able to create Orgs.
 
 Set this variable to `true` to allow any user to create an Org.
 This setting activates two links on the user's Org Dashboard:
 
 * The **Create a New Org** link in the drop-down menu in the left navigation panel
-* The **Create Org** link on the right side of the My Account page, which you access from the user name drop-down menu
-
-<%= image_tag("images/ev_org_create_composite.png") %>
-
-Set this variable to `false` if you do not want to give non-admin users the ability create Orgs. This is the default value.
+* The **Create Org** link in the MY ORGS section of the My Account page, which you access from the user name drop-down menu
 
 ### <a id="ENABLE_NON_ADMIN_ROLE_MANAGEMENT"></a> ENABLE\_NON\_ADMIN\_ROLE\_MANAGEMENT ###
 
-Set this variable to `true` to allow users with the Org Manager or Space Manager role to manage existing users and roles within their Orgs or Spaces. This setting enables self-management of Orgs and Spaces.
+This variable defaults to `false`, which prevents users with the Org Manager or Space Manager role from managing existing users and roles within their Orgs or Spaces. This allows users and roles to be centrally managed by admins.
 
-Set this variable to `false` to prevent users with the Org Manager or Space Manager role from managing existing users and roles within their Orgs or Spaces. This setting allows users and roles to be centrally managed by admins. This is the default value.
+Set this variable to `true` to allow users with the Org Manager or Space Manager role to manage existing users and roles within their Orgs or Spaces.
 
 ## <a id='change-ev'></a>Changing an Environment Variable Value ##
 
-<p class="note"><strong>Note</strong>: To run the commands discussed in this section, you must log in to the CF CLI with your UAA Administrator user credentials. In Pivotal Operations Manager, refer to <strong>Elastic Runtime > Credentials</strong> for the UAA admin name and password.</p>
+<p class="note"><strong>Note</strong>: To run the commands discussed in this section, you must log in to the cf CLI with your UAA Administrator user credentials. In Pivotal Operations Manager, refer to <strong>Elastic Runtime > Credentials</strong> for the UAA admin name and password.</p>
 
 To change an environment variable value:
 
-1. From a terminal window, run `cf api` to set your target API to your Apps Manager URL.
+1. In a terminal window, set your target API to your Apps Manager URL by running `cf api API-URL`, where API-URL is <%=vars.api_endpoint%>.
 <pre class="terminal">$ cf api api.YOUR-SYSTEM-DOMAIN</pre>
 
 1. Run `cf login` to log in as an admin. When prompted, provide your UAA Administrator user credentials. When prompted further, choose `system` as your org and `apps-manager` as your space.
@@ -51,7 +47,7 @@ If you are already logged in with UAA Administrator user credentials, switch to 
 </p>
 
 1. Run `cf set-env apps-manager ENVIRONMENT-VAR VALUE`, where ENVIRONMENT-VAR is the variable that you want to change and VALUE is `true` or `false`.
-For example, to let users self-manage their org and space roles as described above, enter:
+For example, to let users self-manage their org and space roles as described above, run the following command:
 <pre class="terminal">$ cf set-env apps-manager ENABLE\_NON\_ADMIN\_ROLE\_MANAGEMENT true</pre>
 
 1. Run `cf restart apps-manager` to reinitialize Apps Manager with the new environment variable value.
