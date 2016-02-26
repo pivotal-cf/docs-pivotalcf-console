@@ -46,10 +46,9 @@ To change an environment variable value:
 If you are already logged in with UAA Administrator user credentials, switch to the correct org and space by running `cf target -o system -s apps-manager`. You do not need to log in again.
 </p>
 
-1. Run `cf set-env apps-manager ENVIRONMENT-VAR VALUE`, where ENVIRONMENT-VAR is the variable that you want to change and VALUE is `true` or `false`.
-For example, to let users self-manage their org and space roles as described above, run the following command:
-<pre class="terminal">$ cf set-env apps-manager ENABLE\_NON\_ADMIN\_ROLE\_MANAGEMENT true</pre>
+1. Set an environment variable for either `apps-manager-blue` or `apps-manager-green`, depending on which is currently live. To learn more about how Apps Manager uses blue-green deployment to reduce downtime, review [Using Blue-Green Deployment to Reduce Downtime and Risk](../devguide/deploy-apps/blue-green.html). For example, to let users self-manage their org and space roles as described above, run the following command to set an environment variable for your live Apps Manager.
+<pre class="terminal">$ cf set-env apps-manager-blue ENABLE\_NON\_ADMIN\_ROLE\_MANAGEMENT true</pre>
 
-1. Run `cf restart apps-manager` to reinitialize Apps Manager with the new environment variable value.
-<pre class="terminal">$ cf restart apps-manager</pre>
+1. Reinitialize your live Apps Manager with the new environment variable value.
+<pre class="terminal">$ cf restart apps-manager-blue</pre>
 
