@@ -1,5 +1,6 @@
 ---
 title: Using the Apps Manager
+owner: Apps Manager
 ---
 
 The web-based Apps Manager application helps you manage users, organizations, spaces, and applications.
