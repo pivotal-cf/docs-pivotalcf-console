@@ -5,60 +5,79 @@ owner: Apps Manager
 
 <strong><%= modified_date %></strong>
 
-To manage a space in an org, you must have org manager or space manager
-permissions in that space.
+This topic discusses how to view and manage spaces, as well as how to manage apps and service instances associated with a space.
 
-Org managers have space manager permissions by default and can manage user
-accounts in all spaces associated with the org.
+<p class="note"><strong>Note</strong>: To manage a space in an org, you must have org manager or space manager permissions in that space. Org managers have space manager permissions by default and can manage user accounts in all spaces associated with the org.</p>
 
-Log in to the Apps Manager: <%=vars.console%>
+## <a id='view-space'></a>View a Space
 
- <%= image_tag("console-org.png") %>
+1. Log in to Apps Manager. Review the <%=vars.console%> topic for more information.
 
-## <a id='orgs'></a>Orgs ##
+    <%= image_tag("console-org.png") %>
 
-The current org is highlighted in the Apps Manager navigation.
-The drop-down menu on the right displays other orgs.
-Use this menu to switch between orgs.
+    The left navigation of Apps Manager shows the current org. 
 
- <%= image_tag("manage-spaces/select-org.png") %>
+1. To view spaces in a different org, use the drop-down menu to change the org. 
 
-## <a id='app_spaces'></a>Spaces ##
+    <%= image_tag("manage-spaces/select-org.png") %>
 
-The Apps Manager navigation also shows the spaces in the current org.
-The current space is highlighted.
+1. On the org page, click a space. Or, if you want to create a new space, click **Add a Space** at the bottom of the org page.
 
- <%= image_tag("manage-spaces/app-spaces.png") %>
+##<a id='manage-space'></a>Manage a Space
 
- * **Add a Space**: Click the **Add A Space** button.
- * **Switch Space**: Select a different space on the Org dashboard or from the
- navigation.
+The space page displays the apps and service instances associated with the selected space.
 
-## <a id='settings_view'></a>Edit Space ##
+<%= image_tag("manage-spaces/services-view.png") %>
 
-From the Space page, click the **Edit Space** link.
-
- <%= image_tag("manage-spaces/space-settings.png") %>
-
- * **Delete a Space**: Click the **Delete Space** button in the top right
- corner.
- * **Rename a Space**: Change the text in the **Space Name** field, then click
- **Save**.
-
-## <a id='apps'></a>Apps List ##
-
-The Apps List displays information about the **Status**, **Name**, **Route**,
-number of **Instances**, and amount of **Memory** for each app in the current
-space.
+The **Apps** list shows the **Name**, the number of **Instances**, the amount of **Memory** available, the time since the **Last Push**, and the **Route** for each app. 
 
  <%= image_tag("manage-spaces/apps-in-space.png") %>
 
-## <a id='services'></a>Services View ##
-
-The Services view lists services bound to apps in the current space.
+The **Services** list shows the **Service**, the **Name**, the number of **Bound Apps**, and the **Plan** for each service instance. If you want to add a service to your space, click **Add Service**. For more information on configuring services, see the [Services Overview](../devguide/services/) topic.
 
  <%= image_tag("manage-spaces/services-space.png") %>
 
- * **Add a Service**: Click the **Add Service** button on the right side of the
- Services view.
- Clicking the **Add Service** button takes you to the Marketplace.
+##<a id='manage-service'></a>Manage a Service Instance
+
+On the space page, click the service instance you want to manage. This directs you to the service page, where you can bind or unbind an app, view or change your service plan, and rename or delete your service instance.
+
+###<a id='bind-app'></a>Bind or Unbind an App
+
+<%= image_tag("manage-spaces/services-binding.png") %>
+
+1. Click **Edit Bindings**.
+
+1. Select the checkbox for the app you want to bind to your service instance.
+
+1. Click **Save**.
+
+###<a id='view-plan'></a>View or Change Your Service Plan
+
+1. Click **Plan**.
+
+    <%= image_tag("manage-spaces/services-plan.png") %>
+
+1. Review your current plan information. 
+
+1. To change your plan, select a new plan from the list and click **Select this plan**.
+
+###<a id='rename-service'></a>Rename or Delete Your Service Instance
+
+1. Click **Settings**.
+
+    <%= image_tag("manage-spaces/services-settings.png") %>
+
+1. To change the service instance name, enter your new name and click **Save changes**.
+
+1. To delete the service instance, click **Delete Service Instance**.
+
+
+##<a id='manage-space'></a>Delete or Rename a Space
+
+1. On the space page, click **Settings**.
+
+    <%= image_tag("manage-spaces/rename-space.png") %>
+
+1. To change the space name, enter your new name and click **Save changes**.
+
+1. To delete the space, click **Delete Space**.
