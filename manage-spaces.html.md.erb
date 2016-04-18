@@ -11,15 +11,15 @@ This topic discusses how to view and manage spaces, as well as how to manage app
 
 ## <a id='view-space'></a>View a Space
 
-1. Log in to Apps Manager. Review the <%=vars.console%> topic for more information.
+1. Log in to Apps Manager. Review the <%= vars.console %> topic for more information.
 
-    <%= image_tag("console-org.png") %>
+	![Org Console]( <%= vars.console_org %> )
 
     The left navigation of Apps Manager shows the current org. 
 
 1. To view spaces in a different org, use the drop-down menu to change the org. 
 
-    <%= image_tag("manage-spaces/select-org.png") %>
+	![Select Org]( <%= vars.select_org %> )
 
 1. On the org page, click a space. Or, if you want to create a new space, click **Add a Space** at the bottom of the org page.
 
@@ -27,15 +27,15 @@ This topic discusses how to view and manage spaces, as well as how to manage app
 
 The space page displays the apps and service instances associated with the selected space.
 
-<%= image_tag("manage-spaces/services-view.png") %>
+![Select Org]( <%= vars.services_view %> )
 
 The **Apps** list shows the **Name**, the number of **Instances**, the amount of **Memory** available, the time since the **Last Push**, and the **Route** for each app. 
 
- <%= image_tag("manage-spaces/apps-in-space.png") %>
+ <%= image_tag("apps-in-space.png") %>
 
 The **Services** list shows the **Service**, the **Name**, the number of **Bound Apps**, and the **Plan** for each service instance. If you want to add a service to your space, click **Add Service**. For more information on configuring services, see the [Services Overview](../devguide/services/) topic.
 
- <%= image_tag("manage-spaces/services-space.png") %>
+ <%= image_tag("services-space.png") %>
 
 ##<a id='manage-service'></a>Manage a Service Instance
 
@@ -43,7 +43,7 @@ On the space page, click the service instance you want to manage. This directs y
 
 ###<a id='bind-app'></a>Bind or Unbind an App
 
-<%= image_tag("manage-spaces/services-binding.png") %>
+<%= image_tag("services-binding.png") %>
 
 1. Click **Edit Bindings**.
 
@@ -55,7 +55,7 @@ On the space page, click the service instance you want to manage. This directs y
 
 1. Click **Plan**.
 
-    <%= image_tag("manage-spaces/services-plan.png") %>
+    <%= image_tag("services-plan.png") %>
 
 1. Review your current plan information. 
 
@@ -65,7 +65,7 @@ On the space page, click the service instance you want to manage. This directs y
 
 1. Click **Settings**.
 
-    <%= image_tag("manage-spaces/services-settings.png") %>
+    <%= image_tag("services-settings.png") %>
 
 1. To change the service instance name, enter your new name and click **Save changes**.
 
@@ -76,7 +76,7 @@ On the space page, click the service instance you want to manage. This directs y
 
 1. On the space page, click **Settings**.
 
-    <%= image_tag("manage-spaces/rename-space.png") %>
+    <%= image_tag("rename-space.png") %>
 
 1. To change the space name, enter your new name and click **Save changes**.
 
