@@ -46,19 +46,15 @@ Assign this role to users who need to view but not edit the application space.
 
 1. On the Org dashboard, click the **Members** tab.
 
-	<%= image_tag("manage-accounts/org-members.png") %>
+	![Members]( <%=vars.org_members %> )
 
-1. Click **Invite New Members**.
-The **Invite New Team Member(s)** form appears.
+1. Click **Invite New Members**. The **Invite New Team Member(s)** form appears.
 
-    <%= image_tag("manage-accounts/invite-page.png") %>
+	![Invite]( <%=vars.invite_members %> )
 
-1. In the **Add Email Address(es)** text field, enter the email addresses of
-the users that you want to invite.
-Enter multiple email addresses as a comma-delimited list.
+1. In the **Add Email Addresses** text field, enter the email addresses of the users that you want to invite. Enter multiple email addresses as a comma-delimited list.
 
-1. The **Assign Team Roles** view lists the current org and available spaces
-with checkboxes corresponding to each possible user role.
+1. The **Assign Org Roles** and **Assign Space Roles** tables list the current org and available spaces with checkboxes corresponding to each possible user role.
 Select the checkboxes that correspond to the permissions that you want to grant to the invited users.
 
 1. Click **Send Invite**.
@@ -73,7 +69,7 @@ each user and for each space that you want to change.
 
 1. On the Org dashboard, click the **Members** tab.
 
-	<%= image_tag("manage-accounts/org-members.png") %>
+	![Members]( <%=vars.org_members %> )
 
 1. Edit the permissions assigned to each user by checking or unchecking the
 checkboxes under each user role.
@@ -81,6 +77,6 @@ The Apps Manager saves your changes automatically.
 
 ### <a id='removing'></a>Removing a User ###
 
-To remove a user from a particular space, revoke that user’s permissions for
+To remove a user from a space, revoke that user’s permissions for
 all user roles in that space.
 The user remains visible in the list unless you remove the user from the org.
