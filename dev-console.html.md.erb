@@ -5,8 +5,81 @@ owner: Apps Manager
 
 <strong><%= modified_date %></strong>
 
-The Apps Manager is a tool to help manage organizations, users,
-applications, and spaces.
+Apps Manager is a web-based tool to help manage organizations, spaces, applications, services, and users. Apps Manager provides a visual interface for performing a subset of functions available through the cf Command Line Interface (CLI):
+
+* **Orgs**: You can create, manage, and delete orgs.
+* **Spaces**: You can create, manage, and delete spaces.
+* **Apps**: You can scale apps, bind apps to services, manage environment variables and routes, view logs and usage information, start and stop apps, and delete apps.
+* **Services**: You can bind services to apps, unbind services from apps, choose and edit service plans, and rename and delete service instances.
+* **Users**: You can invite new users, manage user roles, and delete users.
+
+
+Your ability to perform actions in Apps Manager depends on your <%=vars.console_ev%>.
+
+
+What you can do with Apps Man depends on your role. 
+However, depending on your <%=vars.console_ev%>, you might be able to perform certain org and space management actions on the Apps Manager.
+
+The table below shows the relationship between specific org and space management
+actions that you can perform and the users that can perform these actions.
+
+Note that:
+
+* Admins can use either the CLI or the Apps Manager to perform these actions.
+* Org Managers, like Admins, can perform all actions using the Apps Manager.
+* Space Managers, like Admins and Org Managers, can assign and remove users from
+spaces using the Apps Manager.
+* Apps Manager users of any role can create an org and view org and space users.
+
+<table border="1" class="nice">
+<tr>
+	  <th></th>
+	  <th><div class="centered"><strong>CLI</strong></div></th>
+	  <th colspan='3'><div class="centered"><strong>Apps Manager</strong></div></th>
+</tr>
+<tr>
+  <th><strong>Command</strong></th>
+  <th><strong>Admin</strong></th>
+  <th><strong>Admin</strong> or <strong>Org Manager</strong></th>
+  <th><strong>Space Manager</strong></th>
+  <th><strong>Org Auditor</strong> or <strong>Space Developer</strong> or <strong>Space Auditor</strong></th>
+</tr>
+<tr>
+  <td><code>create-org</code></td><td>X</td><td>X</td><td>X</td><td>X</td>
+</tr>
+<tr>
+  <td><code>delete-org</code></td><td>X</td><td>X</td><td></td><td></td>
+</tr>
+<tr>
+  <td><code>rename-org</code></td><td>X</td><td>X</td><td></td><td></td>
+</tr>
+<tr>
+  <td><code>org-users</code></td><td>X</td><td>X</td><td>X</td><td>X</td>
+</tr>
+<tr>
+  <td><code>set-org-role</code></td><td>X</td><td>X</td><td></td><td></td>
+</tr>
+<tr>
+  <td><code>unset-org-role</code></td><td>X</td><td>X</td><td></td><td></td>
+</tr>
+<tr>
+  <td><code>space-users</code></td><td>X</td><td>X</td><td>X</td><td>X</td>
+</tr>
+<tr>
+  <td><code>set-space-role</code></td><td>X</td><td>X</td><td>X</td><td></td>
+</tr>
+<tr>
+  <td><code>unset-space-role</code></td><td>X</td><td>X</td><td>X</td><td></td>
+</tr>
+
+</table>
+
+
+
+
+This topic discusses how to view and manage spaces, as well as how to manage apps and service instances associated with a space.
+
+
 Complete the following steps to invite new users to the Apps Manager.
 
 1. Log in to the Apps Manager. <%=vars.console_3%>
@@ -14,6 +87,13 @@ Complete the following steps to invite new users to the Apps Manager.
 1. The Apps Manager displays information for your org and all of the spaces in your org.
 
 	![Select Org]( <%=vars.console_org %> )
+
+
+
+
+
+
+
 
 1. In the Members tab, click **Invite New Members**. The **Invite New Team Member(s)** form appears.
 
