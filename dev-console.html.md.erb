@@ -5,7 +5,9 @@ owner: Apps Manager
 
 <strong><%= modified_date %></strong>
 
-Apps Manager is a web-based tool to help manage organizations, spaces, applications, services, and users. Apps Manager provides a visual interface for performing a subset of functions available through the cf Command Line Interface (CLI):
+##<a id="overview"></a> Overview
+
+Apps Manager is a web-based tool to help manage organizations, spaces, applications, services, and users. Apps Manager provides a visual interface for performing the following subset of functions available through the cf Command Line Interface (CLI):
 
 * **Orgs**: You can create, manage, and delete orgs.
 * **Spaces**: You can create, manage, and delete spaces.
@@ -13,23 +15,12 @@ Apps Manager is a web-based tool to help manage organizations, spaces, applicati
 * **Services**: You can bind services to apps, unbind services from apps, choose and edit service plans, and rename and delete service instances.
 * **Users**: You can invite new users, manage user roles, and delete users.
 
+##<a id="permissions"></a> Understanding Permissions
 
 Your ability to perform actions in Apps Manager depends on your <%=vars.console_ev%>.
 
-
-What you can do with Apps Man depends on your role. 
-However, depending on your <%=vars.console_ev%>, you might be able to perform certain org and space management actions on the Apps Manager.
-
 The table below shows the relationship between specific org and space management
 actions that you can perform and the users that can perform these actions.
-
-Note that:
-
-* Admins can use either the CLI or the Apps Manager to perform these actions.
-* Org Managers, like Admins, can perform all actions using the Apps Manager.
-* Space Managers, like Admins and Org Managers, can assign and remove users from
-spaces using the Apps Manager.
-* Apps Manager users of any role can create an org and view org and space users.
 
 <table border="1" class="nice">
 <tr>
@@ -74,41 +65,11 @@ spaces using the Apps Manager.
 
 </table>
 
+Note the following:
 
-
-
-This topic discusses how to view and manage spaces, as well as how to manage apps and service instances associated with a space.
-
-
-Complete the following steps to invite new users to the Apps Manager.
-
-1. Log in to the Apps Manager. <%=vars.console_3%>
-
-1. The Apps Manager displays information for your org and all of the spaces in your org.
-
-	![Select Org]( <%=vars.console_org %> )
-
-
-
-
-
-
-
-
-1. In the Members tab, click **Invite New Members**. The **Invite New Team Member(s)** form appears.
-
-	![Members]( <%=vars.org_members %> )
-
-1. Add an email address, assign a team role or roles, then click **Send Invite** to invite a new user to join your org.
-
-	![Invite]( <%=vars.invite_members %> )
-
-## <a id='known-issues'></a>Important Tips ##
-
-* You can remove users from orgs, but not spaces.
-Instead, revoke the user's permissions in all spaces to effectively remove the
-user from the org.
-* Not all of the Apps Manager pages are Ajax-enabled.
-Refresh the page to see the latest information.
-* Changes to environment variables, as well as service bindings and unbindings,
-require a `cf restage` to update the application.
+* Admins can use either the cf CLI or the Apps Manager to perform these actions.
+* Org Managers, like Admins, can perform all actions using the Apps Manager.
+* Space Managers, like Admins and Org Managers, can assign and remove users from
+spaces using the Apps Manager.
+* Apps Manager users of any role can <%= vars.create_org %> view org and space users.
+* Users cannot be removed from an org, but they can be removed from a space. To effectively remove a user from an org, you can remove them from all spaces in an org.
