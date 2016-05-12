@@ -52,14 +52,7 @@ Assign this role to users who need to view but not edit the application space.
 
 	![Invite]( <%=vars.invite_members %> )
 
-    <p class="note"><strong>Note</strong>: If you do not see the <strong>Invite New Members</strong> button, 
-ensure that, in the <strong>Apps Manager</strong> section of Elastic Runtime,
-you have selected the <strong>Enable Internal User Store</strong> and <strong>Enable Non Admin Role Management</strong> 
-checkboxes and that Apply Changes has been run.
-For more information about these checkboxes, 
-see the Configuring Elastic Runtime topic for your IaaS: <a href="../customizing/cloudform-er-config.html#customize-apps-man">AWS</a>,
-<a href="../customizing/openstack-er-config.html#customize-apps-man">OpenStack</a>,
-<a href="../customizing/config-er-vmware.html#customize-apps-man">vSphere/vCloud</a>.
+    <%=vars.config_ert_checkboxes%>
 
 1. In the **Add Email Addresses** text field, enter the email addresses of the users that you want to invite. Enter multiple email addresses as a comma-delimited list.
 
