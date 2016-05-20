@@ -20,56 +20,54 @@ Apps Manager is a web-based tool to help manage organizations, spaces, applicati
 Your ability to perform actions in Apps Manager depends on your <%=vars.console_ev%>.
 
 The table below shows the relationship between specific org and space management
-actions that you can perform and the users that can perform these actions.
+actions and the non-Admin user roles who can perform them within orgs and spaces they are members of. Admin users can perform all of these actions using either the cf CLI or by logging into Apps Manager as an Org Manager, using the UAA Admin credentials.
 
 <table border="1" class="nice">
+  <col width="20%">
+  <col width="20%">
+  <col width="20%">
+  <col width="20%">
+  <col width="20%">
 <tr>
-	  <th></th>
-	  <th><div class="centered"><strong>CLI</strong></div></th>
-	  <th colspan='3'><div class="centered"><strong>Apps Manager</strong></div></th>
-</tr>
-<tr>
-  <th><strong>Command</strong></th>
-  <th><strong>Admin</strong></th>
-  <th><strong>Admin</strong> or <strong>Org Manager</strong></th>
+  <th><strong>Action</strong></th>
+  <th><strong>CLI command</strong></th>
+  <th><strong>Org Manager</strong></th>
   <th><strong>Space Manager</strong></th>
-  <th><strong>Org Auditor</strong> or <strong>Space Developer</strong> or <strong>Space Auditor</strong></th>
+  <th><strong>Org Auditor, Space Developer, or Space Auditor</strong></th>
 </tr>
 <tr>
-  <td><code>create-org</code></td><td>X</td><td>X</td><td>X</td><td>X</td>
+  <td>Create an org</td><td><code>create-org</code></td><td><%= vars.create_orgs %></td><td><%= vars.create_orgs %></td><td><%= vars.create_orgs %></td>
 </tr>
 <tr>
-  <td><code>delete-org</code></td><td>X</td><td>X</td><td></td><td></td>
+  <td>Delete an org</td><td><code>delete-org</code></td><td>Yes</td><td>No</td><td>No</td>
 </tr>
 <tr>
-  <td><code>rename-org</code></td><td>X</td><td>X</td><td></td><td></td>
+  <td>Rename an org</td><td><code>rename-org</code></td><td>Yes</td><td>No</td><td>No</td>
 </tr>
 <tr>
-  <td><code>org-users</code></td><td>X</td><td>X</td><td>X</td><td>X</td>
+  <td>View org members</td><td><code>org-users</code></td><td>Yes</td><td>Yes</td><td>Yes</td>
 </tr>
 <tr>
-  <td><code>set-org-role</code></td><td>X</td><td>X</td><td></td><td></td>
+  <td>Assign user a role in org</td><td><code>set-org-role</code></td><td><%= vars.manage_roles_pws_yes %></td><td><%= vars.manage_roles_pws_no %></td><td>No</td>
 </tr>
 <tr>
-  <td><code>unset-org-role</code></td><td>X</td><td>X</td><td></td><td></td>
+  <td>Remove org role from user</td><td><code>unset-org-role</code></td><td><%= vars.manage_roles_pws_yes %></td><td><%= vars.manage_roles_pws_no %></td><td>No</td>
 </tr>
 <tr>
-  <td><code>space-users</code></td><td>X</td><td>X</td><td>X</td><td>X</td>
+  <td>View space members</td><td><code>space-users</code></td><td>Yes</td><td>Yes</td><td>Yes</td>
 </tr>
 <tr>
-  <td><code>set-space-role</code></td><td>X</td><td>X</td><td>X</td><td></td>
+  <td>Assign user a role in space</td><td><code>set-space-role</code></td><td><%= vars.manage_roles_pws_yes %></td><td><%= vars.manage_roles_pws_yes %></td><td>No</td>
 </tr>
 <tr>
-  <td><code>unset-space-role</code></td><td>X</td><td>X</td><td>X</td><td></td>
+  <td>Remove space role from user</td><td><code>unset-space-role</code></td><td><%= vars.manage_roles_pws_yes %></td><td><%= vars.manage_roles_pws_yes %></td><td>No</td>
 </tr>
 
 </table>
 
-Note the following:
 
-* Admins can use either the cf CLI or the Apps Manager to perform these actions.
-* Org Managers, like Admins, can perform all actions using the Apps Manager.
-* Space Managers, like Admins and Org Managers, can assign and remove users from
-spaces using the Apps Manager.
-* Apps Manager users of any role can <%= vars.create_org %> view org and space users of which they are members.
-* Users cannot be removed from an org, but they can be removed from a space. To effectively remove a user from an org, you can remove them from all spaces in an org.
+<%= vars.create_orgs_footnote %>
+
+<%= vars.manage_roles_footnote %>
+
+Org and Space Managers assign and remove users from spaces by setting and unsetting their roles within the space. They remove users from orgs by removing them from all spaces within that org.
