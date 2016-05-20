@@ -5,30 +5,69 @@ owner: Apps Manager
 
 <strong><%= modified_date %></strong>
 
-The Apps Manager is a tool to help manage organizations, users,
-applications, and spaces.
-Complete the following steps to invite new users to the Apps Manager.
+##<a id="overview"></a> Overview
 
-1. Log in to the Apps Manager. <%=vars.console_3%>
+Apps Manager is a web-based tool to help manage organizations, spaces, applications, services, and users. Apps Manager provides a visual interface for performing the following subset of functions available through the cf Command Line Interface (CLI):
 
-1. The Apps Manager displays information for your org and all of the spaces in your org.
+* **Orgs**: You can create, manage, and delete orgs.
+* **Spaces**: You can create, manage, and delete spaces.
+* **Apps**: You can scale apps, bind apps to services, manage environment variables and routes, view logs and usage information, start and stop apps, and delete apps.
+* **Services**: You can bind services to apps, unbind services from apps, choose and edit service plans, and rename and delete service instances.
+* **Users**: You can invite new users, manage user roles, and delete users.
 
-	![Select Org]( <%=vars.console_org %> )
+##<a id="permissions"></a> Understanding Permissions
 
-1. In the Members tab, click **Invite New Members**. The **Invite New Team Member(s)** form appears.
+Your ability to perform actions in Apps Manager depends on your <%=vars.console_ev%>.
 
-	![Members]( <%=vars.org_members %> )
+The table below shows the relationship between specific org and space management
+actions and the non-Admin user roles who can perform them within orgs and spaces they are members of. Admin users can perform all of these actions using either the cf CLI or by logging into Apps Manager as an Org Manager, using the UAA Admin credentials.
 
-1. Add an email address, assign a team role or roles, then click **Send Invite** to invite a new user to join your org.
+<table border="1" class="nice">
+  <col width="20%">
+  <col width="20%">
+  <col width="20%">
+  <col width="20%">
+  <col width="20%">
+<tr>
+  <th><strong>Action</strong></th>
+  <th><strong>CLI command</strong></th>
+  <th><strong>Org Manager</strong></th>
+  <th><strong>Space Manager</strong></th>
+  <th><strong>Org Auditor, Space Developer, or Space Auditor</strong></th>
+</tr>
+<tr>
+  <td>Create an org</td><td><code>create-org</code></td><td><%= vars.create_orgs %></td><td><%= vars.create_orgs %></td><td><%= vars.create_orgs %></td>
+</tr>
+<tr>
+  <td>Delete an org</td><td><code>delete-org</code></td><td>Yes</td><td>No</td><td>No</td>
+</tr>
+<tr>
+  <td>Rename an org</td><td><code>rename-org</code></td><td>Yes</td><td>No</td><td>No</td>
+</tr>
+<tr>
+  <td>View org members</td><td><code>org-users</code></td><td>Yes</td><td>Yes</td><td>Yes</td>
+</tr>
+<tr>
+  <td>Assign user a role in org</td><td><code>set-org-role</code></td><td><%= vars.manage_roles_pws_yes %></td><td><%= vars.manage_roles_pws_no %></td><td>No</td>
+</tr>
+<tr>
+  <td>Remove org role from user</td><td><code>unset-org-role</code></td><td><%= vars.manage_roles_pws_yes %></td><td><%= vars.manage_roles_pws_no %></td><td>No</td>
+</tr>
+<tr>
+  <td>View space members</td><td><code>space-users</code></td><td>Yes</td><td>Yes</td><td>Yes</td>
+</tr>
+<tr>
+  <td>Assign user a role in space</td><td><code>set-space-role</code></td><td><%= vars.manage_roles_pws_yes %></td><td><%= vars.manage_roles_pws_yes %></td><td>No</td>
+</tr>
+<tr>
+  <td>Remove space role from user</td><td><code>unset-space-role</code></td><td><%= vars.manage_roles_pws_yes %></td><td><%= vars.manage_roles_pws_yes %></td><td>No</td>
+</tr>
 
-	![Invite]( <%=vars.invite_members %> )
+</table>
 
-## <a id='known-issues'></a>Important Tips ##
 
-* You can remove users from orgs, but not spaces.
-Instead, revoke the user's permissions in all spaces to effectively remove the
-user from the org.
-* Not all of the Apps Manager pages are Ajax-enabled.
-Refresh the page to see the latest information.
-* Changes to environment variables, as well as service bindings and unbindings,
-require a `cf restage` to update the application.
+<%= vars.create_orgs_footnote %>
+
+<%= vars.manage_roles_footnote %>
+
+Org and Space Managers assign and remove users from spaces by setting and unsetting their roles within the space. They remove users from orgs by removing them from all spaces within that org.
