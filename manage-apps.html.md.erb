@@ -17,24 +17,23 @@ On the space page, click the app you want to manage. This directs you to the app
 
 ###<a id="scale"></a> Scale an App
 
-1. Click **Scale App**.
-1. Adjust the number of **Instances** and the **Memory Limit**.
-1. Click **Save**.
+1. Under **Scaling**, adjust the number of **Instances**, the **Memory Limit**, and the **Disk Limit** as desired.
+1. Click **Scale App**. 
 
 ###<a id="bind-services"></a> Bind or Unbind a Service
 
 1. Click **Services**.
 1. To bind your app to a service, click **Bind a Service**.
 	<%= image_tag("bound-services.png") %>
-1. To bind your app to an an existing service instance, choose the service instance from the dropdown menu, and click **Bind**. To bind your app to a new service instance, click **Add from Marketplace** to choose a service from the Marketplace.
-1. To unbind your app from a service instance, locate the service instance in the **Bound Services** list and click **Unbind**.
+1. To bind your app to an an existing service instance, choose the service instance from the dropdown menu, and click **Bind**. To bind your app to a new service instance, click **Go to the Marketplace** to choose a service from the Marketplace.
+1. To unbind your app from a service instance, locate the service instance in the **Bound Services** list and click the three-dot icon on the far right. Select **Unbind** from the dropdown menu.
 
 ###<a id="env-var"></a>View or Add Environment Variables
 
 1. Click **Env Variables**.
 	<%= image_tag("env-vars.png") %>
-1. The page displays both the **User Provided** and **System Provided** environment variables associated with the app.
-1. To add a user-provided environment variable, click **Add an Env Variable**.
+1. The page displays both the **User Provided Environment Variables** and **System Provided Environment Variables** environment variables associated with the app.
+1. To add a user-provided environment variable, enter the **Name** and **Value** and click **Save**.
 
 <p class="note"><strong>Note</strong>: Changes to environment variables, as well as to service bindings and unbindings, require restarting the app to take effect. You can restart the app from the Apps Manager or with <code>cf restage</code> from the cf Command Line Interface (CLI).</p>
 
@@ -44,28 +43,35 @@ On the space page, click the app you want to manage. This directs you to the app
 1. The page displays the routes associated with the app. To add a new route, click **Map a Route**.
 	<%= image_tag("routes.png") %>
 1. Enter the route and click **Map**.
-1. To unmap a route, locate the route from the list and click **Unmap**.
+1. To unmap a route, locate the route from the list and click the red x. Click **Unmap** in the popup to confirm.
 
 ###<a id="logs"></a>View Logs
 
 1. Click **Logs** to view the logs for the app.
 	<%= image_tag("logs.png") %>
-1. Click the icon next to **Recent Logs** to refresh the logs. Click **Tail Logs** to view a live version of the logs.
+1. Click the play button to view a live version of the logs.
 
 ###<a id="start-stop"></a>Start or Stop an App
 
-1. To stop an app, click the stop button under the name of the app. Click **Stop** in the popup to confirm.
-1. To restart a stopped app, click the play button under the name of the app.
-1. To restart a running app, click the restart button under the name of the app. Click **Restart** in the popup to confirm.
+1. To stop an app, click the stop button next to the name of the app. Click **Stop** in the popup to confirm.
+1. To restart a stopped app, click the play button next to the name of the app.
+1. To restart a running app, click the restart button next to the name of the app. Click **Restart** in the popup to confirm.
+
+###<a id="rename-app"></a>Rename an App
+
+1. Click **Settings**.
+1. Edit the **Name**.
+1. Click **Save changes**.
 
 ###<a id="delete-app"></a>Delete an App
 
-1. To delete an app, click **Delete App** on the right side of the app page.
-1. Click **Delete** in the popup to confirm.
+1. Click **Settings**.
+1. Click **Delete App**.
+1. Click **Delete App** in the popup to confirm.
 
 ##<a id='manage-service'></a>Manage a Service Instance
 
-On the space page, click the service instance you want to manage. This directs you to the service instance page, where you can bind or unbind apps, view or change your service plan, and rename or delete your service instance.
+On the space page, click **Services** and then click the service instance you want to manage. This directs you to the service instance page, where you can bind or unbind apps, view or change your service plan, and rename or delete your service instance.
 
 ###<a id='bind-app'></a>Bind or Unbind an App
 
