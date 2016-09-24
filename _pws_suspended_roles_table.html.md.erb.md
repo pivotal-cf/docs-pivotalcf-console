@@ -17,10 +17,10 @@
 		<td>Space</td>
 	</tr><tr>
 		<td>Add and edit users and roles</td>
-		<td>&check;</td>
 		<td></td>
 		<td></td>
-		<td>&check;</td>
+		<td></td>
+		<td></td>
 		<td></td>
 		<td></td>
 	</tr><tr>
@@ -33,7 +33,7 @@
 		<td>&check;</td>
 	</tr><tr>
 		<td>Create and assign org and space quota plans</td>
-		<td>&check;</td>
+		<td></td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -49,6 +49,22 @@
 		<td>&check;</td>
 	</tr><tr>
 		<td>Create orgs</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr><tr>
+		<td>View all orgs</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr><tr>
+		<td>View orgs where user is a member</td>
 		<td>&check;</td>
 		<td>&check;</td>
 		<td>&check;</td>
@@ -56,16 +72,8 @@
 		<td>&check;</td>
 		<td>&check;</td>
 	</tr><tr>
-		<td>View orgs</td>
-		<td>&check;</td>
-		<td>&check;</td>
-		<td>&check;</td>
-		<td>&check;</td>
-		<td>&check;</td>
-		<td>&check;</td>
-	</tr><tr>
-		<td>Edit, rename, and delete Orgs</td>
-		<td>&check;</td>
+		<td>Edit, rename, and delete orgs</td>
+		<td></td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -73,7 +81,7 @@
 		<td></td>
 	</tr><tr>
 		<td>Create spaces</td>
-		<td>&check;</td>
+		<td></td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -89,15 +97,15 @@
 		<td></td>
 	</tr><tr>
 		<td>Edit spaces</td>
-		<td>&check;</td>
+	    <td></td>
 		<td></td>
 		<td></td>
-		<td>&check;</td>
-		<td>&check;</td>
+		<td></td>
+		<td></td>
 		<td></td>
 	</tr><tr>
 		<td>Delete spaces</td>
-		<td>&check;</td>
+	    <td></td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -105,10 +113,10 @@
 		<td></td>
 	</tr><tr>
 		<td>Rename spaces</td>
-		<td>&check;</td>
 		<td></td>
 		<td></td>
-		<td>&check;</td>
+		<td></td>
+		<td></td>
 		<td></td>
 		<td></td>
 	</tr><tr>
@@ -121,7 +129,7 @@
 		<td>&check;</td>
 	</tr><tr>
 		<td>Add private domains</td>
-		<td>&check;</td>
+		<td></td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -133,7 +141,7 @@
 		<td></td>
 		<td></td>
 		<td></td>
-		<td>&check;</td>
+		<td></td>
 		<td></td>
 	</tr><tr>
 		<td>Instantiate and bind services to applications</td>
@@ -141,7 +149,7 @@
 		<td></td>
 		<td></td>
 		<td></td>
-		<td>&check;</td>
+		<td></td>
 		<td></td>
 	</tr><tr>
 		<td>Associate routes, instance counts, memory allocation, and disk limit of applications</td>
@@ -149,7 +157,7 @@
 		<td></td>
 		<td></td>
 		<td></td>
-		<td>&check;</td>
+		<td></td>
 		<td></td>
 	</tr><tr>
 		<td>Rename applications</td>
@@ -157,18 +165,18 @@
 		<td></td>
 		<td></td>
 		<td></td>
-		<td>&check;</td>
+		<td></td>
 		<td></td>
 	</tr><tr>
 		<td>Set payment information and org/space spending limit</td>
 		<td></td>
 		<td></td>
-		<td>&check;</td>
+		<td></td>
 		<td></td>
 		<td></td>
 		<td></td>
 	</tr><tr>
-		<td>Read invoices and payment history; set invoice notification email addresses</td>
+		<td>Read invoices and payment history</td>
 		<td></td>
 		<td></td>
 		<td>&check;</td>
