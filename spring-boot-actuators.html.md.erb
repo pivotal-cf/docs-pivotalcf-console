@@ -1,0 +1,33 @@
+---
+title: Configuring Spring Boot Actuators
+owner: Java
+---
+
+<strong><%= modified_date %></strong>
+
+Intro/STEM sentence about actuator endpionts
+‘the benefit of doing all this is that you’ll see it in apps man’/’spring apps properly configured with actuators will get these things’.
+
+## <a id='actuator'></a>Understand actuators  ##
+What is an actuator - concept
+
+## <a class="health-endpoint"></a>Configure the <code>/health</code> production ready endpoint
+
+http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#production-ready-health
+
+## <a id="info-endpoint"></a>Configure the <code>/info</code> production ready endpoint
+
+<infomap>procedure to configure endpoint
+</infomap>
+To add git commit data to the info endpoint:
+
+First, do this:
+http://docs.spring.io/spring-boot/docs/current/reference/html/howto-build.html#howto-git-info
+Then add this line:
+http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#production-ready-application-info-git
+ [the critical piece, after we synthesize these two items is management.info.git.mode=full]
+
+<infomap>procedure to configure /info
+</infomap>[Additionally, you can add build information using the info endpoint. We can link out or document it and ask Mike if that’s something we still want to do.]
+Link out to spring docs for further details about /info.
+http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#production-ready-application-info
