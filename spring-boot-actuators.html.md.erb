@@ -1,0 +1,133 @@
+---
+title: Configuring Spring Boot Actuator Endpoints for Apps Man
+owner: Apps Manager
+---
+
+<strong><%= modified_date %></strong>
+
+The Apps Manager UI supports several production ready-endpoints from Spring Boot Actuator. This topic describes how you can configure your app to display data from the Actuator endpoints in Apps Manager. 
+
+For information on how you view the data from these endpoints in Apps Manager, see the [Viewing Spring Boot Actuator Endpoints in Apps Manager](./viewing-actuators.html). 
+
+## <a id='actuator'></a> Overview: Spring Boot Actuators
+
+Spring Boot Actuator provides services for monitoring and managing your Spring Boot app. You can add Actuators to your app project and access them through HTTP endpoints. 
+
+Apps Manager supports the following endpoints:
+
+* <code>/info</code>: exposes details about application environment, git, and build
+* <code>/health</code>: shows health status or detailed health information over secure connection
+
+For more information about Spring Boot Actuators, see the [Spring Boot Actuator docs](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready.html).
+
+## <a id="activating-spring-boot-actuator"></a>Activate Spring Boot Actuator for Your App
+
+You must add a `spring-boot-starter-actuator` dependency to your app project for the production-ready HTTP endpoints to return values. For more information, see the [Enabling production-ready features](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-enabling) section of the Spring Boot documentation. 
+
+Follow the instructions that correspond to your project type: 
+
+### Maven 
+
+If you use Maven, add the following to your project:
+
+``` java
+<dependencies>
+    <dependency> 
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+</dependencies>
+```
+
+### Gradle
+
+If you use Gradle, add the following to your project:
+
+``` java
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+}
+```
+
+## <a id="health-endpoint"></a>Configure the <b>Health</b> Actuator
+
+Spring Boot Actuator includes the autoconfigured health indicators specified in the [Auto-configured HealthIndicators](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#_auto_configured_healthindicators) section of the Spring Boot documentation. If you want to write custom health indicators, see the [Writing custom HealthIndicators](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#_writing_custom_healthindicators) section.
+
+## <a id="info-endpoint"></a>Configure the <b>Info</b> Actuator
+
+The `/info` endpoint provides information about the project build for your app, as well as its git details.
+
+### <a href="build-info"></a> Add Build Information
+
+To add build information to the `/info` endpoint, follow the instructions for your project build type:
+
+#### Maven
+
+Add the following to your app project:
+
+``` java
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <version>1.4.2.RELEASE</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>build-info</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+```
+
+#### Gradle
+
+Add the following to your app project:
+
+``` java
+springBoot  {
+    buildInfo()
+}
+```
+
+### <a class="git-info"></a> Add Git Information
+
+To add git information to the `/info` endpoint, follow these instructions:
+
+
+1. Add the following property to your `application.properties` file:
+
+	```
+	management.info.git.mode=full
+	```
+
+1. Follow the instructions below that correspond to your project type:
+
+#### Maven
+
+Add the following plugin to your project:
+
+``` java
+<build>
+    <plugins>
+        <plugin>
+            <groupId>pl.project13.maven</groupId>
+            <artifactId>git-commit-id-plugin</artifactId>
+        </plugin>
+    </plugins>
+</build>
+```
+
+#### Gradle
+
+Add the following plugin to your project: 
+
+``` java
+plugins {
+    id "com.gorylenko.gradle-git-properties" version "1.4.6"
+}
+```
