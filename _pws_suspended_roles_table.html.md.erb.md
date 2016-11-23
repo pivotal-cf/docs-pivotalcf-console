@@ -32,7 +32,7 @@
 		<td>&check;</td>
 		<td>&check;</td>
 	</tr><tr>
-		<td>Create and assign org and space quota plans</td>
+		<td>Create and assign org quota plans</td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -73,6 +73,15 @@
 		<td>&check;</td>
 	</tr><tr>
 		<td>Edit, rename, and delete orgs</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Create and assign space quota plans</td>
 		<td></td>
 		<td></td>
 		<td></td>
