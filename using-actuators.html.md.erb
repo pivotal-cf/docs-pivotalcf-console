@@ -1,0 +1,57 @@
+---
+title: Using Spring Boot Actuators with Apps Manager
+owner: Apps Manager
+---
+
+This document describes how to view and manage app information from Spring Boot Actuator in Apps Manager. 
+
+## Overview
+
+Apps manager supports several Spring Boot Actuator endpoints for your apps. To use the features provided by Apps Manager, you must [Configure Spring Boot Actuator Endpoints for Apps Manager](./spring-boot-actuators.html). 
+
+Once your configure your app, Apps Manager displays the Spring Boot logo next to its name on the app page:
+
+![Icon](actuator-icon.png)
+
+## View Build and Git Information for your App
+
+To view the data that your app sends to its `build` and `git` Actuator endpoints, select the **Settings** tab:
+
+![Info](info.png)
+	
+In the upper right of the app page, Apps Manager also displays the SHA of your app code repository from the latest build:
+	
+![Git sha](git-sha.png)
+
+## View App Health 
+
+To view the health-check data that your app sends to its `health` Actuator endpoints, see the **Instances** section:
+
+![Info](hc.png)
+
+## <a class="manage-log-levels"></a> Managing Log Levels in Apps Manager
+
+Spring Boot apps include _loggers_ for each component of the app. You can set the log level for each logger in Apps Manager. 
+
+To view the **Configure Logging Levels** screen, select the **Logs** tab and click the **Configure Logging Levels** button. 
+
+Apps Manager displays the default log level for each logger in gray. You can modify the log level for any logger by clicking the desired level in the logger row. 
+
+You can also filter what loggers you see using the **Filter Loggers** textbox.
+
+![Logs Default](log-default.png)
+
+Whenever you set a log level, the following happens:
+
+* Each child namespace of the logger inherits the log level.
+* The log level becomes blue to indicate that it is user-configured.
+
+![Logs user configured](log-user-configured.png)
+
+You can reset log levels by clicking the white dot displayed on the current log level:
+
+![Reset Logs](reset-log.png)
+ 
+
+
+

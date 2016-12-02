@@ -7,7 +7,7 @@ owner: Apps Manager
 
 The Apps Manager UI supports several production ready-endpoints from Spring Boot Actuator. This topic describes how you can configure your app to display data from the Actuator endpoints in Apps Manager. 
 
-For information on how you view the data from these endpoints in Apps Manager, see the [Viewing Spring Boot Actuator Endpoints in Apps Manager](./viewing-actuators.html). 
+For information on how you view the data from these endpoints in Apps Manager, see the [Viewing Spring Boot Actuator Endpoints in Apps Manager](./using-actuators.html). 
 
 ## <a id='actuator'></a> Overview: Spring Boot Actuators
 
@@ -57,7 +57,7 @@ Spring Boot Actuator includes the autoconfigured health indicators specified in 
 
 The `/info` endpoint provides information about the project build for your app, as well as its git details.
 
-### <a href="build-info"></a> Add Build Information
+### <a id="build-info"></a> Add Build Information
 
 To add build information to the `/info` endpoint, follow the instructions for your project build type:
 
@@ -94,7 +94,7 @@ springBoot  {
 }
 ```
 
-### <a class="git-info"></a> Add Git Information
+### <a id="git-info"></a> Add Git Information
 
 To add git information to the `/info` endpoint, follow these instructions:
 
