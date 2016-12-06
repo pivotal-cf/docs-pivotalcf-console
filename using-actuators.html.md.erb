@@ -35,16 +35,31 @@ Spring Boot apps include _loggers_ for many provided and user components of the 
 
 To view the **Configure Logging Levels** screen, select the **Logs** tab and click the **Configure Logging Levels** button. 
 
-Apps Manager displays the default log level for each logger in gray. You can modify the log level for any logger by clicking the desired level in the logger row. 
+![Configure Logging Levels](config-log-levels.png)
+
+Apps Manager displays the default log level for each logger in gray. 
+
+![Defaults](default-levels.png)
+
+You can modify the log level for any logger by clicking the desired level in the logger row as in the image below. Whenever you set a log level, the following happens:
+
+* The log level becomes blue to indicate that it is user-configured.
+* Each child namespace of the logger inherits the log level.
+	<p class="note"><strong>Note</strong>: You can manually set any of the child loggers to override this inheritance.</p>
+
+![Set Log level](set-levels.png)
+
+All of the loggers with user-configured logging levels float to the top of the list:
+
+![Float to top](float-levels.png)
+
+You can reset log levels by clicking the white dot displayed on the current log level:
+
+![Reset Logs](reset-logs.png)
 
 You can also filter what loggers you see using the **Filter Loggers** textbox.
 
-Whenever you set a log level, the following happens:
-
-* Each child namespace of the logger inherits the log level.
-* The log level becomes blue to indicate that it is user-configured.
-
-You can reset log levels by clicking the white dot displayed on the current log level:
+![Filter Loggers](filter-loggers.png)
 
 
  
