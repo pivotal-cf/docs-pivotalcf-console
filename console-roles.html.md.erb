@@ -18,10 +18,9 @@ A user can have one or more roles.
 The combination of these roles defines the user’s overall permissions in the org
 and within specific app spaces in that org.
 
-An administrator can manage user roles in orgs and spaces using the Apps Manager. To manage user accounts in a space, you must have Space Manager permissions in
-that space.
+An administrator can manage user roles in orgs and spaces using the Apps Manager. To manage user accounts in a space, you must have Space Manager permissions in that space.
 
-To see which permissions each role grants, see [Organizations, Spaces, Roles, and Permissions](../concepts/roles.html).
+To see which permissions each role grants, see the [Organizations, Spaces, Roles, and Permissions](../concepts/roles.html) topic.
 
 ## <a id='orgs-roles'></a>Managing Org Roles ##
 
@@ -29,8 +28,7 @@ Valid [org roles](../concepts/roles.html#roles) are <%=vars.org_roles %>.
 
 To grant or revoke org roles, follow the steps below.
 
-1. In the Apps Manager navigation on the left, the current org is
-highlighted.
+1. In the Apps Manager navigation on the left, the current org is highlighted.
 Click the drop-down menu to view other orgs belonging to the account.
 
     ![Other Orgs]( <%=vars.select_org %> )
@@ -63,13 +61,9 @@ the org.
 Select a checkbox to grant an app space role to a user, or deselect a checkbox to revoke a role from a user.
 
     <%= image_tag("images/space-members.png") %>
-	* **Space Managers** can invite and manage users and enable features for a given
-	space. Assign this role to managers or other users who need to administer the account.
-	* **Space Developers** can create, delete, and manage applications and services, and
-	have full access to all usage reports and logs. Space Developers can also edit applications, including the number of instances and memory footprint. Assign this role to app developers or other users who need to interact with
-	applications and services.
-	* **Space Auditors** have view-only access to all space information, settings,
-	reports, and logs. Assign this role to users who need to view but not edit the application space.
+	* **Space Managers** can invite and manage users and enable features for a given space. Assign this role to managers or other users who need to administer the account.
+	* **Space Developers** can create, delete, and manage applications and services, and have full access to all usage reports and logs. Space Developers can also edit applications, including the number of instances and memory footprint. Assign this role to app developers or other users who need to interact with applications and services.
+	* **Space Auditors** have view-only access to all space information, settings, reports, and logs. Assign this role to users who need to view but not edit the application space.
 
 
 ## <a id='invite'></a>Inviting New Users ##
