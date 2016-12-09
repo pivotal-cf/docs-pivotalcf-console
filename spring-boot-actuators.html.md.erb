@@ -7,7 +7,7 @@ owner: Apps Manager
 
 The Apps Manager UI supports several production ready-endpoints from Spring Boot Actuator. This topic describes how you can configure your app to display data from the Actuator endpoints in Apps Manager. 
 
-For information on how you view the data from these endpoints in Apps Manager, see the [Viewing Spring Boot Actuator Endpoints in Apps Manager](./using-actuators.html). 
+For information about how you view the data from these endpoints in Apps Manager, see the [Viewing Spring Boot Actuator Endpoints in Apps Manager](./using-actuators.html) topic. 
 
 ## <a id='actuator'></a> Overview: Spring Boot Actuators
 
@@ -15,11 +15,11 @@ Spring Boot Actuator provides services for monitoring and managing your Spring B
 
 Apps Manager supports the following endpoints:
 
-* <code>/info</code>: exposes details about application environment, git, and build
-* <code>/health</code>: shows health status or detailed health information over secure connection
-* <code>/loggers</code>: lists and allows modification of the levels of the loggers in an application
+* <code>/info</code>: Exposes details about application environment, git, and build
+* <code>/health</code>: Shows health status or detailed health information over a secure connection
+* <code>/loggers</code>: Lists and allows modification of the levels of the loggers in an application
 
-For more information about Spring Boot Actuators, see the [Spring Boot Actuator docs](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready.html).
+For more information about Spring Boot Actuators, see the [Spring Boot Actuator documentation](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready.html).
 
 ## <a id="activating-spring-boot-actuator"></a>Activate Spring Boot Actuator for Your App
 
@@ -50,11 +50,11 @@ dependencies {
 }
 ```
 
-## <a id="health-endpoint"></a>Configure the <b>Health</b> Actuator
+## <a id="health-endpoint"></a>Configure the Health Actuator
 
-Spring Boot Actuator includes the autoconfigured health indicators specified in the [Auto-configured HealthIndicators](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#_auto_configured_healthindicators) section of the Spring Boot documentation. If you want to write custom health indicators, see the [Writing custom HealthIndicators](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#_writing_custom_healthindicators) section.
+Spring Boot Actuator includes the auto-configured health indicators specified in the [Auto-configured HealthIndicators](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#_auto_configured_healthindicators) section of the Spring Boot documentation. If you want to write custom health indicators, see the [Writing custom HealthIndicators](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#_writing_custom_healthindicators) section.
 
-## <a id="info-endpoint"></a>Configure the <b>Info</b> Actuator
+## <a id="info-endpoint"></a>Configure the Info Actuator
 
 The `/info` endpoint provides information about the project build for your app, as well as its git details.
 
