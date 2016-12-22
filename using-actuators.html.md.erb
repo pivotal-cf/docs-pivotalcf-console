@@ -5,15 +5,15 @@ owner: Apps Manager
 
 This document describes how to view and manage app information from Spring Boot Actuator in Apps Manager. 
 
-## Overview
+## <a id="overview"></a>Overview
 
 Apps Manager supports several Spring Boot Actuator endpoints for your apps. To use the features provided by Apps Manager, you must [Configure Spring Boot Actuator Endpoints for Apps Manager](./spring-boot-actuators.html). 
 
-Once your configure your app, Apps Manager displays the Spring Boot logo next to its name on the app page:
+After your configure your app, Apps Manager displays the Spring Boot logo next to its name on the app page:
 
 ![Icon](actuator-icon.png)
 
-## View Build and Git Information for your App
+## <a id="view-build"></a>View Build and Git Information for Your App
 
 To view the data that your app sends to its `/info` Actuator endpoint, select the **Settings** tab:
 
@@ -23,13 +23,13 @@ In the upper right of the app page, Apps Manager also displays the SHA of your a
 	
 ![Git sha](git-sha.png)
 
-## View App Health 
+## <a id="view-app-health"></a>View App Health 
 
 To view the health-check data that your app sends to its `/health` Actuator endpoints, see the **Instances** section:
 
 ![Info](hc.png)
 
-## <a class="manage-log-levels"></a> Managing Log Levels in Apps Manager
+## <a id="manage-log-levels"></a> Manage Log Levels in Apps Manager
 
 Spring Boot apps include _loggers_ for many provided and user components of the app. You can set the log level for each logger in Apps Manager. 
 
