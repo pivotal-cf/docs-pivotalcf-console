@@ -26,7 +26,11 @@ Interface (cf CLI):
 Your ability to perform actions in Apps Manager depends on your <%=vars.console_ev%>.
 
 The table below shows the relationship between specific org and space management
-actions and the non-Admin user roles who can perform them within orgs and spaces they are members of. Admin users can perform all of these actions using either the cf CLI or by logging into Apps Manager as an Org Manager, using the UAA Admin credentials.
+actions and the non-Admin user roles who can perform them within orgs and spaces they are members of. 
+
+Admin users can perform all of these actions using either the cf CLI or by logging into Apps Manager as an Org Manager, using the UAA Admin credentials.
+
+Space Managers assign and remove users from spaces by setting and unsetting their roles within the space. 
 
 <table border="1" class="nice">
   <col width="20%">
@@ -75,5 +79,3 @@ actions and the non-Admin user roles who can perform them within orgs and spaces
 <%= vars.create_orgs_footnote %>
 
 <%= vars.manage_roles_footnote %>
-
-Space Managers assign and remove users from spaces by setting and unsetting their roles within the space. To remove a user from an org, remove them from all spaces within that org.
