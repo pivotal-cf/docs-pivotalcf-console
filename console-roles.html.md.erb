@@ -1,5 +1,5 @@
 ---
-title: Managing User Accounts and Permissions Using Apps Manager
+title: Managing User Roles in Apps Manager
 owner: Apps Manager
 ---
 
@@ -12,16 +12,17 @@ owner: Apps Manager
 
 <% end %>
 
-The Apps Manager uses role-based access control, with each role granting
-permissions in either an organization or an application space.
-A user can have one or more roles.
-The combination of these roles defines the user’s overall permissions in the org
+Apps Manager uses role-based access control, with each role granting the
+permissions in either an org or an application space.
+
+A user account can be assigned one or more roles.
+
+The combination of these roles defines the actions a user can perform in an org
 and within specific app spaces in that org.
 
-An administrator can manage user roles in orgs and spaces using the Apps Manager. To manage user accounts in a space, you must have Space Manager permissions in
-that space.
+To view the actions that each role allows, see the [Organizations, Spaces, Roles, and Permissions](../concepts/roles.html) topic. For example, to assign roles to user accounts in a space, you must have Space Manager role assigned to the user in that space.
 
-To see which permissions each role grants, see [Organizations, Spaces, Roles, and Permissions](../concepts/roles.html).
+You can also modify permissions for existing users by adding or removing the roles associated with the user account. User roles are assigned on a per-space basis, so you must modify the user account for each space that you want to change.
 
 ## <a id='orgs-roles'></a>Managing Org Roles ##
 
@@ -29,7 +30,7 @@ Valid [org roles](../concepts/roles.html#roles) are <%=vars.org_roles %>.
 
 To grant or revoke org roles, follow the steps below.
 
-1. In the Apps Manager navigation on the left, the current org is
+1. In the Apps Manager navigation on the left, the current org is highlighted.
 highlighted.
 Click the drop-down menu to view other orgs belonging to the account.
 
@@ -37,7 +38,7 @@ Click the drop-down menu to view other orgs belonging to the account.
 
 1. Use the Apps Manager navigation to select an org.
 
-1. Click the **Members** tab.
+1. Click the **Members** tab. Edit the roles assigned to each user by checking or unchecking the checkboxes under each user role. Apps Manager saves your changes automatically.
 
     ![Members]( <%=vars.org_members_multi %> )
 
@@ -91,24 +92,22 @@ Select the checkboxes that correspond to the permissions that you want to grant 
 The Apps Manager sends an email containing an invitation link to each
 email address that you specified.
 
-## <a id='change_perm'></a>Changing User Permissions ##
+## <a id='removing_space'></a> Removing a User From a Space ##
 
-You can also change user permissions for existing users on the account.
-User permissions are handled on a per-space basis, so you must edit them for
-each user and for each space that you want to change.
+To remove a user from a space, remove all user roles for the user in the space.
+
+The user remains visible in the list unless you remove the user from the org.
+
+## <a id='removing_org'></a> Removing a User From an Org
 
 1. On the Org dashboard, click the **Members** tab.
 
 	![Members]( <%=vars.org_members %> )
 
-1. Edit the permissions assigned to each user by checking or unchecking the
-checkboxes under each user role.
-The Apps Manager saves your changes automatically.
+1. Locate the user account that you want to remove.
 
+1. Under the user's email address, click on the **Remove User** link. A warning dialog appears.
 
-### <a id='removing'></a>Removing a User ###
+1. Click the **Remove** button to confirm user account deletion from the org.
 
-To remove a user from a space, revoke that user’s permissions for
-all user roles in that space.
-The user remains visible in the list unless you remove the user from the org.
 
