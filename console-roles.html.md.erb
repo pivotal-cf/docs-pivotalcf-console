@@ -1,5 +1,5 @@
 ---
-title: Managing User Roles in Apps Manager
+title: Managing User Roles with Apps Manager
 owner: Apps Manager
 ---
 
@@ -12,7 +12,7 @@ owner: Apps Manager
 
 <% end %>
 
-Apps Manager uses role-based access control, with each role granting the
+Cloud Foundry uses role-based access control, with each role granting the
 permissions in either an org or an application space.
 
 A user account can be assigned one or more roles.
@@ -23,6 +23,8 @@ and within specific app spaces in that org.
 To view the actions that each role allows, see the [Organizations, Spaces, Roles, and Permissions](../concepts/roles.html) topic. For example, to assign roles to user accounts in a space, you must have Space Manager role assigned to the user in that space.
 
 You can also modify permissions for existing users by adding or removing the roles associated with the user account. User roles are assigned on a per-space basis, so you must modify the user account for each space that you want to change.
+
+Admins, Org Managers, and Space Managers can assign user roles with Apps Manager or with the [cf CLI](../cf-cli/getting-started.html#user-roles).
 
 ## <a id='orgs-roles'></a>Managing Org Roles ##
 
