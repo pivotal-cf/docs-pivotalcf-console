@@ -13,7 +13,7 @@ owner: Apps Manager
 <% end %>
 
 Cloud Foundry uses role-based access control, with each role granting the
-permissions in either an org or an application space.
+permissions in either an org or an application space. 
 
 A user account can be assigned one or more roles.
 
@@ -24,7 +24,7 @@ To view the actions that each role allows, see the [Organizations, Spaces, Roles
 
 You can also modify permissions for existing users by adding or removing the roles associated with the user account. User roles are assigned on a per-space basis, so you must modify the user account for each space that you want to change.
 
-Admins, Org Managers, and Space Managers can assign user roles with Apps Manager or with the [cf CLI](../cf-cli/getting-started.html#user-roles).
+Admins, Org Managers, and Space Managers can assign user roles with Apps Manager or with the Cloud Foundry Command Line Interface (cf CLI). For more information, see the [Users and Roles](../cf-cli/getting-started.html#user-roles) section of the _Getting Started with the cf CLI_ topic.
 
 ## <a id='orgs-roles'></a>Managing Org Roles ##
 
@@ -39,12 +39,12 @@ Click the drop-down menu to view other orgs belonging to the account.
 
 1. Use the Apps Manager navigation to select an org.
 
-1. Click the **Members** tab. Edit the roles assigned to each user by checking or unchecking the checkboxes under each user role. Apps Manager saves your changes automatically.
+1. Click the **Members** tab. Edit the roles assigned to each user by selecting or clearing the checkboxes under each user role. Apps Manager saves your changes automatically.
 
     ![Members]( <%=vars.org_members_multi %> )
 
 1. The **Members** panel displays all members of the org.
-Select a checkbox to grant an org role to a user, or deselect a checkbox to
+Select a checkbox to grant an org role to a user, or clear a checkbox to
 revoke a role from a user.
 
 ## <a id='space-roles'></a>Managing App Space Roles ##
@@ -62,7 +62,7 @@ the org.
 1. Use the drop-down menu to select a space.
 
 1. The **Members** panel displays all members of the org.
-Select a checkbox to grant an app space role to a user, or deselect a checkbox to revoke a role from a user.
+Select a checkbox to grant an app space role to a user, or clear a checkbox to revoke a role from a user.
 
     <%= image_tag("images/space-members.png") %>
 	* **Space Managers** can invite and manage users and enable features for a given space. Assign this role to managers or other users who need to administer the account.
