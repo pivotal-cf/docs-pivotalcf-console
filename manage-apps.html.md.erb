@@ -73,7 +73,7 @@ On the space page, click the app you want to manage. This directs you to the app
 
 ##<a id='manage-service'></a>Manage a Service Instance
 
-On the space page, click **Services**, then click the service instance you want to manage. This directs you to the service instance page, where you can bind or unbind apps, view or change your service plan, and rename or delete your service instance.
+On the space page, click **Services**, then click the service instance you want to manage. This directs you to the service instance page, where you can bind or unbind apps, view or change your service plan, manage service keys, and rename or delete your service instance.
 
 ###<a id='bind-app'></a>Bind or Unbind an App
 
@@ -107,4 +107,36 @@ On the space page, click **Services**, then click the service instance you want 
 
 1. To delete the service instance, click **Delete Service Instance**.
 
+## <a id='manage-keys'></a>Manage Service Keys
 
+On the space page, click **Services**, then click the service instance that you want to manage service keys for. This directs you to the service instance **Overview** page, where you can generate a new service key, get the credentials for a service key, and delete a service key.
+
+<%= image_tag("keys-list.png") %>
+
+### <a id='create-key'></a>Generate a Service Key
+
+1. Click **Create Service Key** in the **Service Key Credentials** section.
+
+1. Edit the **Service Key Name**.
+
+    <%= image_tag("keys-create.png") %>
+
+1. (Optional) Click **Show Advanced Options** to enter any additional service-specific configuration to the **Name** and **Value** fields under **Arbitrary Parameters**.
+
+    <%= image_tag("keys-create-adv.png") %>
+
+1. Click **Create** to generate the service key.
+
+### <a id='get-creds'></a>Get Credentials for a Service Key
+
+1. To view the credentials for a particular service instance, click the service instance name under **Service Key Credentials**. The JSON object containing the credentials will appear.
+
+    <%= image_tag("keys-creds.png") %>
+
+1. Click **Close**.
+
+### <a id='delete-key'></a>Delete Service Key
+
+1. To delete a service key, click the red **X** next to the service instance name.
+
+    <%= image_tag("keys-delete.png") %>
