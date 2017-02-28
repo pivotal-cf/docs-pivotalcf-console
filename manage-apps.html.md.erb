@@ -36,15 +36,6 @@ On the space page, click the app you want to manage. This directs you to the app
 1. To bind your app to an an existing service instance, choose the service instance from the dropdown menu, and click **Bind**. To bind your app to a new service instance, click **Go to the Marketplace** to choose a service from the Marketplace.
 1. To unbind your app from a service instance, locate the service instance in the **Bound Services** list and click the three-dot icon on the far right. Select **Unbind** from the dropdown menu.
 
-###<a id="env-var"></a>View or Add Environment Variables
-
-1. Click **Env Variables**.
-	<%= image_tag("env-vars.png") %>
-1. The page displays both the **User Provided Environment Variables** and **System Provided Environment Variables** environment variables associated with the app.
-1. To add a user-provided environment variable, enter the **Name** and **Value** and click **Save**.
-
-<p class="note"><strong>Note</strong>: Changes to environment variables, as well as to service bindings and unbindings, require restarting the app to take effect. You can restart the app from the Apps Manager or with <code>cf restage</code> from the Cloud Foundry Command Line Interface (cf CLI).</p>
-
 ###<a id="routes"></a>Map or Unmap Routes
 
 1. Click **Routes**.
@@ -77,8 +68,26 @@ On the space page, click the app you want to manage. This directs you to the app
 Click the **Settings** tab. In this tab you can do the following:
 
 * Rename the app. 
+* View or add Environment Variables associated with the app.
+* View the Application Security Groups (ASGs) associated with the app.
 * Delete the app.
-* View the Application Security Groups (ASGs) associated with the app. 
+    <%= image_tag("apps-man-settings.png") %>
+
+###<a id="env-var"></a>View or Add Environment Variables
+
+To view or add a user-provided environment variable:
+
+1. Click the **Settings** tab.
+1. Click **Reveal User Provided Env Vars**.
+1. Enter the **Name** and **Value** of the variable and click **Save**.
+    <%= image_tag("user-env-vars.png") %>
+
+To view a system-provided variable:
+
+1. Click **Reveal Env Vars**.
+        <%= image_tag("env-vars.png") %>
+
+<p class="note"><strong>Note</strong>: Changes to environment variables, as well as to service bindings and unbindings, require restarting the app to take effect. You can restart the app from the Apps Manager or with <code>cf restage</code> from the Cloud Foundry Command Line Interface (cf CLI).</p> 
 
 ##<a id='manage-service'></a>Manage a Service Instance
 
