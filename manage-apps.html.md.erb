@@ -71,7 +71,8 @@ Click the **Settings** tab. In this tab you can do the following:
 * View or add Environment Variables associated with the app.
 * View the Application Security Groups (ASGs) associated with the app.
 * Delete the app.
-    <%= image_tag("apps-man-settings.png") %>
+
+<%= image_tag("apps-man-settings.png") %>
 
 ###<a id="env-var"></a>View or Add Environment Variables
 
@@ -92,6 +93,8 @@ To view a system-provided variable:
 ##<a id='manage-service'></a>Manage a Service Instance
 
 On the space page, click **Services**, then click the service instance you want to manage. This directs you to the service instance page, where you can bind or unbind apps, view or change your service plan, manage service keys, and rename or delete your service instance.
+
+For services that use on demand brokers, the service broker will create, update, or delete the service instance in the background and notify you when it is finished.
 
 ###<a id='bind-app'></a>Bind or Unbind an App
 
@@ -117,13 +120,13 @@ On the space page, click **Services**, then click the service instance you want 
 
 ###<a id='rename-service'></a>Rename or Delete Your Service Instance
 
-1. Click **Settings**.
+* Click **Settings**.
 
     <%= image_tag("services-settings.png") %>
 
-1. To change the service instance name, enter your new name and click **Save changes**.
+* To change the service instance name, enter your new name and click **Update**.
 
-1. To delete the service instance, click **Delete Service Instance**.
+* To delete the service instance, click **Delete Service Instance**. 
 
 ## <a id='manage-keys'></a>Manage Service Keys
 
