@@ -53,15 +53,15 @@ On the space page, click the app you want to manage. This directs you to the app
 ###<a id='view'></a> View Tasks
 
 1. Click the **Tasks** tab within Apps Manager.
-1. This section displays a table containing **Task ID**, **State**, **Start Time**, **Task Name**, and **Command**.
+1. This page displays a table containing **Task ID**, **State**, **Start Time**, **Task Name**, and **Command**.
     <%= image_tag("task-window-resize.png") %>
 
 ###<a id='run'></a> Run a Task
 
-1. To create a task click the **Run a Task** button.
-1. You can enter a **Task Name** (optional) and then the **Task Command**.
+1. Click **Run a Task** to create a task.
+1. (Optional) Enter a **Task Name**.
+1. Enter the **Task Command**.
     <%= image_tag("run-task.png") %>
-
 
 ###<a id="view-settings"></a>View Settings
 
@@ -76,27 +76,28 @@ Click the **Settings** tab. In this tab you can do the following:
 
 ###<a id="env-var"></a>View or Add Environment Variables
 
-To view or add a user-provided environment variable:
+Follow the procedure below to add a user-provided environment variable:
 
 1. Click the **Settings** tab.
 1. Click **Reveal User Provided Env Vars**.
-1. Enter the **Name** and **Value** of the variable and click **Save**.
+1. Enter the **Name** and **Value** of the variable.
+1. Click **Save**.
     <%= image_tag("user-env-vars.png") %>
 
-To view a system-provided variable:
+To view a user-provided environment variable, click **Reveal Env Vars**.
+<%= image_tag("env-vars.png") %>
 
-1. Click **Reveal Env Vars**.
-        <%= image_tag("env-vars.png") %>
-
-<p class="note"><strong>Note</strong>: Changes to environment variables, as well as to service bindings and unbindings, require restarting the app to take effect. You can restart the app from the Apps Manager or with <code>cf restage</code> from the Cloud Foundry Command Line Interface (cf CLI).</p> 
+<p class="note"><strong>Note</strong>: Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p> 
 
 ##<a id='manage-service'></a>Manage a Service Instance
 
-On the space page, click **Services**, then click the service instance you want to manage. This directs you to the service instance page, where you can bind or unbind apps, view or change your service plan, manage service keys, and rename or delete your service instance.
+On the space page click **Services**, then click the service instance you want to manage. This directs you to the service instance page, where you can bind or unbind apps, view or change your service plan, manage service keys, and rename or delete your service instance.
 
-For services that use on demand brokers, the service broker will create, update, or delete the service instance in the background and notify you when it is finished.
+For services that use on demand brokers, the service broker will create, update, or delete the service instance in the background and notify you when it finishes.
 
 ###<a id='bind-app'></a>Bind or Unbind an App
+
+Follow the steps below to bind or unbind an app.
 
 <%= image_tag("services-binding.png") %>
 
@@ -107,6 +108,8 @@ For services that use on demand brokers, the service broker will create, update,
 1. Click **Save**.
 
 ###<a id='view-plan'></a>View or Change Your Service Plan
+
+Follow the steps below to view or change your service plan.
 
 1. Click **Plan**.
 
@@ -120,17 +123,19 @@ For services that use on demand brokers, the service broker will create, update,
 
 ###<a id='rename-service'></a>Rename or Delete Your Service Instance
 
-* Click **Settings**.
+Follow the steps below to rename or delete your service instance. 
+
+1. Click **Settings**.
 
     <%= image_tag("services-settings.png") %>
 
-* To change the service instance name, enter your new name and click **Update**.
+* To change the service instance name, enter the new name and click **Update**.
 
-* To add configuration parameters to the service instance, enter the parameters in the **Name** and **Value** fields and click **Update**.
+* To add configuration parameters to the service instance, enter the parameters in the **Name** and **Value** fields, then click **Update**.
 
 * To delete the service instance, click **Delete Service Instance**.
 
-<p class="note"><strong>Note</strong>: The service broker supports creating, updating, and deleting service instances asynchronously. When the service broker completes one of these operations, a status banner will appear in Apps Manager.</p>
+<p class="note"><strong>Note</strong>: The service broker supports creating, updating, and deleting service instances asynchronously. When the service broker completes one of these operations, a status banner appears in Apps Manager.</p>
 
 ## <a id='manage-keys'></a>Manage Service Keys
 
@@ -140,21 +145,25 @@ On the space page, click **Services**, then click the service instance that you 
 
 ### <a id='create-key'></a>Generate a Service Key
 
-1. Click **Create Service Key** in the **Service Key Credentials** section.
+Follow the steps below to generate a service key. 
+
+1. In the **Service Key Credentials** section, click **Create Service Key**.
 
 1. Edit the **Service Key Name**.
 
     <%= image_tag("keys-create.png") %>
 
-1. (Optional) Click **Show Advanced Options** to enter any additional service-specific configuration to the **Name** and **Value** fields under **Arbitrary Parameters**.
+1. (Optional) Click **Show Advanced Options**. Under **Arbitrary Parameters**, enter any additional service-specific configuration in the **Name** and **Value** fields.
 
     <%= image_tag("keys-create-adv.png") %>
 
 1. Click **Create** to generate the service key.
 
-### <a id='get-creds'></a>Get Credentials for a Service Key
+### <a id='get-creds'></a>View Credentials for a Service Key
 
-1. To view the credentials for a particular service instance, click the service instance name under **Service Key Credentials**. The JSON object containing the credentials will appear.
+Follow the steps below to view the credentials for a service key. 
+
+1. To view the credentials for a particular service instance, click the service instance name under **Service Key Credentials**. The JSON object containing the credentials appears. 
 
     <%= image_tag("keys-creds.png") %>
 
@@ -162,6 +171,5 @@ On the space page, click **Services**, then click the service instance that you 
 
 ### <a id='delete-key'></a>Delete Service Key
 
-1. To delete a service key, click the red **X** next to the service instance name.
-
-    <%= image_tag("keys-delete.png") %>
+To delete a service key, click the red **X** next to the service instance name.
+<%= image_tag("keys-delete.png") %>
