@@ -95,7 +95,7 @@ To view a user-provided environment variable, click **Reveal Env Vars**.
 
 ##<a id='manage-service'></a>Manage a Service Instance
 
-On the space page click **Services**, then click the service instance you want to manage. This directs you to the service instance page, where you can bind or unbind apps, view or change your service plan, manage service keys, and rename or delete your service instance.
+On the space page click **Services**, then click the service instance you want to manage. This directs you to the service instance page, where you can bind or unbind apps, bind or unbind routes, view or change your service plan, manage service keys, and rename or delete your service instance.
 
 For services that use on demand brokers, the service broker will create, update, or delete the service instance in the background and notify you when it finishes.
 
@@ -177,3 +177,34 @@ Follow the steps below to view the credentials for a service key.
 
 To delete a service key, click the red **X** next to the service instance name.
 <%= image_tag("keys-delete.png") %>
+
+## <a id='manage-route-services'></a>Manage Route Services
+
+For more information about route services, see the [Route Services](../services/route-services.html) topic.
+
+You can bind a [new service instance](#new-route-services) to a route when creating the instance in the Marketplace, or you can manage route services for an [existing service instance](#old-route-services) on the service instance page.
+
+### <a id='new-route-services'></a>Bind a New Service Instance to a Route
+
+Follow the steps below to bind a new service instance to a route. 
+
+1. Select the service from the Marketplace.
+    <%= image_tag('bind-route-new.png') %>
+1. Under **Bind to Route**, either bind the service instance to an existing route or click **Create Route** to create a new custom route.
+    <p class="note"><strong>Note</strong>: You must choose a Marketplace service compatible with route services for the <strong>Bind to Route</strong> field to appear.</p>
+1. Complete the remaining fields and click **Add** to create the service instance.
+
+### <a id='old-route-services'></a>Bind an Existing Service Instance to a Route
+
+Follow the steps below to bind an existing service instance to a route. 
+
+1. On the space page, click **Services**.
+1. Click the service instance that you want to manage route services for. 
+    <p class="note"><strong>Note</strong>: If the service is not compatible with route services, the text "This service does not support route binding" appears under <strong>Bound Routes</strong>.</p>
+1. To bind the service instance to a route, click **Bind Route**.
+    <%= image_tag('bind-route-old.png') %>
+1. Select an existing route under **Select a route to bind** or enter a new route under **Create Custom Route**.
+1. Click **Bind**.
+
+To unbind a route from a service instance, click the red "X" next to the name of the route under **Bound Routes**.
+
