@@ -32,7 +32,33 @@ To view the health-check data that your app sends to its `/health` Actuator endp
 
 ![Info](hc.png)
 
-## <a id="manage-log-levels"></a> Manage Log Levels in Apps Manager
+## <a id="view-thread"></a>View Thread Dump 
+
+To view thread dumps that your app sends to its `/dump` Actuator endpoint, select the **Threads** tab. 
+
+![Thread Dump](thread_dump.png)
+
+This page displays each thread dump from your app, along with the thread state. You can click each thread dump to expand and view its details. 
+
+You can modify which thread dumps appear on the page using the **Instance** and **Show** dropdown boxes.
+
+## <a id="view-trace"></a>View Request Traces
+
+To view the tracing information that your app sends to its `/trace` Actuator endpoint, select the **Trace** tab.
+
+![Trace](trace.png)
+
+This page displays up to the last 100 requests from your app. You can click each individual request to expand and view its trace details. 
+
+You can modify which requests appear on the page using the **Instance** dropdown box.
+
+## <a id="view-heap"></a>Download Heap Dump
+
+To view the information that your app sends to its `/heapdump` endpoint, select the settings dropdown for an instance of your app and click **Heap Dump**. This downloads a `.zip` file. 
+
+![Heap dump](heap-dump.png)
+
+## <a id="manage-log-levels"></a> Manage Log Levels
 
 Spring Boot apps include _loggers_ for many provided and user components of the app. You can set the log level for each logger in Apps Manager. 
 
