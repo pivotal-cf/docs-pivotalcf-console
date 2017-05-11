@@ -73,15 +73,25 @@ From the app page, you can scale apps, bind apps to services, manage environment
 Click the **Settings** tab. In this tab you can do the following:
 
 * Rename the app. 
+* View information about the buildpack, start command, stack, and health check.
 * View or add Environment Variables associated with the app.
 * View the Application Security Groups (ASGs) associated with the app.
 * Delete the app.
 
 <%= image_tag("apps-man-settings.png") %>
 
+###<a id="health-checks"></a>View Health Checks
+
+Follow the steps below to view information about a health check you have configured for your app. For more information, see the [Using Application Health Checks](../devguide/deploy-apps/healthchecks.html) topic.
+
+1. Click the **Settings** tab.
+1. Under **Info**, find the **Health check type**. If your health check type is HTTP, Apps Manager also displays the **Health check endpoint**.
+
+    <%= image_tag("health-check.png") %>
+
 ###<a id="env-var"></a>View or Add Environment Variables
 
-Follow the procedure below to add a user-provided environment variable:
+Follow the steps below to add a user-provided environment variable.
 
 1. Click the **Settings** tab.
 1. Click **Reveal User Provided Env Vars**.
