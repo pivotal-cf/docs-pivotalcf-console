@@ -5,83 +5,76 @@ owner: Apps Manager
 
 <strong><%= modified_date %></strong>
 
-The Apps Manager UI supports several production ready-endpoints from Spring Boot Actuator. This topic describes how you can configure your app to display data from the Actuator endpoints in Apps Manager. For more information about Spring Boot Actuator, see the [Spring Boot Actuator documentation](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready.html).
+The Apps Manager UI supports several production ready-endpoints from Spring Boot Actuator. This topic describes the Actuator endpoints and how you can configure your app to display data from the endpoints in Apps Manager. 
+
+For more information about Spring Boot Actuator, see the [Spring Boot Actuator documentation](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready.html).
 
 <p class="note"><strong>Note</strong>: This feature requires Spring Boot v1.5 or later.</p>
 
 ## <a id='actuator'></a> Overview
 
-The table in this section describes the Spring Boot Actuator endpoints that Apps Manager supports. To integrate these endpoints with Apps Manager, you must do the following:
+The table below describes the Spring Boot Actuator endpoints that Apps Manager supports. To integrate these endpoints with Apps Manager, you must first [Activate Spring Boot Actuator for Your App](#activating-spring-boot-actuator").
 
-1. Enable general support for Spring Boot Actuator in your app by following these instructions: [Activate Spring Boot Actuator for Your App](#activating-spring-boot-actuator")
-
-1. For each individual endpoint that you want to use, configure your app according to the table:
-    <table>
-    <tr>
-    <th>Endpoint</th>
-    <th>About</th>
-    </tr>
-    <tr>
-    <td><code>/info</code></td>
-    <td>
-    <ul>
-    <li><b>Description</b>: Exposes details about app environment, git, and build.</li>
-    <li><b>How to configure</b>: See <a href="#info-endpoint">Configure the Info Actuator</a>.</li>
-    <li><b>How to use in Apps Man</b>: See <a href="./using-actuators.html#view-build">View Build and Git Information for Your App</a>.</li>
-    </ul>
-    </td>
-    </tr>
-    <tr>
-    <td><code>/health</code></td>
-    <td>
-    <ul>
-    <li><b>Description</b>: Shows health status or detailed health information over a secure connection.</li>
-    <li><b>How to configure</b>: Spring Boot Actuator includes the auto-configured health indicators specified in the <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#_auto_configured_healthindicators">Auto-configured HealthIndicators</a> section of the Spring Boot documentation. If you want to write custom health indicators, see the <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#_writing_custom_healthindicators">Writing custom HealthIndicators</a> section.</li>
-    <li><b>How to use in Apps Man</b>: See <a href="./using-actuators.html#view-app-health">View App Health</a>.</li>
-    </ul>
-    </td>
-    </tr>
-    <tr>
-    <td><code>/loggers</code></td>
-    <td>
-    <ul>
-    <li><b>Description</b>: Lists and allows modification of the levels of the loggers in an application.</li>
-    <li><b>How to configure</b>: Auto-configured.</li>
-    <li><b>How to use in Apps Man</b>: See <a href="./using-actuators.html#manage-log-levels">Manage Log Levels</a>.</li>
-    </ul>
-    </td>
-    </tr>
-    <tr>
-    <td><code>/dump</code></td>
-    <td>
-    <ul>
-    <li><b>Description</b>: </li>
-    <li><b>How to configure</b>: </li>
-    <li><b>How to use in Apps Man</b>: See <a href="./using-actuators.html#view-thread">View Thread Dump</a>.</li>
-    </ul>
-    </td>
-    </tr>
-    <tr>
-    <td><code>/trace</code></td>
-    <td>
-    <ul>
-    <li><b>Description</b>: Displays trace information from your app for each of the last 100 HTTP requests.</li>
-    <li><b>How to configure</b>: Auto-configured. For more information, see the  <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-tracing.html">Tracing</a> section of the Spring Boot documentation.</li>
-    <li><b>How to use in Apps Man</b>: See <a href="./using-actuators.html#view-trace">View Request Traces</a>.</li>
-    </ul>
-    </td>
-    </tr>
-    <tr>
-    <td><code>/heapdump</code></td>
-    <td>
-    <ul>
-    <li><b>Description</b>: </li>
-    <li><b>How to configure</b>: </li>
-    <li><b>How to use in Apps Man</b>: See <a href="./using-actuators.html#view-heap">Download Heap Dump</a>.</li>
-    </ul>
-    </td>
-    </tr>
-    </table>
+<table>
+<tr>
+<th>Endpoint</th>
+<th>About</th>
+</tr>
+<tr>
+<td><code>/info</code></td>
+<td>
+<ul>
+<li><b>Description</b>: Exposes details about app environment, git, and build. To send build and Git information to this endpoint, see <a href="#info-endpoint">Configure the Info Actuator</a>.</li>
+<li><b>How to use in Apps Man</b>: See <a href="./using-actuators.html#view-build">View Build and Git Information for Your App</a>.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><code>/health</code></td>
+<td>
+<ul>
+<li><b>Description</b>: Shows health status or detailed health information over a secure connection. <br>Spring Boot Actuator includes the auto-configured health indicators specified in the <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#_auto_configured_healthindicators">Auto-configured HealthIndicators</a> section of the Spring Boot documentation. If you want to write custom health indicators, see the <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#_writing_custom_healthindicators">Writing custom HealthIndicators</a> section.</li>
+<li><b>How to use in Apps Man</b>: See <a href="./using-actuators.html#view-app-health">View App Health</a>.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><code>/loggers</code></td>
+<td>
+<ul>
+<li><b>Description</b>: Lists and allows modification of the levels of the loggers in an app.</li>
+<li><b>How to use in Apps Man</b>: See <a href="./using-actuators.html#manage-log-levels">Manage Log Levels</a>.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><code>/dump</code></td>
+<td>
+<ul>
+<li><b>Description</b>: Generates a thread dump</li>
+<li><b>How to use in Apps Man</b>: See <a href="./using-actuators.html#view-thread">View Thread Dump</a>.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><code>/trace</code></td>
+<td>
+<ul>
+<li><b>Description</b>: Displays trace information from your app for each of the last 100 HTTP requests. For more information, see the  <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-tracing.html">Tracing</a> section of the Spring Boot documentation.</li>
+<li><b>How to use in Apps Man</b>: See <a href="./using-actuators.html#view-trace">View Request Traces</a>.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><code>/heapdump</code></td>
+<td>
+<ul>
+<li><b>Description</b>: Generates a heap dump and provides a compressed file containing the results.</li>
+<li><b>How to use in Apps Man</b>: See <a href="./using-actuators.html#view-heap">Download Heap Dump</a>.</li>
+</ul>
+</td>
+</tr>
+</table>
 
 ## <a id="activating-spring-boot-actuator"></a>Activate Spring Boot Actuator for Your App
 
