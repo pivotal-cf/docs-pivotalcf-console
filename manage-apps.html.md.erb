@@ -52,7 +52,7 @@ From the app page, you can scale apps, bind apps to services, manage environment
 
 1. Click **Logs** to view the logs for the app.
 	<%= image_tag("logs.png") %>
-1. Click the play button to view a live version of the logs.
+1. Click the play button to view a live version of the logs. 
 
 ###<a id='view'></a> View Tasks
 
@@ -62,10 +62,11 @@ From the app page, you can scale apps, bind apps to services, manage environment
 
 ###<a id='run'></a> Run a Task
 
-1. Click **Run a Task** to create a task.
+1. Click **Run Task** to create a task.
+    <%= image_tag("run-task.png") %>
 1. (Optional) Enter a **Task Name**.
 1. Enter the **Task Command**.
-    <%= image_tag("run-task.png") %>
+1. Click **Run**.
 
 ###<a id="view-settings"></a>View Settings
 
@@ -88,7 +89,7 @@ Follow the procedure below to add a user-provided environment variable:
 1. Click **Save**.
     <%= image_tag("user-env-vars.png") %>
 
-To view a user-provided environment variable, click **Reveal Env Vars**.
+To view all environment variables, click **Reveal Env Vars**.
 <%= image_tag("env-vars.png") %>
 
 <p class="note"><strong>Note</strong>: Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p> 
@@ -121,7 +122,7 @@ Follow the steps below to view or change your service plan.
 
 1. Review your current plan information. 
 
-1. To change your plan, select a new plan from the list and click **Select this plan**.
+1. To change your plan, select a new plan from the list and click **Select This Plan** or **Upgrade Your Account**.
 
 <p class="note"><strong>Note</strong>: Not all services support upgrading. If your service does not support upgrading, the service plan page only displays the selected plan.</p>
 
