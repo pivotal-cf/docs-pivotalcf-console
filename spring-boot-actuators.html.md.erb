@@ -5,7 +5,7 @@ owner: Apps Manager
 
 <strong><%= modified_date %></strong>
 
-The Apps Manager UI supports several production ready-endpoints from Spring Boot Actuator. This topic describes the Actuator endpoints and how you can configure your app to display data from the endpoints in Apps Manager. 
+The Apps Manager UI supports several production-ready endpoints from Spring Boot Actuator. This topic describes the Actuator endpoints and how you can configure your app to display data from the endpoints in Apps Manager. 
 
 For more information about Spring Boot Actuator, see the [Spring Boot Actuator documentation](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready.html).
 
@@ -13,7 +13,7 @@ For more information about Spring Boot Actuator, see the [Spring Boot Actuator d
 
 ## <a id='actuator'></a> Overview
 
-The table below describes the Spring Boot Actuator endpoints that Apps Manager supports. To integrate these endpoints with Apps Manager, you must first [Activate Spring Boot Actuator for Your App](#activating-spring-boot-actuator").
+The table below describes the Spring Boot Actuator endpoints supported by Apps Manager. To integrate these endpoints with Apps Manager, you must first [Activate Spring Boot Actuator for Your App](#activating-spring-boot-actuator").
 
 <table>
 <tr>
@@ -33,7 +33,7 @@ The table below describes the Spring Boot Actuator endpoints that Apps Manager s
 <td><code>/health</code></td>
 <td>
 <ul>
-<li><b>Description</b>: Shows health status or detailed health information over a secure connection. <br>Spring Boot Actuator includes the auto-configured health indicators specified in the <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#_auto_configured_healthindicators">Auto-configured HealthIndicators</a> section of the Spring Boot documentation. If you want to write custom health indicators, see the <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#_writing_custom_healthindicators">Writing custom HealthIndicators</a> section.</li>
+<li><b>Description</b>: Shows health status or detailed health information over a secure connection. <br>Spring Boot Actuator includes the auto-configured health indicators specified in the <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#_auto_configured_healthindicators">Auto-configured HealthIndicators</a> section of the Spring Boot documentation. If you want to write custom health indicators, see the <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#_writing_custom_healthindicators">Writing custom HealthIndicators</a> section of the Spring Boot documentation.</li>
 <li><b>How to use in Apps Man</b>: See <a href="./using-actuators.html#view-app-health">View App Health</a>.</li>
 </ul>
 </td>
@@ -51,7 +51,7 @@ The table below describes the Spring Boot Actuator endpoints that Apps Manager s
 <td><code>/dump</code></td>
 <td>
 <ul>
-<li><b>Description</b>: Generates a thread dump</li>
+<li><b>Description</b>: Generates a thread dump.</li>
 <li><b>How to use in Apps Man</b>: See <a href="./using-actuators.html#view-thread">View Thread Dump</a>.</li>
 </ul>
 </td>
@@ -60,7 +60,7 @@ The table below describes the Spring Boot Actuator endpoints that Apps Manager s
 <td><code>/trace</code></td>
 <td>
 <ul>
-<li><b>Description</b>: Displays trace information from your app for each of the last 100 HTTP requests. For more information, see the  <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-tracing.html">Tracing</a> section of the Spring Boot documentation.</li>
+<li><b>Description</b>: Displays trace information from your app for each of the last 100 HTTP requests. For more information, see the <a href="http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-tracing.html">Tracing</a> section of the Spring Boot documentation.</li>
 <li><b>How to use in Apps Man</b>: See <a href="./using-actuators.html#view-trace">View Request Traces</a>.</li>
 </ul>
 </td>
@@ -80,7 +80,7 @@ The table below describes the Spring Boot Actuator endpoints that Apps Manager s
 
 You must add a `spring-boot-starter-actuator` dependency to your app project for the production-ready HTTP endpoints to return values. For more information, see the [Enabling production-ready features](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-enabling) section of the Spring Boot documentation. 
 
-Follow the instructions that correspond to your project type: 
+Follow the instructions below that correspond to your project type. 
 
 ### Maven 
 
@@ -111,7 +111,7 @@ The `/info` endpoint provides information about the project build for your app, 
 
 ### <a id="build-info"></a> Add Build Information
 
-To add build information to the `/info` endpoint, follow the instructions for your project build type:
+To add build information to the `/info` endpoint, follow the instructions below that correspond to your project type.
 
 #### Maven
 
@@ -157,7 +157,7 @@ To add git information to the `/info` endpoint, follow these instructions:
 	management.info.git.mode=full
 	```
 
-1. Follow the instructions below that correspond to your project type:
+1. Follow the instructions below that correspond to your project type.
 
 #### Maven
 
