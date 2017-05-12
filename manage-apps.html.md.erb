@@ -176,13 +176,16 @@ in the **Name** and **Value** fields, then click **Update**.
 
 <p class="note"><strong>Note</strong>: The service broker supports creating, updating, and deleting service instances asynchronously. When the service broker completes one of these operations, a status banner appears in Apps Manager.</p>
 
-###<a id='config-user-provided'></a>Update Your User-Provided Service Instance
+<% if vars.product_name == 'PCF' %>
+###Update Your User-Provided Service Instance
 
 Follow the steps below to update an existing user-provided service instance. You can create a user-provided service instance from the Marketplace. For more information, see the [User-Provided Service Instances](../devguide/services/user-provided.html) topic.
 
 1. Click **Configuration**. This tab only appears for user-provided service instances.
     <%= image_tag("config-user-provided.png") %>
 1. Enter your **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**, and click **Update Service**.
+<% else %>
+<% end %>
 
 ## <a id='manage-keys'></a>Manage Service Keys
 
