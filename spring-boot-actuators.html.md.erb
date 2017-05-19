@@ -27,30 +27,29 @@ For more information about Spring Boot Actuators, see the [Spring Boot Actuator 
 
 You must add a `spring-boot-starter-actuator` dependency to your app project for the production-ready HTTP endpoints to return values. For more information, see the [Enabling production-ready features](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-enabling) section of the Spring Boot documentation. 
 
-Follow the instructions that correspond to your project type: 
+1. Follow the instructions below that correspond to your project type. 
+    * **Maven**: If you use Maven, add the following to your project:
+        <pre>
+        java
+        \<dependencies\>
+            \<dependency\> 
+                \<groupId\>org.springframework.boot\</groupId\>
+                \<artifactId\>spring-boot-starter-actuator\</artifactId\>
+            \</dependency\>
+        \</dependencies\>
+        </pre>
+    * **Gradle**: If you use Gradle, add the following to your project:
+        <pre>java
+        dependencies {
+            compile("org.springframework.boot:spring-boot-starter-actuator")
+        }
+        </pre>
 
-### Maven 
-
-If you use Maven, add the following to your project:
-
-``` java
-<dependencies>
-    <dependency> 
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-actuator</artifactId>
-    </dependency>
-</dependencies>
-```
-
-### Gradle
-
-If you use Gradle, add the following to your project:
-
-``` java
-dependencies {
-    compile("org.springframework.boot:spring-boot-starter-actuator")
-}
-```
+1. If you use self-signed certificates in your PCF deployment for UAA or the Cloud Controller, specify in your `application.properties` file to skip SSL validation:
+<pre>
+management.cloudfoundry.skip-ssl-validation=true
+</pre>
+See [Cloud Foundry support](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-cloudfoundry) in the Spring Boot Actuator documentation for more information.
 
 ## <a id="health-endpoint"></a>Configure the Health Actuator
 
