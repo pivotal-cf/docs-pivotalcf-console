@@ -65,9 +65,13 @@ You can also filter what loggers you see using the **Filter Loggers** textbox.
 
 ![Filter Loggers](filter-loggers.png)
 
-## <a id="troubleshoot"></a> Troubleshoot /cloudfoundryapplication Failed Request
+## <a id="troubleshoot"></a> Troubleshoot Spring Boot Actuator Integration
 
-### Symptom
+This section describes how to troubleshoot common issues with the integration of Apps Manager and Spring Boot Actuator.  
+
+### /cloudfoundryapplication Failed Request
+
+#### Symptom
 
 You see the following failed request message in your app logs:
 
@@ -75,10 +79,10 @@ You see the following failed request message in your app logs:
 Could not find resource for relative : /cloudfoundryapplication of full path: http://example.com/cloudfoundryapplication
 </pre>
 
-### Explanation
+#### Explanation
 
 Apps Manager uses the `/cloudfoundryapplication` endpoint as the root for Spring Boot Actuator integrations. It calls this endpoint for an app when you view the app in the Apps Manager UI, regardless of whether you have [configured Spring Boot Actuator endpoints for Apps Manager](./spring-boot-actuators.html).
 
-### Solution
+#### Solution
 
 If you are not using the Spring Boot Actuator integrations for Apps Manager, you can ignore this failed request message. 
