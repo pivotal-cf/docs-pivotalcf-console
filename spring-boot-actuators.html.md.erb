@@ -13,6 +13,12 @@ For more information about Spring Boot Actuator, see the [Spring Boot Actuator d
 
 ## <a id='actuator'></a> Overview
 
+The Apps Manager integration with Spring Boot does not use the standard Spring Boot Actuators. Instead, it uses a specific set of actuators that are secured using the Space Developer role for the space that the application runs in. Authentication and authorization are automatically delegated to the [Cloud Controller](../concepts/architecture/cloud-controller.html) and the [User Account and Authentication](../concepts/architecture/uaa.html) server without any configuration from the user.
+
+By default, actuators are secure and cannot be accessed without explicit configuration by the user, even if [Spring Security](https://projects.spring.io/spring-security/) is not included. This allows users to take advantage of the Spring Boot Apps Manager integration without accidentally exposing their actuators without security.
+
+## <a id='endpoints'></a> Actuator Endpoints
+
 The table below describes the Spring Boot Actuator endpoints supported by Apps Manager. To integrate these endpoints with Apps Manager, you must first [Activate Spring Boot Actuator for Your App](#activating-spring-boot-actuator").
 
 <table>
