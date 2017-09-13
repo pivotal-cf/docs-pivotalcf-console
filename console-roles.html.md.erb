@@ -26,7 +26,7 @@ You can also modify permissions for existing users by adding or removing the rol
 
 Admins, Org Managers, and Space Managers can assign user roles with Apps Manager or with the Cloud Foundry Command Line Interface (cf CLI). For more information, see the [Users and Roles](../cf-cli/getting-started.html#user-roles) section of the _Getting Started with the cf CLI_ topic.
 
-## <a id='orgs-roles'></a>Managing Org Roles ##
+## <a id='orgs-roles'></a>Manage Org Roles ##
 
 Valid [org roles](../concepts/roles.html#roles) are <%=vars.org_roles %>.
 
@@ -47,7 +47,7 @@ Click the drop-down menu to view other orgs belonging to the account.
 Select a checkbox to grant an org role to a user, or clear a checkbox to
 revoke a role from a user.
 
-## <a id='space-roles'></a>Managing App Space Roles ##
+## <a id='space-roles'></a>Manage App Space Roles ##
 
 Valid [app space roles](../concepts/roles.html#roles) are Space Manager,
 Space Developer, and Space Auditor.
@@ -61,7 +61,7 @@ the org.
 
 1. Use the drop-down menu to select a space.
 
-1. The **Members** panel displays all members of the org.
+1. The **Members** panel displays all members of the space.
 Select a checkbox to grant an app space role to a user, or clear a checkbox to revoke a role from a user.
 
     <%= image_tag("images/space-members.png") %>
@@ -70,7 +70,7 @@ Select a checkbox to grant an app space role to a user, or clear a checkbox to r
 	* **Space Auditors** have view-only access to all space information, settings, reports, and logs. Assign this role to users who need to view but not edit the application space.
 
 
-## <a id='invite'></a>Inviting New Users ##
+## <a id='invite'></a>Invite New Users ##
 
 <%= vars.enable_invitations %>
 
@@ -91,13 +91,9 @@ Select the checkboxes that correspond to the permissions that you want to grant 
 The Apps Manager sends an email containing an invitation link to each
 email address that you specified.
 
-## <a id='removing_space'></a> Removing a User From a Space ##
+## <a id='removing_org'></a> Remove a User From an Org
 
-To remove a user from a space, remove all user roles for the user in the space.
-
-The user remains visible in the list unless you remove the user from the org.
-
-## <a id='removing_org'></a> Removing a User From an Org
+Removing a user from org also removes them from all spaces in the org.
 
 1. On the Org dashboard, click the **Members** tab.
 
@@ -107,6 +103,25 @@ The user remains visible in the list unless you remove the user from the org.
 
 1. Under the user's email address, click on the **Remove User** link. A warning dialog appears.
 
+    <%= image_tag("images/remove-org-member.png") %>
+
 1. Click **Remove** to confirm user account deletion from the org.
 
+## <a id='removing_space'></a> Remove a User From a Space ##
+
+1. In the **Members** tab of an org, click the drop-down menu to view spaces in the org.
+
+    <%= image_tag("images/select-space.png") %>
+
+1. Select the space you are removing members from.
+
+1. The **Members** panel displays all members of the space. Locate the user account that you want to remove.
+
+    <%= image_tag("images/space-members.png") %>
+
+1. Under the user's email address, click on the **Remove User** link. A warning dialog appears.
+
+    <%= image_tag("images/remove-space-member.png") %>
+
+1. Click **Remove** to confirm user account deletion from the space.
 

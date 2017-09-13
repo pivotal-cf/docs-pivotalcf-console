@@ -49,6 +49,9 @@ To retrieve and view tracing information from the `/trace` Actuator endpoint of 
 
 This page displays the last 100 requests from your app. You can click each individual request to expand and view its trace details. You can modify which requests appear on the page using the **Instance** drop-down menu.
 
+By default, the **Trace** tab does not show requests and responses from Apps Manager polling app instances for data.
+To include these requests, clear the <%= vars.spring_trace_label %> checkbox next to the **Instance** drop-down menu.
+
 ## <a id="view-heap"></a>Download Heap Dump
 
 To trigger and view a heap dump from your app to its `/heapdump` endpoint, select the settings drop-down menu for an instance of your app and click **Heap Dump**. This downloads a `.zip` file. 

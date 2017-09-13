@@ -140,31 +140,44 @@ To view all environment variables, click **Reveal Env Vars**.
 
 ##<a id='manage-service'></a>Manage a Service Instance
 
-On the space page click **Services**, then click the service instance you want 
-to manage. This directs you to the service instance page, where you can bind or 
-unbind apps, bind or unbind routes, view or change your service plan, manage 
+From the **Services** tab on the space page, you can bind or unbind apps, bind or unbind routes, view or change your service plan, manage 
 service keys, and rename or delete your service instance.
 
-For services that use on demand brokers, the service broker will create, 
+For services that use on-demand brokers, the service broker will create, 
 update, or delete the service instance in the background and notify you when it 
 finishes.
 
-###<a id='bind-app'></a>Bind or Unbind an App
+###<a id='bind-app'></a>Bind an App
 
-Follow the steps below to bind or unbind an app.
+1. From the space page **Services** tab, click the service instance you want to bind to an app. 
 
 <%= image_tag("services-binding.png") %>
 
-1. Click **Edit Bindings**.
+1. Click **Bind App**. A popup appears.
 
-1. Select the checkbox for the apps you want to bind to or unbind from your 
-service instance.
+1. In the **Bind App** popup, select the app you want to bind to your service instance.
 
-1. Click **Save**.
+<%= image_tag("services-binding-popup.png") %>
+
+1. (Optional) To attach parameters to the binding, click **Show Advanced Options**. Under **Arbitrary Parameters**, enter any additional service-specific configuration in the **Name** and **Value** fields.
+
+1. Click **Bind**.
+
+###<a id='unbind-app'></a>Unbind an App
+
+1. From the space page **Services** tab, click the service instance you want to unbind from an app. 
+
+<%= image_tag("services-binding.png") %>
+
+1. Locate the app under **Bound Apps** and click the red **×** on the right. An **Unbind App** popup appears.
+
+<%= image_tag("services-unbinding-popup.png") %>
+
+1. Click **Unbind** to confirm.
 
 ###<a id='view-plan'></a>View or Change Your Service Plan
 
-Follow the steps below to view or change your service plan.
+1. From the space page **Services** tab, click the service instance you want to view or change the plan for.
 
 1. Click **Plan**.
 
@@ -178,7 +191,7 @@ Follow the steps below to view or change your service plan.
 
 ###<a id='rename-service'></a>Rename or Delete Your Service Instance
 
-Follow the steps below to rename or delete your service instance. 
+1. From the space page **Services** tab, click the service instance you want to rename or delete. 
 
 1. Click **Settings**.
 
