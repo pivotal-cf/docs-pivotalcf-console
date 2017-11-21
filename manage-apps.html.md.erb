@@ -102,9 +102,23 @@ Click **Unmap** in the pop-up to confirm.
 
 ###<a id="task-scheduling"></a> Enable Task Scheduling
 
-Click the **Enable Scheduling** button to bind the PCF Scheduler service to Apps Manager.
+Click the **Enable Scheduling** button to bind the PCF Scheduler service to Apps Manager. For more about the PCF Scheduler, see [Scheduling Jobs](http://docs.pivotal.io/pcf-scheduler/using-jobs.html).
 
 ![The Apps Manager interface shows the Task tab enabled with a box beneath that says "The Scheduler Service has not been enabled yet." with an "Enable Scheduling" button beneath](enable-scheduling.png)
+
+###<a id="schedule-task"></a>Schedule a Task
+
+1. Click **Create Job** to schedule a task.
+<%= image_tag("create-job.png") %>
+
+1. Enter a **Job Name**.
+<br><%= image_tag("create-job-window.png") %>
+
+1. Enter a **Command**.
+
+1. Enter one or more **Cron Expressions** for your desired task schedule or schedules. See [Schedule a Job](http://docs.pivotal.io/pcf-scheduler/using-jobs.html#schedule-a-job) for more information on cron expression syntax.
+
+1. Click **Create Job**
 
 ###<a id="view-settings"></a>View Settings
 
