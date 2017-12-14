@@ -34,11 +34,23 @@ app. Click **Restart** in the pop-up to confirm.
 
 ###<a id="scale"></a> Scale an App
 
-<p class="note"><strong>Note</strong>&#58; You can configure your app to scale automatically based on rules that you set. See the <a href="../appsman-services/autoscaler/using-autoscaler.html">Scaling an Application Using Autoscaler</a> topic for more information.</p>
+From the app **Overview** pane, you can scale an app [manually](#manual-scale) or configure [App Autoscaler](#autoscale) to scale it automatically.
+
+<%= image_tag("scale-app.png") %>
+
+####<a id="manual-scale"></a> Scale an App Manually
 
 1. Under **Scaling**, adjust the number of **Instances**, the **Memory Limit**, 
 and the **Disk Limit** as desired.
 1. Click **Scale App**. 
+
+####<a id="autoscale"></a> Configure App Autoscaler
+
+1. Use the **Autoscaling** slider to enable App Autoscaler.
+
+1. Click **Manage Autoscaling** to open App Autoscaler.
+
+1. See the <a href="../appsman-services/autoscaler/using-autoscaler.html#config">Scaling an Application Using Autoscaler</a> topic for how to configure your App Autoscaler to scale automatically based on rules or a schedule.
 
 ###<a id="bind-services"></a> Bind or Unbind a Service
 
