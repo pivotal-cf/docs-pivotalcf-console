@@ -62,7 +62,7 @@ and the **Disk Limit** as desired.
         <%= image_tag("bind-service.png") %>
         <br>
     1. Under **Service to Bind**, select the service instance from the dropdown menu. 
-    1. Optionally add any parameters under **Add Parameters**. 
+    1. Optionally, specify additional parameters under **Add Parameters**.
     1. Click **Bind**.
 1. To bind your app to a new service instance, perform the following steps: 
     1. Click **New Service**.<br>
@@ -76,7 +76,7 @@ and the **Disk Limit** as desired.
         <%= image_tag("instance-name.png") %>
         <br>
     1. Under **Instance Name**, enter a name for the instance.
-    1. Optionally add any parameters under **Add Parameters**. The service may provide different parameter options, or a JSON editor for you to define the parameters. For more information, consult the documentation for the service.
+    1. Optionally, specify additional parameters under **Add Parameters**. For a list of supported configuration parameters, consult the documentation for the service.
     1. Click **Create**.
 1. To unbind your app from a service instance, locate the service instance in 
 the **Bound Services** list and click the three-dot icon on the far right. 
@@ -164,7 +164,7 @@ Follow the steps below to add a user-provided environment variable.
 
 1. Click the **Settings** tab.
 1. Click **Reveal User Provided Env Vars**.
-1. Enter the **Name** and **Value** of the variable.
+1. Enter the **Name** and **Value** of the variable. Alternatively, enter your variable using the **Enter JSON** toggle.
 1. Click **Save**.
     <%= image_tag("user-env-vars.png") %>
 
@@ -194,7 +194,7 @@ finishes.
 
     <%= image_tag("services-binding-popup.png") %>
 
-1. (Optional) To attach parameters to the binding, click **Show Advanced Options**. Under **Arbitrary Parameters**, enter any additional service-specific configuration in the **Name** and **Value** fields.
+1. (Optional) To attach parameters to the binding, click **Show Advanced Options**. Under **Arbitrary Parameters**, enter any additional service-specific configuration.
 
 1. Click **Bind**.
 
@@ -235,7 +235,8 @@ finishes.
 * To change the service instance name, enter the new name and click **Update**.
 
 * To add configuration parameters to the service instance, enter the parameters 
-in the **Name** and **Value** fields, then click **Update**.
+in the **Name** and **Value** fields and then click **Update**.
+Alternatively, enter your configuration parameters using the **Enter JSON** toggle and then click **Update**.
 
 * To delete the service instance, click **Delete Service Instance**.
 
