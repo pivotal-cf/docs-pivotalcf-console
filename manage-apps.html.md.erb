@@ -36,19 +36,24 @@ app. Click **Restart** in the pop-up to confirm.
 
 From the app **Overview** pane, Space Developers can scale an app [manually](#manual-scale) or configure [App Autoscaler](#autoscale) to scale it automatically.
 
-<%= image_tag("scale-app.png", :alt => "In the 'Processes and Instances' section of the 'Overview' pane, find the 'Scale' button to the right of each process.") %>
 
 ####<a id="manual-scale"></a> Scale an App Manually
 
-<%= image_tag("scale-app-modal.png", :alt => "A dialogue titled 'Scale App' lists each process with corresponding 'Instances', 'Memory Limit', and 'Disk Limit' fields. A 'Usage Total' section at the bottom of the dialogue tallies the total entered in each field. Find an 'Apply Changes' button to the bottom right of the dialogue.") %>
+<%= image_tag("scale-app.png", :alt => "In the 'Processes and Instances' section of the 'Overview' pane, find the 'Scale' button to the right of each process.") %>
 
-1. Under **Scaling**, adjust the number of **Instances**, the **Memory Limit**, 
+1. Click **Scale** to open the "Scale App" dialog.
+
+<%= image_tag("scale-app-modal.png", :alt => "A dialog titled 'Scale App' lists each process with corresponding 'Instances', 'Memory Limit', and 'Disk Limit' fields. A 'Usage Total' section at the bottom of the dialog tallies the total entered in each field. Find an 'Apply Changes' button to the bottom right of the dialog.") %>
+
+1. Adjust the number of **Instances**, the **Memory Limit**, 
 and the **Disk Limit** as desired.
-1. Click **Scale App**. 
+1. Click **Apply Changes**. 
 
 ####<a id="autoscale"></a> Configure App Autoscaler
 
-1. Use the **Autoscaling** slider to enable App Autoscaler.
+<%= image_tag("autoscaler-toggle.png", :alt => "In the 'Processes and Instances' section of the 'Overview' pane, find the 'Autoscaling' toggle button below the title of each process.") %>
+
+1. Use the **Autoscaling** slider to enable App Autoscaler. This action will disable the manual **Scale** button.
 
 1. Click **Manage Autoscaling** to open App Autoscaler.
 
