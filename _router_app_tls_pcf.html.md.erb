@@ -1,7 +1,7 @@
-By default in all PAS runtimes with Linux cells, the Gorouter communicates with and validates app containers over TLS. To change this setting, do the following:
+By default, Gorouter does not use TLS to verify app identity. To enable Gorouter to communicate with and validate app containers over TLS in Linux cells, perform the following steps:
 
-1. In Ops Manager, click to open the PAS runtime tile that you want to change routing behavior to. This can be a Pivotal Application Service, Isolation Segment, or Small Footprint Runtime tile.
+1. In Ops Manager, click the Pivotal Application Service, Isolation Segment, or Small Footprint Runtime tile.
 
 1. Navigate to the **Application Containers** pane.
 
-1. Enable or disable the **Router uses TLS to verify application identity** checkbox. This checkbox configures the Diego cells to run an Envoy proxy for each app instance.
+1. Enable the **Router uses TLS to verify application identity** checkbox. With this configuration, Diego cells run an Envoy proxy for each app instance.
