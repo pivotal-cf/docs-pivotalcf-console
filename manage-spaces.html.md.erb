@@ -33,6 +33,35 @@ To rename the current org, click the **Settings** tab. Enter the new org name in
 
 From the **Settings** tab, you can also view the spaces assigned to your isolation segment in the **Isolation Segment Entitlements** section. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments).
 
+### <a id="domains"></a> Domains
+
+In the **Domains** tab, you can do the following:
+
+- See each **Domain** in your org.
+
+- See the **Type** associated with each domain. A type is either "Private" or "Global".
+Global domains are also called shared domains. For more information,
+see [Private Domains](https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/routes-domains.html#private-domains)
+and [Shared Domains](https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/routes-domains.html#shared-domains) respectively.
+
+- Delete a domain by clicking the vertical three-dot icon and selecting **Delete**.
+You must have permission to manage the domain to delete it.
+
+- Create a new private domain by clicking **Add a Domain**. You must have Org
+Manager permissions to create a private domain.
+  <p class="note"><strong>Note: </strong>To create global domains, you must have
+Admin permissions and use the Cloud Foundry Command Line Interface (cf CLI).
+For more information, see [Create a Shared Domain](https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/routes-domains.html#create-a-shared-domain).</p>
+
+See the following screenshot for an example **Domains** interface
+with Org Manager permissions:
+
+<%= image_tag("apps-manager-domains-tab.png", :alt => "The screenshot shows the
+'Domains' tab selected. At the top of the tab content is an 'Add a Domain' button. Below is a table with
+three example domains listed: `apps.internal' which is a 'Global' type, 'apps.test.cf-app.com,'
+which is also a 'Global' type, and 'dev.private,' which is a 'Private' type. Only the domain with the 'Private'
+type has the horizontal three-dot menu, indicating that the domain can be deleted.") %>
+
 ##<a id='manage-space'></a>Manage a Space
 
 The space page displays the apps, service instances, and routes associated with 
