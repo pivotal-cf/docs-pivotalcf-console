@@ -92,26 +92,6 @@ click **Map a Route**.
 1. To unmap a route, locate the route from the list and click the red `x`. 
 Click **Unmap** in the pop-up to confirm.
 
-###<a id="networking"></a> Create Policies for Container-to-Container Networking
-
-To view and use the **Networking** tab, you must have either the `network.write` or `network.admin` UAA scope. 
-
-If you do not see the **Networking** tab, request one of the above scopes from your PCF administrator. 
-
-1. Click **Networking**. The page displays any container networking policies associated with the app.
-     <%= image_tag("networking-tab.png", :alt => "The Container Networking Policies tab shows a Create Policy button, and a Add a network policy link. There is an empty list of network policies.") %>
-1. To add a new network policy, click **Create Policy** or **Add a network policy**.
-      <%= image_tag("add-policy-form.png", :alt => "The Add Policy form shows dropdown menus for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button.") %>  
-1. In the **Add Policy** window, configure the following:
-    *  For **Org**, select the org of the destination app.
-    *  For **Space**, select the space of the destination app.
-    *  For **App**, select the destination app.
-    *  For **Protocol**, select **TCP** or **UDP**.
-    *  For **Ports**, enter the ports at which to connect to the destination app. The allowed range is from `1` to `65535`. You can specify a single port, such as `8080`, or a range of ports, such as `8080-8090`.
-1. Click **Save**
-
-For more information about container-to-container networking in PCF, see [Understanding Container-to-Container Networking](../concepts/understand-cf-networking.html).
-
 ###<a id="logs"></a>View Logs
 
 1. Click **Logs** to view the logs for the app.
