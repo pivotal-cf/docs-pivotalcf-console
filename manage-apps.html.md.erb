@@ -179,19 +179,24 @@ Click the **Settings** tab. In this tab, you can do the following:
 
 <%= image_tag("apps-man-settings.png") %>
 
-### <a id="health-checks"></a> View Health Checks
+### <a id="health-checks"></a> Configure Health Checks
 
-Follow the steps below to view information about a health check you have configured for your app. For more information, see the [Using Application Health Checks](../devguide/deploy-apps/healthchecks.html) topic.
+To configure an app invocation timeout for your app, do the following:
 
 1. Click the **Settings** tab.
 
-1. Under **Info**, find the **Health check type**. If your health check type is 
-HTTP, Apps Manager also displays the **Health check endpoint**.
+1. In the **Health Check** section, click the **Type** dropdown and select `port`, `http`, or `process`.
+    * For `port`, complete the **Invocation timeout (seconds)** field.
+    * For `http`, complete the **Endpoint**, **Timeout (seconds)**, and **Invocation timeout (seconds)** fields.
+    * For `process`, there are no additional fields.
+
+1. Click **Update**.
+
     <%= image_tag("health-check.png") %>
 
 ### <a id="env-var"></a> View or Add Environment Variables
 
-Follow the steps below to add a user-provided environment variable.
+To add a user-provided environment variable, do the following:
 
 1. Click the **Settings** tab.
 
