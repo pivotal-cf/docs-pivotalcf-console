@@ -187,12 +187,13 @@ To configure an app invocation timeout for your app, do the following:
 
 1. In the **Health Check** section, click the **Type** dropdown and select `port`, `http`, or `process`.
     * For `port`, complete the **Invocation timeout (seconds)** field.
+        <%= image_tag("health-check-port.png") %>
     * For `http`, complete the **Endpoint**, **Timeout (seconds)**, and **Invocation timeout (seconds)** fields.
+        <%= image_tag("health-check-http.png") %>
     * For `process`, there are no additional fields.
+        <%= image_tag("health-check-process.png") %>
 
 1. Click **Update**.
-
-    <%= image_tag("health-check.png") %>
 
 ### <a id="env-var"></a> View or Add Environment Variables
 
