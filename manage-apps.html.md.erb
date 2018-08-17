@@ -5,50 +5,45 @@ owner: Apps Manager
 
 <strong><%= modified_date %></strong>
 
-This topic discusses how to view and manage apps and service instances 
-associated with a space using Apps Manager.
+This topic discusses how to view and manage apps and service instances associated with a space using Apps Manager.
 
-To perform the following steps, you must first log in to Apps Manager with an 
-account that has adequate permissions. See the [Understanding Permissions](dev-console.html#permissions) topic for more information.
+To perform the following steps, you must first log in to Apps Manager with an account that has adequate permissions. See the [Understanding Permissions](dev-console.html#permissions) topic for more information.
 
-##<a id='manage-app'></a>Manage an App
 
-On the space page, click the app you want to manage. You can search for the app 
-by entering its name in the search bar.
+## <a id='manage-app'></a> Manage an App
+
+On the space page, click the app you want to manage. You can search for the app by entering its name in the search bar.
 
 <%= image_tag("global-search.png") %>
 
-From the app page, you can scale apps, bind apps to services, manage 
-environment variables and routes, view logs and usage information, start and 
-stop apps, and delete apps.
+From the app page, you can scale apps, bind apps to services, manage environment variables and routes, view logs and usage information, start and stop apps, and delete apps.
 
 <%= image_tag("app-page.png", :alt => "The example Apps Manager dashboard shows at the top heading the name of the example app, 'cf-nodejs', with a stop and refresh button to the right. A green status icon says 'Running'. Below shows a horizontal series of tabs with the 'Overview' tab selected. Below, the 'Overview' pane shows an 'Events' section, 'App Summary' section, and 'Processes and Instances' section.") %>
 
-###<a id="start-stop"></a>Start or Stop an App
+### <a id="start-stop"></a> Start or Stop an App
 
-1. To stop an app, click the stop button next to the name of the app. Click 
-**Stop** in the pop-up to confirm.
+1. To stop an app, click the stop button next to the name of the app. Click **Stop** in the pop-up to confirm.
+
 1. To restart a stopped app, click the play button next to the name of the app.
-1. To restart a running app, click the restart button next to the name of the 
-app. Click **Restart** in the pop-up to confirm.
 
-###<a id="scale"></a> Scale an App
+1. To restart a running app, click the restart button next to the name of the app. Click **Restart** in the pop-up to confirm.
+
+### <a id="scale"></a> Scale an App
 
 From the app **Overview** pane, Space Developers can scale an app [manually](#manual-scale) or configure [App Autoscaler](#autoscale) to scale it automatically.
 
-
-####<a id="manual-scale"></a> Scale an App Manually
+#### <a id="manual-scale"></a> Scale an App Manually
 
 <%= image_tag("scale-app.png", :alt => "In the 'Processes and Instances' section of the 'Overview' pane, find the 'Scale' button to the right of each process.") %>
 
 1. Click **Scale** to open the "Scale App" dialog.
    <%= image_tag("scale-app-modal.png", :alt => "A dialog titled 'Scale App' lists each process with corresponding 'Instances', 'Memory Limit', and 'Disk Limit' fields. A 'Usage Total' section at the bottom of the dialog tallies the total entered in each field. Find an 'Apply Changes' button to the bottom right of the dialog.") %>
 
-1. Adjust the number of **Instances**, the **Memory Limit**, 
-and the **Disk Limit** as desired.
+1. Adjust the number of **Instances**, the **Memory Limit**, and the **Disk Limit** as desired.
+
 1. Click **Apply Changes**. 
 
-####<a id="autoscale"></a> Configure App Autoscaler
+#### <a id="autoscale"></a> Configure App Autoscaler
 
 <%= image_tag("autoscaler-toggle.png", :alt => "In the 'Processes and Instances' section of the 'Overview' pane, find 'Autoscaling' two rows below the title of each process.") %>
 
@@ -56,25 +51,28 @@ and the **Disk Limit** as desired.
 
 1. Click **Manage Autoscaling** to open App Autoscaler.
 
-1. See the <a href="../appsman-services/autoscaler/using-autoscaler.html#config">Configure Autoscaling for an App</a> section of the _Scaling an Application Using Autoscaler_ topic for how to configure your App Autoscaler to scale automatically based on rules or a schedule.
+1. See the [Configure Autoscaling for an App](../appsman-services/autoscaler/using-autoscaler.html#config) section of the _Scaling an Application Using Autoscaler_ topic for how to configure your App Autoscaler to scale automatically based on rules or a schedule.
 
-###<a id="bind-services"></a> Bind or Unbind a Service
+### <a id="bind-services"></a> Bind or Unbind a Service
 
 1. Click **Services**.
+
 1. To bind your app to a service, click **Bind Service**.
     <%= image_tag("bound-services.png") %>
-1. To bind your app to an an existing service instance, perform the following steps:
+
+1. To bind your app to an an existing service instance, do the following:
     1. Click **Bind Service**.<br> 
         <%= image_tag("bind-service.png") %>
         <br>
     1. Under **Service to Bind**, select the service instance from the dropdown menu. 
     1. Optionally, specify additional parameters under **Add Parameters**.
     1. Click **Bind**.
-1. To bind your app to a new service instance, perform the following steps: 
+
+1. To bind your app to a new service instance, do the following: 
     1. Click **New Service**.<br>
         <%= image_tag("new-service.png") %>.
         <br>
-        <p class="note"><strong>Note</strong>: If you prefer to create the new service instance in the Marketplace, you can click **View in Marketplace** at any time.</p>
+        <p class="note"><strong>Note:</strong> If you prefer to create the new service instance in the Marketplace, you can click **View in Marketplace** at any time.</p>
     1. Click the service.<br>
         <%= image_tag("select-plan.png") %>
         <br>
@@ -84,21 +82,21 @@ and the **Disk Limit** as desired.
     1. Under **Instance Name**, enter a name for the instance.
     1. Optionally, specify additional parameters under **Add Parameters**. For a list of supported configuration parameters, consult the documentation for the service.
     1. Click **Create**.
-1. To unbind your app from a service instance, locate the service instance in 
-the **Bound Services** list and click the three-dot icon on the far right. 
-Select **Unbind** from the dropdown menu.
 
-###<a id="routes"></a>Map or Unmap Routes
+1. To unbind your app from a service instance, locate the service instance in the **Bound Services** list and click the three-dot icon on the far right. Select **Unbind** from the dropdown menu.
+
+### <a id="routes"></a> Map or Unmap Routes
 
 1. Click **Routes**.
-1. The page displays the routes associated with the app. To add a new route, 
-click **Map a Route**.
-    <%= image_tag("routes.png") %>
-1. Enter the route and click **Map**.
-1. To unmap a route, locate the route from the list and click the red `x`. 
-Click **Unmap** in the pop-up to confirm.
 
-###<a id="networking"></a> Create Policies for Container-to-Container Networking
+1. The page displays the routes associated with the app. To add a new route, click **Map a Route**.
+    <%= image_tag("routes.png") %>
+
+1. Enter the route and click **Map**.
+
+1. To unmap a route, locate the route from the list and click the red `x`. Click **Unmap** in the pop-up to confirm.
+
+### <a id="networking"></a> Create Policies for Container-to-Container Networking
 
 To view and use the **Networking** tab, you must have either the `network.write` or `network.admin` UAA scope. 
 
@@ -106,45 +104,53 @@ If you do not see the **Networking** tab, request one of the above scopes from y
 
 1. Click **Networking**. The page displays any container networking policies associated with the app.
      <%= image_tag("networking-tab.png", :alt => "The Container Networking Policies tab shows a Create Policy button, and a Add a network policy link. There is an empty list of network policies.") %>
+
 1. To add a new network policy, click **Create Policy** or **Add a network policy**.
       <%= image_tag("add-policy-form.png", :alt => "The Add Policy form shows dropdown menus for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button.") %>  
+
 1. In the **Add Policy** window, configure the following:
     *  For **Org**, select the org of the destination app.
     *  For **Space**, select the space of the destination app.
     *  For **App**, select the destination app.
     *  For **Protocol**, select **TCP** or **UDP**.
     *  For **Ports**, enter the ports at which to connect to the destination app. The allowed range is from `1` to `65535`. You can specify a single port, such as `8080`, or a range of ports, such as `8080-8090`.
+
 1. Click **Save**
 
 For more information about container-to-container networking in PCF, see [Understanding Container-to-Container Networking](../concepts/understand-cf-networking.html).
 
-###<a id="logs"></a>View Logs
+### <a id="logs"></a> View Logs
 
 1. Click **Logs** to view the logs for the app.
     <%= image_tag("logs.png") %>
+
 1. Click the play button to view a live version of the logs. 
 
-###<a id='view'></a> View Tasks
+### <a id='view'></a> View Tasks
 
 1. Click the **Tasks** tab within Apps Manager.
+
 1. This page displays a table containing **Task ID**, **State**, **Start Time**, **Task Name**, and **Command**.
     <%= image_tag("task-window-resize.png") %>
 
-###<a id='run'></a> Run a Task
+### <a id='run'></a> Run a Task
 
 1. Click **Run Task** to create a task.
     <%= image_tag("run-task.png") %>
+
 1. (Optional) Enter a **Task Name**.
+
 1. Enter the **Task Command**.
+
 1. Click **Run**.
 
-###<a id="enable-scheduling"></a> Enable Task Scheduling
+### <a id="enable-scheduling"></a> Enable Task Scheduling
 
 In the **Tasks** tab, click **Enable Scheduling** to bind the PCF Scheduler service to your app. For more about the PCF Scheduler, see [Scheduling Jobs](http://docs.pivotal.io/pcf-scheduler/using-jobs.html).
 
 ![The Apps Manager interface shows the Task tab enabled with a box beneath that says "The Scheduler Service has not been enabled yet." with an "Enable Scheduling" button beneath](enable-scheduling.png)
 
-###<a id="schedule-task"></a>Schedule a Task
+### <a id="schedule-task"></a> Schedule a Task
 
 1. Navigate to the **Tasks** tab.
 <%= image_tag("create-job.png") %>
@@ -160,9 +166,9 @@ In the **Tasks** tab, click **Enable Scheduling** to bind the PCF Scheduler serv
 
 1. Click **Create Job**
 
-###<a id="view-settings"></a>View Settings
+### <a id="view-settings"></a> View Settings
 
-Click the **Settings** tab. In this tab you can do the following:
+Click the **Settings** tab. In this tab, you can do the following:
 
 * Rename the app.
 * View information about the buildpack(s), start command, stack, and health check.
@@ -173,42 +179,42 @@ Click the **Settings** tab. In this tab you can do the following:
 
 <%= image_tag("apps-man-settings.png") %>
 
-###<a id="health-checks"></a>View Health Checks
+### <a id="health-checks"></a> View Health Checks
 
-Follow the steps below to view information about a health check you have 
-configured for your app. For more information, see the [Using Application Health Checks](../devguide/deploy-apps/healthchecks.html) topic.
+Follow the steps below to view information about a health check you have configured for your app. For more information, see the [Using Application Health Checks](../devguide/deploy-apps/healthchecks.html) topic.
 
 1. Click the **Settings** tab.
+
 1. Under **Info**, find the **Health check type**. If your health check type is 
 HTTP, Apps Manager also displays the **Health check endpoint**.
-
     <%= image_tag("health-check.png") %>
 
-###<a id="env-var"></a>View or Add Environment Variables
+### <a id="env-var"></a> View or Add Environment Variables
 
 Follow the steps below to add a user-provided environment variable.
 
 1. Click the **Settings** tab.
+
 1. Click **Reveal User Provided Env Vars**.
+
 1. Enter the **Name** and **Value** of the variable. Alternatively, enter your variable using the **Enter JSON** toggle.
+
 1. Click **Save**.
     <%= image_tag("user-env-vars.png") %>
 
 To view all environment variables, click **Reveal Env Vars**.
 <%= image_tag("env-vars.png") %>
 
-<p class="note"><strong>Note</strong>: Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p> 
+<p class="note"><strong>Note:</strong> Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p> 
 
-##<a id='manage-service'></a>Manage a Service Instance
 
-From the **Services** tab on the space page, you can bind or unbind apps, bind or unbind routes, view or change your service plan, manage 
-service keys, and rename or delete your service instance.
+## <a id='manage-service'></a> Manage a Service Instance
 
-For services that use on-demand brokers, the service broker will create, 
-update, or delete the service instance in the background and notify you when it 
-finishes.
+From the **Services** tab on the space page, you can bind or unbind apps, bind or unbind routes, view or change your service plan, manage service keys, and rename or delete your service instance.
 
-###<a id='bind-app'></a>Bind an App
+For services that use on-demand brokers, the service broker will create, update, or delete the service instance in the background and notify you when it finishes.
+
+### <a id='bind-app'></a> Bind an App
 
 1. From the space page **Services** tab, click the service instance you want to bind to an app. 
 
@@ -224,7 +230,7 @@ finishes.
 
 1. Click **Bind**.
 
-###<a id='unbind-app'></a>Unbind an App
+### <a id='unbind-app'></a> Unbind an App
 
 1. From the space page **Services** tab, click the service instance you want to unbind from an app. 
 
@@ -236,7 +242,7 @@ finishes.
 
 1. Click **Unbind** to confirm.
 
-###<a id='view-plan'></a>View or Change Your Service Plan
+### <a id='view-plan'></a> View or Change Your Service Plan
 
 1. From the space page **Services** tab, click the service instance you want to view or change the plan for.
 
@@ -248,9 +254,9 @@ finishes.
 
 1. To change your plan, select a new plan from the list and click **Select This Plan** or **Upgrade Your Account**.
 
-<p class="note"><strong>Note</strong>: Not all services support upgrading. If your service does not support upgrading, the service plan page only displays the selected plan.</p>
+<p class="note"><strong>Note:</strong> Not all services support upgrading. If your service does not support upgrading, the service plan page only displays the selected plan.</p>
 
-###<a id='rename-service'></a>Rename or Delete Your Service Instance
+### <a id='rename-service'></a> Rename or Delete Your Service Instance
 
 1. From the space page **Services** tab, click the service instance you want to rename or delete. 
 
@@ -260,35 +266,31 @@ finishes.
 
 * To change the service instance name, enter the new name and click **Update**.
 
-* To add configuration parameters to the service instance, enter the parameters 
-in the **Name** and **Value** fields and then click **Update**.
-Alternatively, enter your configuration parameters using the **Enter JSON** toggle and then click **Update**.
+* To add configuration parameters to the service instance, enter the parameters in the **Name** and **Value** fields and then click **Update**. Alternatively, enter your configuration parameters using the **Enter JSON** toggle and then click **Update**.
 
 * To delete the service instance, click **Delete Service Instance**.
 
-<p class="note"><strong>Note</strong>: The service broker supports creating, updating, and deleting service instances asynchronously. When the service broker completes one of these operations, a status banner appears in Apps Manager.</p>
+<p class="note"><strong>Note:</strong> The service broker supports creating, updating, and deleting service instances asynchronously. When the service broker completes one of these operations, a status banner appears in Apps Manager.</p>
 
 <% if vars.product_name == 'PCF' %>
-###Update Your User-Provided Service Instance
+### Update Your User-Provided Service Instance
 
 Follow the steps below to update an existing user-provided service instance. You can create a user-provided service instance from the Marketplace. For more information, see the [User-Provided Service Instances](../devguide/services/user-provided.html) topic.
 
 1. Click **Configuration**. This tab only appears for user-provided service instances.
     <%= image_tag("config-user-provided.png") %>
+
 1. Enter your **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**, and click **Update Service**.
 <% else %>
 <% end %>
 
 ## <a id='manage-keys'></a>Manage Service Keys
 
-On the space page, click **Services**, then click the service instance that you 
-want to manage service keys for. This directs you to the service instance 
-**Overview** page, where you can generate a new service key, get the 
-credentials for a service key, and delete a service key.
+On the space page, click **Services**, then click the service instance that you want to manage service keys for. This directs you to the service instance **Overview** page, where you can generate a new service key, get the credentials for a service key, and delete a service key.
 
 <%= image_tag("keys-list.png") %>
 
-### <a id='create-key'></a>Generate a Service Key
+### <a id='create-key'></a> Generate a Service Key
 
 Follow the steps below to generate a service key. 
 
@@ -298,64 +300,60 @@ Follow the steps below to generate a service key.
 
     <%= image_tag("keys-create.png") %>
 
-1. (Optional) Click **Show Advanced Options**. Under **Arbitrary Parameters**, 
-enter any additional service-specific configuration in the **Name** and 
-**Value** fields.
+1. (Optional) Click **Show Advanced Options**. Under **Arbitrary Parameters**, enter any additional service-specific configuration in the **Name** and **Value** fields.
 
     <%= image_tag("keys-create-adv.png") %>
 
 1. Click **Create** to generate the service key.
 
-### <a id='get-creds'></a>View Credentials for a Service Key
+### <a id='get-creds'></a> View Credentials for a Service Key
 
 Follow the steps below to view the credentials for a service key. 
 
-1. To view the credentials for a particular service instance, click the service 
-instance name under **Service Key Credentials**. The JSON object containing the 
-credentials appears. 
+1. To view the credentials for a particular service instance, click the service instance name under **Service Key Credentials**. The JSON object containing the credentials appears. 
 
     <%= image_tag("keys-creds.png") %>
 
 1. Click **Close**.
 
-### <a id='delete-key'></a>Delete Service Key
+### <a id='delete-key'></a> Delete Service Key
 
 To delete a service key, click the red `x` next to the service instance name.
 <%= image_tag("keys-delete.png") %>
 
-## <a id='manage-route-services'></a>Manage Route Services
+
+## <a id='manage-route-services'></a> Manage Route Services
 
 For more information about route services, see the [Route Services](../services/route-services.html) topic.
 
-You can bind a [new service instance](#new-route-services) to a route when 
-creating the instance in the Marketplace, or you can manage route services for 
-an [existing service instance](#old-route-services) on the service instance 
-page.
+You can bind a [new service instance](#new-route-services) to a route when creating the instance in the Marketplace, or you can manage route services for an [existing service instance](#old-route-services) on the service instance page.
 
-### <a id='new-route-services'></a>Bind a New Service Instance to a Route
+### <a id='new-route-services'></a> Bind a New Service Instance to a Route
 
 Follow the steps below to bind a new service instance to a route. 
 
 1. Select the service from the Marketplace.
     <%= image_tag('bind-route-new.png') %>
-1. Under **Bind to Route**, either bind the service instance to an existing 
-route or click **Create Route** to create a new custom route.
-    <p class="note"><strong>Note</strong>: You must choose a Marketplace service compatible with route services for the <strong>Bind to Route</strong> field to appear.</p>
-1. Complete the remaining fields and click **Add** to create the service 
-instance.
 
-### <a id='old-route-services'></a>Bind an Existing Service Instance to a Route
+1. Under **Bind to Route**, either bind the service instance to an existing route or click **Create Route** to create a new custom route.
+    <p class="note"><strong>Note:</strong> You must choose a Marketplace service compatible with route services for the <strong>Bind to Route</strong> field to appear.</p>
+
+1. Complete the remaining fields and click **Add** to create the service instance.
+
+### <a id='old-route-services'></a> Bind an Existing Service Instance to a Route
 
 Follow the steps below to bind an existing service instance to a route. 
 
 1. On the space page, click **Services**.
+
 1. Click the service instance that you want to manage route services for. 
-    <p class="note"><strong>Note</strong>: If the service is not compatible with route services, the text "This service does not support route binding" appears under <strong>Bound Routes</strong>.</p>
+    <p class="note"><strong>Note:</strong> If the service is not compatible with route services, the text "This service does not support route binding" appears under <strong>Bound Routes</strong>.</p>
+
 1. To bind the service instance to a route, click **Bind Route**.
     <%= image_tag('bind-route-old.png') %>
-1. Select an existing route under **Select a route to bind** or enter a new 
-route under **Create Custom Route**.
+
+1. Select an existing route under **Select a route to bind** or enter a new route under **Create Custom Route**.
+
 1. Click **Bind**.
 
-To unbind a route from a service instance, click the red `x` next to the name 
-of the route under **Bound Routes**.
+To unbind a route from a service instance, click the red `x` next to the name of the route under **Bound Routes**.
