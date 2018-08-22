@@ -183,19 +183,23 @@ Click the **Settings** tab. In this tab, you can do the following:
 
 ### <a id="health-checks"></a> Configure Health Checks
 
-To configure an app invocation timeout for your app, do the following:
+To configure health checks for your app, do the following:
 
 1. Click the **Settings** tab.
 
-1. In the **Health Check** section, click the **Type** dropdown and select `port`, `http`, or `process`.
+1. In the **Health Check** section, click the **Type** dropdown and select `port`, `http`, or `process`. Depending on which option you select, additional fields may appear. For `http`, enter the endpoint.
+
+1. (Optional) To configure an app invocation timeout, complete the optional fields that appear with your selection.
     * For `port`, complete the **Invocation timeout (seconds)** field.
         <%= image_tag("health-check-port.png") %>
-    * For `http`, complete the **Endpoint**, **Timeout (seconds)**, and **Invocation timeout (seconds)** fields.
+    * For `http`, complete the **Timeout (seconds)** and **Invocation timeout (seconds)** fields.
         <%= image_tag("health-check-http.png") %>
     * For `process`, there are no additional fields.
         <%= image_tag("health-check-process.png") %>
 
 1. Click **Update**.
+
+For more information, see the [Using Application Health Checks](../devguide/deploy-apps/healthchecks.html) topic.
 
 ### <a id="env-var"></a> View or Add Environment Variables
 
