@@ -166,7 +166,7 @@ In the **Tasks** tab, click **Enable Scheduling** to bind the PCF Scheduler serv
 
 1. Enter one or more **Cron Expressions** for your desired task schedule or schedules. See [Schedule a Job](http://docs.pivotal.io/pcf-scheduler/using-jobs.html#schedule-a-job) for more information on cron expression syntax.
 
-1. Click **Create Job**
+1. Click **Create Job**.
 
 ### <a id="view-settings"></a> View Settings
 
@@ -194,8 +194,6 @@ To configure health checks for your app, do the following:
         <%= image_tag("health-check-port.png") %>
     * For `http`, complete the **Timeout (seconds)** and **Invocation timeout (seconds)** fields.
         <%= image_tag("health-check-http.png") %>
-    * For `process`, there are no additional fields.
-        <%= image_tag("health-check-process.png") %>
 
 1. Click **Update**.
 
@@ -296,7 +294,8 @@ Follow the steps below to update an existing user-provided service instance. You
 <% else %>
 <% end %>
 
-## <a id='manage-keys'></a>Manage Service Keys
+
+## <a id='manage-keys'></a> Manage Service Keys
 
 On the space page, click **Services**, then click the service instance that you want to manage service keys for. This directs you to the service instance **Overview** page, where you can generate a new service key, get the credentials for a service key, and delete a service key.
 
