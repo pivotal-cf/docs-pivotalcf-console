@@ -5,3 +5,5 @@ By default, Gorouter does not use TLS to verify app identity. To enable Gorouter
 1. Navigate to the **Application Containers** pane.
 
 1. Enable the **Router uses TLS to verify application identity** checkbox. With this configuration, Diego cells run an Envoy proxy for each app instance.
+
+<p class='note'><strong>Note:</strong> This feature does not work if the <b>Disable SSL certificate verification for this environment</b> checkbox is selected.</p>
