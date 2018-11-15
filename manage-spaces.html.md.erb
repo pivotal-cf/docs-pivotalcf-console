@@ -17,21 +17,17 @@ account that has adequate permissions. See the [Understanding Permissions](dev-c
 The org page displays the spaces associated with the selected org. The left 
 navigation of Apps Manager shows the current org. 
 
-![Org Console]( <%= vars.console_org %> )
+### <a id="spaces"></a> Spaces
 
-To view spaces in a different org, use the drop-down menu to change the org. 
+In the **Spaces** tab, you can do the following:
 
-![Select Org]( <%= vars.select_org %> )
-
-To view the page for a particular space, click the space on the org page or on 
-the left navigation. To create a new space, click **Add a Space** at the bottom 
-of the org page.
-
-![](org-settings.png)
-
-To rename the current org, click the **Settings** tab. Enter the new org name in the **Org Name** section and click **Update**.
-
-From the **Settings** tab, you can also view the spaces assigned to your isolation segment in the **Isolation Segment Entitlements** section. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments).
+- See the following information for each space:
+   - Name
+   - Number of apps
+   - Number of apps in running, stopped, and crashed states
+   - Number of services
+   - Memory quota usage
+- Create a new space
 
 ### <a id="domains"></a> Domains
 
@@ -61,6 +57,23 @@ with Org Manager permissions:
 three example domains listed: `apps.internal' which is a 'Global' type, 'apps.test.cf-app.com,'
 which is also a 'Global' type, and 'dev.private,' which is a 'Private' type. Only the domain with the 'Private'
 type has the horizontal three-dot menu, indicating that the domain can be deleted.") %>
+
+### <a id="members"></a> Members
+
+In the **Members** tab, you can do the following:
+
+- See member email addresses
+- Toggle member permissions
+- Remove member from org
+- Invite a new member
+
+### <a id="org-settings"></a> Settings
+
+In the **Settings** tab, you can do the following:
+
+- Change the org name
+- See spaces assigned to isolation segments. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments).
+- Delete the org. You must have admin permissions to delete an org. 
 
 ##<a id='manage-space'></a>Manage a Space
 
