@@ -17,42 +17,19 @@ account that has adequate permissions. See the [Understanding Permissions](dev-c
 The following sections describe how to manage your orgs using the org management interface
 in Apps Manager.
 
-### <a id="gather-data"></a> See Org Information
+### <a id="spaces"></a> Spaces
 
-The org page displays information on each of the following tabs:
+In the **Spaces** tab, you can do the following:
 
-- **Spaces**---The org page shows the following information on each space:
-   - Space name
-   - The number of apps in that space
+- See the following information for each space:
+   - Name
+   - Number of apps
    - Number of apps in running, stopped, and crashed states
    - Number of services
    - Memory quota usage
-- **Domains**---The org page shows the following information on each domain:
-   - The domain name
-   - Whether the domain is shared globally or privately
-- **Members**---The org page shows the following information on each member:
-   - Email address
-   - Org Manager permissions
-   - Org Billing Manager permissions
-   - Org Auditor permissions
-- **Settings**---The org page shows the following information:
-   - Spaces assigned to isolation segments. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments).
+- Create a new space
 
-
-### <a id="nav-orgs"></a> Navigate Between Orgs and Spaces
-
-To view spaces in a different org, you must navigate to that org in Apps Manager.
-
-To navigate to a different org, choose one of the following options:
-
-- Click **Home** and select a different org by **Org Name**.
-
-- Use the global searchbar to find a different org.
-
-
-
-
-### <a id="domains"></a> Manage Domains
+### <a id="domains"></a> Domains
 
 In the **Domains** tab, you can do the following:
 
@@ -80,6 +57,23 @@ with Org Manager permissions:
 three example domains listed: `apps.internal' which is a 'Global' type, 'apps.test.cf-app.com,'
 which is also a 'Global' type, and 'dev.private,' which is a 'Private' type. Only the domain with the 'Private'
 type has the horizontal three-dot menu, indicating that the domain can be deleted.") %>
+
+### <a id="members"></a> Members
+
+In the **Members** tab, you can do the following:
+
+- See member email addresses
+- Toggle member permissions
+- Remove member from org
+- Invite a new member
+
+### <a id="org-settings"></a> Settings
+
+In the **Settings** tab, you can do the following:
+
+- Change the org name
+- See spaces assigned to isolation segments. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments).
+- Delete the org. You must have admin permissions to delete an org. 
 
 ##<a id='manage-space'></a>Manage a Space
 
