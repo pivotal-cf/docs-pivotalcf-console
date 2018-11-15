@@ -14,42 +14,61 @@ account that has adequate permissions. See the [Understanding Permissions](dev-c
 
 ## <a id='view-space'></a>Manage an Org
 
-The org page displays the spaces associated with the selected org. The left 
-navigation of Apps Manager shows the current org. 
+The following sections describe how to manage your orgs using the org management interface
+in Apps Manager.
 
-![Org Console]( <%= vars.console_org %> )
+### <a id="gather-data"></a> See Org Information
 
-To view spaces in a different org, use the drop-down menu to change the org. 
+The org page displays information on each of the following tabs:
 
-![Select Org]( <%= vars.select_org %> )
+- **Spaces**---The org page shows the following information on each space:
+   - Space name
+   - The number of apps in that space
+   - Number of apps in running, stopped, and crashed states
+   - Number of services
+   - Memory quota usage
+- **Domains**---The org page shows the following information on each domain:
+   - The domain name
+   - Whether the domain is shared globally or privately
+- **Members**---The org page shows the following information on each member:
+   - Email address
+   - Org Manager permissions
+   - Org Billing Manager permissions
+   - Org Auditor permissions
+- **Settings**---The org page shows the following information:
+   - Spaces assigned to isolation segments. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments).
 
-To view the page for a particular space, click the space on the org page or on 
-the left navigation. To create a new space, click **Add a Space** at the bottom 
-of the org page.
 
-![](org-settings.png)
+### <a id="nav-orgs"></a> Navigate Between Orgs and Spaces
 
-To rename the current org, click the **Settings** tab. Enter the new org name in the **Org Name** section and click **Update**.
+To view spaces in a different org, you must navigate to that org in Apps Manager.
 
-From the **Settings** tab, you can also view the spaces assigned to your isolation segment in the **Isolation Segment Entitlements** section. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments).
+To navigate to a different org, choose one of the following options:
 
-### <a id="domains"></a> Domains
+- Click **Home** and select a different org by **Org Name**.
+
+- Use the global searchbar to find a different org.
+
+
+
+
+### <a id="domains"></a> Manage Domains
 
 In the **Domains** tab, you can do the following:
 
 - See each **Domain** in your org.
 
-- See the **Type** associated with each domain. A type is either "Private" or "Global".
-Global domains are also called shared domains. For more information,
-see [Private Domains](https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/routes-domains.html#private-domains)
-and [Shared Domains](https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/routes-domains.html#shared-domains).
+- See the **Type** associated with each domain. A type is either **Globally Shared** or
+**Privately Shared**. For more information about globally and locally shared domains,
+see [Shared Domains](https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/routes-domains.html#shared-domains) and [Private Domains](https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/routes-domains.html#private-domains)
+.
 
 - Delete a domain by clicking the vertical three-dot icon and selecting **Delete**.
 You must have permission to manage the domain to delete it.
 
 - Create a new private domain by clicking **Add a Domain**. You must have Org
 Manager permissions to create a private domain.
-  <p class="note"><strong>Note: </strong>To create global domains, you must have
+  <p class="note"><strong>Note: </strong>To create globally shared domains, you must have
 Admin permissions and use the Cloud Foundry Command Line Interface (cf CLI).
 For more information, see [Create a Shared Domain](https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/routes-domains.html#create-a-shared-domain).</p>
 
