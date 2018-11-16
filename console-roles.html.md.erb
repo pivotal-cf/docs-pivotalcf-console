@@ -32,12 +32,9 @@ Valid [org roles](../concepts/roles.html#roles) are <%=vars.org_roles %>.
 
 To grant or revoke org roles, follow the steps below.
 
-1. In the Apps Manager navigation on the left, the current org is highlighted.
-Click the drop-down menu to view other orgs belonging to the account.
+1. Go to the **Home** page
 
-    ![Other Orgs]( <%=vars.select_org %> )
-
-1. Use the Apps Manager navigation to select an org.
+1. Select an org.
 
 1. Click the **Members** tab. Edit the roles assigned to each user by selecting or clearing the checkboxes under each user role. Apps Manager saves your changes automatically.
 
@@ -52,19 +49,12 @@ revoke a role from a user.
 Valid [app space roles](../concepts/roles.html#roles) are Space Manager,
 Space Developer, and Space Auditor.
 
-To grant or revoke app space roles, follow the steps below.
+To grant or revoke app space roles, do the following:
 
-1. In the **Members** tab of an org, click the drop-down menu to view spaces in
-the org.
-
-    <%= image_tag("images/select-space.png") %>
-
-1. Use the drop-down menu to select a space.
-
-1. The **Members** panel displays all members of the space.
-Select a checkbox to grant an app space role to a user, or clear a checkbox to revoke a role from a user.
-
-    <%= image_tag("images/space-members.png") %>
+1. Go to the page for a space 
+1. Select the **Members** tab. The **Members** panel displays all members of the space.
+    <% image_tag("space-members.png", :alt=> "This screenshot shows an example space page of 'space-0000'. The 'Members' tab is selected. A table lists members and various permissions. On this example page, there are many space auditor members. ") %>
+1. Select a checkbox to grant an app space role to a user, or clear a checkbox to revoke a role from a user.
 	* **Space Managers** can invite and manage users and enable features for a given space. Assign this role to managers or other users who need to administer the account.
 	* **Space Developers** can create, delete, and manage applications and services, and have full access to all usage reports and logs. Space Developers can also edit applications, including the number of instances and memory footprint. Assign this role to app developers or other users who need to interact with applications and services.
 	* **Space Auditors** have view-only access to all space information, settings, reports, and logs. Assign this role to users who need to view but not edit the application space.
@@ -75,8 +65,6 @@ Select a checkbox to grant an app space role to a user, or clear a checkbox to r
 <%= vars.enable_invitations %>
 
 1. On the Org dashboard, click the **Members** tab.
-
-	![Members]( <%=vars.org_members %> )
 
 1. Click **Invite New Members**. The **Invite New Team Member(s)** form appears.
 
@@ -109,13 +97,9 @@ Removing a user from org also removes them from all spaces in the org.
 
 ## <a id='removing_space'></a> Remove a User From a Space ##
 
-1. In the **Members** tab of an org, click the drop-down menu to view spaces in the org.
-
-    <%= image_tag("images/select-space.png") %>
-
-1. Select the space you are removing members from.
-
-1. The **Members** panel displays all members of the space. Locate the user account that you want to remove.
+1. Go to the page for a space 
+1. Select the **Members** tab. The **Members** panel displays all members of the space
+1. Locate the user account that you want to remove.
 
     <%= image_tag("images/space-members.png") %>
 
