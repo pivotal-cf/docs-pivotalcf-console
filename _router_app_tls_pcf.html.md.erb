@@ -1,6 +1,6 @@
 Verifying app identity using TLS improves resiliency and consistency for app routes. The **Application Containers** configuration pane of the PAS tile includes the following options:
 
-<p class='note breaking'><strong>Breaking Change:</strong> If you have mutual TLS app identity verification enabled, app containers accept incoming communication only from the Gorouter. This disables <code>cf ssh</code> and TCP routing.</p>
+<p class='note breaking'><strong>Breaking Change:</strong> If you have mutual TLS app identity verification enabled, app containers accept incoming communication only from the Gorouter. This disables TCP routing.</p>
 <p class='note'><strong>Note:</strong> This feature does not work if the <b>Disable SSL certificate verification for this environment</b> checkbox is selected.</p>
 
 * **Router uses TLS to verify application identity**
