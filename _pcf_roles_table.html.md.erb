@@ -24,9 +24,9 @@
 		<td>&check;</td>
 		<td></td>
 		<td></td>
-		<td><sup>&#42;&#42;</sup></td>
+		<td><sup><strong>1</strong></sup></td>
 		<td></td>
-		<td><sup>&#42;&#42;</sup></td>
+		<td><sup><strong>1</strong></sup></td>
 		<td></td>
 		<td></td>
 	</tr><tr>
@@ -64,11 +64,11 @@
 		<td>&check;</td>
 		<td></td>
 		<td></td>
-		<td><sup>&#42;</sup></td>
-		<td><sup>&#42;</sup></td>
-		<td><sup>&#42;</sup></td>
-		<td><sup>&#42;</sup></td>
-		<td><sup>&#42;</sup></td>
+		<td><sup><strong>2</strong></sup></td>
+		<td><sup><strong>2</strong></sup></td>
+		<td><sup><strong>2</strong></sup></td>
+		<td><sup><strong>2</strong></sup></td>
+		<td><sup><strong>2</strong></sup></td>
 	</tr><tr>
 		<td>View all orgs</td>
 		<td>&check;</td>
@@ -81,9 +81,9 @@
 		<td></td>
 	</tr><tr>
 		<td>View orgs where user is a member</td>
-        <td>&check;<sup>&#42;</sup><sup>&#42;</sup><sup>&#42;</sup></td>
-        <td>&check;<sup>&#42;</sup><sup>&#42;</sup><sup>&#42;</sup></td>
-        <td>&check;<sup>&#42;</sup><sup>&#42;</sup><sup>&#42;</sup></td>
+        <td>&check;<sup><strong>3</strong></sup></td>
+        <td>&check;<sup><strong>3</strong></sup></td>
+        <td>&check;<sup><strong>3</strong></sup></td>
 		<td>&check;</td>
 		<td>&check;</td>
 		<td>&check;</td>
@@ -94,7 +94,7 @@
 		<td>&check;</td>
 		<td></td>
 		<td></td>
-		<td>&check;&#8258;</td>    
+		<td>&check;<sup><strong>4</strong></sup></td>    
 		<td></td>
 		<td></td>
 		<td></td>
@@ -183,7 +183,7 @@
 		<td>&check;</td>
 		<td>&check;</td>
 	</tr><tr>
-		<td>Add private domains<sup>&dagger;</sup></td>
+		<td>Add private domains<sup><strong>5</strong></sup></td>
 		<td>&check;</td>
 		<td></td>
 		<td></td>
@@ -203,6 +203,16 @@
 		<td>&check;</td>
 		<td></td>
 	</tr><tr>
+		<td>Use application SSH<sup><strong>6</strong></sup></td>
+		<td>&check;</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>&check;</td>
+		<td></td>
+	</tr><tr>
 		<td>Instantiate and bind services to applications</td>
 		<td>&check;</td>
 		<td></td>
@@ -213,7 +223,7 @@
 		<td>&check;</td>
 		<td></td>
 	</tr><tr>
-		<td>Associate routes<sup>&dagger;</sup>, instance counts, memory allocation, and disk limit of applications</td>
+		<td>Associate routes<sup><strong>5</strong></sup>, instance counts, memory allocation, and disk limit of applications</td>
 		<td>&check;</td>
 		<td></td>
 		<td></td>
@@ -257,12 +267,12 @@
 		<td>List all <a href="../adminguide/isolation-segments.html">Isolation Segments</a> for an Org</td>
 		<td>&check;</td>
 		<td>&check;</td>
-		<td>&check;****</td>
-		<td>&check;****</td>
-		<td>&check;****</td>
-		<td>&check;****</td>
-		<td>&check;****</td>
-		<td>&check;****</td>
+		<td>&check;<sup><strong>7</strong></sup></td>
+		<td>&check;<sup><strong>7</strong></sup></td>
+		<td>&check;<sup><strong>7</strong></sup></td>
+		<td>&check;<sup><strong>7</strong></sup></td>
+		<td>&check;<sup><strong>7</strong></sup></td>
+		<td>&check;<sup><strong>7</strong></sup></td>
         </tr><tr>
 		<td>Entitle or revoke an <a href="../adminguide/isolation-segments.html">Isolation Segment</a></td>
 		<td>&check;</td>
@@ -277,12 +287,12 @@
 		<td>List all Orgs entitled to an <a href="../adminguide/isolation-segments.html">Isolation Segment</a></td>
 		<td>&check;</td>
 		<td>&check;</td>
-		<td>&check;****</td>
-		<td>&check;****</td>
-		<td>&check;****</td>
-		<td>&check;****</td>
-		<td>&check;****</td>
-		<td>&check;****</td>
+		<td>&check;<sup><strong>7</strong></sup></td>
+		<td>&check;<sup><strong>7</strong></sup></td>
+		<td>&check;<sup><strong>7</strong></sup></td>
+		<td>&check;<sup><strong>7</strong></sup></td>
+		<td>&check;<sup><strong>7</strong></sup></td>
+		<td>&check;<sup><strong>7</strong></sup></td>
         </tr><tr>
 		<td>Assign a default <a href="../adminguide/isolation-segments.html">Isolation Segment</a> to an Org</td>
 		<td>&check;</td>
@@ -326,15 +336,16 @@
         </tr><tr>
 </table>
 
-<sup>&#42;</sup>Not by default, unless [feature flag](../adminguide/listing-feature-flags.html) `user_org_creation` is set to `true`.
+<sup><strong>1</strong></sup>Not by default, unless [feature flag](../adminguide/listing-feature-flags.html) `set_roles_by_username` is set to `true`.
 
-<sup>&#42;&#42;</sup>Not by default, unless [feature flag](../adminguide/listing-feature-flags.html) `set_roles_by_username` is set to `true`.
+<sup><strong>2</strong></sup>Not by default, unless [feature flag](../adminguide/listing-feature-flags.html) `user_org_creation` is set to `true`.
 
-<sup>&#42;</sup><sup>&#42;</sup><sup>&#42;</sup>Admin, admin read-only, and global auditor roles do not need to be added as members of orgs or spaces to view resources.
+<sup><strong>3</strong></sup>Admin, admin read-only, and global auditor roles do not need to be added as members of orgs or spaces to view resources.
 
-<sup>&#42;</sup><sup>&#42;</sup><sup>&#42;</sup><sup>&#42;</sup>Applies only to orgs they belong to.
+<sup><strong>4</strong></sup>Org Managers can rename their orgs and edit some fields; they cannot delete orgs.
 
-<sup>&#8258;</sup>Org Managers can rename their orgs and edit some fields; they cannot delete orgs.
+<sup><strong>5</strong></sup>Unless disabled by [feature flags](../adminguide/listing-feature-flags.html).
 
-<sup>&dagger;</sup>Unless disabled by [feature flags](../adminguide/listing-feature-flags.html).
+<sup><strong>6</strong></sup>This assumes that SSH is enabled for the platform, space, and app. For more information, see [SSH Access Control Heirarchy](../devguide/deploy-apps/app-ssh-overview.html#ssh-access-control-hierarchy).
 
+<sup><strong>7</strong></sup>Applies only to orgs they belong to.
