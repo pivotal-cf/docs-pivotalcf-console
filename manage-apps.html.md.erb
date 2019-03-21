@@ -193,15 +193,14 @@ In the **Tasks** tab, click **Enable Scheduling** to bind the PCF Scheduler serv
 
 1. Click **Create Job**.
 
-### <a id="view-settings"></a> Manage Settings
+### <a id="view-settings"></a> View Settings
 
-You can do the following in the **Settings** tab for an app:
+Click the **Settings** tab. In this tab, you can do the following:
 
 * Rename the app.
 * View information about the buildpack(s), start command, and stack.
 * Configure health checks.
 * View or add Environment Variables associated with the app.
-* Add metadata, including labels and annotations, to the app
 * View the Application Security Groups (ASGs) associated with the app.
 * Delete the app. When you click **Delete App**, you also have the option to delete the app's routes.
 
@@ -245,21 +244,6 @@ To view all environment variables, click **Reveal Env Vars**.
 
 <p class="note"><strong>Note:</strong> Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p> 
 
-### <a id="metadata"></a>Add Metadata
-
-You can add metadata, including labels and annotations, to apps using Apps Manager. Labels are name and value pairs that identify and categorize apps. For example, you can label an app as front end or back end. You can search apps by their labels. 
-
-Annotations are name and value pairs that provide additional information about an app. For example, you can add the contact information of the persons responsible for the app. You cannot search apps by their annotations.
-
-For more information about using metadata in PAS, see [Using Metadata](../adminguide/metadata.html).
-
-To add labels or annotations to an app using Apps Manager, do the following:
-
-1. Click the **Settings** tab of the desired app.
-1. For **Labels**, provide a name and value pair. Or, select **Enter JSON** to enter the label in JSON.
-1. For **Annotations**, provide a name and value pair. Or, select **Enter JSON** to enter the annotation in JSON.
-1. To add additional labels or annotations, click **+** next to the **Labels** or **Annotations** field.
-1. Click **Update Metadata**. 
 
 ## <a id='manage-service'></a> Manage a Service Instance
 
