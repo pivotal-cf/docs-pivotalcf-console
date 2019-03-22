@@ -201,6 +201,7 @@ Click the **Settings** tab. In this tab, you can do the following:
 * View information about the buildpack(s), start command, and stack.
 * Configure health checks.
 * View or add Environment Variables associated with the app.
+* Add metadata to the app.
 * View the Application Security Groups (ASGs) associated with the app.
 * Delete the app. When you click **Delete App**, you also have the option to delete the app's routes.
 
@@ -244,6 +245,27 @@ To view all environment variables, click **Reveal Env Vars**.
 
 <p class="note"><strong>Note:</strong> Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p> 
 
+### <a id="metadata"></a>Add Metadata
+
+You can add metadata, including labels and annotations, to apps and spaces using Apps Manager. For more information about adding metadata to spaces using Apps Manager, see [Managing Orgs and Spaces Using Apps Manager](./manage-spaces.html).
+
+<% if var.product_name.include? "CF" %>
+
+For more information about adding metadata to objects in PAS, see [Using Metadata](../adminguide/metadata.html).
+
+<% else %>
+
+For more information about adding metadata to objects in PAS, see [Using Metadata](https://docs.pivotal.io/pivotalcf/adminguide/metadata.html).
+
+<% end %>
+
+To add labels or annotations to an app using Apps Manager, do the following:
+
+1. Click the **Settings** tab of the desired app.
+1. For **Labels**, provide a name and value pair. Or, select **Enter JSON** to enter the label in JSON.
+1. For **Annotations**, provide a name and value pair. Or, select **Enter JSON** to enter the annotation in JSON.
+1. To add more labels or annotations, click **+** next to the **Labels** or **Annotations** field.
+1. Click **Update Metadata**. 
 
 ## <a id='manage-service'></a> Manage a Service Instance
 
