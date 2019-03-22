@@ -118,3 +118,25 @@ From the **Settings** tab, you can do the following:
 * Delete the space by clicking **Delete Space**.
 
 <%= image_tag("rename-space.png") %>
+
+### <a id="metadata"></a>Add Metadata
+
+You can add metadata, including labels and annotations, to apps and spaces using Apps Manager. For more information about adding metadata to apps using Apps Manager, see [Managing Apps and Service Instances Using Apps Manager](./manage-apps.html).
+
+<% if var.product_name.include? "CF" %>
+
+For more information about adding metadata to objects in PAS, see [Using Metadata](../adminguide/metadata.html).
+
+<% else %>
+
+For more information about adding metadata to objects in PAS, see [Using Metadata](https://docs.pivotal.io/pivotalcf/adminguide/metadata.html).
+
+<% end %>
+
+To add labels or annotations to a space using Apps Manager, do the following:
+
+1. Click the **Settings** tab of the desired space.
+1. For **Labels**, provide a name and value pair. Or, select **Enter JSON** to enter the label in JSON.
+1. For **Annotations**, provide a name and value pair. Or, select **Enter JSON** to enter the annotation in JSON.
+1. To add more labels or annotations, click **+** next to the **Labels** or **Annotations** field.
+1. Click **Update Metadata**.
