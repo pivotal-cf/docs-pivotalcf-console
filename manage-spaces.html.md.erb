@@ -78,6 +78,28 @@ In the **Settings** tab, you can do the following:
 - See spaces assigned to isolation segments. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments).
 - Delete the org. You must have admin permissions to delete an org. 
 
+### <a id="metadata-org"></a>Add Metadata
+
+You can add metadata, including labels and annotations, to orgs using Apps Manager. 
+
+<% if vars.product_name.include? "CF" %>
+
+For more information about adding metadata to objects in PAS, see [Using Metadata](../adminguide/metadata.html).
+
+<% else %>
+
+For more information about adding metadata to objects in PAS, see [Using Metadata](https://docs.pivotal.io/pivotalcf/adminguide/metadata.html).
+
+<% end %>
+
+To add labels or annotations to a org using Apps Manager, do the following:
+
+1. Click the **Settings** tab of the desired org.
+1. For **Labels**, provide a name and value pair. Or, select **Enter JSON** to enter the label in JSON.
+1. For **Annotations**, provide a name and value pair. Or, select **Enter JSON** to enter the annotation in JSON.
+1. To add more labels or annotations, click **+** next to the **Labels** or **Annotations** field.
+1. Click **Update Metadata**.
+
 ##<a id='manage-space'></a>Manage a Space
 
 The space page displays the apps, service instances, and routes associated with 
@@ -120,9 +142,9 @@ From the **Settings** tab, you can do the following:
 
 <%= image_tag("rename-space.png") %>
 
-### <a id="metadata"></a>Add Metadata
+### <a id="metadata-space"></a>Add Metadata
 
-You can add metadata, including labels and annotations, to apps and spaces using Apps Manager. For more information about adding metadata to apps using Apps Manager, see [Managing Apps and Service Instances Using Apps Manager](./manage-apps.html).
+You can add metadata, including labels and annotations spaces using Apps Manager. 
 
 <% if vars.product_name.include? "CF" %>
 
