@@ -393,7 +393,7 @@ To navigate to a service instance **Overview** page, do the following:
 
 The following image shows an example of a service instance **Overview** page.
 
-
+<%= image_tag("services-binding.png") %>
 
 
 ### <a id='bind-app'></a> Bind an App
@@ -428,7 +428,7 @@ and delete service instances.
 
 To share your service instance, do the following:
 
-1. From the service **Overview** tab, click **Share Service Instance**.
+1. From the service **Overview** page, click **Share Service Instance**.
 <%= image_tag("share-service-instance-button.png", :alt=>"The service instance button is
               located in the 'Overview' tab of a service instance. The section is at the
               bottom of the body, next to the text 'Shared with these Spaces'") %>
@@ -442,9 +442,9 @@ To share your service instance, do the following:
 
 ### <a id='view-plan'></a> View or Change Your Service Plan
 
-1. From the space page **Services** tab, click the service instance you want to view or change the plan for.
+1. Navigate to the **Overview** page for the service instance.
 
-1. Click **Plan**.
+1. In the panel on the left side of the screen, under **Service**, click **Plan**.
 
     <%= image_tag("services-plan.png") %>
 
@@ -456,17 +456,16 @@ To share your service instance, do the following:
 
 ### <a id='rename-service'></a> Rename or Delete Your Service Instance
 
-1. From the space page **Services** tab, click the service instance you want to rename or delete. 
+1. Navigate to the **Overview** page for the service instance.
 
-1. Click **Settings**.
+1. In the panel on the left side of the screen, under **Service**, click **Settings**.
 
     <%= image_tag("services-settings.png") %>
 
-* To change the service instance name, enter the new name and click **Update**.
-
-* To add configuration parameters to the service instance, enter the parameters in the **Name** and **Value** fields and then click **Update**. Alternatively, enter your configuration parameters using the **Enter JSON** toggle and then click **Update**.
-
-* To delete the service instance, click **Delete Service Instance**.
+1. Do one of the following:
+    * To change the service instance name, enter the new name and click **Update**.
+    * To add configuration parameters to the service instance, enter the parameters in the **Name** and **Value** fields and then click **Update**. Alternatively, enter your configuration parameters using the **Enter JSON** toggle and then click **Update**.
+    * To delete the service instance, click **Delete Service Instance**.
 
 <p class="note"><strong>Note:</strong> The service broker supports creating, updating, and deleting service instances asynchronously. When the service broker completes one of these operations, a status banner appears in Apps Manager.</p>
 
