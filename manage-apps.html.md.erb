@@ -33,24 +33,31 @@ For more information, see [About Permissions](dev-console.html#permissions).
 
 ## <a id='manage-app'></a> Manage an App
 
-To manage an app, navigate to an app page with one of the following methods:
-
-- On the space page, click the app you want to manage.
-- Search for an app by entering its name in the search bar.
-
+This section describes how to manage an app in Apps Manager.
 
 You can do the following tasks to manage apps in Apps Manager:
 
+- View app summary information
+- Start and stop apps
 - Scale apps
 - Bind apps to services
 - Manage environment variables and routes
 - View logs and usage information
-- Start and stop apps
 - Delete apps
 - Terminate specific instances of apps
 
-<%= image_tag("app-page.png", :alt => "The example Apps Manager dashboard shows at the top heading the name of the example app, 'cf-nodejs', with a stop and refresh button to the right. A green status icon says 'Running'. Below shows a horizontal series of tabs with the 'Overview' tab selected. Below, the 'Overview' pane shows an 'Events' section, 'App Summary' section, and 'Processes and Instances' section.") %>
+### <a id="view"></a> View App Overview
 
+To view summary information for an app, navigate to the **Overview** page for the app. The **Overview** page includes information about app processes and instances, app memory and disk space, and app events. 
+
+To navigate to an app **Overview** page, do one of the following:
+
+- On the space page, click the app you want to manage.
+- Search for an app by entering its name in the search bar.
+
+The following image shows an example of an app **Overview** page.
+
+<%= image_tag("app-page.png", :alt => "The example Apps Manager dashboard shows at the top heading the name of the example app, 'cf-nodejs', with a stop and refresh button to the right. A green status icon says 'Running'. Below shows a horizontal series of tabs with the 'Overview' tab selected. Below, the 'Overview' pane shows an 'Events' section, 'App Summary' section, and 'Processes and Instances' section.") %>
 
 
 ### <a id="start-stop"></a> Start, Stop, or Restage an App
@@ -77,7 +84,7 @@ Cloud Foundry Command Line Interface (cf CLI), see [Starting, Restarting, and Re
 
 ### <a id="scale"></a> Scale an App
 
-From the app **Overview** pane, Space Developers can scale an app manually or configure App Autoscaler to scale it automatically.
+From the app **Overview** page, you can scale an app manually or configure App Autoscaler to scale it automatically.
 
 #### <a id="manual-scale"></a> Scale an App Manually
 
@@ -85,7 +92,7 @@ To manually scale an app, do the following:
 
 1. In the panel on the left side of the screen, under **Application**, click **Overview**.
 
-1. Click **Scale** to open the **Scale App** dialog.
+1. Click **Scale** to open the **Scale app** dialog.
    <%= image_tag("scale-app.png", :alt => "In the 'Processes and Instances' section of the 'Overview' pane, find the 'Scale' button to the right of each process.") %>
 
 1. Adjust the number of **Instances**, the **Memory Limit**, and the **Disk Limit** as desired.
@@ -93,6 +100,8 @@ To manually scale an app, do the following:
 1. Click **Apply Changes**. 
 
 #### <a id="autoscale"></a> Enable App Autoscaler
+
+You can enable App Autoscaler to automatically scale your apps. For information about how to configure App Autoscaler to scale an app automatically, see the [Configure Autoscaling for an App](../appsman-services/autoscaler/using-autoscaler.html#config) section of the _Scaling an Application Using Autoscaler_ topic. 
 
 To enable App Autoscaler for an app, do the following:
 
@@ -103,7 +112,6 @@ To enable App Autoscaler for an app, do the following:
 
 1. Click **Manage Autoscaling** to open App Autoscaler.
 
-For information about how to configure App Autoscaler to scale your app automatically, see the [Configure Autoscaling for an App](../appsman-services/autoscaler/using-autoscaler.html#config) section of the _Scaling an Application Using Autoscaler_ topic.
 
 ### <a id="bind-unbind-services"></a> Bind or Unbind Services
 
@@ -116,18 +124,15 @@ You can bind your app to new or existing service instances. You can also unbind 
 To bind your app to an existing service, do the following:
 
 1. In the panel on the left side of the screen, under **Application**, click **Services**.
+    <%= image_tag("bound-services.png") %>
 
 1. Click **Bind Service**.
-    <%= image_tag("bound-services.png") %>
-    <br> 
-    <%= image_tag("bind-service.png") %>
-    <br>
 
-1. Under **Service to Bind**, select the service instance from the dropdown menu.
+1. For **Service to Bind**, select the service instance from the dropdown menu.
 
-1. (Optional) Enter a binding name under **Binding Name** in all lowercase letters. For example, `bind-usr-serv`.
+1. (Optional) For **Binding Name**, enter a binding name in all lowercase letters. For example, `bind-usr-serv`.
 
-1. (Optional) Specify additional parameters under **Add Parameters**.
+1. (Optional) For **Add Parameters**, specify additional parameters.
 
 1. Click **Bind**.
 
@@ -149,9 +154,9 @@ To bind your app to a new service instance, do the following:
 
 1. Under **Instance Name**, enter a name for the instance.
 
-1. (Optional) Enter a binding name under **Binding Name** in all lowercase letters. For example, `bind-autoscaler`.
+1. (Optional) For **Binding Name**, enter a binding name in all lowercase letters. For example, `bind-usr-serv`.
 
-1. (Optional) Specify additional parameters under **Add Parameters**. For a list of supported configuration parameters, consult the documentation for the service.
+1. (Optional) For **Add Parameters**, specify additional parameters. For a list of supported configuration parameters, consult the documentation for the service.
 
 1. Click **Create**.
 
@@ -190,7 +195,7 @@ To unmap a route from your app, do the following:
 
 1. In the panel on the left side of the screen, under **Networking**, click **Routes**.
 
-1. Locate the route from the list and click the red `x`. 
+1. Locate the route from the list and click the `x`. 
 
 1. Click **Unmap** in the pop-up to confirm.
 
@@ -198,12 +203,13 @@ To unmap a route from your app, do the following:
 
 Container networking policies enable app instances to communicate with each other directly. You can create container networking policies in the **Networking** tab.
 
-To view and use the **Networking** tab, you must have either the `network.write` or `network.admin` UAA scope. If you do not see the **Networking** tab, request one of the above scopes from your PCF administrator. 
+For more information about container-to-container networking in PCF, see [Container-to-Container Networking](../concepts/understand-cf-networking.html).
+
+<p class="note"><b>Note:</b> To view and use the <b>Networking</b> tab, you must have either the <code>network.write</code> or <code>network.admin</code> UAA scope. If you do not see the <b>Networking</b> tab, request one of the above scopes from your PCF administrator.</p> 
 
 To create container-to-container networking policies, do the following:
 
 1. In the panel on the left side of the screen, under **Networking**, click **Container Networking**. The page displays any container networking policies associated with the app.
-     <%= image_tag("networking-tab.png", :alt => "The Container Networking Policies page shows a Create Policy button, and a Add a network policy link. There is an empty list of network policies.") %>
 
 1. To add a new network policy, click **Create Policy** or **Add a network policy**.
       <%= image_tag("add-policy-form.png", :alt => "The Add Policy form shows dropdown menus for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button.") %>  
@@ -217,9 +223,10 @@ To create container-to-container networking policies, do the following:
 
 1. Click **Save**.
 
-For more information about container-to-container networking in PCF, see [Container-to-Container Networking](../concepts/understand-cf-networking.html).
 
 ### <a id="logs"></a> View Logs
+
+You can view logs for an app in Apps Manager. You can also use Apps Manager to view a live stream of app logs. 
 
 To view logs for an app, do the following:
 
@@ -267,7 +274,7 @@ In the **Tasks** tab, click **Enable Scheduling** to bind the PCF Scheduler serv
 
 To schedule a task, do the following:
 
-1. Navigate to the **Tasks** tab.
+1. In the panel on the left side of the screen, under **Application**, click **Tasks**.
 
 1. Click **Create Job** to schedule a task.
 <%= image_tag("create-job-window.png") %>
@@ -283,9 +290,9 @@ To schedule a task, do the following:
 
 ### <a id="view-settings"></a> View and Manage Settings
 
-To view settings for an app, click the **Settings** tab. 
+To view settings for an app, in the panel on the left side of the screen, under **Application**, click **Settings**.
 
-You can do the following from the **Settings** tab:
+You can do the following from the **Settings** page:
 
 * Rename the app.
 * View information about the buildpack(s), start command, and stack.
@@ -300,7 +307,7 @@ You can do the following from the **Settings** tab:
 
 To configure health checks for your app, do the following:
 
-1. Click the **Settings** tab.
+1. In the panel on the left side of the screen, under **Application**, click **Settings**.
 
 1. In the **Health Check** section, click the **Type** dropdown and select `port`, `http`, or `process`. Depending on which option you select, additional fields may appear.
 
@@ -316,7 +323,11 @@ For more information, see [Using Application Health Checks](../devguide/deploy-a
 
 #### <a id="view-env-var"></a> View Environment Variables
 
-To view all environment variables, click **Reveal Env Vars**.
+To view all environment variables for an app, do the following:
+
+1. In the panel on the left side of the screen, under **Application**, click **Settings**.
+
+1. Under **User Provided Environment Variables**, click **Reveal Env Vars**.
 
 
 #### <a id="add-env-var"></a> Add Environment Variables
