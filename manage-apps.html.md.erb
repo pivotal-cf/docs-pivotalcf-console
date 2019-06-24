@@ -16,13 +16,19 @@ owner: Apps Manager
 
 </style>
 
-This topic discusses how to view and manage apps and service instances associated with a space using Apps Manager.
+This topic explains how to view and manage apps and service instances with Apps Manager.
 
-To perform the following steps, you must first log in to Apps Manager with an account that has adequate permissions. See the [About Permissions](dev-console.html#permissions) topic for more information.
+## <a id='overview'></a> Overview
 
+You can use Apps Manager to manage apps, service instances, service keys, and route services. This includes tasks such as scaling apps, binding apps to services, generating services keys, and more. 
 
-## <a id='navigate'></a> Navigate Apps Manager
+For information about managing orgs and spaces, see [Managing Orgs and Spaces Using Apps Manager](manage-spaces.html).
 
+## <a id='prerequisite'></a> Prerequisite
+
+To view and manage apps and service instances with Apps Manager, you must log in to Apps Manager with an account that has adequate permissions. 
+
+For more information, see [About Permissions](dev-console.html#permissions).
 
 
 ## <a id='manage-app'></a> Manage an App
@@ -33,7 +39,7 @@ To manage an app, navigate to an app page with one of the following methods:
 - Search for an app by entering its name in the search bar.
 
 
-From the app page, you can do the following:
+You can do the following tasks to manage apps in Apps Manager:
 
 - Scale apps
 - Bind apps to services
@@ -77,6 +83,8 @@ From the app **Overview** pane, Space Developers can scale an app manually or co
 
 To manually scale an app, do the following:
 
+1. In the panel on the left side of the screen, under **Application**, click **Overview**.
+
 1. Click **Scale** to open the **Scale App** dialog.
    <%= image_tag("scale-app.png", :alt => "In the 'Processes and Instances' section of the 'Overview' pane, find the 'Scale' button to the right of each process.") %>
 
@@ -87,6 +95,8 @@ To manually scale an app, do the following:
 #### <a id="autoscale"></a> Enable App Autoscaler
 
 To enable App Autoscaler for an app, do the following:
+
+1. In the panel on the left side of the screen, under **Application**, click **Overview**.
 
 1. Click **Enable Autoscaling** to enable App Autoscaler. 
 <%= image_tag("enable-autoscaling.png", :alt => "In the 'Processes and Instances' section of the 'Overview' pane, find 'Enable Autoscaling' two rows below the title of each process.") %>
