@@ -48,7 +48,7 @@ You can do the following tasks to manage apps in Apps Manager:
 
 ### <a id="view"></a> View App Overview
 
-To view summary information for an app, navigate to the **Overview** page for the app. The **Overview** page includes information about app processes and instances, app memory and disk space, and app events. 
+The **Overview** page for an app includes information about app processes and instances, app memory and disk space, and app events. 
 
 To navigate to an app **Overview** page, do one of the following:
 
@@ -62,8 +62,9 @@ The following image shows an example of an app **Overview** page.
 
 ### <a id="start-stop"></a> Start, Stop, or Restage an App
 
-The start, stop, and restage buttons are located next to the name of your app.
-See the diagram below:
+You can start, stop, and restage from the **Overview** page of the app. The start, stop, and restage buttons are located on the app **Overview** page next to the name of the app.
+
+The following image shows the location of the start, stop, and restage buttons.
 
 <%# To edit the following diagram, go to https://drive.google.com/file/d/1X4GPXIaf9gPIjkHiDHDxTZWWVY4Wt0qn/view?usp=sharing.
 You must be in the Pivotal org to edit the diagram.%>
@@ -71,16 +72,7 @@ You must be in the Pivotal org to edit the diagram.%>
               To the right of the app name is three buttons: one with a 'stop' icon, another with a 'restart' icon, and the last with
               a 'restage' icon.") %>
 
-To perform actions with the three buttons, see the table below:
-
-| To...  | Do the following:  |
-|---|---|
-| Stop an app    |   Click the <i class="fa fa-stop" aria-hidden="true"></i> (stop) button |
-| Restart a stopped or running app |  Click the <i class="fa fa-repeat" aria-hidden="true"></i> (restart) button  |
-| Restage an app | Click the <i class="fa fa-refresh" aria-hidden="true"></i> (restage) button. | 
-
-For more information about starting, stopping, and restaging apps, but with the
-Cloud Foundry Command Line Interface (cf CLI), see [Starting, Restarting, and Restaging Applications](../devguide/deploy-apps/start-restart-restage.html).
+For more information about starting, stopping, and restaging apps with the Cloud Foundry Command Line Interface (cf CLI), see [Starting, Restarting, and Restaging Applications](../devguide/deploy-apps/start-restart-restage.html).
 
 ### <a id="scale"></a> Scale an App
 
@@ -377,21 +369,42 @@ To add labels or annotations to an app using Apps Manager, do the following:
 
 ## <a id='manage-service'></a> Manage a Service Instance
 
-From the **Services** tab on the space page, you can bind or unbind apps, bind or unbind routes, view or change your service plan, manage service keys, and rename or delete your service instance.
+This section describes how to manage service instances in Apps Manager.
 
-For services that use on-demand brokers, the service broker will create, update, or delete the service instance in the background and notify you when it finishes.
+You can do the following tasks to manage service instances in Apps Manager:
+
+* Bind or unbind apps 
+* Bind or unbind routes
+* View or change your service plan 
+* Manage service keys 
+* Rename or delete your service instance
+
+<p class="note"><b>Note: </b>For services that use on-demand brokers, the service broker will create, update, or delete the service instance in the background and notify you when it finishes.</p>
+
+### <a id='view-service'></a> View Service Overview
+
+The **Overview** page for a service instance includes information about bound apps, bound routes, and service key credentials for the service. 
+
+To navigate to a service instance **Overview** page, do the following:
+
+1. Navigate to the landing page for the space of the service instance.  
+1. In the panel on the left side of the screen, under **Space**, click **Services**. 
+1. On the **Services** page, click on the name of the service instance. 
+
+The following image shows an example of a service instance **Overview** page.
+
+
+
 
 ### <a id='bind-app'></a> Bind an App
 
 <p class="note"><strong>Note</strong>: For services that use asynchronous bindings, Apps Manager displays the status of the service while the bind is still pending. Asynchronous bindings provide more flexibility for services that require additional time before returning a successful bind response.</p>
 
-1. From the space page **Services** tab, click the service instance you want to bind to an app. 
+To bind and app to a service, do the following: 
 
-    <%= image_tag("services-binding.png") %>
+1. On the service **Overview** page, click **Bind App**.
 
-1. Click **Bind App**. A popup appears.
-
-1. In the **Bind App** popup, select the app you want to bind to your service instance.
+1. In the **Bind App** popup, select the app to bind to the service instance.
 
     <%= image_tag("services-binding-popup.png") %>
 
@@ -401,15 +414,12 @@ For services that use on-demand brokers, the service broker will create, update,
 
 ### <a id='unbind-app'></a> Unbind an App
 
-1. From the space page **Services** tab, click the service instance you want to unbind from an app. 
-
-    <%= image_tag("services-binding.png") %>
-
-1. Locate the app under **Bound Apps** and click the red **×** on the right. An **Unbind App** popup appears.
+1. On the service **Overview** page, locate the app under **Bound Apps** and click the **×** on the right. An **Unbind App** popup appears.
 
     <%= image_tag("services-unbinding-popup.png") %>
 
 1. Click **Unbind** to confirm.
+
 
 ### <a id="shared-instances"></a> Share Service Instance
 
@@ -418,7 +428,7 @@ and delete service instances.
 
 To share your service instance, do the following:
 
-1. From the **Overview** tab of your service instance, click **Share Service Instance**.
+1. From the service **Overview** tab, click **Share Service Instance**.
 <%= image_tag("share-service-instance-button.png", :alt=>"The service instance button is
               located in the 'Overview' tab of a service instance. The section is at the
               bottom of the body, next to the text 'Shared with these Spaces'") %>
