@@ -334,17 +334,18 @@ To view all environment variables for an app, do the following:
 
 To add a user-provided environment variable, do the following:
 
-1. Click the **Settings** tab.
+1. In the panel on the left side of the screen, under **Application**, click **Settings**.
 
 1. Click **Reveal User Provided Env Vars**.
 
-1. Enter the **Name** and **Value** of the variable. Alternatively, enter your variable using the **Enter JSON** toggle.
+1. Click **Add Environment Variable**.
+
+1. Enter the **key** and **value** of the variable. Alternatively, toggle **Enter as JSON** to enter the variable in JSON.
   <%= image_tag("user-env-vars.png") %>
 
-1. Click **Save**.
-    
+1. Click **Save**. 
 
-<p class="note"><strong>Note:</strong> Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p> 
+<p class="note"><strong>Note:</strong> Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p>
 
 
 ### <a id="metadata"></a>Add Metadata
@@ -363,7 +364,7 @@ For more information about adding metadata to objects in PAS, see [Using Metadat
 
 To add labels or annotations to an app using Apps Manager, do the following:
 
-1. Click the **Settings** tab of the desired app.
+1. In the panel on the left side of the screen, under **Application**, click **Settings**.
 
 1. For **Labels**, provide a name and value pair. Or, select **Enter JSON** to enter the label in JSON.
 
