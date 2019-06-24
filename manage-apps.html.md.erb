@@ -21,6 +21,10 @@ This topic discusses how to view and manage apps and service instances associate
 To perform the following steps, you must first log in to Apps Manager with an account that has adequate permissions. See the [About Permissions](dev-console.html#permissions) topic for more information.
 
 
+## <a id='navigate'></a> Navigate Apps Manager
+
+
+
 ## <a id='manage-app'></a> Manage an App
 
 To manage an app, navigate to an app page with one of the following methods:
@@ -40,6 +44,8 @@ From the app page, you can do the following:
 - Terminate specific instances of apps
 
 <%= image_tag("app-page.png", :alt => "The example Apps Manager dashboard shows at the top heading the name of the example app, 'cf-nodejs', with a stop and refresh button to the right. A green status icon says 'Running'. Below shows a horizontal series of tabs with the 'Overview' tab selected. Below, the 'Overview' pane shows an 'Events' section, 'App Summary' section, and 'Processes and Instances' section.") %>
+
+
 
 ### <a id="start-stop"></a> Start, Stop, or Restage an App
 
@@ -99,7 +105,7 @@ You can bind your app to new or existing service instances. You can also unbind 
 
 To bind your app to an existing service, do the following:
 
-1. Click **Services**.
+1. In the panel on the left side of the screen, under **Application**, click **Services**.
 
 1. Click **Bind Service**.
     <%= image_tag("bound-services.png") %>
@@ -120,7 +126,7 @@ To bind your app to an existing service, do the following:
 
 To bind your app to a new service instance, do the following:
 
-1. Click **Services**.
+1. In the panel on the left side of the screen, under **Application**, click **Services**.
 
 1. Click **New Service**.<br>
     <%= image_tag("new-service.png") %>.
@@ -144,7 +150,7 @@ To bind your app to a new service instance, do the following:
 
 To unbind your app from a service instance, do the following:
 
-1. Click **Services**.
+1. In the panel on the left side of the screen, under **Application**, click **Services**.
 
 1. Locate the service instance in the **Bound Services** list. 
 
@@ -161,7 +167,7 @@ The **Routes** page displays the routes associated with your app. You can use th
 
 To map routes to your app, do the following:
 
-1. Click **Routes**.
+1. In the panel on the left side of the screen, under **Networking**, click **Routes**.
 
 1. To add a new route, click **Map a Route**.
     <%= image_tag("routes.png") %>
@@ -172,7 +178,7 @@ To map routes to your app, do the following:
 
 To unmap a route from your app, do the following:
 
-1. Click **Routes**.
+1. In the panel on the left side of the screen, under **Networking**, click **Routes**.
 
 1. Locate the route from the list and click the red `x`. 
 
@@ -186,8 +192,8 @@ To view and use the **Networking** tab, you must have either the `network.write`
 
 To create container-to-container networking policies, do the following:
 
-1. Click **Networking**. The page displays any container networking policies associated with the app.
-     <%= image_tag("networking-tab.png", :alt => "The Container Networking Policies tab shows a Create Policy button, and a Add a network policy link. There is an empty list of network policies.") %>
+1. In the panel on the left side of the screen, under **Networking**, click **Container Networking**. The page displays any container networking policies associated with the app.
+     <%= image_tag("networking-tab.png", :alt => "The Container Networking Policies page shows a Create Policy button, and a Add a network policy link. There is an empty list of network policies.") %>
 
 1. To add a new network policy, click **Create Policy** or **Add a network policy**.
       <%= image_tag("add-policy-form.png", :alt => "The Add Policy form shows dropdown menus for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button.") %>  
@@ -207,8 +213,7 @@ For more information about container-to-container networking in PCF, see [Contai
 
 To view logs for an app, do the following:
 
-1. Click **Logs** to view the logs for the app.
-    <%= image_tag("logs.png") %>
+1. In the panel on the left side of the screen, under **Observability**, click **Logs**.
 
 1. Click the play button to view a live version of the logs. 
 
@@ -220,14 +225,16 @@ From the **Tasks** page, you can view tasks, run tasks, and enable task scheduli
 
 #### <a id='view'></a> View Tasks
 
-To view tasks for an app, click the **Tasks** tab within Apps Manager.
+You can view tasks for an app on the Tasks page in Apps Manager.
 
-<%= image_tag("task-window-resize.png") %>
+To access the Tasks page, in the panel on the left side of the screen, under **Application**, click **Tasks**. 
 
 
 #### <a id='run'></a> Run a Task
 
 To run a task for an app, do the following:
+
+1. In the panel on the left side of the screen, under **Application**, click **Tasks**.
 
 1. Click **Run Task** to create a task.
     <%= image_tag("run-task.png") %>
@@ -235,6 +242,8 @@ To run a task for an app, do the following:
 1. (Optional) Enter a **Task Name**.
 
 1. Enter the **Task Command**.
+
+1. Select a **Memory Limit** and a **Disk Limit** for the task.
 
 1. Click **Run**.
 
