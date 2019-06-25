@@ -471,31 +471,38 @@ To share a service instance, do the following:
 <% if vars.product_name == 'PCF' %>
 
 
-### <a id='update-user-provided-service'> Update User-Provided Service Instance
+### <a id='update-user-provided-service'></a> Update User-Provided Service Instance
 
-Follow the steps below to update an existing user-provided service instance. You can create a user-provided service instance from the Marketplace. For more information, see the [User-Provided Service Instances](../devguide/services/user-provided.html) topic.
+You can create a user-provided service instance from the Marketplace. For more information, see the [User-Provided Service Instances](../devguide/services/user-provided.html) topic.
+
+To update a user-provided service instance, do the following:
 
 1. Click **Configuration**. This tab only appears for user-provided service instances.
     <%= image_tag("config-user-provided.png") %>
 
-1. Enter your **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**, and click **Update Service**.
+1. Enter your **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**. Click **Update Service**.
 <% else %>
 <% end %>
 
 
 ## <a id='manage-keys'></a> Manage Service Keys
 
-On the space page, click **Services**, then click the service instance that you want to manage service keys for. This directs you to the service instance **Overview** page, where you can generate a new service key, get the credentials for a service key, and delete a service key.
+To manage service keys, do the following:
 
-<%= image_tag("keys-list.png") %>
+1. Navigate to the service **Overview** page.
+
+1. Under **Service Key Credentials**, generate a new service key, get the credentials for a service key, or delete a service key.
+
 
 ### <a id='create-key'></a> Generate a Service Key
 
-Follow the steps below to generate a service key. 
+To generate a new service key, do the following:
 
-1. In the **Service Key Credentials** section, click **Create Service Key**.
+1. Navigate to the service **Overview** page.
 
-1. Edit the **Service Key Name**.
+1. Under **Service Key Credentials**, click **Create Service Key**.
+
+1. Enter a **Service Key Name**.
 
     <%= image_tag("keys-create.png") %>
 
@@ -505,11 +512,14 @@ Follow the steps below to generate a service key.
 
 1. Click **Create** to generate the service key.
 
+
 ### <a id='get-creds'></a> View Credentials for a Service Key
 
-Follow the steps below to view the credentials for a service key. 
+To view the credentials for a service key, do the following: 
 
-1. To view the credentials for a particular service instance, click the service instance name under **Service Key Credentials**. The JSON object containing the credentials appears. 
+1. Navigate to the service **Overview** page.
+
+1. Under **Service Key Credentials**, click the service instance name. The JSON object containing the credentials appears. 
 
     <%= image_tag("keys-creds.png") %>
 
@@ -517,19 +527,23 @@ Follow the steps below to view the credentials for a service key.
 
 ### <a id='delete-key'></a> Delete Service Key
 
-To delete a service key, click the red `x` next to the service instance name.
+To delete a service key, do the following:
+
+1. Navigate to the service **Overview** page.
+
+1. Under **Service Key Credentials**, click the `x` next to the service instance name.
 <%= image_tag("keys-delete.png") %>
 
 
 ## <a id='manage-route-services'></a> Manage Route Services
 
-For more information about route services, see the [Route Services](../services/route-services.html) topic.
-
 You can bind a [new service instance](#new-route-services) to a route when creating the instance in the Marketplace, or you can manage route services for an [existing service instance](#old-route-services) on the service instance page.
+
+For more information about route services, see the [Route Services](../services/route-services.html) topic.
 
 ### <a id='new-route-services'></a> Bind a New Service Instance to a Route
 
-Follow the steps below to bind a new service instance to a route. 
+To bind a new service instance to a route, do the following: 
 
 1. Select the service from the Marketplace.
     <%= image_tag('bind-route-new.png') %>
@@ -541,18 +555,24 @@ Follow the steps below to bind a new service instance to a route.
 
 ### <a id='old-route-services'></a> Bind an Existing Service Instance to a Route
 
-Follow the steps below to bind an existing service instance to a route. 
+To bind an existing service instance to a route, do the following: 
 
-1. On the space page, click **Services**.
+1. Navigate to the service **Overview** page.
 
-1. Click the service instance that you want to manage route services for. 
+1. Under **Bound Routes**, click **Bind Route**.
     <p class="note"><strong>Note:</strong> If the service is not compatible with route services, the text "This service does not support route binding" appears under <strong>Bound Routes</strong>.</p>
-
-1. To bind the service instance to a route, click **Bind Route**.
     <%= image_tag('bind-route-old.png') %>
 
-1. Select an existing route under **Select a route to bind** or enter a new route under **Create Custom Route**.
+1. Do one of the following:
+    * For **Select a route to bind**, select an existing route. 
+    * For **Create Custom Route**, enter a new route.
 
 1. Click **Bind**.
 
-To unbind a route from a service instance, click the `x` next to the name of the route under **Bound Routes**.
+### <a id='unbind-route-services'></a> Unbind a Route from a Service Instance
+
+To unbind a route from a service instance, do the following:
+
+1. Navigate to the service **Overview** page.
+
+1. Under **Bound Routes**, click the `x` next to the name of the route.
