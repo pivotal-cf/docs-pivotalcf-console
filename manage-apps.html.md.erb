@@ -3,18 +3,7 @@ title: Managing Apps and Service Instances Using Apps Manager
 owner: Apps Manager
 ---
 
-<style>
-.fa-stop:before {
-   content: "\f04d";
-}
-.fa-repeat:before {
-   content: "\f01e";
-}
-.fa-refresh:before {
-   content: "\f021";
-}
 
-</style>
 
 This topic explains how to view and manage apps and service instances with Apps Manager.
 
@@ -119,7 +108,7 @@ To bind your app to an existing service, do the following:
 1. Navigate to the app **Overview** page.
 
 1. In the panel on the left side of the screen, under **Application**, click **Services**.
-    <%= image_tag("bound-services.png") %>
+    <%= image_tag("bound-services.png", :alt => "") %>
 
 1. Click **Bind Service**.
 
@@ -141,7 +130,7 @@ To bind your app to a new service instance, do the following:
 1. In the panel on the left side of the screen, under **Application**, click **Services**.
 
 1. Click **New Service**.<br>
-    <%= image_tag("new-service.png") %>.
+    <%= image_tag("new-service.png", :alt => "") %>.
     <br>
     <p class="note"><strong>Note:</strong> If you prefer to create the new service instance in the Marketplace, you can click **View in Marketplace** at any time.</p>
 
@@ -186,7 +175,7 @@ To map routes to your app, do the following:
 1. In the panel on the left side of the screen, under **Networking**, click **Routes**.
 
 1. To add a new route, click **Map a Route**.
-    <%= image_tag("routes.png") %>
+    <%= image_tag("routes.png", :alt => "") %>
 
 1. Enter the route and click **Map**.
 
@@ -217,7 +206,7 @@ To create container-to-container networking policies, do the following:
 1. In the panel on the left side of the screen, under **Networking**, click **Container Networking**. The page displays any container networking policies associated with the app.
 
 1. To add a new network policy, click **Create Policy** or **Add a network policy**.
-      <%= image_tag("add-policy-form.png", :alt => "The Add Policy form shows dropdown menus for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button.") %>  
+      <%= image_tag("add-policy-form.png", :width => "400", :alt => "The Add Policy form shows dropdown menus for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button.") %>  
 
 1. In the **Add Policy** window, configure the following:
     *  For **Org**, select the org of the destination app.
@@ -267,7 +256,7 @@ To run a task for an app, do the following:
 1. In the panel on the left side of the screen, under **Application**, click **Tasks**.
 
 1. Click **Run Task** to create a task.
-    <%= image_tag("run-task.png") %>
+    <%= image_tag("run-task.png", :width => "400", :alt => "") %>
 
 1. (Optional) Enter a **Task Name**.
 
@@ -292,7 +281,7 @@ To schedule a task, do the following:
 1. In the panel on the left side of the screen, under **Application**, click **Tasks**.
 
 1. Click **Create Job** to schedule a task.
-<%= image_tag("create-job-window.png") %>
+<%= image_tag("create-job-window.png", :alt => "") %>
 
 1. Enter a **Job Name**.
 
@@ -361,7 +350,7 @@ To add a user-provided environment variable, do the following:
 1. Click **Add Environment Variable**.
 
 1. Enter the **key** and **value** of the variable. Alternatively, toggle **Enter as JSON** to enter the variable in JSON.
-  <%= image_tag("user-env-vars.png") %>
+  <%= image_tag("user-env-vars.png", :alt => "") %>
 
 1. Click **Save**. 
 
@@ -425,7 +414,7 @@ To navigate to a service instance **Overview** page, do the following:
 
 The following image shows an example of a service instance **Overview** page.
 
-<%= image_tag("services-binding.png") %>
+<%= image_tag("services-binding.png", :alt => "") %>
 
 
 ### <a id='bind-app'></a> Bind an App
@@ -438,7 +427,7 @@ To bind and app to a service, do the following:
 
 1. In the **Bind App** popup, select the app to bind to the service instance.
 
-    <%= image_tag("services-binding-popup.png") %>
+    <%= image_tag("services-binding-popup.png", :alt => "") %>
 
 1. (Optional) To attach parameters to the binding, click **Show Advanced Options**. Under **Arbitrary Parameters**, enter any additional service-specific configuration.
 
@@ -450,7 +439,7 @@ To unbind an app from a service instance, do the following:
 
 1. On the service **Overview** page, under **Bound Apps**, click the **×** to the right of the app name. An **Unbind App** popup appears.
 
-    <%= image_tag("services-unbinding-popup.png") %>
+    <%= image_tag("services-unbinding-popup.png", :alt => "") %>
 
 1. Click **Unbind** to confirm.
 
@@ -491,7 +480,7 @@ To share a service instance, do the following:
 
 1. In the panel on the left side of the screen, under **Service**, click **Settings**.
 
-    <%= image_tag("services-settings.png") %>
+    <%= image_tag("services-settings.png", :alt => "") %>
 
 1. Do one of the following:
     * To change the service instance name, enter the new name and click **Update**.
@@ -513,7 +502,7 @@ To update a user-provided service instance, do the following:
 
 1. In the panel on the left side of the screen, under **Service**, click **Configuration**. 
     <p class="note"><b>Note</b>: The <b>Configuration</b> page only appears for user-provided service instances.</p>
-    <%= image_tag("config-user-provided.png") %>
+    <%= image_tag("config-user-provided.png", :alt => "") %>
 
 1. Enter the **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**. 
 
@@ -541,11 +530,11 @@ To generate a new service key, do the following:
 
 1. Enter a **Service Key Name**.
 
-    <%= image_tag("keys-create.png") %>
+    <%= image_tag("keys-create.png", :alt => "") %>
 
 1. (Optional) Click **Show Advanced Options**. Under **Arbitrary Parameters**, enter any additional service-specific configuration in the **Name** and **Value** fields.
 
-    <%= image_tag("keys-create-adv.png") %>
+    <%= image_tag("keys-create-adv.png", :alt => "") %>
 
 1. Click **Create** to generate the service key.
 
@@ -558,7 +547,7 @@ To view the credentials for a service key, do the following:
 
 1. Under **Service Key Credentials**, click the service instance name. The JSON object containing the credentials appears. 
 
-    <%= image_tag("keys-creds.png") %>
+    <%= image_tag("keys-creds.png", :alt => "") %>
 
 1. Click **Close**.
 
@@ -569,7 +558,7 @@ To delete a service key, do the following:
 1. Navigate to the service **Overview** page.
 
 1. Under **Service Key Credentials**, click the `x` next to the service instance name.
-<%= image_tag("keys-delete.png") %>
+<%= image_tag("keys-delete.png", :alt => "") %>
 
 
 ## <a id='manage-route-services'></a> Manage Route Services
@@ -583,7 +572,7 @@ For more information about route services, see the [Route Services](../services/
 To bind a new service instance to a route, do the following: 
 
 1. Select the service from the Marketplace.
-    <%= image_tag('bind-route-new.png') %>
+    <%= image_tag('bind-route-new.png', :alt => "") %>
 
 1. Under **Bind to Route**, either bind the service instance to an existing route or click **Create Route** to create a new custom route.
     <p class="note"><strong>Note:</strong> You must choose a Marketplace service compatible with route services for the <strong>Bind to Route</strong> field to appear.</p>
@@ -598,7 +587,7 @@ To bind an existing service instance to a route, do the following:
 
 1. Under **Bound Routes**, click **Bind Route**.
     <p class="note"><strong>Note:</strong> If the service is not compatible with route services, the text "This service does not support route binding" appears under <strong>Bound Routes</strong>.</p>
-    <%= image_tag('bind-route-old.png') %>
+    <%= image_tag('bind-route-old.png', :alt => "") %>
 
 1. Do one of the following:
     * For **Select a route to bind**, select an existing route. 
