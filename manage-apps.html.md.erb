@@ -18,11 +18,12 @@ owner: Apps Manager
 
 This topic discusses how to view and manage apps and service instances associated with a space using Apps Manager.
 
-To perform the following steps, you must first log in to Apps Manager with an account that has adequate permissions. See the [About Permissions](dev-console.html#permissions) topic for more information.
+To do the following, you must first log in to Apps Manager with an account that has adequate permissions. See the [About Permissions](dev-console.html#permissions) topic for more information.
+
+You can manage apps and service instances across multiple foundations. For more information, see [Configuring Multi-Foundation Support in Apps Manager](../opsguide/configure-multi-foundation.html).
 
 
 ## <a id='manage-app'></a> Manage an App
-
 
 From any specific app page, you can do the following to manage an app:
 
@@ -37,8 +38,7 @@ From any specific app page, you can do the following to manage an app:
 
 ### <a id="start-stop"></a> Start, Stop, or Restage an App
 
-The start, stop, and restage buttons are located next to the name of your app.
-See the diagram below:
+The start, stop, and restage buttons are located next to the name of your app. See the diagram below:
 
 <%# To edit the following diagram, go to https://drive.google.com/file/d/1X4GPXIaf9gPIjkHiDHDxTZWWVY4Wt0qn/view?usp=sharing.
 You must be in the Pivotal org to edit the diagram.%>
@@ -76,6 +76,8 @@ From the app **Overview** pane, Space Developers can scale an app [manually](#ma
 
 <%= image_tag("autoscaler-toggle.png", :alt => "In the 'Processes and Instances' section of the 'Overview' pane, find 'Autoscaling' two rows below the title of each process.") %>
 
+To configure App Autoscaler, do the following:
+
 1. Use **Autoscaling** to enable App Autoscaler.
 
 1. Click **Manage Autoscaling** to open App Autoscaler.
@@ -84,7 +86,9 @@ From the app **Overview** pane, Space Developers can scale an app [manually](#ma
 
 ### <a id="bind-services"></a> Bind or Unbind a Service
 
-<p class="note"><strong>Note</strong>: For services that use asynchronous bindings, Apps Manager displays the status of the service while the bind is still pending. Asynchronous bindings provide more flexibility for services that require additional time before returning a successful bind response.</p>
+<p class="note"><strong>Note:</strong> For services that use asynchronous bindings, Apps Manager displays the status of the service while the bind is still pending. Asynchronous bindings provide more flexibility for services that require additional time before returning a successful bind response.</p>
+
+To bind or unbind a service, do the following:
 
 1. Click **Services**.
 
@@ -116,7 +120,7 @@ From the app **Overview** pane, Space Developers can scale an app [manually](#ma
     1. (Optional) Specify additional parameters under **Add Parameters**. For a list of supported configuration parameters, consult the documentation for the service.
     1. Click **Create**.
 
-1. To unbind your app from a service instance, locate the service instance in the **Bound Services** list and click the three-dot icon on the far right. Select **Unbind** from the dropdown menu.
+1. To unbind your app from a service instance, locate the service instance in the **Bound Services** list and click the three-dot icon on the far right. Select **Unbind** from the dropdown.
 
 ### <a id="routes"></a> Map or Unmap Routes
 
@@ -129,7 +133,7 @@ From the app **Overview** pane, Space Developers can scale an app [manually](#ma
 
 1. To unmap a route, locate the route from the list and click the red `x`. Click **Unmap** in the pop-up to confirm.
 
-###<a id="networking"></a> Create Container-to-Container Networking Policies
+### <a id="networking"></a> Create Container-to-Container Networking Policies
 
 Container networking policies enable app instances to communicate with each other directly. You can create container networking policies in the **Networking** tab.
 
@@ -154,6 +158,8 @@ For more information about container-to-container networking in PCF, see [Contai
 
 ### <a id="logs"></a> View Logs
 
+To view logs for your app, do the following:
+
 1. Click **Logs** to view the logs for the app.
     <%= image_tag("logs.png") %>
 
@@ -161,12 +167,16 @@ For more information about container-to-container networking in PCF, see [Contai
 
 ### <a id='view'></a> View Tasks
 
+To view tasks for your app, do the following:
+
 1. Click the **Tasks** tab within Apps Manager.
 
 1. This page displays a table containing **Task ID**, **State**, **Start Time**, **Task Name**, and **Command**.
     <%= image_tag("task-window-resize.png") %>
 
 ### <a id='run'></a> Run a Task
+
+To run a task, do the following:
 
 1. Click **Run Task** to create a task.
     <%= image_tag("run-task.png") %>
@@ -184,6 +194,8 @@ In the **Tasks** tab, click **Enable Scheduling** to bind the PCF Scheduler serv
 ![The Apps Manager interface shows the Task tab enabled with a box beneath that says "The Scheduler Service has not been enabled yet." with an "Enable Scheduling" button beneath](enable-scheduling.png)
 
 ### <a id="schedule-task"></a> Schedule a Task
+
+To schedule a task, do the following:
 
 1. Navigate to the **Tasks** tab.
 <%= image_tag("create-job.png") %>
@@ -251,7 +263,7 @@ To view all environment variables, click **Reveal Env Vars**.
 
 <p class="note"><strong>Note:</strong> Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p> 
 
-### <a id="metadata"></a>Add Metadata
+### <a id="metadata"></a> Add Metadata
 
 You can add metadata, including labels and annotations, to apps and spaces using Apps Manager. For more information about adding metadata to spaces using Apps Manager, see [Managing Orgs and Spaces Using Apps Manager](./manage-spaces.html).
 
@@ -268,10 +280,15 @@ For more information about adding metadata to objects in PAS, see [Using Metadat
 To add labels or annotations to an app using Apps Manager, do the following:
 
 1. Click the **Settings** tab of the desired app.
+
 1. For **Labels**, provide a name and value pair. Or, select **Enter JSON** to enter the label in JSON.
+
 1. For **Annotations**, provide a name and value pair. Or, select **Enter JSON** to enter the annotation in JSON.
+
 1. To add more labels or annotations, click **+** next to the **Labels** or **Annotations** field.
+
 1. Click **Update Metadata**. 
+
 
 ## <a id='manage-service'></a> Manage a Service Instance
 
@@ -311,8 +328,7 @@ For services that use on-demand brokers, the service broker will create, update,
 
 ### <a id="shared-instances"></a> Share Service Instance
 
-From the **Overview** tab, you can share your service instance across spaces. You can also view
-and delete service instances.
+From the **Overview** tab, you can share your service instance across spaces. You can also view and delete service instances.
 
 To share your service instance, do the following:
 
@@ -329,6 +345,8 @@ To share your service instance, do the following:
 1. Click **Share**.
 
 ### <a id='view-plan'></a> View or Change Your Service Plan
+
+To view or change your service plan, do the following:
 
 1. From the space page **Services** tab, click the service instance you want to view or change the plan for.
 
@@ -379,7 +397,7 @@ On the space page, click **Services**, then click the service instance that you 
 
 ### <a id='create-key'></a> Generate a Service Key
 
-Follow the steps below to generate a service key. 
+To generate a service key, do the following: 
 
 1. In the **Service Key Credentials** section, click **Create Service Key**.
 
@@ -395,7 +413,7 @@ Follow the steps below to generate a service key.
 
 ### <a id='get-creds'></a> View Credentials for a Service Key
 
-Follow the steps below to view the credentials for a service key. 
+To view the credentials for a service key, do the following:
 
 1. To view the credentials for a particular service instance, click the service instance name under **Service Key Credentials**. The JSON object containing the credentials appears. 
 
@@ -417,7 +435,7 @@ You can bind a [new service instance](#new-route-services) to a route when creat
 
 ### <a id='new-route-services'></a> Bind a New Service Instance to a Route
 
-Follow the steps below to bind a new service instance to a route. 
+To bind a new service instance to a route, do the following:
 
 1. Select the service from the Marketplace.
     <%= image_tag('bind-route-new.png') %>
@@ -429,7 +447,7 @@ Follow the steps below to bind a new service instance to a route.
 
 ### <a id='old-route-services'></a> Bind an Existing Service Instance to a Route
 
-Follow the steps below to bind an existing service instance to a route. 
+To bind an existing service instance to a route, do the following:
 
 1. On the space page, click **Services**.
 
