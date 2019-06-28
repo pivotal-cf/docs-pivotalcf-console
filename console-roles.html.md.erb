@@ -3,34 +3,33 @@ title: Managing User Roles with Apps Manager
 owner: Apps Manager
 ---
 
-
-
 <% unless vars.book_title == "Pivotal Web Services Documentation" %>
 <!-- This ensures that the note below only appears in the PCF docs, not in the PWS docs.  -->
 
-<p class='note'><strong>Note</strong>: The procedures described here are not compatible with using SAML or LDAP for user identity management. To create and manage user accounts in a SAML- or LDAP-enabled Cloud Foundry deployment, see <a href='../opsguide/external-user-management.html'>Adding Existing SAML or LDAP Users to a Pivotal Cloud Foundry Deployment</a>.</p>
+<p class='note'><strong>Note:</strong> The procedures described here are not compatible with using SAML or LDAP for user identity management. To create and manage user accounts in a SAML- or LDAP-enabled Cloud Foundry deployment, see <a href='../opsguide/external-user-management.html'>Adding Existing SAML or LDAP Users to a Pivotal Cloud Foundry Deployment</a>.</p>
 
 <% end %>
 
-Cloud Foundry uses role-based access control, with each role granting the
-permissions in either an org or an application space. 
+Cloud Foundry uses role-based access control, with each role granting the permissions in either an org or an application space. 
 
 A user account can be assigned one or more roles.
 
-The combination of these roles defines the actions a user can perform in an org
-and within specific app spaces in that org.
+The combination of these roles defines the actions a user can perform in an org and within specific app spaces in that org.
 
-To view the actions that each role allows, see the [Organizations, Spaces, Roles, and Permissions](../concepts/roles.html) topic. For example, to assign roles to user accounts in a space, you must have Space Manager role assigned to the user in that space.
+To view the actions that each role allows, see [Organizations, Spaces, Roles, and Permissions](../concepts/roles.html). For example, to assign roles to user accounts in a space, you must have Space Manager role assigned to the user in that space.
 
 You can also modify permissions for existing users by adding or removing the roles associated with the user account. User roles are assigned on a per-space basis, so you must modify the user account for each space that you want to change.
 
 Admins, Org Managers, and Space Managers can assign user roles with Apps Manager or with the Cloud Foundry Command Line Interface (cf CLI). For more information, see the [Users and Roles](../cf-cli/getting-started.html#user-roles) section of the _Getting Started with the cf CLI_ topic.
 
-## <a id='orgs-roles'></a>Manage Org Roles ##
+You can manage user roles across multiple foundations. For more information, see [Configuring Multi-Foundation Support in Apps Manager](../opsguide/configure-multi-foundation.html).
+
+
+## <a id='orgs-roles'></a> Manage Org Roles
 
 Valid [org roles](../concepts/roles.html#roles) are <%=vars.org_roles %>.
 
-To grant or revoke org roles, follow the steps below.
+To grant or revoke org roles, do the following:
 
 1. Go to the **Home** page
 
@@ -38,29 +37,31 @@ To grant or revoke org roles, follow the steps below.
 
 1. Click the **Members** tab. Edit the roles assigned to each user by selecting or clearing the checkboxes under each user role. Apps Manager saves your changes automatically.
 
-1. The **Members** panel displays all members of the org.
-Select a checkbox to grant an org role to a user, or clear a checkbox to
-revoke a role from a user.
+1. The **Members** panel displays all members of the org. Select a checkbox to grant an org role to a user, or clear a checkbox to revoke a role from a user.
 
-## <a id='space-roles'></a>Manage App Space Roles ##
 
-Valid [app space roles](../concepts/roles.html#roles) are Space Manager,
-Space Developer, and Space Auditor.
+## <a id='space-roles'></a> Manage App Space Roles
+
+Valid [app space roles](../concepts/roles.html#roles) are Space Manager, Space Developer, and Space Auditor.
 
 To grant or revoke app space roles, do the following:
 
-1. Go to the page for a space 
+1. Go to the page for a space.
+
 1. Select the **Members** tab. The **Members** panel displays all members of the space.
     <% image_tag("space-members.png", :alt=> "This screenshot shows an example space page of 'space-0000'. The 'Members' tab is selected. A table lists members and various permissions. On this example page, there are many space auditor members. ") %>
+
 1. Select a checkbox to grant an app space role to a user, or clear a checkbox to revoke a role from a user.
 	* **Space Managers** can invite and manage users and enable features for a given space. Assign this role to managers or other users who need to administer the account.
 	* **Space Developers** can create, delete, and manage applications and services, and have full access to all usage reports and logs. Space Developers can also edit applications, including the number of instances and memory footprint. Assign this role to app developers or other users who need to interact with applications and services.
 	* **Space Auditors** have view-only access to all space information, settings, reports, and logs. Assign this role to users who need to view but not edit the application space.
 
 
-## <a id='invite'></a>Invite New Users ##
+## <a id='invite'></a> Invite New Users
 
 <%= vars.enable_invitations %>
+
+To invite new users to an org, do the following:
 
 1. On the Org dashboard, click the **Members** tab.
 
@@ -70,16 +71,16 @@ To grant or revoke app space roles, do the following:
 
 1. In the **Add Email Addresses** text field, enter the email addresses of the users that you want to invite. Enter multiple email addresses as a comma-delimited list.
 
-1. The **Assign Org Roles** and **Assign Space Roles** tables list the current org and available spaces with checkboxes corresponding to each possible user role.
-Select the checkboxes that correspond to the permissions that you want to grant to the invited users.
+1. The **Assign Org Roles** and **Assign Space Roles** tables list the current org and available spaces with checkboxes corresponding to each possible user role. Select the checkboxes that correspond to the permissions that you want to grant to the invited users.
 
-1. Click **Send Invite**.
-The Apps Manager sends an email containing an invitation link to each
-email address that you specified.
+1. Click **Send Invite**. The Apps Manager sends an email containing an invitation link to each email address that you specified.
+
 
 ## <a id='removing_org'></a> Remove a User From an Org
 
 Removing a user from org also removes them from all spaces in the org.
+
+To remove a user from the org, do the following:
 
 1. On the Org dashboard, click the **Members** tab.
 
@@ -91,10 +92,15 @@ Removing a user from org also removes them from all spaces in the org.
 
 1. Click **Remove** to confirm user account deletion from the org.
 
-## <a id='removing_space'></a> Remove a User From a Space ##
 
-1. Go to the page for a space 
-1. Select the **Members** tab. The **Members** panel displays all members of the space
+## <a id='removing_space'></a> Remove a User From a Space
+
+To remove a user from a space, do the following:
+
+1. Go to the page for a space.
+
+1. Select the **Members** tab. The **Members** panel displays all members of the space.
+
 1. Locate the user account that you want to remove.
 
     <%= image_tag("images/space-members.png") %>
@@ -104,4 +110,3 @@ Removing a user from org also removes them from all spaces in the org.
     <%= image_tag("images/remove-space-member.png") %>
 
 1. Click **Remove** to confirm user account deletion from the space.
-

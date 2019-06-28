@@ -3,15 +3,17 @@ title: Managing Apps and Service Instances Using Apps Manager
 owner: Apps Manager
 ---
 
-
-
 This topic explains how to view and manage apps and service instances with Apps Manager.
+
 
 ## <a id='overview'></a> Overview
 
 You can use Apps Manager to manage apps, service instances, service keys, and route services. This includes tasks such as scaling apps, binding apps to services, generating services keys, and more. 
 
 For information about managing orgs and spaces, see [Managing Orgs and Spaces Using Apps Manager](manage-spaces.html).
+
+You can manage apps and service instances across multiple foundations. For more information, see [Configuring Multi-Foundation Support in Apps Manager](../opsguide/configure-multi-foundation.html).
+
 
 ## <a id='prerequisite'></a> Prerequisite
 
@@ -48,7 +50,6 @@ The following image shows an example of an app **Overview** page.
 
 <%= image_tag("app-page.png", :alt => "The example Apps Manager dashboard shows at the top heading the name of the example app, 'cf-nodejs', with a stop and refresh button to the right. A green status icon says 'Running'. Below shows a horizontal series of tabs with the 'Overview' tab selected. Below, the 'Overview' pane shows an 'Events' section, 'App Summary' section, and 'Processes and Instances' section.") %>
 
-
 ### <a id="start-stop"></a> Start, Stop, or Restage an App
 
 You can start, stop, and restage from the **Overview** page of the app. The start, stop, and restage buttons are located on the app **Overview** page next to the name of the app.
@@ -80,7 +81,6 @@ To manually scale an app, do the following:
 
 1. Click **Apply Changes**. 
 
-
 #### <a id="autoscale"></a> Enable App Autoscaler
 
 You can enable App Autoscaler to automatically scale your apps. For information about how to configure App Autoscaler to scale an app automatically, see the [Configure Autoscaling for an App](../appsman-services/autoscaler/using-autoscaler.html#config) section of the _Scaling an Application Using Autoscaler_ topic. 
@@ -94,14 +94,13 @@ To enable App Autoscaler for an app, do the following:
 
 1. Click **Manage Autoscaling** to open App Autoscaler.
 
-
 ### <a id="bind-unbind-services"></a> Bind or Unbind Services
 
 You can bind your app to new or existing service instances. You can also unbind your app from service instances.
 
-#### <a id="bind-existing-services"></a> Bind An App to an Existing Service
+#### <a id="bind-existing-services"></a> Bind an App to an Existing Service
 
-<p class="note"><strong>Note</strong>: For services that use asynchronous bindings, Apps Manager displays the status of the service while the bind is still pending. Asynchronous bindings provide more flexibility for services that require additional time before returning a successful bind response.</p>
+<p class="note"><strong>Note:</strong> For services that use asynchronous bindings, Apps Manager displays the status of the service while the bind is still pending. Asynchronous bindings provide more flexibility for services that require additional time before returning a successful bind response.</p>
 
 To bind your app to an existing service, do the following:
 
@@ -112,7 +111,7 @@ To bind your app to an existing service, do the following:
 
 1. Click **Bind Service**.
 
-1. For **Service to Bind**, select the service instance from the dropdown menu.
+1. For **Service to Bind**, select the service instance from the dropdown.
 
 1. (Optional) For **Binding Name**, enter a binding name in all lowercase letters. For example, `bind-usr-serv`.
 
@@ -120,8 +119,7 @@ To bind your app to an existing service, do the following:
 
 1. Click **Bind**.
 
-
-#### <a id="bind-new-services"></a> Bind An App to a New Service
+#### <a id="bind-new-services"></a> Bind an App to a New Service
 
 To bind your app to a new service instance, do the following:
 
@@ -146,7 +144,6 @@ To bind your app to a new service instance, do the following:
 
 1. Click **Create**.
 
-
 #### <a id="unbind-services"></a> Unbind a Service
 
 To unbind your app from a service instance, do the following:
@@ -160,7 +157,6 @@ To unbind your app from a service instance, do the following:
 1. Click the three-dot icon on the far right.
 
 1. Select **Unbind** from the dropdown menu.
-
 
 ### <a id="routes"></a> Map or Unmap Routes
 
@@ -191,13 +187,13 @@ To unmap a route from your app, do the following:
 
 1. Click **Unmap** in the pop-up to confirm.
 
-###<a id="networking"></a> Create Container-to-Container Networking Policies
+### <a id="networking"></a> Create Container-to-Container Networking Policies
 
 Container networking policies enable app instances to communicate with each other directly. You can create container networking policies in the **Networking** tab.
 
 For more information about container-to-container networking in PCF, see [Container-to-Container Networking](../concepts/understand-cf-networking.html).
 
-<p class="note"><b>Note:</b> To view and use the <b>Networking</b> tab, you must have either the <code>network.write</code> or <code>network.admin</code> UAA scope. If you do not see the <b>Networking</b> tab, request one of the above scopes from your PCF administrator.</p> 
+<p class="note"><strong>Note:</strong> To view and use the <strong>Networking</strong> tab, you must have either the <code>network.write</code> or <code>network.admin</code> UAA scope. If you do not see the <strong>Networking</strong> tab, request one of the above scopes from your PCF administrator.</p> 
 
 To create container-to-container networking policies, do the following:
 
@@ -216,7 +212,6 @@ To create container-to-container networking policies, do the following:
     *  For **Ports**, enter the ports at which to connect to the destination app. The allowed range is from `1` to `65535`. You can specify a single port, such as `8080`, or a range of ports, such as `8080-8090`.
 
 1. Click **Save**.
-
 
 ### <a id="logs"></a> View Logs
 
@@ -245,7 +240,6 @@ To access the **Tasks page**, do the following:
 1. Navigate to the app **Overview** page.
 
 1. In the panel on the left side of the screen, under **Application**, click **Tasks**. 
-
 
 #### <a id='run'></a> Run a Task
 
@@ -291,7 +285,6 @@ To schedule a task, do the following:
 
 1. Click **Create Job**.
 
-
 ### <a id="view-settings"></a> View and Manage Settings
 
 To view settings for an app, in the panel on the left side of the screen, under **Application**, click **Settings**.
@@ -305,7 +298,6 @@ You can do the following from the **Settings** page:
 * Add metadata to the app.
 * View the Application Security Groups (ASGs) associated with the app.
 * Delete the app. When you click **Delete App**, you also have the option to delete the app's routes.
-
 
 ### <a id="health-checks"></a> Configure Health Checks
 
@@ -325,7 +317,6 @@ To configure health checks for your app, do the following:
 
 For more information, see [Using Application Health Checks](../devguide/deploy-apps/healthchecks.html).
 
-
 ### <a id="view-env-var"></a> View Environment Variables
 
 To view all environment variables for an app, do the following:
@@ -335,7 +326,6 @@ To view all environment variables for an app, do the following:
 1. In the panel on the left side of the screen, under **Application**, click **Settings**.
 
 1. Under **User Provided Environment Variables**, click **Reveal Env Vars**.
-
 
 ### <a id="add-env-var"></a> Add Environment Variables
 
@@ -356,8 +346,7 @@ To add a user-provided environment variable, do the following:
 
 <p class="note"><strong>Note:</strong> Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p>
 
-
-### <a id="metadata"></a>Add Metadata
+### <a id="metadata"></a> Add Metadata
 
 You can add metadata, including labels and annotations, to apps and spaces using Apps Manager.
 
@@ -398,7 +387,7 @@ You can do the following tasks to manage service instances in Apps Manager:
 * Manage service keys 
 * Rename or delete your service instance
 
-<p class="note"><b>Note: </b>For services that use on-demand brokers, the service broker will create, update, or delete the service instance in the background and notify you when it finishes.</p>
+<p class="note"><strong>Note:</strong> For services that use on-demand brokers, the service broker will create, update, or delete the service instance in the background and notify you when it finishes.</p>
 
 ### <a id='view-service'></a> View Service Overview
 
@@ -415,7 +404,6 @@ To navigate to a service instance **Overview** page, do the following:
 The following image shows an example of a service instance **Overview** page.
 
 <%= image_tag("services-binding.png", :alt => "") %>
-
 
 ### <a id='bind-app'></a> Bind an App
 
@@ -442,7 +430,6 @@ To unbind an app from a service instance, do the following:
     <%= image_tag("services-unbinding-popup.png", :alt => "") %>
 
 1. Click **Unbind** to confirm.
-
 
 ### <a id="shared-instances"></a> Share Service Instance
 
@@ -491,7 +478,6 @@ To share a service instance, do the following:
 
 <% if vars.product_name == 'PCF' %>
 
-
 ### <a id='update-user-provided-service'></a> Update User-Provided Service Instance
 
 You can create a user-provided service instance from the Marketplace. For more information, see the [User-Provided Service Instances](../devguide/services/user-provided.html) topic.
@@ -519,7 +505,6 @@ To manage service keys, do the following:
 
 1. Under **Service Key Credentials**, generate a new service key, get the credentials for a service key, or delete a service key.
 
-
 ### <a id='create-key'></a> Generate a Service Key
 
 To generate a new service key, do the following:
@@ -537,7 +522,6 @@ To generate a new service key, do the following:
     <%= image_tag("keys-create-adv.png", :alt => "") %>
 
 1. Click **Create** to generate the service key.
-
 
 ### <a id='get-creds'></a> View Credentials for a Service Key
 
