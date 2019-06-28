@@ -13,17 +13,10 @@ To do the following, you must first log in to Apps Manager with an account that 
 
 You can manage orgs and spaces across multiple foundations. For more information, see [Configuring Multi-Foundation Support in Apps Manager](../opsguide/configure-multi-foundation.html).
 
-<<<<<<< HEAD
-To perform the following steps, you must first log in to Apps Manager with an 
-account that has adequate permissions. See the [About Permissions](dev-console.html#permissions) topic for more information.  
-=======
->>>>>>> d430585... Added link to multi-foundation config topic; fixed formatting, wording, style [#165573697]
 
-## <a id='view-space'></a>Manage an Org
+## <a id='view-space'></a> Manage an Org
 
-The following sections describe how to manage your orgs using the org management interface
-in Apps Manager. You can navigate to your org from the **Home** page or through
-the global search.
+The following sections describe how to manage your orgs using the org management interface in Apps Manager. You can navigate to your org from the **Home** page or through the global search.
 
 For details about each tab in the org page, see the following sections.
 
@@ -45,22 +38,15 @@ In the **Domains** tab, you can do the following:
 
 - See each **Domain** in your org.
 
-- See the **Type** associated with each domain. A type is either **Globally Shared** or
-**Privately Shared**. For more information about globally and locally shared domains,
-see [Shared Domains](https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/routes-domains.html#shared-domains) and [Private Domains](https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/routes-domains.html#private-domains)
-.
+- See the **Type** associated with each domain. A type is either **Globally Shared** or **Privately Shared**. For more information about globally and locally shared domains, see [Shared Domains](https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/routes-domains.html#shared-domains) and [Private Domains](https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/routes-domains.html#private-domains).
 
 - Delete a domain by clicking the vertical three-dot icon and selecting **Delete**.
 You must have permission to manage the domain to delete it.
 
-- Create a new private domain by clicking **Add a Domain**. You must have Org
-Manager permissions to create a private domain.
-  <p class="note"><strong>Note: </strong>To create globally shared domains, you must have
-Admin permissions and use the Cloud Foundry Command Line Interface (cf CLI).
-For more information, see [Create a Shared Domain](https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/routes-domains.html#create-a-shared-domain).</p>
+- Create a new private domain by clicking **Add a Domain**. You must have Org Manager permissions to create a private domain.
+  <p class="note"><strong>Note:</strong> To create globally shared domains, you must have Admin permissions and use the Cloud Foundry Command Line Interface (cf CLI). For more information, see [Create a Shared Domain](https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/routes-domains.html#create-a-shared-domain).</p>
 
-See the following screenshot for an example **Domains** interface
-with Org Manager permissions:
+See the following screenshot for an example **Domains** interface with Org Manager permissions:
 
 <%= image_tag("apps-manager-domains-tab.png", :alt => "The screenshot shows the
 'Domains' tab selected. At the top of the tab content is an 'Add a Domain' button. Below is a table with
@@ -85,36 +71,32 @@ In the **Settings** tab, you can do the following:
 - See spaces assigned to isolation segments. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments).
 - Delete the org. You must have admin permissions to delete an org. 
 
-##<a id='manage-space'></a>Manage a Space
 
-The space page displays the apps, service instances, and routes associated with 
-the selected space.
+## <a id='manage-space'></a> Manage a Space
+
+The space page displays the apps, service instances, and routes associated with the selected space.
 
 <%= image_tag('space-apps-view.png') %>
 
-### <a id="apps-tab"></a>  Apps
+### <a id="apps-tab"></a> Apps
 
-The **Apps** tab shows the **Status**, the **Name**, the number of 
-**Instances**, the amount of **Memory** available, the time since the **Last Push**, and the **Route** for each app. 
+The **Apps** tab shows the **Status**, the **Name**, the number of **Instances**, the amount of **Memory** available, the time since the **Last Push**, and the **Route** for each app. 
 
 <%= image_tag("apps-in-space.png") %>
 
-###<a id="services-tab"></a> Services
+### <a id="services-tab"></a> Services
 
-The **Services** list shows the **Service**, the **Name**, the number of 
-**Bound Apps**, and the **Plan** for each service instance. If you want to add 
-a service to your space, click **Add Service**. For more information about 
-configuring services, see the [Services Overview](../devguide/services/) topic.
+The **Services** list shows the **Service**, the **Name**, the number of **Bound Apps**, and the **Plan** for each service instance. If you want to add a service to your space, click **Add Service**. For more information about configuring services, see the [Services Overview](../devguide/services/) topic.
 
 <%= image_tag("services-space.png") %>
 
-###<a id="routes-tab"></a> Routes
+### <a id="routes-tab"></a> Routes
 
 From the **Routes** tab, you can view and delete routes associated with your space. For each **Route**, the tab shows **Route Service** and **Bound Apps**. Refer to the [Route Services](../services/route-services.html) topic to learn more about route services.
 
 <%= image_tag("routes-tab.png") %>
 
-###<a id="settings-tab"></a> Settings
+### <a id="settings-tab"></a> Settings
 
 From the **Settings** tab, you can do the following:
 
@@ -127,7 +109,7 @@ From the **Settings** tab, you can do the following:
 
 <%= image_tag("rename-space.png") %>
 
-### <a id="metadata"></a>Add Metadata
+### <a id="metadata"></a> Add Metadata
 
 You can add metadata, including labels and annotations, to apps and spaces using Apps Manager. For more information about adding metadata to apps using Apps Manager, see [Managing Apps and Service Instances Using Apps Manager](./manage-apps.html).
 
@@ -144,7 +126,11 @@ For more information about adding metadata to objects in PAS, see [Using Metadat
 To add labels or annotations to a space using Apps Manager, do the following:
 
 1. Click the **Settings** tab of the desired space.
+
 1. For **Labels**, provide a name and value pair. Or, select **Enter JSON** to enter the label in JSON.
+
 1. For **Annotations**, provide a name and value pair. Or, select **Enter JSON** to enter the annotation in JSON.
+
 1. To add more labels or annotations, click **+** next to the **Labels** or **Annotations** field.
+
 1. Click **Update Metadata**.
