@@ -31,15 +31,33 @@ To do the following, you must first log in to Apps Manager with an account that 
 For more information, see [About Permissions](dev-console.html#permissions).
 
 
-## <a id='view-space'></a> Manage an Org
+## <a id='view-org'></a> Manage an Org
 
-The following sections describe how to manage your orgs using the org management interface in Apps Manager. You can navigate to your org from the **Home** page or through the global search.
+You can manage org resources, including the spaces, domains, and members associated with the selected space, in Apps Manager. You can also manage org settings.
 
-For details about each tab in the org page, see the following sections.
+You can manage an org by navigating to the org in Apps Manager. 
 
-### <a id="spaces"></a> Spaces
+To navigate to an org, do one of the following:
 
-In the **Spaces** tab, you can do the following:
+* On the Apps Manager home page, under **Orgs**, click the name of the org that you want to manage.
+* Search for the org by entering its name in the search bar.
+
+By default, the landing page for an org in Apps Manager is the org **Spaces** page. You can use the panel on the left side of the screen to navigate to other pages for resources in the org, such as domains and members.
+
+The following image shows an example of the landing page for an org in Apps Manager.
+
+![A panel on the left side of the screen has the following main sections: Org and Marketplace. The following links are under the Org section: Spaces, Domains, Members, and Settings. In the main content of the page, a page title of "test-org" appears at the top of the page under a smaller "Org" heading. To the right of the "test-space" title is a horizontal bar with the label "Quota". Below this header content is a table labeled "Spaces". The table has the following columns: Name, Apps, App Status, Services, and Org Quota Usage.](org-spaces-page.png) 
+
+You can manage the following resources in an org using Apps Manager:
+
+* Spaces. See [Manage Spaces](#spaces).
+* Domains. See [Manage Domains](#domains).
+* Members. See [Manage Members](#members).
+* Org settings. See [Manage Settings](#org-settings).
+
+### <a id="spaces"></a> Manage Spaces
+
+In the org **Spaces** tab, you can do the following:
 
 - See the following information for each space:
    - Name
@@ -48,11 +66,11 @@ In the **Spaces** tab, you can do the following:
    - Number of services
    - Memory quota usage
 
-- Create a new space
+- Create a new space.
 
-### <a id="domains"></a> Domains
+### <a id="domains"></a> Manage Domains
 
-In the **Domains** tab, you can do the following:
+In the org **Domains** page, you can do the following:
 
 - See each **Domain** in your org.
 
@@ -63,26 +81,18 @@ In the **Domains** tab, you can do the following:
 - Create a new private domain by clicking **Add a Domain**. You must have Org Manager permissions to create a private domain.
   <p class="note"><strong>Note:</strong> To create globally shared domains, you must have Admin permissions and use the Cloud Foundry Command Line Interface (cf CLI). For more information, see [Create a Shared Domain](https://docs.pivotal.io/pivotalcf/devguide/deploy-apps/routes-domains.html#create-a-shared-domain).</p>
 
-See the following screenshot for an example **Domains** interface with Org Manager permissions:
+### <a id="members"></a> Manage Members
 
-<%= image_tag("apps-manager-domains-tab.png", :alt => "The screenshot shows the
-'Domains' tab selected. At the top of the tab content is an 'Add a Domain' button. Below is a table with
-three example domains listed: 'apps.internal' which is a 'Global' type, 'apps.test.cf-app.com,'
-which is also a 'Global' type, and 'dev.private,' which is a 'Private' type. Only the domain with the 'Private'
-type has the horizontal three-dot menu, indicating that the domain can be deleted.") %>
-
-### <a id="members"></a> Members
-
-In the **Members** tab, you can do the following:
+In the org **Members** page, you can do the following:
 
 - See member email addresses
 - Toggle member permissions
 - Remove member from org
 - Invite a new member
 
-### <a id="org-settings"></a> Settings
+### <a id="org-settings"></a> Manage Settings
 
-In the **Settings** tab, you can do the following:
+In the org **Settings** page, you can do the following:
 
 - Change the org name
 - See spaces assigned to isolation segments. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments).
