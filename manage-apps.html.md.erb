@@ -15,7 +15,7 @@ You can use Apps Manager to manage apps, service instances, service keys, and ro
 For information about managing orgs and spaces, see [Managing Orgs and Spaces Using Apps Manager](manage-spaces.html).
 
 <% unless vars.book_title == "Pivotal Web Services Documentation" %>
-<!-- This ensures that the paragraph below only appears in the PCF docs, not in the PWS docs.  -->
+<!-- This ensures that the paragraph below only appears in the <%= vars.product_name  %> docs, not in the PWS docs.  -->
 
 You can manage apps and service instances across multiple foundations. For more information, see [Configuring Multi-Foundation Support in Apps Manager](../opsguide/configure-multi-foundation.html).
 
@@ -198,9 +198,9 @@ To unmap a route from your app, do the following:
 
 Container networking policies enable app instances to communicate with each other directly. You can create container networking policies in the **Networking** tab.
 
-For more information about container-to-container networking in PCF, see [Container-to-Container Networking](../concepts/understand-cf-networking.html).
+For more information about container-to-container networking in <%= vars.product_name  %>, see [Container-to-Container Networking](../concepts/understand-cf-networking.html).
 
-<p class="note"><strong>Note:</strong> To view and use the <strong>Networking</strong> tab, you must have either the <code>network.write</code> or <code>network.admin</code> UAA scope. If you do not see the <strong>Networking</strong> tab, request one of the above scopes from your PCF administrator.</p> 
+<p class="note"><strong>Note:</strong> To view and use the <strong>Networking</strong> tab, you must have either the <code>network.write</code> or <code>network.admin</code> UAA scope. If you do not see the <strong>Networking</strong> tab, request one of the above scopes from your <%= vars.product_name  %> administrator.</p> 
 
 To create container-to-container networking policies, do the following:
 
@@ -269,7 +269,7 @@ To run a task for an app, do the following:
 
 #### <a id="enable-scheduling"></a> Enable Task Scheduling
 
-In the **Tasks** tab, click **Enable Scheduling** to bind the PCF Scheduler service to your app. For more about the PCF Scheduler, see [Scheduling Jobs](http://docs.pivotal.io/pcf-scheduler/using-jobs.html).
+In the **Tasks** tab, click **Enable Scheduling** to bind the <%= vars.product_name  %> Scheduler service to your app. For more about the <%= vars.product_name  %> Scheduler, see [Scheduling Jobs](http://docs.pivotal.io/pcf-scheduler/using-jobs.html).
 
 ![The Apps Manager interface shows the Task tab enabled with a box beneath that says "The Scheduler Service has not been enabled yet." with an "Enable Scheduling" button beneath](enable-scheduling.png)
 
