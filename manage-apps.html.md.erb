@@ -10,7 +10,7 @@ This topic explains how to view and manage apps and service instances with Apps 
 
 ## <a id='overview'></a> Overview
 
-You can use Apps Manager to manage apps, service instances, service keys, and route services. This includes tasks such as scaling apps, binding apps to services, generating services keys, and more. 
+You can use Apps Manager to manage apps, service instances, service keys, and route services. This includes tasks such as scaling apps, binding apps to services, generating services keys, and more.
 
 For information about managing orgs and spaces, see [Managing Orgs and Spaces Using Apps Manager](manage-spaces.html).
 
@@ -24,7 +24,7 @@ You can manage apps and service instances across multiple foundations. For more 
 
 ## <a id='prerequisite'></a> Prerequisite
 
-To view and manage apps and service instances with Apps Manager, you must log in to Apps Manager with an account that has adequate permissions. 
+To view and manage apps and service instances with Apps Manager, you must log in to Apps Manager with an account that has adequate permissions.
 
 For more information, see [About Permissions](dev-console.html#permissions).
 
@@ -41,12 +41,13 @@ You can do the following tasks to manage apps in Apps Manager:
 - Bind apps to services
 - Manage environment variables and routes
 - View logs and usage information
+- Re-deploy apps
 - Delete apps
 - Terminate specific instances of apps
 
 ### <a id="view"></a> View App Overview
 
-The **Overview** page for an app includes information about app processes and instances, app memory and disk space, and app events. 
+The **Overview** page for an app includes information about app processes and instances, app memory and disk space, and app events.
 
 To navigate to an app **Overview** page, do one of the following:
 
@@ -86,17 +87,17 @@ To manually scale an app, do the following:
 
 1. Edit the number of **Instances**, the **Memory Limit**, and the **Disk Limit** as desired.
 
-1. Click **Apply Changes**. 
+1. Click **Apply Changes**.
 
 #### <a id="autoscale"></a> Enable App Autoscaler
 
-You can enable App Autoscaler to automatically scale your apps. For information about how to configure App Autoscaler to scale an app automatically, see the [Configure Autoscaling for an App](../appsman-services/autoscaler/using-autoscaler.html#config) section of the _Scaling an Application Using Autoscaler_ topic. 
+You can enable App Autoscaler to automatically scale your apps. For information about how to configure App Autoscaler to scale an app automatically, see the [Configure Autoscaling for an App](../appsman-services/autoscaler/using-autoscaler.html#config) section of the _Scaling an Application Using Autoscaler_ topic.
 
 To enable App Autoscaler for an app, do the following:
 
 1. Navigate to the app **Overview** page.
 
-1. Under **Processes and Instances**, click **Enable Autoscaling** to enable App Autoscaler. 
+1. Under **Processes and Instances**, click **Enable Autoscaling** to enable App Autoscaler.
 <%= image_tag("enable-autoscaling.png", :alt => "In the 'Processes and Instances' section of the 'Overview' pane, find 'Enable Autoscaling' two rows below the title of each process.") %>
 
 1. Click **Manage Autoscaling** to open App Autoscaler.
@@ -159,7 +160,7 @@ To unbind your app from a service instance, do the following:
 
 1. In the panel on the left side of the screen, under **Application**, click **Services**.
 
-1. Locate the service instance in the **Bound Services** list. 
+1. Locate the service instance in the **Bound Services** list.
 
 1. Click the three-dot icon on the far right.
 
@@ -190,7 +191,7 @@ To unmap a route from your app, do the following:
 
 1. In the panel on the left side of the screen, under **Networking**, click **Routes**.
 
-1. Locate the route from the list and click the `x`. 
+1. Locate the route from the list and click the `x`.
 
 1. Click **Unmap** in the pop-up to confirm.
 
@@ -200,7 +201,7 @@ Container networking policies enable app instances to communicate with each othe
 
 For more information about container-to-container networking in <%= vars.product_name %>, see [Container-to-Container Networking](../concepts/understand-cf-networking.html).
 
-<p class="note"><strong>Note:</strong> To view and use the <strong>Networking</strong> tab, you must have either the <code>network.write</code> or <code>network.admin</code> UAA scope. If you do not see the <strong>Networking</strong> tab, request one of the above scopes from your <%= vars.product_name %> administrator.</p> 
+<p class="note"><strong>Note:</strong> To view and use the <strong>Networking</strong> tab, you must have either the <code>network.write</code> or <code>network.admin</code> UAA scope. If you do not see the <strong>Networking</strong> tab, request one of the above scopes from your <%= vars.product_name %> administrator.</p>
 
 To create container-to-container networking policies, do the following:
 
@@ -209,7 +210,7 @@ To create container-to-container networking policies, do the following:
 1. In the panel on the left side of the screen, under **Networking**, click **Container Networking**. The page displays any container networking policies associated with the app.
 
 1. To add a new network policy, click **Create Policy** or **Add a network policy**.
-      <%= image_tag("add-policy-form.png", :width => "400", :alt => "The Add Policy form shows dropdown menus for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button.") %>  
+      <%= image_tag("add-policy-form.png", :width => "400", :alt => "The Add Policy form shows dropdown menus for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button.") %>
 
 1. In the **Add Policy** window, configure the following:
     *  For **Org**, select the org of the destination app.
@@ -220,9 +221,64 @@ To create container-to-container networking policies, do the following:
 
 1. Click **Save**.
 
+### <a id="revisions"></a>Manage App Revisions
+
+A revision represents code and configuration used by an app at a specific time. It is a Cloud Foundry API
+(CAPI) object that can contain references to a droplet, custom start command, and environment variables.
+The most recent revision for a running app represents code and configuration currently running in <%= vars.product_name %>.
+
+You can enable revisions, view revisions, list environment variables associated with revisions, and
+re-deploy previous revisions in the **Revisions** tab.
+
+For more information about app revisions in <%= vars.product_name %>, see [App Revisions](../devguide/revisions.html).
+
+#### <a id="enable-revisions"></a>Enable App Revisions
+
+To enable app revisions:
+
+1. Navigate to the app **Overview** page.
+
+1. In the panel on the left side of the screen, under **Application**, click **Revisions**.
+
+1. Click **Enable Revisions**.
+
+#### <a id="view-revisions"></a>View App Revisions
+
+To list revisions for an app:
+
+1. Navigate to the app **Overview** page.
+
+1. In the panel on the left side of the screen, under **Application**, click **Revisions**.
+
+1. View app revisions in the **Revisions** table.
+
+#### <a id="revision-env-vars"></a>List Environment Variables for an App Revision
+
+To list environment variables associated with an app revision:
+
+1. Navigate to the app **Overview** page.
+
+1. In the panel on the left side of the screen, under **Application**, click **Revisions**.
+
+1. In the **Revisions** table, select the row that contains the revision. The row expands to reveal
+metadata and environment variables associated with the revision.
+
+#### <a id="rollback"></a>Roll Back to a Previous App Revision
+
+To roll back an app to a previous revision:
+
+1. Navigate to the app **Overview** page.
+
+1. In the panel on the left side of the screen, under **Application**, click **Revisions**.
+
+1. In the **Revisions** table, select the row that contains the revision you want to roll back to.
+The row expands to reveal metadata.
+
+1. Click **Redeploy**.
+
 ### <a id="logs"></a> View Logs
 
-You can view logs for an app in Apps Manager. You can also use Apps Manager to view a live stream of app logs. 
+You can view logs for an app in Apps Manager. You can also use Apps Manager to view a live stream of app logs.
 
 To view logs for an app, do the following:
 
@@ -230,11 +286,11 @@ To view logs for an app, do the following:
 
 1. In the panel on the left side of the screen, under **Observability**, click **Logs**.
 
-1. Click the play button to view a live version of the logs. 
+1. Click the play button to view a live version of the logs.
 
 ### <a id='tasks'></a> Manage Tasks
 
-The **Tasks** page includes jobs and tasks associated with an app. It displays a table containing **Task ID**, **State**, **Start Time**, **Task Name**, and **Command**. 
+The **Tasks** page includes jobs and tasks associated with an app. It displays a table containing **Task ID**, **State**, **Start Time**, **Task Name**, and **Command**.
 
 From the **Tasks** page, you can view tasks, run tasks, and enable task scheduling.
 
@@ -246,7 +302,7 @@ To access the **Tasks page**, do the following:
 
 1. Navigate to the app **Overview** page.
 
-1. In the panel on the left side of the screen, under **Application**, click **Tasks**. 
+1. In the panel on the left side of the screen, under **Application**, click **Tasks**.
 
 #### <a id='run'></a> Run a Task
 
@@ -318,7 +374,7 @@ To configure health checks for your app, do the following:
 
 1. For **Type**, select `port`, `http`, or `process`.
 
-1. Complete the fields that appear based on your selection.   
+1. Complete the fields that appear based on your selection.
 
 1. Click **Update**.
 
@@ -349,7 +405,7 @@ To add a user-provided environment variable, do the following:
 1. Enter the **key** and **value** of the variable. Alternatively, toggle **Enter as JSON** to enter the variable in JSON.
   <%= image_tag("user-env-vars.png", :alt => "") %>
 
-1. Click **Save**. 
+1. Click **Save**.
 
 <p class="note"><strong>Note:</strong> Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p>
 
@@ -379,7 +435,7 @@ To add labels or annotations to an app using Apps Manager, do the following:
 
 1. To add more labels or annotations, click **+** next to the **Labels** or **Annotations** field.
 
-1. Click **Update Metadata**. 
+1. Click **Update Metadata**.
 
 
 ## <a id='manage-service'></a> Manage a Service Instance
@@ -388,25 +444,25 @@ This section describes how to manage service instances in Apps Manager.
 
 You can do the following tasks to manage service instances in Apps Manager:
 
-* Bind or unbind apps 
+* Bind or unbind apps
 * Bind or unbind routes
-* View or change your service plan 
-* Manage service keys 
+* View or change your service plan
+* Manage service keys
 * Rename or delete your service instance
 
 <p class="note"><strong>Note:</strong> For services that use on-demand brokers, the service broker will create, update, or delete the service instance in the background and notify you when it finishes.</p>
 
 ### <a id='view-service'></a> View Service Overview
 
-The **Overview** page for a service instance includes information about bound apps, bound routes, and service key credentials for the service. 
+The **Overview** page for a service instance includes information about bound apps, bound routes, and service key credentials for the service.
 
 To navigate to a service instance **Overview** page, do the following:
 
-1. Navigate to the landing page for the space of the service instance.  
+1. Navigate to the landing page for the space of the service instance.
 
-1. In the panel on the left side of the screen, under **Space**, click **Services**. 
+1. In the panel on the left side of the screen, under **Space**, click **Services**.
 
-1. On the **Services** page, click on the name of the service instance. 
+1. On the **Services** page, click on the name of the service instance.
 
 The following image shows an example of a service instance **Overview** page.
 
@@ -416,7 +472,7 @@ The following image shows an example of a service instance **Overview** page.
 
 <p class="note"><strong>Note</strong>: For services that use asynchronous bindings, Apps Manager displays the status of the service while the bind is still pending. Asynchronous bindings provide more flexibility for services that require additional time before returning a successful bind response.</p>
 
-To bind and app to a service, do the following: 
+To bind and app to a service, do the following:
 
 1. On the service **Overview** page, click **Bind App**.
 
@@ -450,7 +506,7 @@ To share a service instance, do the following:
               bottom of the body, next to the text 'Shared with these Spaces'") %>
 
 1. Select the spaces with which you want to share your service instance.
-<%= image_tag("share-services-slideout.png", :alt=>"The service instance slideout shows 
+<%= image_tag("share-services-slideout.png", :alt=>"The service instance slideout shows
               checkboxes next to each space and a 'Share' button and 'Cancel' button
               in the bottom right-hand corner.") %>
 
@@ -464,7 +520,7 @@ To view or change your service plan, do the following:
 
 1. In the panel on the left side of the screen, under **Service**, click **Plan**.
 
-1. Review your current plan information. 
+1. Review your current plan information.
 
 1. To change your plan, select a new plan from the list and click **Select This Plan** or **Upgrade Your Account**.
 
@@ -497,11 +553,11 @@ To update a user-provided service instance, do the following:
 
 1. Navigate to the service **Overview** page.
 
-1. In the panel on the left side of the screen, under **Service**, click **Configuration**. 
+1. In the panel on the left side of the screen, under **Service**, click **Configuration**.
     <p class="note"><b>Note</b>: The <b>Configuration</b> page only appears for user-provided service instances.</p>
     <%= image_tag("config-user-provided.png", :alt => "") %>
 
-1. Enter the **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**. 
+1. Enter the **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**.
 
 1. Click **Update Service**.
 <% else %>
@@ -536,11 +592,11 @@ To generate a new service key, do the following:
 
 ### <a id='get-creds'></a> View Credentials for a Service Key
 
-To view the credentials for a service key, do the following: 
+To view the credentials for a service key, do the following:
 
 1. Navigate to the service **Overview** page.
 
-1. Under **Service Key Credentials**, click the service instance name. The JSON object containing the credentials appears. 
+1. Under **Service Key Credentials**, click the service instance name. The JSON object containing the credentials appears.
 
     <%= image_tag("keys-creds.png", :alt => "") %>
 
@@ -564,7 +620,7 @@ For more information about route services, see the [Route Services](../services/
 
 ### <a id='new-route-services'></a> Bind a New Service Instance to a Route
 
-To bind a new service instance to a route, do the following: 
+To bind a new service instance to a route, do the following:
 
 1. Select the service from the Marketplace.
     <%= image_tag('bind-route-new.png', :alt => "") %>
@@ -576,7 +632,7 @@ To bind a new service instance to a route, do the following:
 
 ### <a id='old-route-services'></a> Bind an Existing Service Instance to a Route
 
-To bind an existing service instance to a route, do the following: 
+To bind an existing service instance to a route, do the following:
 
 1. Navigate to the service **Overview** page.
 
@@ -585,7 +641,7 @@ To bind an existing service instance to a route, do the following:
     <%= image_tag('bind-route-old.png', :alt => "") %>
 
 1. Do one of the following:
-    * For **Select a route to bind**, select an existing route. 
+    * For **Select a route to bind**, select an existing route.
     * For **Create Custom Route**, enter a new route.
 
 1. Click **Bind**.
