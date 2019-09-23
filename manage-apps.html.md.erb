@@ -15,7 +15,7 @@ You can use Apps Manager to manage apps, service instances, service keys, and ro
 For information about managing orgs and spaces, see [Managing Orgs and Spaces Using Apps Manager](manage-spaces.html).
 
 <% unless vars.book_title == "Pivotal Web Services Documentation" %>
-<!-- This ensures that the paragraph below only appears in the <%= vars.product_name %> docs, not in the PWS docs.  -->
+<!-- This ensures that the paragraph below only appears in the Pivotal Platform docs, not in the PWS docs.  -->
 
 You can manage apps and service instances across multiple foundations. For more information, see [Configuring Multi-Foundation Support in Apps Manager](../opsguide/configure-multi-foundation.html).
 
@@ -414,7 +414,7 @@ To add a user-provided environment variable, do the following:
 
 You can add metadata, including labels and annotations, to apps and spaces using Apps Manager.
 
-<% if vars.product_name.include? "CF" %>
+<% if vars.platform_code.include? 'CF' %>
 
 For more information about adding metadata to objects in PAS, see [Using Metadata](../adminguide/metadata.html).
 
@@ -544,7 +544,7 @@ To rename or delete your service instance, do the following:
 
 <p class="note"><strong>Note:</strong> The service broker supports creating, updating, and deleting service instances asynchronously. When the service broker completes one of these operations, a status banner appears in Apps Manager.</p>
 
-<% if vars.product_name == 'Pivotal Platform' %>
+<% if vars.platform_code == 'PCF' %>
 
 ### <a id='update-user-provided-service'></a> Update User-Provided Service Instance
 
