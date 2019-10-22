@@ -546,16 +546,45 @@ To rename or delete your service instance, do the following:
 
 <% if vars.platform_code == 'PCF' %>
 
-### <a id='update-user-provided-service'></a> Update User-Provided Service Instance
+### <a id='configure-scs'></a> View and Update Spring Cloud Services Configurations
+
+For Spring Cloud Services (SCS) instances, Apps Manager lets you:
+
+* See the Git repos that the SCS Config Server uses to configure the Spring apps that it serves.
+  - For more information, see the topic [Configuring with Git](https://docs.pivotal.io/spring-cloud-services/common/config-server/configuring-with-git.html) in the SCS documentation.
+* Update Spring app configurations, by updating the local mirrors of their configuration repos.
+* See the current status and configuration of the SCS Config Server itself.
+
+To see and update this configuration and status information for an SCS instance:
+
+1. Navigate to the service **Overview** page.
+
+1. In the panel on the left side of the screen, under **Service**, click **Config**.
+    <p class="note"><b>Note</b>: The <b>Config</b> pane only appears for Spring Cloud Services instances.</p>
+    <%= image_tag("sc-config-server-instance.png", :alt => "") %>
+
+The **Config** pane includes:
+
+* The current status of the SCS Config Server.
+* The JSON object that configures settings for the SCS Config Server itself.
+  * Passed in with `-c` flag to `cf create-service` and `cf update-service`.
+* A **Synchronize Mirrors** button for the app configurations that the SCS Config Server serves.
+  - Click this button to refresh the local Git configuration mirrors.  
+  Refreshing the mirrors updates Spring app settings, as described in the [Mirror Service](https://docs.pivotal.io/spring-cloud-services/common/config-server/mirror-service.html) topic in the SCS documentation.
+* A **Manage** link to the SCS Config Server dashboard, at the `/dashboard` URL endpoint of the SCS service instance.
+  - Click this link to see the Git repos that the SCS Config Server uses to configure its apps.
+  - For more information about the SCS Config Server dashboard, see [Dashboard Information](https://docs.pivotal.io/spring-cloud-services/common/config-server/using-the-dashboard.html#dashboard-information) in the SCS documentation.
+
+### <a id='configure-user-provided'></a> Configure User-Provided Service Instance
 
 You can create a user-provided service instance from the Marketplace. For more information, see the [User-Provided Service Instances](../devguide/services/user-provided.html) topic.
 
-To update a user-provided service instance, do the following:
+To configure settings for a user-provided service instance, do the following:
 
 1. Navigate to the service **Overview** page.
 
 1. In the panel on the left side of the screen, under **Service**, click **Configuration**.
-    <p class="note"><b>Note</b>: The <b>Configuration</b> page only appears for user-provided service instances.</p>
+    <p class="note"><b>Note</b>: The <b>Configuration</b> pane only appears for user-provided service instances.</p>
     <%= image_tag("config-user-provided.png", :alt => "") %>
 
 1. Enter the **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**.
@@ -563,7 +592,6 @@ To update a user-provided service instance, do the following:
 1. Click **Update Service**.
 <% else %>
 <% end %>
-
 
 ## <a id='manage-keys'></a> Manage Service Keys
 
