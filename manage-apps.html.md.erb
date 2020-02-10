@@ -33,16 +33,16 @@ This section describes how to manage an app in Apps Manager.
 
 You can do the following tasks to manage apps in Apps Manager:
 
-- View app summary information
-- Start and stop apps
-- Scale apps
-- Bind apps to services
-- Manage environment variables and routes
-- View logs and usage information
-- View app revisions
-- Re-deploy app revisions
-- Delete apps
-- Terminate specific instances of apps
+* View app summary information
+* Start and stop apps
+* Scale apps
+* Bind apps to services
+* Manage environment variables and routes
+* View logs and usage information
+* View app revisions
+* Re-deploy app revisions
+* Delete apps
+* Terminate specific instances of apps
 
 ### <a id="view"></a> View App Overview
 
@@ -90,7 +90,7 @@ To manually scale an app:
 
 #### <a id="autoscale"></a> Enable App Autoscaler
 
-You can enable App Autoscaler to automatically scale your apps. For information about how to configure App Autoscaler to scale an app automatically, see the [Configure Autoscaling for an App](../appsman-services/autoscaler/using-autoscaler.html#config) section of the _Scaling an App Using Autoscaler_ topic.
+You can enable App Autoscaler to automatically scale your apps. For information about how to configure App Autoscaler to scale an app automatically, see [Configure Autoscaling for an App](../appsman-services/autoscaler/using-autoscaler.html#config) in _Scaling an App Using Autoscaler_.
 
 To enable App Autoscaler for an app:
 
@@ -190,7 +190,7 @@ To unmap a route from your app:
 
 1. In the panel on the left side of the screen, under **Networking**, click **Routes**.
 
-1. Locate the route from the list and click the `x`.
+1. Locate the route from the list and click the **x**.
 
 1. Click **Unmap** in the pop-up to confirm.
 
@@ -209,7 +209,7 @@ To create container-to-container networking policies:
 1. In the panel on the left side of the screen, under **Networking**, click **Container Networking**. The page displays any container networking policies associated with the app.
 
 1. To add a new network policy, click **Create Policy** or **Add a network policy**.
-      <%= image_tag("add-policy-form.png", :width => "400", :alt => "The Add Policy form shows dropdown menus for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button.") %>
+      <%= image_tag("add-policy-form.png", :width => "400", :alt => "The Add Policy form shows dropdowns for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button.") %>
 
 1. In the **Add Policy** window, configure the following:
     *  For **Org**, select the org of the destination app.
@@ -311,7 +311,7 @@ To run a task for an app:
 
 In the **Tasks** tab, click **Enable Scheduling** to bind the <%= vars.platform_name %> Scheduler service to your app. For more about the <%= vars.platform_name %> Scheduler, see [Scheduling Jobs](http://docs.pivotal.io/pcf-scheduler/using-jobs.html) in the <%= vars.platform_name %> Scheduler documentation.
 
-![The Apps Manager interface shows the Task tab enabled with a box beneath that says "The Scheduler Service has not been enabled yet." with an "Enable Scheduling" button beneath](enable-scheduling.png)
+![The Apps Manager interface shows the Task tab enabled with a box beneath that says "The Scheduler Service has not been enabled yet." with an "Enable Scheduling" button beneath.](enable-scheduling.png)
 
 #### <a id="schedule-task"></a> Schedule a Task
 
@@ -354,9 +354,9 @@ To configure health checks for your app:
 
 1. In the panel on the left side of the screen, under **Application**, click **Settings**.
 
-1. In the **Health Check** section, click the **Type** dropdown and select `port`, `http`, or `process`. Depending on which option you select, additional fields may appear.
+1. In the **Health Check** section, click the **Type** dropdown and select **port**, **http**, or **process**. Depending on which option you select, additional fields may appear.
 
-1. For **Type**, select `port`, `http`, or `process`.
+1. For **Type**, select **port**, **http**, or **process**.
 
 1. Complete the fields that appear based on your selection.
 
@@ -529,8 +529,7 @@ To rename or delete your service instance:
 
 For Spring Cloud Services (SCS) Config Server instances, Apps Manager lets you:
 
-* See the Git repos that the SCS Config Server uses to configure the client apps that it serves.
-  * For more information, see [Configuring with Git](https://docs.pivotal.io/spring-cloud-services/common/config-server/configuring-with-git.html) in the SCS documentation.
+* See the Git repos that the SCS Config Server uses to configure the client apps that it serves. For more information, see [Configuring with Git](https://docs.pivotal.io/spring-cloud-services/common/config-server/configuring-with-git.html) in the SCS documentation.
 
 * Update client app configurations, by updating the local mirrors of their configuration repos.
 
@@ -665,4 +664,4 @@ To unbind a route from a service instance:
 
 1. Navigate to the service **Overview** page.
 
-1. Under **Bound Routes**, click the `x` next to the name of the route.
+1. Under **Bound Routes**, click the **x** next to the name of the route.
