@@ -36,6 +36,8 @@ You can do the following tasks to manage apps in Apps Manager:
 * View app summary information
 * Start and stop apps
 * Scale apps
+* View sidecar processes
+* View key app metrics
 * Bind apps to services
 * Manage environment variables and routes
 * View logs and usage information
@@ -46,8 +48,7 @@ You can do the following tasks to manage apps in Apps Manager:
 
 ### <a id="view"></a> View App Overview
 
-The **Overview** page for an app includes information about app processes and instances, app memory and disk space, and app events.
-Additionally, if Metric Store is installed, you can view key metrics for the app on the **App Overview** page.
+The **Overview** page for an app includes app summary information, such as app processes and instances, app memory and disk space, and app events.
 
 There are two ways to navigate to an app **Overview** page:
 
@@ -57,15 +58,6 @@ There are two ways to navigate to an app **Overview** page:
 The following image shows an example of an app **Overview** page.
 
 <%= image_tag("app-page.png", :alt => "The example Apps Manager dashboard shows at the top heading the name of the example app, 'cf-nodejs', with a stop and refresh button to the right. A green status icon says 'Running'. Below shows a horizontal series of tabs with the 'Overview' tab selected. Below, the 'Overview' pane shows an 'Events' section, 'App Summary' section, and 'Processes and Instances' section.") %>
-
-The following image is an example of an app **Overview** page, showing key metrics for the app.
-Metric Store is required for this view.
-For information about installing and configuring Metric Store, see [Metric Store](https://docs.pivotal.io/metric-store).
-
-<%= image_tag("app-page-with-metrics.png", :alt => "The example Apps Manager dashboard shows the same information as the screenshot above, although in addition, it shows the six key metrics (CPU, Disk, Request Latency, Request Rate, and Request Errors).") %>
-
-For more information about each metric, see [Interpret Metrics](https://docs.pivotal.io/app-metrics/1-6/using.html#interpret-metrics)
-in _Monitoring and Troubleshooting Apps with Metrics_.
 
 ### <a id="start-stop"></a> Start, Stop, or Restage an App
 
@@ -111,7 +103,7 @@ To enable App Autoscaler for an app:
 
 1. Click **Manage Autoscaling** to open App Autoscaler.
 
-#### <a id='view-sidecars'></a> View Sidecar Processes
+### <a id='view-sidecars'></a> View Sidecar Processes (Beta)
 
 You can view the sidecar processes associated with your app from the app **Overview** page.
 
@@ -123,6 +115,29 @@ To view sidecar processes associated with your apps:
   ![At the top of the image is the header "Processes and Instances". Below are six white, rectangular rows. The top row contains the label "web (Revision 1)" on the left side, and two buttons on the right side: one white, rectangular button with a blue border that is labeled "Enable Autoscaling" in blue letters; and to the right of "Enable Autoscaling", one shorter, blue, rectangular button labeled "Scale" in white letters. The next row down contains the text "Instances  1", "Memory Allocated  256 MB", "Disk Allocated  1 GB", Sidecars  1". The next row down contains five column headers labeled, from left to right, "#", "CPU", "Memory", "Disk", and "Uptime". The next row down contains data for the above column headers: under "#" is "0"; under "CPU" is "0%"; under "Memory" is "0 Bytes"; under "Disk" is "0 Bytes"; and under "Uptime" is "0 Minutes". To the far right of these is a gray "x" button. Below this data is a header labeled "Sidecars". The next row down has a green border on the left side. To the right of this green border is a downward-pointing carat, indicating a collapsable menu. To the right of this carat is the text "config-server". The next row down contains the text "Start Command: $./config-server".](sidecars.png)
 
 For more information about sidecar processes, see [Pushing Apps with Sidecar Processes (Beta)](../devguide/sidecars.html).
+
+### <a id='view-key-metrics'></a> View Key Metrics (Beta)
+
+You can view the following key metrics for an app in the **Key Metrics** section of the app **Overview** page:
+
+* CPU
+* Memory
+* Disk 
+* Request Latency 
+* Request Rate
+* Request Errors
+
+For more information about each metric, see [Interpret Metrics](https://docs.pivotal.io/app-metrics/1-6/using.html#interpret-metrics)
+in _Monitoring and Troubleshooting Apps with Metrics_.
+
+For each metric, the app **Overview** page includes a graph that shows metric behavior over the past three hours. The page also includes the average value for the metric over the past three hours. 
+
+Metric Store is required for Apps Manager to display the **Key Metrics** section.
+For information about installing and configuring Metric Store, see [Metric Store](https://docs.pivotal.io/metric-store).
+
+The following image is an example of an app **Overview** page, showing key metrics for the app.
+
+<%= image_tag("app-page-with-metrics.png", :alt => "The example Apps Manager app overview page shows the six key metrics (CPU, Disk, Request Latency, Request Rate, and Request Errors).") %>
 
 ### <a id="bind-unbind-services"></a> Bind or Unbind Services
 
