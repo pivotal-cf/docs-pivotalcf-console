@@ -47,6 +47,7 @@ You can do the following tasks to manage apps in Apps Manager:
 ### <a id="view"></a> View App Overview
 
 The **Overview** page for an app includes information about app processes and instances, app memory and disk space, and app events.
+Additionally, if Metric Store is installed, you can view key metrics for the app on the **App Overview** page.
 
 There are two ways to navigate to an app **Overview** page:
 
@@ -56,6 +57,11 @@ There are two ways to navigate to an app **Overview** page:
 The following image shows an example of an app **Overview** page.
 
 <%= image_tag("app-page.png", :alt => "The example Apps Manager dashboard shows at the top heading the name of the example app, 'cf-nodejs', with a stop and refresh button to the right. A green status icon says 'Running'. Below shows a horizontal series of tabs with the 'Overview' tab selected. Below, the 'Overview' pane shows an 'Events' section, 'App Summary' section, and 'Processes and Instances' section.") %>
+
+This image is an example of an app **Overview** page, showing key metrics for the app.
+
+<%= image_tag("app-page-with-metrics.png", :alt => "The example Apps Manager dashboard shows the same information as the screenshot above, although in addition, it shows the six key metrics (CPU, Disk, Request Latency, Request Rate, and Request Errors).") %>
+
 
 ### <a id="start-stop"></a> Start, Stop, or Restage an App
 
