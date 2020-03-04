@@ -1,9 +1,17 @@
-#### <a id="xfcc_haproxy"></a> Terminating TLS at the Gorouter
+#### <a id="xfcc_haproxy"></a> Terminate TLS at the Gorouter
 
 If the Gorouter is the first component to terminate TLS, such that it receives the certificate of the originating client in the mutual TLS handshake, you should select this option. When selected, the Gorouter sets the XFCC header to the contents of the client certificate received in the TLS handshake and strips the XFCC header when present in a request.
 
 This option requires you to configure the load balancer in front of the Gorouter to pass through TLS handshake to the Gorouter through TCP. 
 
-To enable this mode, select the **Router** option for **TLS termination point** in the **Networking** pane of the PAS tile.
+To enable this mode:
 
-The Gorouter trusts the Diego intermediate certificate authority. This trust is enabled automatically and permits mutual authentication between apps running on <%= vars.product_name %>.
+1. Navigate to the <%= vars.ops_manager %> Installation Dashboard.
+
+1. Click the <%= vars.app_runtime_abbr %> tile.
+
+1. Select **Networking**.
+
+1. Under **TLS termination point**, select **Gorouter**.
+
+The Gorouter trusts the Diego intermediate certificate authority. This trust is enabled automatically and permits mutual authentication between apps running on <%= vars.platform_name %>.
