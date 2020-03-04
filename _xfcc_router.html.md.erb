@@ -1,9 +1,17 @@
-#### <a id="xfcc_haproxy"></a> Terminating TLS at Gorouter
+#### <a id="xfcc_haproxy"></a> Terminate TLS at the Gorouter
 
-If the Gorouter is the first component to terminate TLS, such that it receives the certificate of the originating client in the mutual TLS handshake, the operator should select this option. When selected, Gorouter sets the XFCC header to the contents of the client certificate received in the TLS handshake and strips the XFCC header when present in a request.
+If the Gorouter is the first component to terminate TLS, such that it receives the certificate of the originating client in the mutual TLS handshake, the operator should select this option. When selected, the Gorouter sets the XFCC header to the contents of the client certificate received in the TLS handshake and strips the XFCC header when present in a request.
 
-Selecting this configuration requires that the load balancer in front of Gorouter is configured to pass through TLS handshake to Gorouter via TCP. 
+Selecting this configuration requires that the load balancer in front of Gorouter is configured to pass through TLS handshake to the Gorouter through TCP. 
 
-This mode is enabled when the <b>TLS terminated for the first time at the Router</b> option is selected in the **Networking** configuration screen of the PAS tile.
+To enable this mode:
 
-Gorouter trusts the Diego intermediate certificate authority. This trust is enabled automatically and permits mutual authentication between applications that are running on Pivotal Cloud Foundry.
+1. Navigate to the <%= vars.ops_manager %> Installation Dashboard.
+
+1. Click the <%= vars.product_short %> tile.
+
+1. Select **Networking**.
+
+1. Under **Configure support for the X-Forwarded-Client-Cert header...**, select **TLS terminated for the first time at the Router**.
+
+The Gorouter trusts the Diego intermediate certificate authority. This trust is enabled automatically and permits mutual authentication between apps running on <%= vars.product_name %>.
