@@ -129,7 +129,7 @@
 		<td></td>
 		<td></td>
 	</tr><tr>
-		<td>View the status, number of instances, service bindings, and resource use of applications</td>
+		<td>View the status, number of instances, service bindings, and resource use of apps</td>
 		<td>&check;</td>
 		<td></td>
 		<td></td>
@@ -145,7 +145,7 @@
 		<td></td>
 		<td></td>
 	</tr><tr>
-		<td>Deploy, run, and manage applications</td>
+		<td>Deploy, run, and manage apps</td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -153,7 +153,7 @@
 		<td></td>
 		<td></td>
 	</tr><tr>
-		<td>Instantiate and bind services to applications</td>
+		<td>Instantiate and bind services to apps</td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -161,7 +161,7 @@
 		<td></td>
 		<td></td>
 	</tr><tr>
-		<td>Associate routes, instance counts, memory allocation, and disk limit of applications</td>
+		<td>Associate routes, instance counts, memory allocation, and disk limit of apps</td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -169,7 +169,7 @@
 		<td></td>
 		<td></td>
 	</tr><tr>
-		<td>Rename applications</td>
+		<td>Rename apps</td>
 		<td></td>
 		<td></td>
 		<td></td>
