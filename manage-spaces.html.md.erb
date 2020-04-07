@@ -27,7 +27,7 @@ You can manage orgs and spaces across multiple foundations. For more information
 
 To do the following, you must first log in to Apps Manager with an account that has adequate permissions.
 
-For more information, see [About Permissions](dev-console.html#permissions).
+For more information, see [About Permissions](dev-console.html#permissions) in _Getting Started with Apps Manager_.
 
 
 ## <a id='view-org'></a> Manage an Org
@@ -58,44 +58,46 @@ You can manage the following resources in an org using Apps Manager:
 
 In the org **Spaces** tab, you can do the following:
 
-- See the following information for each space:
-   - Name
-   - Number of apps
-   - Number of apps in running, stopped, and crashed states
-   - Number of services
-   - Memory quota usage
+* See the following information for each space:
+   * Name
+   * Number of apps
+   * Number of apps in running, stopped, and crashed states
+   * Number of services
+   * Memory quota usage
 
-- Create a new space.
+* Create a new space.
 
 ### <a id="domains"></a> Manage Domains
 
 In the org **Domains** page, you can do the following:
 
-- See each **Domain** in your org.
+* See each **Domain** in your org.
 
-- See the **Type** associated with each domain. A type is either **Globally Shared** or **Privately Shared**. For more information about globally and locally shared domains, see [Shared Domains](https://docs.pivotal.io/platform/devguide/deploy-apps/routes-domains.html#shared-domains) and [Private Domains](https://docs.pivotal.io/platform/devguide/deploy-apps/routes-domains.html#private-domains).
+* See the **Type** associated with each domain. A type is either **Globally Shared** or **Privately Shared**. For more information about globally and locally shared domains, see [Shared Domains](https://docs.pivotal.io/platform/devguide/deploy-apps/routes-domains.html#shared-domains) and [Private Domains](https://docs.pivotal.io/platform/devguide/deploy-apps/routes-domains.html#private-domains).
 
-- Delete a domain by clicking the vertical three-dot icon and selecting **Delete**. You must have permission to manage the domain to delete it.
+* Delete a domain by clicking the vertical three-dot icon and selecting **Delete**. You must have permission to manage the domain to delete it.
 
-- Create a new private domain by clicking **Add a Domain**. You must have Org Manager permissions to create a private domain.
+* Create a new private domain by clicking **Add a Domain**. You must have Org Manager permissions to create a private domain.
   <p class="note"><strong>Note:</strong> To create globally shared domains, you must have Admin permissions and use the Cloud Foundry Command Line Interface (cf CLI). For more information, see [Create a Shared Domain](https://docs.pivotal.io/platform/devguide/deploy-apps/routes-domains.html#create-a-shared-domain).</p>
 
 ### <a id="members"></a> Manage Members
 
 In the org **Members** page, you can do the following:
 
-- See member email addresses
-- Toggle member permissions
-- Remove member from org
-- Invite a new member
+* See member email addresses
+* Toggle member permissions
+* Remove member from org
+* Invite a new member
 
 ### <a id="org-settings"></a> Manage Settings
 
 In the org **Settings** page, you can do the following:
 
-- Change the org name
-- See spaces assigned to isolation segments. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments).
-- Delete the org. You must have admin permissions to delete an org. 
+* Change the org name
+
+* See spaces assigned to isolation segments. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments) in _<%= vars.app_runtime_abbr %> Security_.
+
+* Delete the org. You must have admin permissions to delete an org. 
 
 ### <a id="metadata-org"></a> Add Metadata
 
@@ -103,18 +105,18 @@ You can add metadata, including labels and annotations, to orgs using Apps Manag
 
 <% if vars.platform_code.include? "CF" %>
 
-For more information about adding metadata to objects in PAS, see [Using Metadata](../adminguide/metadata.html).
+For more information about adding metadata to objects in <%= vars.app_runtime_full %> (<%= vars.app_runtime_abbr %>), see [Using Metadata](../adminguide/metadata.html).
 
 <% else %>
 
-For more information about adding metadata to objects in PAS, see [Using Metadata](https://docs.pivotal.io/platform/adminguide/metadata.html).
+For more information about adding metadata to objects in <%= vars.app_runtime_full %> (<%= vars.app_runtime_abbr %>), see [Using Metadata](https://docs.pivotal.io/platform/adminguide/metadata.html).
 
 <% end %>
 
-To add labels or annotations to an org using Apps Manager, do the following:
+To add labels or annotations to an org using Apps Manager:
 
 1. Click the **Settings** tab of the desired org and navigate to the **Metadata** section.
-	![The Metadata section of the Apps Manager Settings page includes  fields for labels and annotations. Each field includes two text boxes for entering name and value pairs, a toggle labeled "Enter JSON" that allows you to enter metadata in JSON format, and  aplus-sign button that allows you to add more name and value pairs. There are also "Cancel" and "Update Metadata" buttons to save or abandon your changes.](metadata.png)
+	![The Metadata section of the Apps Manager Settings page includes fields for labels and annotations. Each field includes two text boxes for entering name and value pairs, a toggle labeled "Enter JSON" that allows you to enter metadata in JSON format, and  aplus-sign button that allows you to add more name and value pairs. There are also "Cancel" and "Update Metadata" buttons to save or abandon your changes.](metadata.png)
 
 1. For **Labels**, complete the **Name** and **Value** fields. Or, select **Enter JSON** to enter the label in JSON.
 
@@ -150,7 +152,6 @@ You can manage the following resources in a space using Apps Manager:
 * Routes. See [Manage Routes](#manage-routes). 
 * Space settings. See [Manage Settings](#manage-settings).
 
-
 ### <a id='manage-apps'></a> Manage Apps
 
 The **Apps** page lists information about all apps in the space. For each app, it shows the **Status**, **Name**, number of  **Instances**, amount of **Memory** available, time since the **Last Push**, and associated **Route**.
@@ -171,24 +172,25 @@ The following user roles can be assigned to space members on the **Members** pag
 * **Space Developer**: Space Developers can create, manage, and delete apps and services in a space.
 * **Space Auditor**: Space Auditors have read-only access to space details, app logs, and reports.
 
-
 ### <a id='manage-routes'></a> Manage Routes
 
 The **Routes** page lists the routes associated with the space. 
 
 For each **Route**, the page shows the **Route Service** and **Bound Apps**. For more information about route services, see [Route Services](../services/route-services.html).
 
-
 ### <a id='manage-settings'></a> Manage Settings
 
 From the space **Settings** page, you can do the following:
 
 * Modify the space name.
-* View the Application Security Groups (ASGs) associated with the space.
-* View the space's isolation segment assignment. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments).
-* Add metadata to the space. See [Add Metadata](#metadata).
-* Delete the space.
 
+* View the Application Security Groups (ASGs) associated with the space.
+
+* View the space's isolation segment assignment. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments) in _<%= vars.app_runtime_abbr %> Security_.
+
+* Add metadata to the space. For more information, see [Add Metadata](#metadata).
+
+* Delete the space.
 
 ### <a id="metadata-space"></a> Add Metadata
 
@@ -196,15 +198,15 @@ You can add metadata, including labels and annotations spaces using Apps Manager
 
 <% if vars.platform_code.include? "CF" %>
 
-For more information about adding metadata to objects in PAS, see [Using Metadata](../adminguide/metadata.html).
+For more information about adding metadata to objects in <%= vars.app_runtime_abbr %>, see [Using Metadata](../adminguide/metadata.html).
 
 <% else %>
 
-For more information about adding metadata to objects in PAS, see [Using Metadata](https://docs.pivotal.io/platform/adminguide/metadata.html).
+For more information about adding metadata to objects in <%= vars.app_runtime_abbr %>, see [Using Metadata](https://docs.pivotal.io/platform/adminguide/metadata.html).
 
 <% end %>
 
-To add labels or annotations to a space using Apps Manager, do the following:
+To add labels or annotations to a space using Apps Manager:
 
 1. Click the **Settings** tab of the desired space and navigate to the **Metadata** section.
 
