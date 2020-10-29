@@ -8,7 +8,7 @@ This topic explains how to manage user roles with Apps Manager.
 <% unless vars.book_title == "Pivotal Web Services Documentation" %>
 <!-- This ensures that the note below only appears in the <%= vars.platform_name %> docs, not in the PWS docs.  -->
 
-<p class='note'><strong>Note:</strong> The procedures described here are not compatible with using SAML or LDAP for user identity management. To create and manage user accounts in a SAML- or LDAP-enabled <%= vars.platform_name %> deployment, see <a href='../opsguide/external-user-management.html'>Adding Existing SAML or LDAP Users to an <%= vars.platform_name %> Deployment</a>.</p>
+<p class='note'><strong>Note:</strong> The procedures described here are not compatible with using SAML or LDAP for user identity management. To create and manage user accounts in a SAML- or LDAP-enabled <%= vars.platform_name %> deployment, see <a href='https://docs.pivotal.io/application-service/2-7/operating/external-user-management.html'>Adding Existing SAML or LDAP Users to an <%= vars.platform_name %> Deployment</a>.</p>
 
 <% end %>
 
@@ -17,15 +17,24 @@ This topic explains how to manage user roles with Apps Manager.
 
 <%= vars.platform_name %> uses role-based access control, with each role granting the permissions in either an org or an app space. 
 
-A user account can be assigned one or more roles. The combination of these roles defines the actions a user can perform in an org and within specific app spaces in that org. For information about the actions that each role allows, see [Orgs, Spaces, Roles, and Permissions](../concepts/roles.html). For example, to assign roles to user accounts in a space, you must have Space Manager role assigned to the user in that space.
+A user account can be assigned one or more roles. The combination of these roles defines the
+actions a user can perform in an org and within specific app spaces in that org. For information
+about the actions that each role allows, see
+[Orgs, Spaces, Roles, and Permissions](../concepts/roles.html). For example, to assign roles to
+user accounts in a space, you must have Space Manager role assigned to the user in that space.
 
-You can also modify permissions for existing users by adding or removing the roles associated with the user account. User roles are assigned on a per-space basis, so you must modify the user account for each space that you want to change.
+You can also modify permissions for existing users by adding or removing the roles associated with
+the user account. User roles are assigned on a per-space basis, so you must modify the user account
+for each space that you want to change.
 
-Admins, Org Managers, and Space Managers can assign user roles with Apps Manager or with the Cloud Foundry Command Line Interface (cf CLI). For more information, see [Users and Roles](../cf-cli/getting-started.html#user-roles) in _Getting Started with the cf CLI_.
+Admins, Org Managers, and Space Managers can assign user roles with Apps Manager or with the Cloud
+Foundry Command Line Interface (cf CLI). For more information, see
+[Users and Roles](../cf-cli/getting-started.html#user-roles) in _Getting Started with the cf CLI_.
 
 <% unless vars.book_title == "Pivotal Web Services Documentation" %>
 
-You can manage user roles across multiple foundations. For more information, see [Configuring Multi-Foundation Support in Apps Manager](../opsguide/configure-multi-foundation.html).
+You can manage user roles across multiple foundations. For more information, see
+[Configuring Multi-Foundation Support in Apps Manager](../opsguide/configure-multi-foundation.html).
 
 <% end %>
 
