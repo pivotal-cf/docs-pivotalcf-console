@@ -3,7 +3,7 @@ title: Using Spring Boot Actuators with Apps Manager
 owner: Apps Manager
 ---
 
-This document describes how to view and manage app information from Spring Boot Actuator in Apps Manager. 
+This document describes how to view and manage app information from Spring Boot Actuator in Apps Manager.
 
 
 ## <a id="prereq"></a> Prerequisites
@@ -14,7 +14,7 @@ The Apps Manager integration with Spring Boot Actuator requires:
 
 * Spring Boot v1.5 or later.
 
-* Completing the procedures in [Configure Spring Boot Actuator Endpoints for Apps Manager](./spring-boot-actuators.html). 
+* Completing the procedures in [Configure Spring Boot Actuator Endpoints for Apps Manager](./spring-boot-actuators.html).
 	<br>
 	After your configure your app, Apps Manager displays the Spring Boot logo next to the name of your app on the app page:
 
@@ -26,13 +26,13 @@ The Apps Manager integration with Spring Boot Actuator requires:
 To view the data that your app sends to its `/info` Actuator endpoint, select the **Settings** tab:
 
 ![Info](info.png)
-	
+
 In the upper right of the app page, Apps Manager also displays the SHA of your app code repository from the latest build:
-	
+
 ![Git sha](git-sha.png)
 
 
-## <a id="view-app-health"></a> View App Health 
+## <a id="view-app-health"></a> View App Health
 
 To view the health-check data that your app sends to its `/health` Actuator endpoints:
 
@@ -43,13 +43,13 @@ To view the health-check data that your app sends to its `/health` Actuator endp
 	![Info](hc.png)
 
 
-## <a id="view-thread"></a> View Thread Dump 
+## <a id="view-thread"></a> View Thread Dump
 
 To trigger and view a thread dump from your app to its `/dump` Actuator endpoint:
 
 1. Select the **Threads** tab.
 
-1. Click **Refresh**. 
+1. Click **Refresh**.
 
 	![Thread Dump](thread_dump.png)
 
@@ -77,7 +77,7 @@ To trigger and view a heap dump from your app to its `/heapdump` endpoint:
 
 1. Select the settings dropdown for an instance of your app.
 
-1. Click **Heap Dump**. This downloads a `.zip` file. 
+1. Click **Heap Dump**. This downloads a `.zip` file.
 
 	![Heap dump](heap-dump.png)
 
@@ -95,17 +95,19 @@ To view a collated list of the endpoints an app serves:
 
 ## <a id="manage-log-levels"></a> Manage Log Levels
 
-Spring Boot apps include _loggers_ for many provided and user components of the app. You can set the log level for each logger in Apps Manager. 
+Spring Boot apps include _loggers_ for many provided and user components of the app. You can set the log level for each logger in Apps Manager.
+
+You can manage log levels for apps that are mapped to external routes.
 
 To view the **Configure Logging Levels** screen:
 
 1. Select the **Logs** tab.
 
-1. Click **Configure Logging Levels**. 
+1. Click **Configure Logging Levels**.
 
 	![Configure Logging Levels](config-log-levels.png)
 
-Apps Manager displays the default log level for each logger in gray. 
+Apps Manager displays the default log level for each logger in gray.
 
 ![Defaults](default-levels.png)
 
@@ -132,7 +134,7 @@ You can also filter which loggers you see using the **Filter Loggers** textbox.
 
 ## <a id="troubleshoot"></a> Troubleshoot Spring Boot Actuator Integration
 
-This section describes how to troubleshoot common issues with the integration of Apps Manager and Spring Boot Actuator.  
+This section describes how to troubleshoot common issues with the integration of Apps Manager and Spring Boot Actuator.
 
 ### <a id='failed-request'></a> /cloudfoundryapplication Failed Request
 
@@ -150,4 +152,4 @@ Apps Manager uses the `/cloudfoundryapplication` endpoint as the root for Spring
 
 #### Solution
 
-If you are not using the Spring Boot Actuator integrations for Apps Manager, you can ignore this failed request message. 
+If you are not using the Spring Boot Actuator integrations for Apps Manager, you can ignore this failed request message.
