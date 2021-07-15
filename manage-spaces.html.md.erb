@@ -120,13 +120,13 @@ You can add metadata, including labels and annotations, to orgs using Apps Manag
 <% if vars.platform_code.include? "CF" %>
 
 For more information about adding metadata to objects in
-<%= vars.app_runtime_full %> (<%= vars.app_runtime_abbr %>),
+<%= vars.app_runtime_first %>,
 see [Using Metadata](../adminguide/metadata.html).
 
 <% else %>
 
 For more information about adding metadata to objects in
-<%= vars.app_runtime_full %> (<%= vars.app_runtime_abbr %>), see
+<%= vars.app_runtime_first %>, see
 [Using Metadata](https://docs.pivotal.io/application-service/<%= product_info['local_product_version'].to_s.sub('.','-') %>/adminguide/metadata.html).
 
 <% end %>
