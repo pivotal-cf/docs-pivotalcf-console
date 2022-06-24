@@ -57,7 +57,7 @@ There are two ways to navigate to an app **Overview** page:
 
 The following image shows an example of an app **Overview** page.
 
-<%= image_tag("app-page.png", :alt => "The example Apps Manager dashboard shows at the top heading the name of the example app, 'cf-nodejs', with a stop and refresh button to the right. A green status icon says 'Running'. Below shows a horizontal series of tabs with the 'Overview' tab selected. Below, the 'Overview' pane shows an 'Events' section, 'App Summary' section, and 'Processes and Instances' section.") %>
+<%= image_tag("./images/app-page.png", :alt => "The example Apps Manager dashboard shows at the top heading the name of the example app, 'cf-nodejs', with a stop and refresh button to the right. A green status icon says 'Running'. Below shows a horizontal series of tabs with the 'Overview' tab selected. Below, the 'Overview' pane shows an 'Events' section, 'App Summary' section, and 'Processes and Instances' section.") %>
 
 ### <a id="start-stop"></a> Start, Stop, or Restage an App
 
@@ -67,7 +67,7 @@ The following image shows the location of the start, stop, and restage buttons.
 
 <%# To edit the following diagram, go to https://drive.google.com/file/d/1X4GPXIaf9gPIjkHiDHDxTZWWVY4Wt0qn/view?usp=sharing.
 You must be in the Pivotal org to edit the diagram.%>
-<%= image_tag("stop-restart-restage-app.png", :alt=>"The app name is shown to the left as a header 2 called 'app-0001-0000'.
+<%= image_tag("./images/stop-restart-restage-app.png", :alt=>"The app name is shown to the left as a header 2 called 'app-0001-0000'.
               To the right of the app name is three buttons: one with a 'stop' icon, another with a 'restart' icon, and the last with
               a 'restage' icon.") %>
 
@@ -84,7 +84,7 @@ To manually scale an app:
 1. Navigate to the app **Overview** page.
 
 1. Under **Processes and Instances**, click **Scale** to open the **Scale app** dialog.
-   <%= image_tag("scale-app.png", :alt => "In the 'Processes and Instances' section of the 'Overview' pane, find the 'Scale' button to the right of each process.") %>
+   <%= image_tag("./images/scale-app.png", :alt => "In the 'Processes and Instances' section of the 'Overview' pane, find the 'Scale' button to the right of each process.") %>
 
 1. Edit the number of **Instances**, the **Memory Limit**, and the **Disk Limit** as desired.
 
@@ -99,7 +99,7 @@ To enable App Autoscaler for an app:
 1. Navigate to the app **Overview** page.
 
 1. Under **Processes and Instances**, click **Enable Autoscaling** to enable App Autoscaler.
-  <%= image_tag("enable-autoscaling.png", :alt => "In the 'Processes and Instances' section of the 'Overview' pane, find 'Enable Autoscaling' two rows below the title of each process.") %>
+  <%= image_tag("./images/enable-autoscaling.png", :alt => "In the 'Processes and Instances' section of the 'Overview' pane, find 'Enable Autoscaling' two rows below the title of each process.") %>
 
 1. Click **Manage Autoscaling** to open App Autoscaler.
 
@@ -112,7 +112,7 @@ To view sidecar processes associated with your apps:
 1. Navigate to the app **Overview** page.
 
 1. Under **Processes and Instances**, see **Sidecars**. This section only appears if your app has any sidecar processes.
-  ![At the top of the image is the header "Processes and Instances". Below are six white, rectangular rows. The top row contains the label "web (Revision 1)" on the left side, and two buttons on the right side: one white, rectangular button with a blue border that is labeled "Enable Autoscaling" in blue letters; and to the right of "Enable Autoscaling", one shorter, blue, rectangular button labeled "Scale" in white letters. The next row down contains the text "Instances  1", "Memory Allocated  256 MB", "Disk Allocated  1 GB", Sidecars  1". The next row down contains five column headers labeled, from left to right, "#", "CPU", "Memory", "Disk", and "Uptime". The next row down contains data for the above column headers: under "#" is "0"; under "CPU" is "0%"; under "Memory" is "0 Bytes"; under "Disk" is "0 Bytes"; and under "Uptime" is "0 Minutes". To the far right of these is a gray "x" button. Below this data is a header labeled "Sidecars". The next row down has a green border on the left side. To the right of this green border is a downward-pointing carat, indicating a collapsable menu. To the right of this carat is the text "config-server". The next row down contains the text "Start Command: $./config-server".](sidecars.png)
+  ![At the top of the image is the header "Processes and Instances". Below are six white, rectangular rows. The top row contains the label "web (Revision 1)" on the left side, and two buttons on the right side: one white, rectangular button with a blue border that is labeled "Enable Autoscaling" in blue letters; and to the right of "Enable Autoscaling", one shorter, blue, rectangular button labeled "Scale" in white letters. The next row down contains the text "Instances  1", "Memory Allocated  256 MB", "Disk Allocated  1 GB", Sidecars  1". The next row down contains five column headers labeled, from left to right, "#", "CPU", "Memory", "Disk", and "Uptime". The next row down contains data for the above column headers: under "#" is "0"; under "CPU" is "0%"; under "Memory" is "0 Bytes"; under "Disk" is "0 Bytes"; and under "Uptime" is "0 Minutes". To the far right of these is a gray "x" button. Below this data is a header labeled "Sidecars". The next row down has a green border on the left side. To the right of this green border is a downward-pointing carat, indicating a collapsable menu. To the right of this carat is the text "config-server". The next row down contains the text "Start Command: $./config-server".](./images/sidecars.png)
 
 For more information about sidecar processes, see [Pushing Apps with Sidecar Processes](../devguide/sidecars.html).
 
@@ -139,7 +139,7 @@ For information about installing and configuring Metric Store, see [Metric Store
 
 The following image is an example of an app **Overview** page, showing key metrics for the app.
 
-<%= image_tag("app-page-with-metrics.png", :alt => "The example Apps Manager app overview page shows the six key metrics (CPU, Disk, Request Latency, Request Rate, and Request Errors).") %>
+<%= image_tag("./images/app-page-with-metrics.png", :alt => "The example Apps Manager app overview page shows the six key metrics (CPU, Disk, Request Latency, Request Rate, and Request Errors).") %>
 
 ### <a id="bind-unbind-services"></a> Bind or Unbind Services
 
@@ -154,7 +154,7 @@ To bind your app to an existing service:
 1. Navigate to the app **Overview** page.
 
 1. In the panel on the left side of the screen, under **Application**, click **Services**.
-    <%= image_tag("bound-services.png", :alt => "") %>
+    <%= image_tag("./images/bound-services.png", :alt => "") %>
 
 1. Click **Bind Service**.
 
@@ -175,7 +175,7 @@ To bind your app to a new service instance:
 1. In the panel on the left side of the screen, under **Application**, click **Services**.
 
 1. Click **New Service**.<br>
-    <%= image_tag("new-service.png", :alt => "") %>.
+    <%= image_tag("./images/new-service.png", :alt => "") %>.
     <br>
     <p class="note"><strong>Note:</strong> If you prefer to create the new service instance in the Marketplace, you can click **View in Marketplace** at any time.</p>
 
@@ -218,7 +218,7 @@ To map routes to your app:
 1. In the panel on the left side of the screen, under **Networking**, click **Routes**.
 
 1. To add a new route, click **Map a Route**.
-    <%= image_tag("routes.png", :alt => "") %>
+    <%= image_tag("./images/routes.png", :alt => "") %>
 
 1. Enter the route and click **Map**.
 
@@ -263,7 +263,7 @@ To create container-to-container networking policies:
 1. In the panel on the left side of the screen, under **Networking**, click **Container Networking**. The page displays any container networking policies associated with the app.
 
 1. To add a new network policy, click **Create Policy** or **Add a network policy**.
-      <%= image_tag("add-policy-form.png", :width => "400", :alt => "The Add Policy form shows dropdowns for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button.") %>
+      <%= image_tag("./images/add-policy-form.png", :width => "400", :alt => "The Add Policy form shows dropdowns for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button.") %>
 
 1. In the **Add Policy** window, configure the following:
     *  For **Org**, select the org of the destination app.
@@ -351,7 +351,7 @@ To run a task for an app:
 1. In the panel on the left side of the screen, under **Application**, click **Tasks**.
 
 1. Click **Run Task** to create a task.
-    <%= image_tag("run-task.png", :width => "400", :alt => "") %>
+    <%= image_tag("./images/run-task.png", :width => "400", :alt => "") %>
 
 1. (Optional) Enter a **Task Name**.
 
@@ -365,7 +365,7 @@ To run a task for an app:
 
 In the **Tasks** tab, click **Enable Scheduling** to bind the Scheduler service to your app. For more about Scheduler, see [Scheduling Jobs](http://docs.pivotal.io/pcf-scheduler/using-jobs.html) in the Scheduler documentation.
 
-![The Apps Manager interface shows the Task tab enabled with a box beneath that says "The Scheduler Service has not been enabled yet." with an "Enable Scheduling" button beneath.](enable-scheduling.png)
+![The Apps Manager interface shows the Task tab enabled with a box beneath that says "The Scheduler Service has not been enabled yet." with an "Enable Scheduling" button beneath.](./images/enable-scheduling.png)
 
 #### <a id="schedule-task"></a> Schedule a Task
 
@@ -376,7 +376,7 @@ To schedule a task:
 1. In the panel on the left side of the screen, under **Application**, click **Tasks**.
 
 1. Click **Create Job** to schedule a task.
-<%= image_tag("create-job-window.png", :alt => "") %>
+<%= image_tag("./images/create-job-window.png", :alt => "") %>
 
 1. Enter a **Job Name**.
 
@@ -441,7 +441,7 @@ To add a user-provided environment variable:
 1. Click **Add Environment Variable**.
 
 1. Enter the **key** and **value** of the variable. Alternatively, toggle **Enter as JSON** to enter the variable in JSON.
-  <%= image_tag("user-env-vars.png", :alt => "") %>
+  <%= image_tag("./images/user-env-vars.png", :alt => "") %>
 
 1. Click **Save**.
 
@@ -504,7 +504,7 @@ To navigate to a service instance **Overview** page:
 
 The following image shows an example of a service instance **Overview** page.
 
-<%= image_tag("services-binding.png", :alt => "") %>
+<%= image_tag("./images/services-binding.png", :alt => "") %>
 
 ### <a id='bind-app'></a> Bind an App
 
@@ -516,7 +516,7 @@ To bind and app to a service:
 
 1. In the **Bind App** popup, select the app to bind to the service instance.
 
-    <%= image_tag("services-binding-popup.png", :alt => "") %>
+    <%= image_tag("./images/services-binding-popup.png", :alt => "") %>
 
 1. (Optional) To attach parameters to the binding, click **Show Advanced Options**. Under **Arbitrary Parameters**, enter any additional service-specific configuration.
 
@@ -528,7 +528,7 @@ To unbind an app from a service instance:
 
 1. On the service **Overview** page, under **Bound Apps**, click the **×** to the right of the app name. An **Unbind App** popup appears.
 
-    <%= image_tag("services-unbinding-popup.png", :alt => "") %>
+    <%= image_tag("./images/services-unbinding-popup.png", :alt => "") %>
 
 1. Click **Unbind** to confirm.
 
@@ -539,10 +539,10 @@ From the service **Overview** page, you can share your service instance across s
 To share a service instance:
 
 1. On the service **Overview** page, click **Share Service Instance**.
-<%= image_tag("share-service-instance-button.png", :alt=>"The service instance button is located in the 'Overview' tab of a service bottom of the body, next to the text 'Shared with these Spaces'") %>
+<%= image_tag("./images/share-service-instance-button.png", :alt=>"The service instance button is located in the 'Overview' tab of a service bottom of the body, next to the text 'Shared with these Spaces'") %>
 
 1. Select the spaces with which you want to share your service instance.
-<%= image_tag("share-services-slideout.png", :alt=>"The service instance slideout shows checkboxes next to each space and a 'Share' button and 'Cancel' button in the bottom right-hand corner.") %>
+<%= image_tag("./images/share-services-slideout.png", :alt=>"The service instance slideout shows checkboxes next to each space and a 'Share' button and 'Cancel' button in the bottom right-hand corner.") %>
 
 1. Click **Share**.
 
@@ -568,7 +568,7 @@ To rename or delete your service instance:
 
 1. In the panel on the left side of the screen, under **Service**, click **Settings**.
 
-    <%= image_tag("services-settings.png", :alt => "") %>
+    <%= image_tag("./images/services-settings.png", :alt => "") %>
 
 1. Do one of these steps:
     * To change the service instance name, enter the new name and click **Update**.
@@ -595,7 +595,7 @@ To see and update this configuration and status information for an SCS Config Se
 
 1. In the panel on the left side of the screen, under **Service**, click **Config**.
     <p class="note"><strong>Note:</strong> The <strong>Configuration</strong> pane only appears for Spring Cloud Services instances.</p>
-    <%= image_tag("sc-config-server-instance.png", :alt => "") %>
+    <%= image_tag("./images/sc-config-server-instance.png", :alt => "") %>
 
 The **Config** pane includes:
 
@@ -621,7 +621,7 @@ To configure settings for a user-provided service instance:
 
 1. In the panel on the left side of the screen, under **Service**, click **Configuration**.
     <p class="note"><strong>Note:</strong> The <strong>Configuration</strong> pane only appears for user-provided service instances.</p>
-    <%= image_tag("config-user-provided.png", :alt => "") %>
+    <%= image_tag("./images/config-user-provided.png", :alt => "") %>
 
 1. Enter the **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**.
     <% unless vars.book_title == "Pivotal Web Services Documentation" %>
@@ -656,11 +656,11 @@ To generate a new service key:
 
 1. Enter a **Service Key Name**.
 
-    <%= image_tag("keys-create.png", :alt => "") %>
+    <%= image_tag("./images/keys-create.png", :alt => "") %>
 
 1. (Optional) Click **Show Advanced Options**. Under **Arbitrary Parameters**, enter any additional service-specific configuration in the **Name** and **Value** fields.
 
-    <%= image_tag("keys-create-adv.png", :alt => "") %>
+    <%= image_tag("./images/keys-create-adv.png", :alt => "") %>
 
 1. Click **Create** to generate the service key.
 
@@ -672,7 +672,7 @@ To view the credentials for a service key:
 
 1. Under **Service Key Credentials**, click the service instance name. The JSON object containing the credentials appears.
 
-    <%= image_tag("keys-creds.png", :alt => "") %>
+    <%= image_tag("./images/keys-creds.png", :alt => "") %>
 
 1. Click **Close**.
 
@@ -683,7 +683,7 @@ To delete a service key:
 1. Navigate to the service **Overview** page.
 
 1. Under **Service Key Credentials**, click the **x** next to the service instance name.
-<%= image_tag("keys-delete.png", :alt => "") %>
+<%= image_tag("./images/keys-delete.png", :alt => "") %>
 
 
 ## <a id='manage-route-services'></a> Manage Route Services
@@ -697,7 +697,7 @@ For more information about route services, see [Route Services](../services/rout
 To bind a new service instance to a route:
 
 1. Select the service from the Marketplace.
-    <%= image_tag('bind-route-new.png', :alt => "") %>
+    <%= image_tag('./images/bind-route-new.png', :alt => "") %>
 
 1. Under **Bind to Route**, either bind the service instance to an existing route or click **Create Route** to create a new custom route.
     <p class="note"><strong>Note:</strong> You must choose a Marketplace service compatible with route services for the <strong>Bind to Route</strong> field to appear.</p>
@@ -712,7 +712,7 @@ To bind an existing service instance to a route:
 
 1. Under **Bound Routes**, click **Bind Route**.
     <p class="note"><strong>Note:</strong> If the service is not compatible with route services, the text "This service does not support route binding" appears under <strong>Bound Routes</strong>.</p>
-    <%= image_tag('bind-route-old.png', :alt => "") %>
+    <%= image_tag('./images/bind-route-old.png', :alt => "") %>
 
 1. Do one of these steps:
     * For **Select a route to bind**, select an existing route.
