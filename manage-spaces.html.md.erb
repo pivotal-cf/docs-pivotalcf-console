@@ -6,63 +6,65 @@ owner: Apps Manager
 
 This topic explains how to view and manage orgs and spaces in Apps Manager.
 
-<p class="note"><strong>Note:</strong> To manage a space, you must have Space Manager permissions in that space.</p>
+<p class='note'><strong>Note:</strong> To manage a space, you must have Space Manager permissions in that space.</p>
 
 
 ## <a id='overview'></a> Overview
 
-You can use Apps Manager to manage orgs and spaces. This includes creating and deleting orgs,
-domains, and spaces, managing member permissions, adding metadata, and more.
+You can use Apps Manager to manage orgs and spaces. This includes creating and deleting orgs, domains, and spaces, managing member permissions, adding
+metadata, and more.
 
-For information about managing apps and service instances, see
-[Managing Apps and Service Instances Using Apps Manager](manage-apps.html).
+For information about managing apps and service instances, see [Managing Apps and Service Instances Using Apps Manager](manage-apps.html).
 
 <% unless vars.disallow_multi_foundation %>
 <!-- This ensures that the paragraph below only appears in the PCF docs, not in the PWS docs.  -->
 
-You can manage orgs and spaces across multiple foundations. For more information, see
-[Configuring Multi-Foundation Support in Apps Manager](../opsguide/configure-multi-foundation.html).
+You can manage orgs and spaces across multiple foundations. For more information, see [Configuring Multi-Foundation Support in Apps
+Manager](../opsguide/configure-multi-foundation.html).
 
 <% end %>
 
 
 ## <a id='prerequisite'></a> Prerequisite
 
-To do the following, you must first log in to Apps Manager with an account that has adequate
-permissions.
+To do the following, you must first log in to Apps Manager with an account that has adequate permissions.
 
-For more information, see [About Permissions](dev-console.html#permissions) in
-_Getting Started with Apps Manager_.
+For more information, see [About Permissions](dev-console.html#permissions) in _Getting Started with Apps Manager_.
 
 
 ## <a id='view-org'></a> Manage an Org
 
-You can manage org resources, including the spaces, domains, and members associated with the
-selected space, in Apps Manager. You can also manage org settings.
+You can manage org resources, including the spaces, domains, and members associated with the selected space, in Apps Manager. You can also manage org
+settings.
 
-You can manage an org by navigating to the org in Apps Manager. 
+You can manage an org by navigating to the org in Apps Manager.
 
 To navigate to an org, do one of the following:
 
 * On the Apps Manager home page, under **Orgs**, click the name of the org that you want to manage.
+
 * Search for the org by entering its name in the search bar.
 
-By default, the landing page for an org in Apps Manager is the org **Spaces** page. You can use the
-panel on the left side of the screen to navigate to other pages for resources in the org, such as
-domains and members.
+By default, the landing page for an org in Apps Manager is the org **Spaces** page. You can use the panel on the left side of the screen to navigate to other
+pages for resources in the org, such as domains and members.
 
 The following image shows an example of the landing page for an org in Apps Manager.
 
-![Landing page for an org in Apps Manager](org-spaces-page.png) 
+![Landing page for an org in Apps Manager](org-spaces-page.png)
 
 You can manage the following resources in an org using Apps Manager:
 
-* Spaces. See [Manage Spaces](#spaces).
-* Domains. See [Manage Domains](#domains).
-* Members. See [Manage Members](#members).
-* Org settings. See [Manage Settings](#org-settings).
+* Spaces. For more information, see [Manage Spaces](#spaces) below.
 
-### <a id="spaces"></a> Manage Spaces
+* Domains. For more information, see [Manage Domains](#domains) below.
+
+* Members. For more information, see [Manage Members](#manage-members-org) below.
+
+* Org settings. For more information, see [Manage Settings](#manage-settings-) below.
+
+* Metadata. For more information, see [Add Metadata](#metadata-org) below.
+
+### <a id='spaces'></a> Manage Spaces
 
 In the org **Spaces** tab, you can do the following:
 
@@ -75,61 +77,53 @@ In the org **Spaces** tab, you can do the following:
 
 * Create a new space.
 
-### <a id="domains"></a> Manage Domains
+### <a id='domains'></a> Manage Domains
 
 In the org **Domains** page, you can do the following:
 
 * See each **Domain** in your org.
 
-* See the **Type** associated with each domain. A type is either **Globally Shared** or
-**Privately Shared**. For more information about globally and locally shared domains, see
-[Shared Domains](https://docs.pivotal.io/application-service/<%= product_info['local_product_version'].to_s.sub('.','-') %>/devguide/deploy-apps/routes-domains.html#shared-domains)
-and [Private Domains](https://docs.pivotal.io/application-service/<%= product_info['local_product_version'].to_s.sub('.','-') %>/devguide/deploy-apps/routes-domains.html#private-domains)
-in _Configuring Routes and Domains_.
+* See the **Type** associated with each domain. A type is either **Globally Shared** or **Privately Shared**. For more information about globally and locally
+shared domains, see [Shared Domains](../devguide/deploy-apps/routes-domains.html#shared-domains) and [Private
+Domains](../devguide/deploy-apps/routes-domains.html#private-domains) in _Configuring Routes and Domains_.
 
 * Delete a domain by clicking the vertical three-dot icon and selecting **Delete**. You must have permission to manage the domain to delete it.
 
 * Create a new private domain by clicking **Add a Domain**. You must have Org Manager permissions to create a private domain.
-  <p class="note"><strong>Note:</strong> To create globally shared domains, you must have Admin permissions and use the Cloud Foundry Command Line Interface (cf CLI). For more information, see [Create a Shared Domain](https://docs.pivotal.io/application-service/<%= product_info['local_product_version'].to_s.sub('.','-') %>//devguide/deploy-apps/routes-domains.html#create-a-shared-domain).</p>
+  <p class='note'><strong>Note:</strong> To create globally shared domains, you must have Admin permissions and use the Cloud Foundry Command Line Interface
+    (cf CLI). For more information, see <a href="../devguide/deploy-apps/routes-domains.html#create-a-shared-domain">Create a Shared Domain</a> in
+    <em>Configuring Routes and Domains</em>.</p>
 
-### <a id="members"></a> Manage Members
+### <a id='manage-members-org'></a> Manage Members
 
 In the org **Members** page, you can do the following:
 
-* See member email addresses
-* Toggle member permissions
-* Remove member from org
-* Invite a new member
+* Search for members of the org
 
-### <a id="org-settings"></a> Manage Settings
+* See member email addresses
+
+* Toggle member permissions
+
+* Invite a new member to the org
+
+* Remove a member from the org
+
+### <a id='manage-settings-org'></a> Manage Settings
 
 In the org **Settings** page, you can do the following:
 
 * Change the org name
 
-* See spaces assigned to isolation segments. For more information, see
-[Isolation Segments](../concepts/security.html#isolation-segments) in
+* See spaces assigned to isolation segments. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments) in
 _<%= vars.app_runtime_abbr %> Security_.
 
-* Delete the org. You must have admin permissions to delete an org. 
+* Delete the org. You must have admin permissions to delete an org.
 
-### <a id="metadata-org"></a> Add Metadata
+### <a id='metadata-org'></a> Add Metadata
 
-You can add metadata, including labels and annotations, to orgs using Apps Manager. 
+You can add metadata, including labels and annotations, to orgs using Apps Manager.
 
-<% if vars.platform_code.include? "CF" %>
-
-For more information about adding metadata to objects in
-<%= vars.app_runtime_first %>,
-see [Using Metadata](../adminguide/metadata.html).
-
-<% else %>
-
-For more information about adding metadata to objects in
-<%= vars.app_runtime_first %>, see
-[Using Metadata](https://docs.pivotal.io/application-service/<%= product_info['local_product_version'].to_s.sub('.','-') %>/adminguide/metadata.html).
-
-<% end %>
+For more information about adding metadata to objects in <%= vars.app_runtime_first %>, see [Using Metadata](../adminguide/metadata.html).
 
 To add labels or annotations to an org using Apps Manager:
 
@@ -147,65 +141,69 @@ To add labels or annotations to an org using Apps Manager:
 
 ## <a id='manage-space'></a> Manage a Space
 
-You can manage space resources, including the apps, service instances, routes, and members
-associated with the selected space, in Apps Manager. You can also manage space settings.
+You can manage space resources, including the apps, service instances, routes, and members associated with the selected space, in Apps Manager. You can also
+manage space settings.
 
-You can manage a space by navigating to the space in Apps Manager. 
+You can manage a space by navigating to the space in Apps Manager.
 
 To navigate to the space, do one of the following:
 
 * On the org page, click the name of the space you want to manage.
+
 * Search for a space by entering its name in the search bar.
 
-By default, the landing page for a space in Apps Manager is the space **Apps** page. You can use
-the panel on the left side of the screen to navigate to other pages for resources in the space,
-such as services and members.
+By default, the landing page for a space in Apps Manager is the space **Apps** page. You can use the panel on the left side of the screen to navigate to other
+pages for resources in the space, such as services and members.
 
-The following image shows an example of the landing page for a space in Apps Manager. 
+The following image shows an example of the landing page for a space in Apps Manager.
 
-![Landing page for a space in Apps Manager](space-apps-view.png) 
+![Landing page for a space in Apps Manager](space-apps-view.png)
 
 You can manage the following resources in a space using Apps Manager:
 
-* Apps. See [Manage Apps](#manage-apps).
-* Services. See [Manage Services](#manage-services).
-* Members. See [Manage Members](#manage-members).
-* Routes. See [Manage Routes](#manage-routes). 
-* Space settings. See [Manage Settings](#manage-settings).
+* Apps. For more information, see [Manage Apps](#manage-apps) below.
+
+* Services. For more information, see [Manage Services](#manage-services) below.
+
+* Members. For more information, see [Manage Members](#manage-members-space) below.
+
+* Routes. For more information, see [Manage Routes](#manage-routes) below.
+
+* Space settings. For more information, see [Manage Settings](#manage-settings-space) below.
+
+* Metadata. For more information, see [Add Metadata](#metadata-space) below.
 
 ### <a id='manage-apps'></a> Manage Apps
 
-The **Apps** page lists information about all apps in the space. For each app, it shows the
-**Status**, **Name**, number of  **Instances**, amount of **Memory** available, time since the
-**Last Push**, and associated **Route**.
+The **Apps** page lists information about all apps in the space. For each app, it shows the **Status**, **Name**, number of  **Instances**, amount of
+**Memory** available, time since the **Last Push**, and associated **Route**.
 
 ### <a id='manage-services'></a> Manage Services
 
-The **Services** page shows the **Service**, **Name**, number of **Bound Apps**, and **Plan** for
-each service instance in the space.
+The **Services** page shows the **Service**, **Name**, number of **Bound Apps**, and **Plan** for each service instance in the space.
 
-For more information about configuring services, see
-[Services](../services/overview.html).
+For more information about configuring services, see [Services](../services/overview.html).
 
-### <a id='manage-members'></a> Manage Members
+### <a id='manage-members-space'></a> Manage Members
 
-The **Members** page lists all members of the space. For each member, the page also lists the
-associated user roles. 
+The **Members** page lists all members of the space. For each member, the page also lists the associated user roles.
 
 The following user roles can be assigned to space members on the **Members** page:
 
-* **Space Manager**: Space Managers can invite and manage users in the space.   
+* **Space Manager**: Space Managers can invite and manage users in the space.
+
 * **Space Developer**: Space Developers can create, manage, and delete apps and services in a space.
+
 * **Space Auditor**: Space Auditors have read-only access to space details, app logs, and reports.
 
 ### <a id='manage-routes'></a> Manage Routes
 
-The **Routes** page lists the routes associated with the space. 
+The **Routes** page lists the routes associated with the space.
 
-For each **Route**, the page shows the **Route Service** and **Bound Apps**. For more information
-about route services, see [Route Services](../services/route-services.html).
+For each **Route**, the page shows the **Route Service** and **Bound Apps**. For more information about route services, see [Route
+Services](../services/route-services.html).
 
-### <a id='manage-settings'></a> Manage Settings
+### <a id='manage-settings-space'></a> Manage Settings
 
 From the space **Settings** page, you can do the following:
 
@@ -213,29 +211,18 @@ From the space **Settings** page, you can do the following:
 
 * View the Application Security Groups (ASGs) associated with the space.
 
-* View the space's isolation segment assignment. For more information, see
-[Isolation Segments](../concepts/security.html#isolation-segments) in
+* View the space's isolation segment assignment. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments) in
 _<%= vars.app_runtime_abbr %> Security_.
 
-* Add metadata to the space. For more information, see [Add Metadata](#metadata).
+* Add metadata to the space. For more information, see [Add Metadata](#metadata-space) below.
 
 * Delete the space.
 
-### <a id="metadata-space"></a> Add Metadata
+### <a id='metadata-space'></a> Add Metadata
 
 You can add metadata, including labels and annotations spaces using Apps Manager.
 
-<% if vars.platform_code.include? "CF" %>
-
-For more information about adding metadata to objects in <%= vars.app_runtime_abbr %>,
-see [Using Metadata](../adminguide/metadata.html).
-
-<% else %>
-
-For more information about adding metadata to objects in <%= vars.app_runtime_abbr %>, see
-[Using Metadata](https://docs.pivotal.io/platform/adminguide/metadata.html).
-
-<% end %>
+For more information about adding metadata to objects in <%= vars.app_runtime_abbr %>, see [Using Metadata](../adminguide/metadata.html).
 
 To add labels or annotations to a space using Apps Manager:
 
