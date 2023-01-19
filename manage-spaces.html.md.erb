@@ -40,7 +40,7 @@ _Getting Started with Apps Manager_.
 You can manage org resources, including the spaces, domains, and members associated with the
 selected space, in Apps Manager. You can also manage org settings.
 
-You can manage an org by navigating to the org in Apps Manager. 
+You can manage an org by navigating to the org in Apps Manager.
 
 To navigate to an org, do one of the following:
 
@@ -53,7 +53,7 @@ domains and members.
 
 The following image shows an example of the landing page for an org in Apps Manager.
 
-![Landing page for an org in Apps Manager](org-spaces-page.png) 
+![Landing page for an org in Apps Manager](org-spaces-page.png)
 
 You can manage the following resources in an org using Apps Manager:
 
@@ -83,14 +83,14 @@ In the org **Domains** page, you can do the following:
 
 * See the **Type** associated with each domain. A type is either **Globally Shared** or
 **Privately Shared**. For more information about globally and locally shared domains, see
-[Shared Domains](https://docs.pivotal.io/application-service/<%= product_info['local_product_version'].to_s.sub('.','-') %>/devguide/deploy-apps/routes-domains.html#shared-domains)
-and [Private Domains](https://docs.pivotal.io/application-service/<%= product_info['local_product_version'].to_s.sub('.','-') %>/devguide/deploy-apps/routes-domains.html#private-domains)
+[Shared Domains](https://docs.pivotal.io/application-service/<%= vars.current_major_version %>/devguide/deploy-apps/routes-domains.html#shared-domains)
+and [Private Domains](https://docs.pivotal.io/application-service/<%= vars.current_major_version %>/devguide/deploy-apps/routes-domains.html#private-domains)
 in _Configuring Routes and Domains_.
 
 * Delete a domain by clicking the vertical three-dot icon and selecting **Delete**. You must have permission to manage the domain to delete it.
 
 * Create a new private domain by clicking **Add a Domain**. You must have Org Manager permissions to create a private domain.
-  <p class="note"><strong>Note:</strong> To create globally shared domains, you must have Admin permissions and use the Cloud Foundry Command Line Interface (cf CLI). For more information, see [Create a Shared Domain](https://docs.pivotal.io/application-service/<%= product_info['local_product_version'].to_s.sub('.','-') %>//devguide/deploy-apps/routes-domains.html#create-a-shared-domain).</p>
+  <p class="note"><strong>Note:</strong> To create globally shared domains, you must have Admin permissions and use the Cloud Foundry Command Line Interface (cf CLI). For more information, see [Create a Shared Domain](https://docs.pivotal.io/application-service/<%= vars.current_major_version %>//devguide/deploy-apps/routes-domains.html#create-a-shared-domain).</p>
 
 ### <a id="members"></a> Manage Members
 
@@ -111,11 +111,11 @@ In the org **Settings** page, you can do the following:
 [Isolation Segments](../concepts/security.html#isolation-segments) in
 _<%= vars.app_runtime_abbr %> Security_.
 
-* Delete the org. You must have admin permissions to delete an org. 
+* Delete the org. You must have admin permissions to delete an org.
 
 ### <a id="metadata-org"></a> Add Metadata
 
-You can add metadata, including labels and annotations, to orgs using Apps Manager. 
+You can add metadata, including labels and annotations, to orgs using Apps Manager.
 
 <% if vars.platform_code.include? "CF" %>
 
@@ -127,7 +127,7 @@ see [Using Metadata](../adminguide/metadata.html).
 
 For more information about adding metadata to objects in
 <%= vars.app_runtime_first %>, see
-[Using Metadata](https://docs.pivotal.io/application-service/<%= product_info['local_product_version'].to_s.sub('.','-') %>/adminguide/metadata.html).
+[Using Metadata](https://docs.pivotal.io/application-service/<%= vars.current_major_version %>/adminguide/metadata.html).
 
 <% end %>
 
@@ -150,7 +150,7 @@ To add labels or annotations to an org using Apps Manager:
 You can manage space resources, including the apps, service instances, routes, and members
 associated with the selected space, in Apps Manager. You can also manage space settings.
 
-You can manage a space by navigating to the space in Apps Manager. 
+You can manage a space by navigating to the space in Apps Manager.
 
 To navigate to the space, do one of the following:
 
@@ -161,16 +161,16 @@ By default, the landing page for a space in Apps Manager is the space **Apps** p
 the panel on the left side of the screen to navigate to other pages for resources in the space,
 such as services and members.
 
-The following image shows an example of the landing page for a space in Apps Manager. 
+The following image shows an example of the landing page for a space in Apps Manager.
 
-![Landing page for a space in Apps Manager](space-apps-view.png) 
+![Landing page for a space in Apps Manager](space-apps-view.png)
 
 You can manage the following resources in a space using Apps Manager:
 
 * Apps. See [Manage Apps](#manage-apps).
 * Services. See [Manage Services](#manage-services).
 * Members. See [Manage Members](#manage-members).
-* Routes. See [Manage Routes](#manage-routes). 
+* Routes. See [Manage Routes](#manage-routes).
 * Space settings. See [Manage Settings](#manage-settings).
 
 ### <a id='manage-apps'></a> Manage Apps
@@ -190,17 +190,17 @@ For more information about configuring services, see
 ### <a id='manage-members'></a> Manage Members
 
 The **Members** page lists all members of the space. For each member, the page also lists the
-associated user roles. 
+associated user roles.
 
 The following user roles can be assigned to space members on the **Members** page:
 
-* **Space Manager**: Space Managers can invite and manage users in the space.   
+* **Space Manager**: Space Managers can invite and manage users in the space.
 * **Space Developer**: Space Developers can create, manage, and delete apps and services in a space.
 * **Space Auditor**: Space Auditors have read-only access to space details, app logs, and reports.
 
 ### <a id='manage-routes'></a> Manage Routes
 
-The **Routes** page lists the routes associated with the space. 
+The **Routes** page lists the routes associated with the space.
 
 For each **Route**, the page shows the **Route Service** and **Bound Apps**. For more information
 about route services, see [Route Services](../services/route-services.html).
