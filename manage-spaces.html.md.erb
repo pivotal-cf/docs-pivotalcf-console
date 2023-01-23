@@ -111,7 +111,7 @@ _<%= vars.app_runtime_abbr %> Security_.
 
 You can add metadata, including labels and annotations, to orgs using Apps Manager.
 
-<% if vars.platform_code.include? "CF" %>
+<% if vars.platform_code == 'CF' %>
 
 For more information about adding metadata to objects in
 <%= vars.app_runtime_full %> (<%= vars.app_runtime_abbr %>),
@@ -130,13 +130,13 @@ To add labels or annotations to an org using Apps Manager:
 1. Click the **Settings** tab of the desired org and navigate to the **Metadata** section.
 	![Metadata section of the Apps Manager Settings page](metadata.png)
 
-1. For **Labels**, complete the **Name** and **Value** fields. Or, select **Enter JSON** to enter the label in JSON.
+2. For **Labels**, complete the **Name** and **Value** fields. Or, select **Enter JSON** to enter the label in JSON.
 
-1. For **Annotations**, complete the **Name** and **Value** fields. Or, select **Enter JSON** to enter the annotation in JSON.
+3. For **Annotations**, complete the **Name** and **Value** fields. Or, select **Enter JSON** to enter the annotation in JSON.
 
-1. To add more labels or annotations, click **+** next to the **Labels** or **Annotations** field.
+4. To add more labels or annotations, click **+** next to the **Labels** or **Annotations** field.
 
-1. Click **Update Metadata**.
+5. Click **Update Metadata**.
 
 
 ## <a id='manage-space'></a> Manage a Space
@@ -219,7 +219,7 @@ _<%= vars.app_runtime_abbr %> Security_.
 
 You can add metadata, including labels and annotations spaces using Apps Manager.
 
-<% if vars.platform_code.include? "CF" %>
+<% if vars.platform_code == 'CF' %>
 
 For more information about adding metadata to objects in <%= vars.app_runtime_abbr %>,
 see [Using Metadata](../adminguide/metadata.html).
