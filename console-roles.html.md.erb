@@ -25,8 +25,12 @@ Admins, Org Managers, and Space Managers can assign user roles with Apps Manager
 Foundry Command Line Interface (cf CLI). For more information, see
 [Users and Roles](../cf-cli/getting-started.html#user-roles) in _Getting Started with the cf CLI_.
 
+<% if vars.disallow_multi_foundation %>
+<% else %>
 You can manage user roles across multiple foundations. For more information, see
 [Configuring Multi-Foundation Support in Apps Manager](../opsguide/configure-multi-foundation.html).
+
+<% end %>
 
 
 ## <a id='orgs-roles'></a> Manage Org Roles
