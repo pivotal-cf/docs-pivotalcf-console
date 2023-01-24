@@ -5,7 +5,14 @@ owner: Apps Manager
 
 This topic explains how to manage user roles with Apps Manager.
 
-<p class='note'><strong>Note:</strong> The procedures described here are not compatible with using SAML or LDAP for user identity management. To create and manage user accounts in a SAML-enabled or LDAP-enabled <%= vars.platform_name %> deployment, see <a href='https://docs.pivotal.io/application-service/<%= vars.current_major_version %>/operating/external-user-management.html'>Adding Existing SAML or LDAP Users to an <%= vars.platform_name %> Deployment</a>.</p>
+<% if vars.disallow_saml_ldap_identity %>
+<% else %>
+<!-- This ensures that the note below only appears in the <%= vars.platform_name %> docs, not in the PWS docs.  -->
+
+<p class='note'><strong>Note:</strong> The procedures described here are not compatible with using SAML or LDAP for user identity management. To create and manage user accounts in a SAML- or LDAP-enabled <%= vars.platform_name %> deployment, see <a href='https://docs.pivotal.io/application-service/2-7/operating/external-user-management.html'>Adding Existing SAML or LDAP Users to an <%= vars.platform_name %> Deployment</a>.</p>
+
+<% end %>
+
 
 ## <a id='overview'></a> Overview
 
