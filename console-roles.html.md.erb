@@ -5,7 +5,7 @@ owner: Apps Manager
 
 This topic explains how to manage user roles with Apps Manager.
 
-<!-- This ensures that the note below only appears in the TAS for VMs docs, not in the PWS docs.  -->
+<!-- This ensures that the note below only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
 <% if vars.disallow_saml_ldap_identity == true %>
 <% else %>
 <p class='note'><strong>Note:</strong> The procedures described here are not compatible with using SAML or LDAP for user identity management. To create and manage user accounts in a SAML-enabled or LDAP-enabled <%= vars.platform_name %> deployment, see <a href='https://docs.pivotal.io/application-service/<%= vars.current_major_version %>/operating/external-user-management.html'>Adding Existing SAML or LDAP Users to an <%= vars.platform_name %> Deployment</a>.</p>
@@ -29,7 +29,7 @@ Admins, Org Managers, and Space Managers can assign user roles with Apps Manager
 Foundry Command Line Interface (cf CLI). For more information, see
 [Users and Roles](../cf-cli/getting-started.html#user-roles) in _Getting Started with the cf CLI_.
 
-<!-- This ensures that the note below only appears in the TAS for VMs docs, not in the PWS docs.  -->
+<!-- This ensures that the note below only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
 <% if vars.disallow_multi_foundation == true %>
 <% else %>
 You can manage user roles across multiple foundations. For more information, see
