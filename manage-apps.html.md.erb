@@ -623,7 +623,7 @@ To configure settings for a user-provided service instance:
     <%= image_tag("config-user-provided.png", :alt => "") %>
 
 1. Enter the **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**.
-    <% unless vars.book_title == "Pivotal Web Services Documentation" %>
+    <% if vars.platform_code != "OFFLINE" %>
     <p class="note breaking"><strong>Breaking Change:</strong> In TAS for VMs v2.10, aggregate syslog drains contain
     only logs by default, and do not contain metrics. If you rely on metrics sent through aggregate syslog drains,
     you must add <code>?include-metrics-deprecated=true</code> to your aggregate drain URLs to continue to receive
