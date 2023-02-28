@@ -3,7 +3,7 @@ title: Configuring Spring Boot Actuator Endpoints for Apps Manager
 owner: Apps Manager
 ---
 
-The Apps Manager UI supports several production-ready endpoints from Spring Boot Actuator. This topic describes the Actuator endpoints and how you can configure your app to display data from the endpoints in Apps Manager. 
+The Apps Manager UI supports several production-ready endpoints from Spring Boot Actuator. This topic describes the Actuator endpoints and how you can configure your app to display data from the endpoints in Apps Manager.
 
 For more information about Spring Boot Actuator, see the [Spring Boot Actuator documentation](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready.html).
 
@@ -80,6 +80,7 @@ The table below describes the Spring Boot Actuator endpoints supported by Apps M
 </ul>
 </td>
 </tr>
+<tr>
 <td><code>/mappings</code></td>
 <td>
 <ul>
@@ -93,30 +94,32 @@ The table below describes the Spring Boot Actuator endpoints supported by Apps M
 
 ## <a id="activating-spring-boot-actuator"></a> Activate Spring Boot Actuator for Your App
 
-You must add a `spring-boot-starter-actuator` dependency to your app project for the production-ready HTTP endpoints to return values. For more information, see the [Enabling production-ready features](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-enabling) section of the Spring Boot documentation. 
+You must add a `spring-boot-starter-actuator` dependency to your app project for the production-ready HTTP endpoints to return values. For more information, see the [Enabling production-ready features](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-enabling) section of the Spring Boot documentation.
 
-1. Follow the instructions below that correspond to your project type. 
+1. Follow the instructions below that correspond to your project type.
     * **Maven**: If you use Maven, add the following to your project:
-        <pre>
-        \<dependencies\>
-            \<dependency\> 
-                \<groupId\>org.springframework.boot\</groupId\>
-                \<artifactId\>spring-boot-starter-actuator\</artifactId\>
-            \</dependency\>
-        \</dependencies\>
-        </pre>
+        ```java
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+            </dependency>
+        </dependencies>
+        ```
     * **Gradle**: If you use Gradle, add the following to your project:
-        <pre>
+        ```java
         dependencies {
             compile("org.springframework.boot:spring-boot-starter-actuator")
         }
-        </pre>
+        ```
 
 1. If you use self-signed certificates in your <%= vars.platform_name %> deployment for UAA or the Cloud Controller, specify in your `application.properties` file to skip SSL validation:
-<pre>
-management.cloudfoundry.skip-ssl-validation=true
-</pre>
-See [Cloud Foundry support](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-cloudfoundry) in the Spring Boot Actuator documentation for more information.
+
+    ```
+    management.cloudfoundry.skip-ssl-validation=true
+    ```
+
+For more information, see [Cloud Foundry support](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-cloudfoundry) in the Spring Boot Actuator documentation.
 
 
 ## <a id="info-endpoint"></a> Configure the Info Actuator
@@ -154,7 +157,7 @@ Add the following to your app project:
 
 Add the following to your app project:
 
-``` java
+```java
 springBoot  {
     buildInfo()
 }
@@ -177,7 +180,7 @@ To add git information to the `/info` endpoint, follow these instructions:
 
 Add the following plugin to your project:
 
-``` java
+```java
 <build>
     <plugins>
         <plugin>
@@ -190,9 +193,9 @@ Add the following plugin to your project:
 
 #### Gradle
 
-Add the following plugin to your project: 
+Add the following plugin to your project:
 
-``` java
+```java
 plugins {
     id "com.gorylenko.gradle-git-properties" version "1.4.17"
 }
