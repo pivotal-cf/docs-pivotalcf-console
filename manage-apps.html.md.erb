@@ -66,9 +66,8 @@ The following image shows the location of the start, stop, and restage buttons.
 
 <%# To edit the following diagram, go to https://drive.google.com/file/d/1X4GPXIaf9gPIjkHiDHDxTZWWVY4Wt0qn/view?usp=sharing.
 You must be in the Pivotal org to edit the diagram.%>
-<%= image_tag("./images/stop-restart-restage-app.png", :alt=>"The app name is shown to the left as a header 2 called 'app-0001-0000'.
-              To the right of the app name is three buttons: one with a 'stop' icon, another with a 'restart' icon, and the last with
-              a 'restage' icon.") %>
+
+<%= image_tag("./images/stop-restart-restage-app.png", :alt=>"The app name is shown to the left as a header 2 called 'app-0001-0000'. To the right of the app name is three buttons: one with a 'stop' icon, another with a 'restart' icon, and the last with a 'restage' icon.") %>
 
 For more information about starting, stopping, and restaging apps with the Cloud Foundry Command Line Interface (cf CLI), see [Starting, Restarting, and Restaging Apps](../devguide/deploy-apps/start-restart-restage.html).
 
@@ -176,7 +175,7 @@ To bind your app to a new service instance:
 1. Click **New Service**.<br>
     <%= image_tag("./images/new-service.png", :alt => "") %>.
     <br>
-    <p class="note"><strong>Note:</strong> If you prefer to create the new service instance in the Marketplace, you can click **View in Marketplace** at any time.</p>
+    <p class="note"><strong>Note:</strong> If you prefer to create the new service instance in the Marketplace, you can click <strong>View in Marketplace</strong> at any time.</p>
 
 1. Click the service.
 
@@ -361,7 +360,8 @@ To schedule a task:
 1. In the panel on the left side of the screen, under **Application**, click **Tasks**.
 
 1. Click **Create Job** to schedule a task.
-<%= image_tag("./images/create-job-window.png", :alt => "") %>
+
+    <%= image_tag("./images/create-job-window.png", :alt => "") %>
 
 1. Enter a **Job Name**.
 
@@ -615,7 +615,7 @@ To configure settings for a user-provided service instance:
     you must add <code>?include-metrics-deprecated=true</code> to your aggregate drain URLs to continue to receive
     metrics in the drains.
     <br><br>
-    For more information, see <a href="https://docs.pivotal.ioapplication-service/2-10/overview/release-notes/runtime-rn.html#syslog-no-metrics">Aggregate Syslog Drains Contain Logs Only</a> in the _TAS for VMs v2.10 Release Notes_.</p>
+    For more information, see <a href="https://docs.pivotal.ioapplication-service/2-10/overview/release-notes/runtime-rn.html#syslog-no-metrics">Aggregate Syslog Drains Contain Logs Only</a> in the <em><%= vars.app_runtime_abbr %> v2.10 Release Notes</em>.</p>
     <% end %>
 
 1. Click **Update Service**.
