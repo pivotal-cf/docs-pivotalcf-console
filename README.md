@@ -18,7 +18,7 @@ content.
 
 If you are planning to initiate a large documentation effort, please coordinate
 with the TAS docs team in advance to make sure we're not going to step on each
-other. You can reach the docs team on Slack: [#tas-docs-team](https://join.slack.com/share/enQtNTAyNTMzNTI2NjgxNi05MzkzYjgzMzdmZWEyZTA4NDU0OGMwMjIzYzI3OWVlNWMwODQ5ZWQ3YWUzYTk0ZTUyMzVkOGI1ODdlMWFkYWJl)
+other. You can reach the docs team on Slack: #tas-docs-team
 
 If you are trying to figure out where a particular bit of information should
 live, please reach out and ask. We're happy to help you ensure information
