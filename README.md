@@ -7,7 +7,7 @@ This repo is one of several doc repositories that go into a complete documentati
 
 The contents here are structured as a topic repository intended to be
 compiled into a larger document with DocWorks.
-For current docs, see [TAS for VMs](https://docs.vmware.com/en/VMware-Tanzu-Application-Service/3.0/tas-for-vms/concepts-overview.html).
+For current docs, see [TAS for VMs](https://docs.vmware.com/en/VMware-Tanzu-Application-Service/<%= vars.current_major_version %>/tas-for-vms/concepts-overview.html).
 
 ## Contributing to the Documentation
 
