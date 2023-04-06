@@ -92,7 +92,7 @@ The table below describes the Spring Boot Actuator endpoints supported by Apps M
 </table>
 
 
-## <a id="activating-spring-boot-actuator"></a> Activate Spring Boot Actuator for Your App
+## <a id="activating-spring-boot-actuator"></a> Activate Spring Boot Actuator for your App
 
 You must add a `spring-boot-starter-actuator` dependency to your app project for the production-ready HTTP endpoints to return values. For more information, see the [Enabling production-ready features](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-enabling) section of the Spring Boot documentation.
 
@@ -108,7 +108,7 @@ You must add a `spring-boot-starter-actuator` dependency to your app project for
         </dependencies>
         ```
     * **Gradle**: If you use Gradle, add the following to your project:
-    
+
         ```java
         dependencies {
             compile("org.springframework.boot:spring-boot-starter-actuator")
@@ -172,13 +172,13 @@ To add git information to the `/info` endpoint, follow these instructions:
 
 1. Add the following property to your `application.properties` file:
 
-	```
+	```console
 	management.info.git.mode=full
 	```
 
 1. Follow the instructions below that correspond to your project type.
 
-#### Maven
+### Maven
 
 Add the following plugin to your project:
 
@@ -193,9 +193,9 @@ Add the following plugin to your project:
 </build>
 ```
 
-#### Gradle
+### Gradle
 
-Add the following plugin to your project:
+Add the following plug-in to your project:
 
 ```java
 plugins {
