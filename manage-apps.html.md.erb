@@ -5,7 +5,6 @@ owner: Apps Manager
 
 This topic describes how to view and manage apps and service instances with Apps Manager.
 
-
 ## <a id='overview'></a> Overview
 
 You can use Apps Manager to manage apps, service instances, service keys, and route services. This includes tasks such as scaling apps, binding apps to services, generating services keys, and more.
@@ -17,7 +16,6 @@ For information about managing orgs and spaces, see [Managing Orgs and Spaces Us
 <% else %>
 You can manage apps and service instances across multiple foundations. For more information, see [Configuring Multi-Foundation Support in Apps Manager](../operating/configure-multi-foundation.html).
 <% end %>
-
 
 ## <a id='prerequisite'></a> Prerequisite
 
@@ -75,7 +73,7 @@ For more information about starting, stopping, and restaging apps with the Cloud
 
 From the app **Overview** page, you can scale an app manually or configure App Autoscaler to scale it automatically.
 
-#### <a id="manual-scale"></a> Scale an App Manually
+### <a id="manual-scale"></a> Scale an App Manually
 
 To manually scale an app:
 
@@ -88,7 +86,7 @@ To manually scale an app:
 
 1. Click **Apply Changes**.
 
-#### <a id="autoscale"></a> Activate App Autoscaler
+### <a id="autoscale"></a> Activate App Autoscaler
 
 You can activate App Autoscaler to scale your apps. For information about how to configure App Autoscaler to scale an app automatically, see [Configure Autoscaling for an App](../appsman-services/autoscaler/using-autoscaler.html#config) in _Scaling an App Using App Autoscaler_.
 
@@ -241,7 +239,7 @@ To change the destination app protocol for a route:
 
 1. Navigate to the app **Overview** page.
 
-1. In the lpeft hand pane of the screen, go to **Networking** > **Routes**.
+1. In the left hand pane of the screen, go to **Networking** > **Routes**.
 
 1. To change the destination protocol for a route, in the **App Protocol** section, select either **HTTP1** or **HTTP2**.
 
@@ -349,16 +347,15 @@ To run a task for an app:
 1. In the left hand pane of the screen, go to **Application** > **Tasks**.
 
 1. Click **Run Task** to create a task.
-
-    <%= image_tag("./images/run-task.png", :width => "400", :alt => "") %>
+![alt-text="Run a task for an app"](./images/run-task.png)
 
 1. (Optional) Enter a **Task Name**.
 
-1. Enter the **Task Command**.
+2. Enter the **Task Command**.
 
-1. Select a **Memory Limit** and a **Disk Limit** for the task.
+3. Select a **Memory Limit** and a **Disk Limit** for the task.
 
-1. Click **Run**.
+4. Click **Run**.
 
 ### <a id="enable-scheduling"></a> Activate Task Scheduling
 
@@ -377,20 +374,19 @@ To schedule a task:
 1. In the left hand pane of the screen, go to **Application**>**Tasks**.
 
 1. Click **Create Job** to schedule a task.
-
-    <%= image_tag("./images/create-job-window.png", :alt => "") %>
+![alt-text="Create a job to schedule a task"](./images/create-job-window.png)
 
 1. Enter a **Job Name**.
 
-1. Enter a **Command**.
+2. Enter a **Command**.
 
-1. Enter one or more **Cron Expressions** for your desired task schedule or schedules. For more information on cron expression syntax, see [Schedule a Job](http://docs.pivotal.io/pcf-scheduler/using-jobs.html#schedule-a-job) in _Scheduling Jobs_ in the Scheduler documentation.
+3. Enter one or more **Cron Expressions** for your desired task schedule or schedules. For more information on cron expression syntax, see [Schedule a Job](http://docs.pivotal.io/pcf-scheduler/using-jobs.html#schedule-a-job) in _Scheduling Jobs_ in the Scheduler documentation.
 
-1. Click **Create Job**.
+4. Click **Create Job**.
 
 ### <a id="view-settings"></a> View and Manage Settings
 
-To view settings for an app, in the panel on the left side of the screen, under **Application**, click **Settings**.
+To view settings for an app, in the pane on the left hand part of the screen, go to **Application** > **Settings**.
 
 You can do the following from the **Settings** page:
 
@@ -410,7 +406,7 @@ To configure health checks for your app:
 
 1. In the left hand pane of the screen, go to **Application** > **Settings**.
 
-1. In the **Health Check** section, click the **Type** dropdown and select **port**, **http**, or **process**. Depending on which option you select, additional fields might appear.
+1. In the **Health Check** section, click **Type** from the dropdown menu and select **port**, **http**, or **process**. Depending on which option you select, additional fields might appear.
 
 1. For **Type**, select **port**, **http**, or **process**.
 
@@ -426,9 +422,9 @@ To view all environment variables for an app:
 
 1. Navigate to the app **Overview** page.
 
-1. In the panel on the left side of the screen, under **Application**, click **Settings**.
+1. In the left hand pane of the screen, go to **Application** > **Settings**.
 
-1. Under **User Provided Environment Variables**, click **Reveal Env Vars**.
+1. In **User Provided Environment Variables**, click **Reveal Env Vars**.
 
 ### <a id="add-env-var"></a> Add Environment Variables
 
@@ -478,7 +474,6 @@ To add labels or annotations to an app using Apps Manager:
 
 1. Click **Update Metadata**.
 
-
 ## <a id='manage-service'></a> Manage a Service Instance
 
 This section describes how to manage service instances in Apps Manager.
@@ -501,13 +496,12 @@ To navigate to a service instance **Overview** page:
 
 1. Navigate to the landing page for the space of the service instance.
 
-1. In the left hand pane of the screen, go to **Space**, click **Services**.
+1. In the left hand pane of the screen, go to **Space** > **Services**.
 
 1. On the **Services** page, click the name of the service instance.
 
 The following image shows an example of a service instance **Overview** page.
-
-<%= image_tag("./images/services-binding.png", :alt => "") %>
+![alt-text="Service instance example"](./images/services-binding.png)
 
 ### <a id='bind-app'></a> Bind an App
 
@@ -517,23 +511,22 @@ To bind and app to a service:
 
 1. On the service **Overview** page, click **Bind App**.
 
-1. In the **Bind App** popup window, select the app to bind to the service instance.
+1. In the **Bind App** pop-up window, select the app to bind to the service instance.
 
-    <%= image_tag("./images/services-binding-popup.png", :alt => "") %>
+    ![alt-text="Select an app to bind to the service instance."](./images/services-binding-popup.png)
 
 1. (Optional) To attach parameters to the binding, click **Show Advanced Options**. Under **Arbitrary Parameters**, enter any additional service-specific configuration.
 
-1. Click **Bind**.
+2. Click **Bind**.
 
 ### <a id='unbind-app'></a> Unbind an App
 
 To unbind an app from a service instance:
 
 1. On the service **Overview** page, under **Bound Apps**, click the **×** to the right of the app name. An **Unbind App** popup appears.
+    ![alt-text="Unbind an app from the service instance."](./images/services-unbinding-popup.png)
 
-    <%= image_tag("./images/services-unbinding-popup.png", :alt => "") %>
-
-1. Click **Unbind** to confirm.
+2. Click **Unbind** to confirm.
 
 ### <a id="shared-instances"></a> Share Service Instance
 
@@ -572,10 +565,9 @@ To rename or delete your service instance:
 1. Navigate to the service **Overview** page.
 
 1. In the left hand pane of the screen, under **Service** > **Settings**.
+    ![alt-text="Rename or delte a service instance."](./images/services-settings.png)
 
-    <%= image_tag("./images/services-settings.png", :alt => "") %>
-
-1. Do one of these steps:
+2. Do one of these steps:
     * To change the service instance name, enter the new name and click **Update**.
     * To add configuration parameters to the service instance, enter the parameters in the **Name** and **Value** fields and then click **Update**. Alternatively, enter your configuration parameters using the **Enter JSON** toggle and then click **Update**.
     * To delete the service instance, click **Delete Service Instance**.
@@ -600,7 +592,8 @@ To see and update this configuration and status information for an SCS Config Se
 
 1. In the left hand pane of the screen, go to **Service** > **Config**.
     <p class="note"><strong>Note:</strong> The <strong>Configuration</strong> pane only appears for Spring Cloud Services instances.</p>
-    <%= image_tag("./images/sc-config-server-instance.png", :alt => "") %>
+
+    ![alt-text="Config page"](./images/sc-config-server-instance.png)
 
 The **Config** pane includes:
 
@@ -626,7 +619,8 @@ To configure settings for a user-provided service instance:
 
 1. In the left hand pane of the screen, go to **Service** > **Configuration**.
     <p class="note"><strong>Note:</strong> The <strong>Configuration</strong> pane only appears for user-provided service instances.</p>
-    <%= image_tag("./images/config-user-provided.png", :alt => "") %>
+
+    ![alt-text="Configure User-Provided Service Instance."](./images/config-user-provided.png)
 
 1. Enter the **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**.
     <% if vars.book_title != "Pivotal Web Services Documentation" %>
@@ -660,13 +654,13 @@ To generate a new service key:
 
 1. Enter a **Service Key Name**.
 
-    <%= image_tag("./images/keys-create.png", :alt => "") %>
+    ![alt-text="Create a service key."](./images/keys-create.png)
 
-1. (Optional) Click **Show Advanced Options**. Go to **Arbitrary Parameters**, and enter any additional service-specific configuration in the **Name** and **Value** fields.
+2. (Optional) Click **Show Advanced Options**. Go to **Arbitrary Parameters**, and enter any additional service-specific configuration in the **Name** and **Value** fields.
 
-    <%= image_tag("./images/keys-create-adv.png", :alt => "") %>
+    ![alt-text=""](./images/keys-create-adv.png)
 
-1. Click **Create** to generate the service key.
+3. Click **Create** to generate the service key.
 
 ### <a id='get-creds'></a> View Credentials for a Service Key
 
@@ -676,9 +670,9 @@ To view the credentials for a service key:
 
 1. Go to **Service Key Credentials**, and click the service instance name. The JSON object containing the credentials appears.
 
-    <%= image_tag("./images/keys-creds.png", :alt => "") %>
+    ![alt-text=""](./images/keys-creds.png)
 
-1. Click **Close**.
+2. Click **Close**.
 
 ### <a id='delete-key'></a> Delete Service Key
 
@@ -688,8 +682,7 @@ To delete a service key:
 
 1. Go to **Service Key Credentials**, and click the **x** next to the service instance name.
 
-    <%= image_tag("./images/keys-delete.png", :alt => "") %>
-
+    ![alt-text="NSX-T Overview"](./images/keys-delete.png)
 
 ## <a id='manage-route-services'></a> Manage Route Services
 
