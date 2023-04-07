@@ -154,7 +154,7 @@ To bind your app to an existing service:
 
 1. Click **Bind Service**.
 
-2. For **Service to Bind**, select the service instance from the dropdown.
+2. For **Service to Bind**, select the service instance from the drop-down menu.
 
 3. (Optional) For **Binding Name**, enter a binding name in all lowercase letters. For example, `bind-usr-serv`.
 
@@ -198,9 +198,9 @@ To unbind your app from a service instance:
 
 1. Locate the service instance in the **Bound Services** list.
 
-1. Click the three-dot icon on the far right.
+1. Click the three-dot icon.
 
-1. Select **Unbind** from the drop down menu.
+1. Select **Unbind** from the drop-down menu.
 
 ### <a id="routes"></a> Map or Unmap Routes
 
@@ -374,6 +374,7 @@ To schedule a task:
 1. In the left hand pane of the screen, go to **Application**>**Tasks**.
 
 1. Click **Create Job** to schedule a task.
+
 ![alt-text="Create a job to schedule a task"](./images/create-job-window.png)
 
 1. Enter a **Job Name**.
@@ -406,7 +407,7 @@ To configure health checks for your app:
 
 1. In the left hand pane of the screen, go to **Application** > **Settings**.
 
-1. In the **Health Check** section, click **Type** from the dropdown menu and select **port**, **http**, or **process**. Depending on which option you select, additional fields might appear.
+1. In the **Health Check** section, click **Type** from the drop-down menu and select **port**, **http**, or **process**. Depending on which option you select, additional fields might appear.
 
 1. For **Type**, select **port**, **http**, or **process**.
 
@@ -440,9 +441,9 @@ To add a user-provided environment variable:
 
 1. Enter the **key** and **value** of the variable. Alternatively, toggle **Enter as JSON** to enter the variable in JSON.
 
-    <%= image_tag("./images/user-env-vars.png", :alt => "") %>
+    ![alt-text="Adding environment variables."](./images/user-env-vars.png)
 
-1. Click **Save**.
+2. Click **Save**.
 
 <p class="note"><strong>Note:</strong> Changes to environment variables, service bindings, and service unbindings require starting the app again to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p>
 
@@ -523,7 +524,7 @@ To bind and app to a service:
 
 To unbind an app from a service instance:
 
-1. On the service **Overview** page, under **Bound Apps**, click the **×** to the right of the app name. An **Unbind App** popup appears.
+1. On the service **Overview** page, under **Bound Apps**, click the **×** to the right of the app name. An **Unbind App** pop-up window appears.
     ![alt-text="Unbind an app from the service instance."](./images/services-unbinding-popup.png)
 
 2. Click **Unbind** to confirm.
@@ -564,7 +565,7 @@ To rename or delete your service instance:
 
 1. Navigate to the service **Overview** page.
 
-1. In the left hand pane of the screen, under **Service** > **Settings**.
+1. In the left hand pane of the screen, go to **Service** > **Settings**.
     ![alt-text="Rename or delte a service instance."](./images/services-settings.png)
 
 2. Do one of these steps:
@@ -695,12 +696,12 @@ For more information about route services, see [Route Services](../services/rout
 To bind a new service instance to a route:
 
 1. Select the service from the Marketplace.
-    <%= image_tag('./images/bind-route-new.png', :alt => "") %>
+    ![alt-text=""](./images/bind-route-new.png)
 
-1. Go to **Bind to Route**, and either bind the service instance to an existing route or click **Create Route** to create a new custom route.
+2. Go to **Bind to Route**, and either bind the service instance to an existing route or click **Create Route** to create a new custom route.
     <p class="note"><strong>Note:</strong> You must choose a Marketplace service compatible with route services for the <strong>Bind to Route</strong> field to appear.</p>
 
-1. Complete the remaining fields and click **Add** to create the service instance.
+3. Complete the remaining fields and click **Add** to create the service instance.
 
 ### <a id='old-route-services'></a> Bind an Existing Service Instance to a Route
 
@@ -710,13 +711,13 @@ To bind an existing service instance to a route:
 
 1. Go to **Bound Routes**, and click **Bind Route**.
     <p class="note"><strong>Note:</strong> If the service is not compatible with route services, the text "This service does not support route binding" appears under <strong>Bound Routes</strong>.</p>
-    <%= image_tag('./images/bind-route-old.png', :alt => "") %>
 
-1. Do one of these steps:
+     ![alt-text=""](./images/bind-route-old.png)
+2. Do one of these steps:
     * For **Select a route to bind**, select an existing route.
     * For **Create Custom Route**, enter a new route.
 
-1. Click **Bind**.
+3. Click **Bind**.
 
 ### <a id='unbind-route-services'></a> Unbind a Route from a Service Instance
 
