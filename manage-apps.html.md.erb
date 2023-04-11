@@ -601,7 +601,7 @@ The **Config** pane includes:
 * The current status of the SCS Config Server.
 
 * The JSON object that configures settings for the SCS Config Server itself.
-  * Passed in with `-c` flag to `cf create-service` and `cf update-service`.
+  * Passed in with `-c` flag to `cf create-service` and `cf update-service`. --upgrade. Note, you can use the new command `cf upgrade-service` to upgrade a plan.
 
   * **Synchronize Mirrors** button for the app configurations that the SCS Config Server serves. Click this button to refresh the local Git repository mirrors. Refreshing the mirrors updates client app configuration settings, as described in [Mirror Service](https://docs.pivotal.io/spring-cloud-services/common/config-server/mirror-service.html) in the SCS documentation.
 
