@@ -15,7 +15,12 @@ metadata, and more.
 
 For information about managing apps and service instances, see [Managing Apps and Service Instances Using Apps Manager](manage-apps.html).
 
-For information about configuring multi-foundation support in Apps Manager, see [Configuring Multi-Foundation Support in Apps Manager][def].
+<!-- This ensures that the note below only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
+<% if vars.disallow_multi_foundation == true %>
+<% else %>
+For more information, see <a href="../operating/configure-multi-foundation.html">Configuring Multi-Foundation Support in Apps Manager</a>.
+<% end %>
+
 
 ## <a id='prerequisite'></a> Prerequisite
 
@@ -25,8 +30,7 @@ For more information, see [About Permissions](dev-console.html#permissions) in _
 
 ## <a id='view-org'></a> Manage an Org
 
-You can manage org resources, including the spaces, domains, and members associated with the selected space, in Apps Manager. You can also manage org
-settings.
+You can manage org resources, including the spaces, domains, and members associated with the selected space, in Apps Manager. You can also manage org settings.
 
 You can manage an org by navigating to the org in Apps Manager.
 
