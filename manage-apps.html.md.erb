@@ -5,6 +5,7 @@ owner: Apps Manager
 
 This topic describes how to view and manage apps and service instances with Apps Manager.
 
+
 ## <a id='overview'></a> Overview
 
 You can use Apps Manager to manage apps, service instances, service keys, and route services. This includes tasks such as scaling apps, binding apps to services, generating services keys, and more.
@@ -16,6 +17,7 @@ For information about managing orgs and spaces, see [Managing Orgs and Spaces Us
 <% else %>
 You can manage apps and service instances across multiple foundations. For more information, see [Configuring Multi-Foundation Support in Apps Manager](https://docs.vmware.com/en/VMware-Tanzu-Application-Service/2.11/tas-for-vms/configure-multi-foundation.html).
 <% end %>
+
 
 ## <a id='prerequisite'></a> Prerequisite
 
@@ -73,7 +75,7 @@ For more information about starting, stopping, and restaging apps with the Cloud
 
 From the app **Overview** page, you can scale an app manually or configure App Autoscaler to scale it automatically.
 
-### <a id="manual-scale"></a> Scale an App Manually
+#### <a id="manual-scale"></a> Scale an App Manually
 
 To manually scale an app:
 
@@ -86,24 +88,24 @@ To manually scale an app:
 
 1. Click **Apply Changes**.
 
-### <a id="autoscale"></a> Activate App Autoscaler
+#### <a id="autoscale"></a> Enable App Autoscaler
 
-You can activate App Autoscaler to scale your apps. For information about how to configure App Autoscaler to scale an app automatically, see [Configure Autoscaling for an App](../appsman-services/autoscaler/using-autoscaler.html#config) in _Scaling an App Using App Autoscaler_.
+You can enable App Autoscaler to automatically scale your apps. For information about how to configure App Autoscaler to scale an app automatically, see [Configure Autoscaling for an App](../appsman-services/autoscaler/using-autoscaler.html#config) in _Scaling an App Using App Autoscaler_.
 
-To activate App Autoscaler for an app:
+To enable App Autoscaler for an app:
 
 1. Navigate to the app **Overview** page.
 
-1. Under **Processes and Instances**, click **Enable Autoscaling** to activate App Autoscaler.
-   ![alt-text="In the 'Processes and Instances' section of the 'Overview' pane, find 'Enable Autoscaling' two rows below the title of each process."](./images/enable-autoscaling.png)
+1. Under **Processes and Instances**, click **Enable Autoscaling** to enable App Autoscaler.
+    <%= image_tag("./images/enable-autoscaling.png", :alt => "In the 'Processes and Instances' section of the 'Overview' pane, find 'Enable Autoscaling' two rows below the title of each process.") %>
 
-2. Click **Manage Autoscaling** to open App Autoscaler.
+1. Click **Manage Autoscaling** to open App Autoscaler.
 
 ### <a id='view-sidecars'></a> View Sidecar Processes
 
-You can view the sidecar processes that are associated with your app from the app **Overview** page.
+You can view the sidecar processes associated with your app from the app **Overview** page.
 
-To view sidecar processes that are associated with your apps:
+To view sidecar processes associated with your apps:
 
 1. Navigate to the app **Overview** page.
 
@@ -114,7 +116,7 @@ For more information about sidecar processes, see [Pushing Apps with Sidecar Pro
 
 ### <a id='view-key-metrics'></a> View Key Metrics (Beta)
 
-If you installed Metric Store, you can view the following key metrics for an app in the **Key Metrics** section of the app **Overview** page:
+If Metric Store is installed, you can view the following key metrics for an app in the **Key Metrics** section of the app **Overview** page:
 
 * CPU
 * Memory
@@ -131,17 +133,17 @@ You can hover over the data points on the graph to view the value of the metric.
 The page also includes the average value for the metric over the past three hours.
 
 Metric Store is required for Apps Manager to display the **Key Metrics** section.
-
 For information about installing and configuring Metric Store, see [Metric Store](https://docs.pivotal.io/metric-store).
 
 The following image is an example of an app **Overview** page, showing key metrics for the app.
-![alt-text="The example Apps Manager app overview page shows the six key metrics (CPU, Disk, Request Latency, Request Rate, and Request Errors"](./images/app-page-with-metrics.png)
+
+<%= image_tag("./images/app-page-with-metrics.png", :alt => "The example Apps Manager app overview page shows the six key metrics (CPU, Disk, Request Latency, Request Rate, and Request Errors).") %>
 
 ### <a id="bind-unbind-services"></a> Bind or Unbind Services
 
 You can bind your app to new or existing service instances. You can also unbind your app from service instances.
 
-### <a id="bind-existing-services"></a> Bind an App to an Existing Service
+#### <a id="bind-existing-services"></a> Bind an App to an Existing Service
 
 <p class="note"><strong>Note:</strong> For services that use asynchronous bindings, Apps Manager displays the status of the service while the bind is still pending. Asynchronous bindings provide more flexibility for services that require additional time before returning a successful bind response.</p>
 
@@ -149,126 +151,112 @@ To bind your app to an existing service:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, go to **Application** > **Services**.
-![alt-text=""](./images/bound-services.png)
+1. In the panel on the left side of the screen, under **Application**, click **Services**.
+    <%= image_tag("./images/bound-services.png", :alt => "") %>
 
 1. Click **Bind Service**.
 
-2. For **Service to Bind**, select the service instance from the drop-down menu.
+1. For **Service to Bind**, select the service instance from the dropdown.
 
-3. (Optional) For **Binding Name**, enter a binding name in all lowercase letters. For example, `bind-usr-serv`.
+1. (Optional) For **Binding Name**, enter a binding name in all lowercase letters. For example, `bind-usr-serv`.
 
-4. (Optional) For **Add Parameters**, specify additional parameters.
+1. (Optional) For **Add Parameters**, specify additional parameters.
 
-5. Click **Bind**.
+1. Click **Bind**.
 
-### <a id="bind-new-services"></a> Bind an App to a New Service
+#### <a id="bind-new-services"></a> Bind an App to a New Service
 
 To bind your app to a new service instance:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, go to **Application** > **Services**.
+1. In the panel on the left side of the screen, under **Application**, click **Services**.
 
 1. Click **New Service**.<br>
-
-    ![alt-text=""](./images/new-service.png)
+    <%= image_tag("./images/new-service.png", :alt => "") %>.
     <br>
-    <p class="note"><strong>Note:</strong> If you want to create the new service instance in the Marketplace, click <strong>View in Marketplace</strong>.</p>
+    <p class="note"><strong>Note:</strong> If you prefer to create the new service instance in the Marketplace, you can click <strong>View in Marketplace</strong> at any time.</p>
 
-2. Click the service.
+1. Click the service.
 
-3. Select a plan and click **Select Plan**.
+1. Select a plan and click **Select Plan**.
 
-4. Under **Instance Name**, enter a name for the instance.
+1. Under **Instance Name**, enter a name for the instance.
 
-5. (Optional) For **Binding Name**, enter a binding name in all lowercase letters. For example, `bind-usr-serv`.
+1. (Optional) For **Binding Name**, enter a binding name in all lowercase letters. For example, `bind-usr-serv`.
 
-6. (Optional) For **Add Parameters**, specify additional parameters. For a list of supported configuration parameters, consult the documentation for the service.
+1. (Optional) For **Add Parameters**, specify additional parameters. For a list of supported configuration parameters, consult the documentation for the service.
 
-7. Click **Create**.
+1. Click **Create**.
 
-### <a id="unbind-services"></a> Unbind a Service
+#### <a id="unbind-services"></a> Unbind a Service
 
 To unbind your app from a service instance:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, go to  **Application** > **Services**.
+1. In the panel on the left side of the screen, under **Application**, click **Services**.
 
 1. Locate the service instance in the **Bound Services** list.
 
-1. Click the three-dot icon.
+1. Click the three-dot icon on the far right.
 
-1. Select **Unbind** from the drop-down menu.
+1. Select **Unbind** from the dropdown.
 
 ### <a id="routes"></a> Map or Unmap Routes
 
-The **Routes** page displays the routes associated with your app. You can use this page to map and unmap routes for your app, or change the destination protocol for routes to your app.
+The **Routes** page displays the routes associated with your app. You can use this page to map and unmap routes for your app.
 
-### <a id="map-routes"></a> Map Routes
+#### <a id="map-routes"></a> Map Routes
 
 To map routes to your app:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, go to **Networking** > **Routes**.
+1. In the panel on the left side of the screen, under **Networking**, click **Routes**.
 
 1. To add a new route, click **Map a Route**.
-![alt-text=""](./images/routes.png)
+    <%= image_tag("./images/routes.png", :alt => "") %>
 
 1. Enter the route and click **Map**.
 
-2. In the **Choose Protocol** section, select either **HTTP1** or **HTTP2**.
-
-### <a id="unmap-routes"></a> Unmap Routes
+#### <a id="unmap-routes"></a> Unmap Routes
 
 To unmap a route from your app:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, go to **Networking** > **Routes**.
+1. In the panel on the left side of the screen, under **Networking**, click **Routes**.
 
 1. Locate the route from the list and click the **x**.
 
-1. Click **Unmap** in the pop-up window to confirm.
-
-### <a id="route-protocol"></a> Change the Destination Protocol for a Route
-
-To change the destination app protocol for a route:
-
-1. Navigate to the app **Overview** page.
-
-1. In the left hand pane of the screen, go to **Networking** > **Routes**.
-
-1. To change the destination protocol for a route, in the **App Protocol** section, select either **HTTP1** or **HTTP2**.
-
-1. Click **Save**.
+1. Click **Unmap** in the pop-up to confirm.
 
 ### <a id="networking"></a> Create Container-to-Container Networking Policies
 
-You can use container networking policies to activate app instances to communicate with each other directly. You can create container networking policies in the **Networking** tab.
+Container networking policies enable app instances to communicate with each other directly. You can create container networking policies in the **Networking** tab.
 
 For more information about container-to-container networking in <%= vars.platform_name %>, see [Container-to-Container Networking](../concepts/understand-cf-networking.html).
 
-<p class="note"><strong>Note:</strong> To view and use the <strong>Networking</strong> tab, you must have either the <code>network.write</code> or <code>network.admin</code> UAA scope. If you do not see the <strong>Networking</strong> tab, request one of the previous mentioned scopes from your <%= vars.platform_name %> administrator.</p>
+<p class="note"><strong>Note:</strong> To view and use the <strong>Networking</strong> tab, you must have either the <code>network.write</code> or <code>network.admin</code> UAA scope. If you do not see the <strong>Networking</strong> tab, request one of the above scopes from your <%= vars.platform_name %> administrator.</p>
 
 To create container-to-container networking policies:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, go to **Networking** > **Container Networking**. Any container networking policies associated with the app appear.
+1. In the panel on the left side of the screen, under **Networking**, click **Container Networking**. The page displays any container networking policies associated with the app.
 
 1. To add a new network policy, click **Create Policy** or **Add a network policy**.
+    <%= image_tag("./images/add-policy-form.png", :width => "400", :alt => "The Add Policy form shows dropdowns for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button.") %>
 
-2. In the **Add Policy** window, configure the following:
+1. In the **Add Policy** window, configure the following:
     *  For **Org**, select the org of the destination app.
     *  For **Space**, select the space of the destination app.
     *  For **App**, select the destination app.
     *  For **Protocol**, select **TCP** or **UDP**.
     *  For **Ports**, enter the ports at which to connect to the destination app. The allowed range is from `1` to `65535`. You can specify a single port, such as `8080`, or a range of ports, such as `8080-8090`.
 
-3. Click **Save**.
+1. Click **Save**.
 
 ### <a id="revisions"></a> Manage App Revisions
 
@@ -278,33 +266,33 @@ You can view revisions, list environment variables associated with revisions, an
 
 For more information about app revisions in <%= vars.platform_name %>, see [App Revisions](../devguide/revisions.html).
 
-### <a id="view-revisions"></a> View App Revisions
+#### <a id="view-revisions"></a> View App Revisions
 
 To list revisions for an app:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane on the left side of the screen, go to **Application** >  **Revisions**.
+1. In the panel on the left side of the screen, under **Application**, click **Revisions**.
 
 1. View app revisions in the **Revisions** table.
 
-### <a id="revision-env-vars"></a> List Environment Variables for an App Revision
+#### <a id="revision-env-vars"></a> List Environment Variables for an App Revision
 
 To list environment variables associated with an app revision:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, under **Application** > **Revisions**.
+1. In the panel on the left side of the screen, under **Application**, click **Revisions**.
 
 1. In the **Revisions** table, select the row that contains the revision. The row expands to reveal metadata and environment variables associated with the revision.
 
-### <a id="rollback"></a> Roll Back to a Previous App Revision
+#### <a id="rollback"></a> Roll Back to a Previous App Revision
 
 To roll back an app to a previous revision:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, go to **Application** > **Revisions**.
+1. In the panel on the left side of the screen, under **Application**, click **Revisions**.
 
 1. In the **Revisions** table, select the row that contains the revision you want to roll back to. The row expands to reveal metadata.
 
@@ -318,76 +306,75 @@ To view logs for an app:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, go to **Observability** > **Logs**.
+1. In the panel on the left side of the screen, under **Observability**, click **Logs**.
 
-1. Click the **Play** button to view a live version of the logs.
+1. Click the play button to view a live version of the logs.
 
 ### <a id='tasks'></a> Manage Tasks
 
 The **Tasks** page includes jobs and tasks associated with an app. It displays a table containing **Task ID**, **State**, **Start Time**, **Task Name**, and **Command**.
 
-From the **Tasks** page, you can view tasks, run tasks, and activate task scheduling.
+From the **Tasks** page, you can view tasks, run tasks, and enable task scheduling.
 
-### <a id='view'></a> View Tasks
+#### <a id='view'></a> View Tasks
 
 You can view tasks for an app on the Tasks page in Apps Manager.
 
-To access the **Tasks** page:
+To access the **Tasks page**:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, under **Application** > **Tasks**.
+1. In the panel on the left side of the screen, under **Application**, click **Tasks**.
 
-### <a id='run'></a> Run a Task
+#### <a id='run'></a> Run a Task
 
 To run a task for an app:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, go to **Application** > **Tasks**.
+1. In the panel on the left side of the screen, under **Application**, click **Tasks**.
 
 1. Click **Run Task** to create a task.
-![alt-text="Run a task for an app"](./images/run-task.png)
+
+    <%= image_tag("./images/run-task.png", :width => "400", :alt => "") %>
 
 1. (Optional) Enter a **Task Name**.
 
-2. Enter the **Task Command**.
+1. Enter the **Task Command**.
 
-3. Select a **Memory Limit** and a **Disk Limit** for the task.
+1. Select a **Memory Limit** and a **Disk Limit** for the task.
 
-4. Click **Run**.
+1. Click **Run**.
 
-### <a id="enable-scheduling"></a> Activate Task Scheduling
+#### <a id="enable-scheduling"></a> Enable Task Scheduling
 
-In the **Tasks** tab, click **Enable Scheduling** to bind the Scheduler service to your app.
-
-For more about Scheduler, see [Scheduling Jobs](http://docs.pivotal.io/pcf-scheduler/using-jobs.html) in the Scheduler documentation.
+In the **Tasks** tab, click **Enable Scheduling** to bind the Scheduler service to your app. For more about Scheduler, see [Scheduling Jobs](http://docs.pivotal.io/pcf-scheduler/using-jobs.html) in the Scheduler documentation.
 
 ![The Apps Manager interface shows the Task tab enabled with a box beneath that says "The Scheduler Service has not been enabled yet." with an "Enable Scheduling" button beneath.](./images/enable-scheduling.png)
 
-### <a id="schedule-task"></a> Schedule a Task
+#### <a id="schedule-task"></a> Schedule a Task
 
 To schedule a task:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, go to **Application**>**Tasks**.
+1. In the panel on the left side of the screen, under **Application**, click **Tasks**.
 
 1. Click **Create Job** to schedule a task.
 
-![alt-text="Create a job to schedule a task"](./images/create-job-window.png)
+    <%= image_tag("./images/create-job-window.png", :alt => "") %>
 
 1. Enter a **Job Name**.
 
-2. Enter a **Command**.
+1. Enter a **Command**.
 
-3. Enter one or more **Cron Expressions** for your desired task schedule or schedules. For more information on cron expression syntax, see [Schedule a Job](http://docs.pivotal.io/pcf-scheduler/using-jobs.html#schedule-a-job) in _Scheduling Jobs_ in the Scheduler documentation.
+1. Enter one or more **Cron Expressions** for your desired task schedule or schedules. For more information on cron expression syntax, see [Schedule a Job](http://docs.pivotal.io/pcf-scheduler/using-jobs.html#schedule-a-job) in _Scheduling Jobs_ in the Scheduler documentation.
 
-4. Click **Create Job**.
+1. Click **Create Job**.
 
 ### <a id="view-settings"></a> View and Manage Settings
 
-To view settings for an app, in the pane on the left hand part of the screen, go to **Application** > **Settings**.
+To view settings for an app, in the panel on the left side of the screen, under **Application**, click **Settings**.
 
 You can do the following from the **Settings** page:
 
@@ -405,9 +392,9 @@ To configure health checks for your app:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, go to **Application** > **Settings**.
+1. In the panel on the left side of the screen, under **Application**, click **Settings**.
 
-1. In the **Health Check** section, click **Type** from the drop-down menu and select **port**, **http**, or **process**. Depending on which option you select, additional fields might appear.
+1. In the **Health Check** section, click the **Type** dropdown and select **port**, **http**, or **process**. Depending on which option you select, additional fields may appear.
 
 1. For **Type**, select **port**, **http**, or **process**.
 
@@ -423,9 +410,9 @@ To view all environment variables for an app:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, go to **Application** > **Settings**.
+1. In the panel on the left side of the screen, under **Application**, click **Settings**.
 
-1. In **User Provided Environment Variables**, click **Reveal Env Vars**.
+1. Under **User Provided Environment Variables**, click **Reveal Env Vars**.
 
 ### <a id="add-env-var"></a> Add Environment Variables
 
@@ -433,7 +420,7 @@ To add a user-provided environment variable:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, go to **Application** > **Settings**.
+1. In the panel on the left side of the screen, under **Application**, click **Settings**.
 
 1. Click **Reveal User Provided Env Vars**.
 
@@ -441,11 +428,11 @@ To add a user-provided environment variable:
 
 1. Enter the **key** and **value** of the variable. Alternatively, toggle **Enter as JSON** to enter the variable in JSON.
 
-    ![alt-text="Adding environment variables."](./images/user-env-vars.png)
+    <%= image_tag("./images/user-env-vars.png", :alt => "") %>
 
-2. Click **Save**.
+1. Click **Save**.
 
-<p class="note"><strong>Note:</strong> Changes to environment variables, service bindings, and service unbindings require starting the app again to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p>
+<p class="note"><strong>Note:</strong> Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p>
 
 ### <a id="metadata"></a> Add Metadata
 
@@ -453,11 +440,11 @@ You can add metadata, including labels and annotations, to apps and spaces using
 
 <% if vars.platform_code == "CF" || vars.platform_code == "PCF" %>
 
-For more information about adding metadata to objects in <%= vars.app_runtime_first %>, see [Using Metadata](../adminguide/metadata.html).
+For more information about adding metadata to objects in <%= vars.app_runtime_full %> (<%= vars.app_runtime_abbr %>), see [Using Metadata](../adminguide/metadata.html).
 
 <% else %>
 
-For more information about adding metadata to objects in <%= vars.app_runtime_first %>, see [Using Metadata](https://docs.pivotal.io/platform/adminguide/metadata.html).
+For more information about adding metadata to objects in <%= vars.app_runtime_full %> (<%= vars.app_runtime_abbr %>), see [Using Metadata](https://docs.pivotal.io/platform/adminguide/metadata.html).
 
 <% end %>
 
@@ -465,7 +452,7 @@ To add labels or annotations to an app using Apps Manager:
 
 1. Navigate to the app **Overview** page.
 
-1. In the left hand pane of the screen, gvo to **Application** > **Settings**.
+1. In the panel on the left side of the screen, under **Application**, click **Settings**.
 
 1. For **Labels**, provide a name and value pair. Or, select **Enter JSON** to enter the label in JSON.
 
@@ -474,6 +461,7 @@ To add labels or annotations to an app using Apps Manager:
 1. To add more labels or annotations, click **+** next to the **Labels** or **Annotations** field.
 
 1. Click **Update Metadata**.
+
 
 ## <a id='manage-service'></a> Manage a Service Instance
 
@@ -497,12 +485,13 @@ To navigate to a service instance **Overview** page:
 
 1. Navigate to the landing page for the space of the service instance.
 
-1. In the left hand pane of the screen, go to **Space** > **Services**.
+1. In the panel on the left side of the screen, under **Space**, click **Services**.
 
-1. On the **Services** page, click the name of the service instance.
+1. On the **Services** page, click on the name of the service instance.
 
 The following image shows an example of a service instance **Overview** page.
-![alt-text="Service instance example"](./images/services-binding.png)
+
+<%= image_tag("./images/services-binding.png", :alt => "") %>
 
 ### <a id='bind-app'></a> Bind an App
 
@@ -512,22 +501,23 @@ To bind and app to a service:
 
 1. On the service **Overview** page, click **Bind App**.
 
-1. In the **Bind App** pop-up window, select the app to bind to the service instance.
+1. In the **Bind App** popup, select the app to bind to the service instance.
 
-    ![alt-text="Select an app to bind to the service instance."](./images/services-binding-popup.png)
+    <%= image_tag("./images/services-binding-popup.png", :alt => "") %>
 
 1. (Optional) To attach parameters to the binding, click **Show Advanced Options**. Under **Arbitrary Parameters**, enter any additional service-specific configuration.
 
-2. Click **Bind**.
+1. Click **Bind**.
 
 ### <a id='unbind-app'></a> Unbind an App
 
 To unbind an app from a service instance:
 
-1. On the service **Overview** page, under **Bound Apps**, click the **×** to the right of the app name. An **Unbind App** pop-up window appears.
-    ![alt-text="Unbind an app from the service instance."](./images/services-unbinding-popup.png)
+1. On the service **Overview** page, under **Bound Apps**, click the **×** to the right of the app name. An **Unbind App** popup appears.
 
-2. Click **Unbind** to confirm.
+    <%= image_tag("./images/services-unbinding-popup.png", :alt => "") %>
+
+1. Click **Unbind** to confirm.
 
 ### <a id="shared-instances"></a> Share Service Instance
 
@@ -551,7 +541,7 @@ To view or change your service plan:
 
 1. Navigate to the service **Overview** page.
 
-1. In the left hand pane of the screen, go to **Service** > **Plan**.
+1. In the panel on the left side of the screen, under **Service**, click **Plan**.
 
 1. Review your current plan information.
 
@@ -565,10 +555,11 @@ To rename or delete your service instance:
 
 1. Navigate to the service **Overview** page.
 
-1. In the left hand pane of the screen, go to **Service** > **Settings**.
-    ![alt-text="Rename or delte a service instance."](./images/services-settings.png)
+1. In the panel on the left side of the screen, under **Service**, click **Settings**.
 
-2. Do one of these steps:
+    <%= image_tag("./images/services-settings.png", :alt => "") %>
+
+1. Do one of these steps:
     * To change the service instance name, enter the new name and click **Update**.
     * To add configuration parameters to the service instance, enter the parameters in the **Name** and **Value** fields and then click **Update**. Alternatively, enter your configuration parameters using the **Enter JSON** toggle and then click **Update**.
     * To delete the service instance, click **Delete Service Instance**.
@@ -591,19 +582,19 @@ To see and update this configuration and status information for an SCS Config Se
 
 1. Navigate to the service **Overview** page.
 
-1. In the left hand pane of the screen, go to **Service** > **Config**.
+1. In the panel on the left side of the screen, under **Service**, click **Config**.
     <p class="note"><strong>Note:</strong> The <strong>Configuration</strong> pane only appears for Spring Cloud Services instances.</p>
-
-    ![alt-text="Config page"](./images/sc-config-server-instance.png)
+    <%= image_tag("./images/sc-config-server-instance.png", :alt => "") %>
 
 The **Config** pane includes:
 
 * The current status of the SCS Config Server.
 
 * The JSON object that configures settings for the SCS Config Server itself.
-  * Passed in with `-c` flag to `cf create-service` and `cf update-service`. --upgrade. Note, you can use the new command `cf upgrade-service` to upgrade a plan.
+  * Passed in with `-c` flag to `cf create-service` and `cf update-service`.
 
-  * **Synchronize Mirrors** button for the app configurations that the SCS Config Server serves. Click this button to refresh the local Git repository mirrors. Refreshing the mirrors updates client app configuration settings, as described in [Mirror Service](https://docs.pivotal.io/spring-cloud-services/common/config-server/mirror-service.html) in the SCS documentation.
+* A **Synchronize Mirrors** button for the app configurations that the SCS Config Server serves.
+  * Click this button to refresh the local Git repository mirrors. Refreshing the mirrors updates client app configuration settings, as described in [Mirror Service](https://docs.pivotal.io/spring-cloud-services/common/config-server/mirror-service.html) in the SCS documentation.
 
 * A **Manage** link to the SCS Config Server dashboard, at the `/dashboard` URL endpoint of the SCS service instance.
   * Click this link to see the Git repos that the SCS Config Server uses to configure its apps.
@@ -617,10 +608,9 @@ To configure settings for a user-provided service instance:
 
 1. Navigate to the service **Overview** page.
 
-1. In the left hand pane of the screen, go to **Service** > **Configuration**.
+1. In the panel on the left side of the screen, under **Service**, click **Configuration**.
     <p class="note"><strong>Note:</strong> The <strong>Configuration</strong> pane only appears for user-provided service instances.</p>
-
-    ![alt-text="Configure User-Provided Service Instance."](./images/config-user-provided.png)
+    <%= image_tag("./images/config-user-provided.png", :alt => "") %>
 
 1. Enter the **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**.
     <% if vars.book_title != "Pivotal Web Services Documentation" %>
@@ -632,9 +622,10 @@ To configure settings for a user-provided service instance:
     For more information, see <a href="https://docs.pivotal.io/application-service-windows/2-10/release-notes.html">Aggregate Syslog Drains Contain Logs Only</a> in the _TAS for VMs v2.10 Release Notes_.</p>
     <% end %>
 
-1. Click **Update Service**.
+2. Click **Update Service**.
 <% else %>
 <% end %>
+
 
 ## <a id='manage-keys'></a> Manage Service Keys
 
@@ -642,7 +633,7 @@ To manage service keys:
 
 1. Navigate to the service **Overview** page.
 
-1. Go to **Service Key Credentials**, to generate a new service key, get the credentials for a service key, or delete a service key.
+1. Under **Service Key Credentials**, generate a new service key, get the credentials for a service key, or delete a service key.
 
 ### <a id='create-key'></a> Generate a Service Key
 
@@ -650,17 +641,17 @@ To generate a new service key:
 
 1. Navigate to the service **Overview** page.
 
-1. Go to **Service Key Credentials**, and click **Create Service Key**.
+1. Under **Service Key Credentials**, click **Create Service Key**.
 
 1. Enter a **Service Key Name**.
 
-    ![alt-text="Create a service key."](./images/keys-create.png)
+    <%= image_tag("./images/keys-create.png", :alt => "") %>
 
-2. (Optional) Click **Show Advanced Options**. Go to **Arbitrary Parameters**, and enter any additional service-specific configuration in the **Name** and **Value** fields.
+1. (Optional) Click **Show Advanced Options**. Under **Arbitrary Parameters**, enter any additional service-specific configuration in the **Name** and **Value** fields.
 
-    ![alt-text=""](./images/keys-create-adv.png)
+    <%= image_tag("./images/keys-create-adv.png", :alt => "") %>
 
-3. Click **Create** to generate the service key.
+1. Click **Create** to generate the service key.
 
 ### <a id='get-creds'></a> View Credentials for a Service Key
 
@@ -668,11 +659,11 @@ To view the credentials for a service key:
 
 1. Navigate to the service **Overview** page.
 
-1. Go to **Service Key Credentials**, and click the service instance name. The JSON object containing the credentials appears.
+1. Under **Service Key Credentials**, click the service instance name. The JSON object containing the credentials appears.
 
-    ![alt-text=""](./images/keys-creds.png)
+    <%= image_tag("./images/keys-creds.png", :alt => "") %>
 
-2. Click **Close**.
+1. Click **Close**.
 
 ### <a id='delete-key'></a> Delete Service Key
 
@@ -680,9 +671,10 @@ To delete a service key:
 
 1. Navigate to the service **Overview** page.
 
-1. Go to **Service Key Credentials**, and click the **x** next to the service instance name.
+1. Under **Service Key Credentials**, click the **x** next to the service instance name.
 
-    ![alt-text="Delete key service"](./images/keys-delete.png)
+    <%= image_tag("./images/keys-delete.png", :alt => "") %>
+
 
 ## <a id='manage-route-services'></a> Manage Route Services
 
@@ -695,12 +687,12 @@ For more information about route services, see [Route Services](../services/rout
 To bind a new service instance to a route:
 
 1. Select the service from the Marketplace.
-    ![alt-text="Service from Marketplace"](./images/bind-route-new.png)
+    <%= image_tag('./images/bind-route-new.png', :alt => "") %>
 
-2. Go to **Bind to Route**, and either bind the service instance to an existing route or click **Create Route** to create a new custom route.
+1. Under **Bind to Route**, either bind the service instance to an existing route or click **Create Route** to create a new custom route.
     <p class="note"><strong>Note:</strong> You must choose a Marketplace service compatible with route services for the <strong>Bind to Route</strong> field to appear.</p>
 
-3. Complete the remaining fields and click **Add** to create the service instance.
+1. Complete the remaining fields and click **Add** to create the service instance.
 
 ### <a id='old-route-services'></a> Bind an Existing Service Instance to a Route
 
@@ -708,15 +700,15 @@ To bind an existing service instance to a route:
 
 1. Navigate to the service **Overview** page.
 
-1. Go to **Bound Routes**, and click **Bind Route**.
+1. Under **Bound Routes**, click **Bind Route**.
     <p class="note"><strong>Note:</strong> If the service is not compatible with route services, the text "This service does not support route binding" appears under <strong>Bound Routes</strong>.</p>
+    <%= image_tag('./images/bind-route-old.png', :alt => "") %>
 
-     ![alt-text="Bind Routes"](./images/bind-route-old.png)
-2. Do one of these steps:
+1. Do one of these steps:
     * For **Select a route to bind**, select an existing route.
     * For **Create Custom Route**, enter a new route.
 
-3. Click **Bind**.
+1. Click **Bind**.
 
 ### <a id='unbind-route-services'></a> Unbind a Route from a Service Instance
 
@@ -724,4 +716,4 @@ To unbind a route from a service instance:
 
 1. Navigate to the service **Overview** page.
 
-1. Go to **Bound Routes**, and click the **x** next to the name of the route.
+1. Under **Bound Routes**, click the **x** next to the name of the route.
