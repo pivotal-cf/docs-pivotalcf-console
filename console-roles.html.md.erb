@@ -5,7 +5,7 @@ owner: Apps Manager
 
 This topic explains how to manage user roles with Apps Manager.
 
-<!-- This ensures that the note below only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
+<!-- This ensures that the following note only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
 <% if vars.disallow_saml_ldap_identity == true %>
 <% else %>
 <p class='note'><strong>Note:</strong> The procedures described here are not compatible with using SAML or LDAP for user identity management. To create and manage user accounts in a SAML-enabled or LDAP-enabled <%= vars.platform_name %> deployment, see <a href='https://docs.pivotal.io/application-service/<%= vars.current_major_version %>/operating/external-user-management.html'>Adding Existing SAML or LDAP Users to an <%= vars.platform_name %> Deployment</a>.</p>
@@ -29,7 +29,7 @@ Admins, Org Managers, and Space Managers can assign user roles with Apps Manager
 Foundry Command Line Interface (cf CLI). For more information, see
 [Users and Roles](../cf-cli/getting-started.html#user-roles) in _Getting Started with the cf CLI_.
 
-<!-- This ensures that the note below only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
+<!-- This ensures that the following note only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
 <% if vars.disallow_multi_foundation == true %>
 <% else %>
 You can manage user roles across multiple foundations. For more information, see
@@ -47,9 +47,9 @@ To grant or revoke org roles:
 
 1. Select an org.
 
-1. In the panel on the left side of the screen, click **Members**. Edit the roles assigned to each user by selecting or clearing the checkboxes under each user role. Apps Manager saves your changes automatically.
+1. In the panel on the left side of the screen, click **Members**. Edit the roles assigned to each user by selecting or clearing the check boxes under each user role. Apps Manager saves your changes automatically.
 
-1. The **Members** panel displays all members of the org. Select a checkbox to grant an org role to a user, or clear a checkbox to revoke a role from a user.
+1. The **Members** panel displays all members of the org. Select a check box to grant an org role to a user, or clear a check box to revoke a role from a user.
 
 
 ## <a id='space-roles'></a> Manage App Space Roles
@@ -62,7 +62,7 @@ To grant or revoke app space roles:
 
 1. In the panel on the left side of the screen, click **Members**. The **Members** panel displays all members of the space.
 
-1. Select a checkbox to grant an app space role to a user, or clear a checkbox to revoke a role from a user.
+1. Select a check box to grant an app space role to a user, or clear a check box to revoke a role from a user.
 	* **Space Managers** can invite and manage users and enable features for a given space. Assign this role to managers or other users who need to administer the account.
 	* **Space Developers** can create, delete, and manage apps and services, and have full access to all usage reports and logs. Space Developers can also edit apps, including the number of instances and memory footprint. Assign this role to app developers or other users who need to interact with apps and services.
 	* **Space Auditors** have view-only access to all space information, settings, reports, and logs. Assign this role to users who need to view but not edit the app space.
@@ -82,7 +82,7 @@ To invite new users to an org:
 
 1. In the **Add Email Addresses** text field, enter the email addresses of the users that you want to invite. Enter multiple email addresses as a comma-delimited list.
 
-1. The **Assign Org Roles** and **Assign Space Roles** tables list the current org and available spaces with checkboxes corresponding to each possible user role. Select the checkboxes that correspond to the permissions that you want to grant to the invited users.
+1. The **Assign Org Roles** and **Assign Space Roles** tables list the current org and available spaces with check boxes corresponding to each possible user role. Select the check boxes that correspond to the permissions that you want to grant to the invited users.
 
 1. Click **Send Invite**. The Apps Manager sends an email containing an invitation link to each email address that you specified.
 
