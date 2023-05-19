@@ -163,17 +163,17 @@ To bind your app to an existing service:
 1. Go to the app **Overview** page.
 
 1. In the panel on the left side of the page, under **Application**, click **Services**.
-    <%= image_tag("./images/bound-services.png", :alt => "") %>
+    ![[alt-text=""](./images/bound-services.png)
 
-1. Click **Bind Service**.
+2. Click **Bind Service**.
 
-1. For **Service to Bind**, select the service instance from the drop-down menu.
+3. For **Service to Bind**, select the service instance from the drop-down menu.
 
-1. (Optional) For **Binding Name**, enter a binding name in all lowercase letters. For example, `bind-usr-serv`.
+4. (Optional) For **Binding Name**, enter a binding name in all lowercase letters. For example, `bind-usr-serv`.
 
-1. (Optional) For **Add Parameters**, specify additional parameters.
+5. (Optional) For **Add Parameters**, specify additional parameters.
 
-1. Click **Bind**.
+6. Click **Bind**.
 
 #### <a id="bind-new-services"></a> Bind an App to a New Service
 
@@ -271,16 +271,16 @@ To create container-to-container networking policies:
 1. In the panel on the left side of the page, under **Networking**, click **Container Networking**. The page displays any container networking policies associated with the app.
 
 1. To add a new network policy, click **Create Policy** or **Add a network policy**.
-      <%= image_tag("./images/add-policy-form.png", :width => "400", :alt => "The Add Policy form shows drop-down menus for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button.") %>
+      ![alt-text="The Add Policy form shows drop-down menus for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button."](./images/add-policy-form.png)
 
-1. In the **Add Policy** window, configure the following:
+2. In the **Add Policy** window, configure the following:
     *  For **Org**, select the org of the destination app.
     *  For **Space**, select the space of the destination app.
     *  For **App**, select the destination app.
     *  For **Protocol**, select **TCP** or **UDP**.
     *  For **Ports**, enter the ports at which to connect to the destination app. The allowed range is from `1` to `65535`. You can specify a single port, such as `8080`, or a range of ports, such as `8080-8090`.
 
-1. Click **Save**.
+3. Click **Save**.
 
 ### <a id="revisions"></a> Manage App Revisions
 
@@ -359,7 +359,6 @@ To run a task for an app:
 1. In the panel on the left side of the page, under **Application**, click **Tasks**.
 
 1. Click **Run Task** to create a task.
-
 
     ![alt-text=""](./images/run-task.png)
 
@@ -554,7 +553,7 @@ To share a service instance:
     ![alt-text="The service instance button is located in the 'Overview' tab"](./images/share-service-instance-button.png)
 1. Select the spaces with which you want to share your service instance.
 
-    ![alt-text="The service instance slideout shows check boxes next to each space and a 'Share' button and 'Cancel' button in the bottom right-hand corner"](./images/share-services-slideout.png)
+    ![alt-text="The service instance slide-out shows check boxes next to each space and a Share button and Cancel button in the bottom right-hand corner"](./images/share-services-slideout.png)
 1. Click **Share**.
 
 ### <a id='view-plan'></a> View or Change Your Service Plan
@@ -632,7 +631,7 @@ To configure settings for a user-provided service instance:
 
 1. In the panel on the left side of the page, under **Service**, click **Configuration**.
     <p class="note"><strong>Note:</strong> The <strong>Configuration</strong> pane only appears for user-provided service instances.</p>
-    ![alt-text="Configure settings for serevice instances."](./images/config-user-provided.png)
+    ![alt-text="Configure settings for service instances."](./images/config-user-provided.png)
 1. Enter the **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**.
     <% if vars.book_title != "Pivotal Web Services Documentation" %>
     <p class="note breaking"><strong>Breaking Change:</strong> In TAS for VMs v2.10, aggregate syslog drains contain
