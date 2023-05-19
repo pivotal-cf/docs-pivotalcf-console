@@ -1,9 +1,9 @@
 ---
-title: Managing Apps and Service Instances Using Apps Manager
+title: Managing Apps and Service Instances using Apps Manager
 owner: Apps Manager
 ---
 
-This topic describes how to view and manage apps and service instances with Apps Manager.
+This topic tells you how to view and manage apps and service instances with Apps Manager.
 
 
 ## <a id='overview'></a> Overview
@@ -49,7 +49,7 @@ You can do the following tasks to manage apps in Apps Manager:
 
 The **Overview** page for an app includes app summary information, such as app processes and instances, app memory and disk space, and app events.
 
-These are the ways to go to the app **Overview** page:
+There are two ways to locate an app **Overview** page:
 
 * On the space page, click the app you want to manage.
 * Search for an app by entering its name in the search bar.
@@ -162,8 +162,9 @@ To bind your app to an existing service:
 
 1. Go to the app **Overview** page.
 
-1. In the panel on the left side of the screen, under **Application**, click **Services**.
-    ![alt-text=""](./images/bound-services.png)
+1. In the panel on the left side of the page, under **Application**, click **Services**.
+    <%= image_tag("bound-services.png", :alt => "") %>
+
 1. Click **Bind Service**.
 
 1. For **Service to Bind**, select the service instance from the drop-down menu.
@@ -178,9 +179,9 @@ To bind your app to an existing service:
 
 To bind your app to a new service instance:
 
-1  Go to the app **Overview** page.
+1. Go to the app **Overview** page.
 
-1. In the panel on the left side of the screen, under **Application**, click **Services**.
+1. In the panel on the left side of the page, under **Application**, click **Services**.
 
 1. Click **New Service**.<br>
     ![alt-text=""](./images/new-service.png)
@@ -205,7 +206,7 @@ To unbind your app from a service instance:
 
 1. Go to the app **Overview** page.
 
-1. IGo to **Application** and click **Services**.
+1. Go to **Application** and click **Services**.
 
 1. Locate the service instance in the **Bound Services** list.
 
@@ -223,7 +224,7 @@ To map routes to your app:
 
 1. Go to the app **Overview** page.
 
-1. Go to **Networking**, and click **Routes**.
+1. In the panel on the left side of the page, under **Networking**, click **Routes**.
 
 1. To add a new route, click **Map a Route**.
     ![alt-text=""](./images/routes.png)
@@ -237,7 +238,7 @@ To unmap a route from your app:
 
 1. Go to the app **Overview** page.
 
-1. Go to **Networking**, and click **Routes**.
+1. In the panel on the left side of the page, under **Networking**, click **Routes**.
 
 1. Locate the route from the list and click the **x**.
 
@@ -267,10 +268,11 @@ To create container-to-container networking policies:
 
 1. Go to the app **Overview** page.
 
-1. Go to **Networking**, and click **Container Networking**. The page displays any container networking policies associated with the app.
+1. In the panel on the left side of the page, under **Networking**, click **Container Networking**. The page displays any container networking policies associated with the app.
 
 1. To add a new network policy, click **Create Policy** or **Add a network policy**.
-    ![alt-text=""](./images/add-policy-form.png)
+      <%= image_tag("add-policy-form.png", :width => "400", :alt => "The Add Policy form shows drop-down menus for org, space, app, radio buttons for protocol, and a text field for ports. It includes a cancel and save button.") %>
+
 1. In the **Add Policy** window, configure the following:
     *  For **Org**, select the org of the destination app.
     *  For **Space**, select the space of the destination app.
@@ -294,7 +296,7 @@ To list revisions for an app:
 
 1. Go to the app **Overview** page.
 
-1. Go to **Application**, and click **Revisions**.
+1. In the panel on the left side of the page, under **Application**, click **Revisions**.
 
 1. View app revisions in the **Revisions** table.
 
@@ -304,7 +306,7 @@ To list environment variables associated with an app revision:
 
 1. Go to the app **Overview** page.
 
-1. Go to **Application**, and click **Revisions**.
+1. In the panel on the left side of the page, under **Application**, click **Revisions**.
 
 1. In the **Revisions** table, select the row that contains the revision. The row expands to reveal metadata and environment variables associated with the revision.
 
@@ -314,7 +316,7 @@ To roll back an app to a previous revision:
 
 1. Go to the app **Overview** page.
 
-1. Go to **Application**, and click **Revisions**.
+1. In the panel on the left side of the page, under **Application**, click **Revisions**.
 
 1. In the **Revisions** table, select the row that contains the revision you want to roll back to. The row expands to reveal metadata.
 
@@ -328,7 +330,7 @@ To view logs for an app:
 
 1. Go to the app **Overview** page.
 
-1. Go to **Observability**, and click **Logs**.
+1. In the panel on the left side of the page, under **Observability**, click **Logs**.
 
 1. Click the Play button to view a live version of the logs.
 
@@ -346,7 +348,7 @@ To access the **Tasks page**:
 
 1. Go to the app **Overview** page.
 
-1. Go to **Application**, and click **Tasks**.
+1. In the panel on the left side of the page, under **Application**, click **Tasks**.
 
 #### <a id='run'></a> Run a Task
 
@@ -354,7 +356,7 @@ To run a task for an app:
 
 1. Go to the app **Overview** page.
 
-1. Go to **Application**, and click **Tasks**.
+1. In the panel on the left side of the page, under **Application**, click **Tasks**.
 
 1. Click **Run Task** to create a task.
 
@@ -381,7 +383,7 @@ To schedule a task:
 
 1. Go to the app **Overview** page.
 
-1. Go to **Application**, and click **Tasks**.
+1. In the panel on the left side of the page, under **Application**, click **Tasks**.
 
 1. Click **Create Job** to schedule a task.
 
@@ -397,7 +399,7 @@ To schedule a task:
 
 ### <a id="view-settings"></a> View and Manage Settings
 
-To view settings for an app, in the panel on the left side of the screen, under **Application**, click **Settings**.
+To view settings for an app, in the panel on the left side of the page, under **Application**, click **Settings**.
 
 You can do the following from the **Settings** page:
 
@@ -415,9 +417,9 @@ To configure health checks for your app:
 
 1. Go to the app **Overview** page.
 
-1. Go to **Application**, and click **Settings**.
+1. In the panel on the left side of the page, under **Application**, click **Settings**.
 
-1. In the **Health Check** section, click the **Type** drop down menu and select **port**, **http**, or **process**. Depending on which option you select, additional fields might appear.
+1. In the **Health Check** section, click the **Type** drop-down menu and select **port**, **http**, or **process**. Depending on which option you select, additional fields may appear.
 
 1. For **Type**, select **port**, **http**, or **process**.
 
@@ -433,7 +435,7 @@ To view all environment variables for an app:
 
 1. Go to the app **Overview** page.
 
-1. Go to **Application**, and click **Settings**.
+1. In the panel on the left side of the page, under **Application**, click **Settings**.
 
 1. Under **User Provided Environment Variables**, click **Reveal Env Vars**.
 
@@ -443,7 +445,7 @@ To add a user-provided environment variable:
 
 1. Go to the app **Overview** page.
 
-1. Go to  **Application**, and click **Settings**.
+1. In the panel on the left side of the page, under **Application**, click **Settings**.
 
 1. Click **Reveal User Provided Env Vars**.
 
@@ -475,11 +477,11 @@ To add labels or annotations to an app using Apps Manager:
 
 1. Go to the app **Overview** page.
 
-1. Go to **Application**, and click **Settings**.
+1. In the panel on the left side of the page, under **Application**, click **Settings**.
 
-1. For **Labels**, provide a name and value pair. Or, select **Enter JSON** to enter the label in JSON.
+1. For **Labels**, provide a name and value pair or select **Enter JSON** to enter the label in JSON.
 
-1. For **Annotations**, provide a name and value pair. Or, select **Enter JSON** to enter the annotation in JSON.
+1. For **Annotations**, provide a name and value pair or select **Enter JSON** to enter the annotation in JSON.
 
 1. To add more labels or annotations, click **+** next to the **Labels** or **Annotations** field.
 
@@ -504,11 +506,11 @@ You can do the following tasks to manage service instances in Apps Manager:
 
 The **Overview** page for a service instance includes information about bound apps, bound routes, and service key credentials for the service.
 
-To go to the service instance **Overview** page:
+To locate the service instance **Overview** page:
 
 1. Go to the landing page for the space of the service instance.
 
-1. Go to **Space**, and click **Services**.
+1. In the panel on the left side of the page, under **Space**, click **Services**.
 
 1. On the **Services** page, click the name of the service instance.
 
@@ -561,7 +563,7 @@ To view or change your service plan:
 
 1. Go to the service **Overview** page.
 
-1. Go to **Service**, and click **Plan**.
+1. In the panel on the left side of the page, under **Service**, click **Plan**.
 
 1. Review your current plan information.
 
@@ -575,7 +577,7 @@ To rename or delete your service instance:
 
 1. Go to the service **Overview** page.
 
-1. Go to **Service**, and click **Settings**.
+1. In the panel on the left side of the page, under **Service**, click **Settings**.
 
     ![alt-text=""](./images/services-settings.png)
 
@@ -602,7 +604,7 @@ To see and update this configuration and status information for an SCS Config Se
 
 1. Go to the service **Overview** page.
 
-1. Go to **Service**, and click **Config**.
+1. In the panel on the left side of the page, under **Service**, click **Config**.
     <p class="note"><strong>Note:</strong> The <strong>Configuration</strong> pane only appears for Spring Cloud Services instances.</p>
 
     ![alt-text=""](./images/sc-config-server-instance.png)
@@ -628,7 +630,7 @@ To configure settings for a user-provided service instance:
 
 1. Go to the service **Overview** page.
 
-1. IGo to **Service**, and click **Configuration**.
+1. In the panel on the left side of the page, under **Service**, click **Configuration**.
     <p class="note"><strong>Note:</strong> The <strong>Configuration</strong> pane only appears for user-provided service instances.</p>
     ![alt-text="Configure settings for serevice instances."](./images/config-user-provided.png)
 1. Enter the **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**.
