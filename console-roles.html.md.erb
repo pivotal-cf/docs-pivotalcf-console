@@ -3,15 +3,14 @@ title: Managing User Roles with Apps Manager
 owner: Apps Manager
 ---
 
-This topic explains how to manage user roles with Apps Manager.
+This topic tells you how to manage user roles with Apps Manager.
 
 <!-- This ensures that the following note only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
 <% if vars.disallow_saml_ldap_identity == true %>
 <% else %>
-<p class='note'><strong>Note:</strong> The procedures described here are not compatible with using SAML or LDAP for user identity management. To create and manage user accounts in a SAML or LDAP-enabled <%= vars.platform_name %> deployment, see <a href='https://docs.vmware.com/en/VMware-Tanzu-Application-Service/2.11/tas-for-vms/external-user-management.html'>Adding Existing SAML or LDAP Users to an <%= vars.platform_name %> Deployment</a>.</p>
+<p class='note'><strong>Note:</strong> The procedures described here are not compatible with using SAML or LDAP for user identity management.
+To create and manage user accounts in a SAML or LDAP-enabled <%= vars.platform_name %> deployment, see <a href='https://docs.vmware.com/en/VMware-Tanzu-Application-Service/4.0/tas-for-vms/external-user-management.html'>Adding Existing SAML or LDAP Users to an <%= vars.platform_name %> Deployment</a>.</p>
 <% end %>
-
-## <a id='overview'></a> Overview
 
 <%= vars.platform_name %> uses role-based access control, with each role granting the permissions in either an org or an app space.
 
@@ -37,7 +36,7 @@ You can manage user roles across multiple foundations. For more information, see
 <% end %>
 
 
-## <a id='orgs-roles'></a> Manage Org Roles
+## <a id='orgs-roles'></a> Managing org roles
 
 Valid org roles are <%= vars.org_roles %>.
 
@@ -52,7 +51,7 @@ To grant or revoke org roles:
 1. The **Members** panel displays all members of the org. Select a check box to grant an org role to a user, or clear a check box to revoke a role from a user.
 
 
-## <a id='space-roles'></a> Manage App Space Roles
+## <a id='space-roles'></a> Managing app space roles
 
 Valid app space roles are Space Manager, Space Developer, and Space Auditor.
 
@@ -68,7 +67,7 @@ To grant or revoke app space roles:
 	* **Space Auditors** have view-only access to all space information, settings, reports, and logs. Assign this role to users who need to view but not edit the app space.
 
 
-## <a id='invite'></a> Invite New Users
+## <a id='invite'></a> Inviting new users
 
 <%= vars.enable_invitations %>
 
@@ -87,7 +86,7 @@ To invite new users to an org:
 1. Click **Send Invite**. The Apps Manager sends an email containing an invitation link to each email address that you specified.
 
 
-## <a id='removing_org'></a> Remove a User From an Org
+## <a id='removing_org'></a> Removing a Uuer from an org
 
 Removing a user from org also removes them from all spaces in the org.
 
@@ -99,12 +98,12 @@ To remove a user from the org:
 
 1. Locate the user account that you want to remove.
 
-1. Under the user's email address, click on the **Remove User** link. A warning dialog appears.
+1. Under the user's email address, click **Remove User** link. A warning dialog appears.
 
 1. Click **Remove** to confirm user account deletion from the org.
 
 
-## <a id='removing_space'></a> Remove a User From a Space
+## <a id='removing_space'></a> Removing a user from a space
 
 To remove a user from a space:
 
@@ -114,6 +113,6 @@ To remove a user from a space:
 
 1. Locate the user account that you want to remove.
 
-1. Under the user's email address, click on the **Remove User** link. A warning dialog appears.
+1. Under the user's email address, click **Remove User** link. A warning dialog appears.
 
 1. Click **Remove** to confirm user account deletion from the space.
