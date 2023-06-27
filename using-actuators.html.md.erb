@@ -3,7 +3,7 @@ title: Using Spring Boot Actuators with Apps Manager
 owner: Apps Manager
 ---
 
-Apps Manager views and manages app information from Spring Boot Actuator.  This page explains the details.
+Apps Manager views and manages app information from Spring Boot Actuator.
 
 
 ## <a id="prereq"></a> Prerequisites
@@ -16,34 +16,34 @@ The Apps Manager integration with Spring Boot Actuator requires:
 
 * Completing the procedures in [Configure Spring Boot Actuator Endpoints for Apps Manager](./spring-boot-actuators.html).
 	<br>
-	After your configure your app, Apps Manager displays the Spring Boot logo next to the name of your app on the app page:
+	After your configure your app, Apps Manager displays the Spring Boot logo next to the name of your app on the app page.
 
-	![Icon](./images/actuator-icon.png)
-
-
-## <a id="view-build"></a> View Build and Git Information for Your App
-
-To view the data that your app sends to its `/info` Actuator endpoint, select the **Settings** tab:
-
-![Info](./images/info.png)
-
-In the upper right of the app page, Apps Manager also displays the SHA of your app code repository from the latest build:
-
-![Git sha](./images/git-sha.png)
+	![alt-text=""](./images/actuator-icon.png)
 
 
-## <a id="view-app-health"></a> View App Health
+## <a id="view-build"></a> View build and git information for your app
+
+To view the data that your app sends to its `/info` Actuator endpoint, click the **Settings** tab.
+
+![alt-text=""](./images/info.png)
+
+In the upper right of the app page, Apps Manager displays the SHA of your app code repository from the latest build.
+
+![alt-text=""](./images/git-sha.png)
+
+
+## <a id="view-app-health"></a> View app health
 
 To view the health-check data that your app sends to its `/health` Actuator endpoints:
 
 1. Select the **Overview** tab.
 
-1. Click an instance under the **Instances** section:
+1. Click an instance under the **Instances** section. The health check details are displayed.
 
-	![Info](./images/hc.png)
+	![alt-text=""](./images/hc.png)
 
 
-## <a id="view-thread"></a> View Thread Dump
+## <a id="view-thread"></a> View thread dump
 
 To trigger and view a thread dump from your app to its `/dump` Actuator endpoint:
 
@@ -51,12 +51,12 @@ To trigger and view a thread dump from your app to its `/dump` Actuator endpoint
 
 1. Click **Refresh**.
 
-	![Thread Dump](./images/thread_dump.png)
+	![alt-text=""](./images/thread_dump.png)
 
 You can click each thread to expand and view its details. You can also modify which threads appear on the page using the **Instance** and **Show** dropdowns.
 
 
-## <a id="view-trace"></a> View Request Traces
+## <a id="view-trace"></a> View request traces
 
 To retrieve and view tracing information from the `/trace` Actuator endpoint of your app:
 
@@ -64,25 +64,25 @@ To retrieve and view tracing information from the `/trace` Actuator endpoint of 
 
 1. Click **Refresh**.
 
-	![Trace]( <%=vars.spring_trace %> )
+	![alt-text=""]( <%=vars.spring_trace %> )
 
 This page displays the last 100 requests from your app. You can click each individual request to expand and view its trace details. You can modify which requests appear on the page using the **Instance** dropdown.
 
-By default, the **Trace** tab does not show requests and responses from Apps Manager polling app instances for data. To include these requests, clear the <%= vars.spring_trace_label %> checkbox next to the **Instance** dropdown.
+By default, the **Trace** tab does not show requests and responses from Apps Manager polling app instances for data. To include these requests, clear the <%= vars.spring_trace_label %> check box next to the **Instance** dropdown.
 
 
-## <a id="view-heap"></a> Download Heap Dump
+## <a id="view-heap"></a> Download heap dump
 
-To trigger and view a heap dump from your app to its `/heapdump` endpoint:
+To trigger and view a heap dump from your app to its `/heapdump` endpoint.
 
 1. Select the settings dropdown for an instance of your app.
 
 1. Click **Heap Dump**. This downloads a `.zip` file.
 
-	![Heap dump](./images/heap-dump.png)
+	![alt-text=""](./images/heap-dump.png)
 
 
-## <a id="view-mappings"></a> View Mappings
+## <a id="view-mappings"></a> View mappings
 
 To view a collated list of the endpoints an app serves:
 
@@ -90,10 +90,10 @@ To view a collated list of the endpoints an app serves:
 
 1. Click **View Mappings**.
 
-	![View Mappings](./images/view-mappings.png)
+	![alt-text=""](./images/view-mappings.png)
 
 
-## <a id="manage-log-levels"></a> Manage Log Levels for Apps Mapped to External Routes
+## <a id="manage-log-levels"></a> Manage log levels for apps mapped to external routes
 
 Spring Boot apps include _loggers_ for many provided and user components of the app. You can set the log level for each logger in Apps Manager.
 
@@ -103,11 +103,11 @@ To view the **Configure Logging Levels** screen:
 
 1. Click **Configure Logging Levels**.
 
-	![Configure Logging Levels](./images/config-log-levels.png)
+	![alt-text=""](./images/config-log-levels.png)
 
 Apps Manager displays the default log level for each logger in gray.
 
-![Defaults](./images/default-levels.png)
+![alt-text=""](./images/default-levels.png)
 
 You can modify the log level for a logger by clicking the desired level in the logger row, as shown in the following image. Whenever you set a log level, the following happens:
 
@@ -115,26 +115,26 @@ You can modify the log level for a logger by clicking the desired level in the l
 * Each child namespace of the logger inherits the log level.
     <p class="note"><strong>Note:</strong> You can manually set any of the child loggers to override this inheritance.</p>
 
-![Set Log level](./images/set-levels.png)
+![alt-text=""](./images/set-levels.png)
 
 All of the loggers with user-configured logging levels float to the top of the list.
 
-![Float to top](./images/float-levels.png)
+![alt-text=""](./images/float-levels.png)
 
 You can reset log levels by clicking the white dot displayed on the current log level.
 
-![Reset Logs](./images/reset-logs.png)
+![alt-text=""](./images/reset-logs.png)
 
 You can also filter which loggers you see using the **Filter Loggers** textbox.
 
-![Filter Loggers](./images/filter-loggers.png)
+![alt-text=""](./images/filter-loggers.png)
 
 
-## <a id="troubleshoot"></a> Troubleshoot Spring Boot Actuator Integration
+## <a id="troubleshoot"></a> Troubleshoot Spring Boot actuator integration
 
 This section describes how to troubleshoot common issues with the integration of Apps Manager and Spring Boot Actuator.
 
-### <a id='failed-request'></a> /cloudfoundryapplication Failed Request
+### <a id='failed-request'></a> /cloudfoundryapplication failed request
 
 #### Symptom
 

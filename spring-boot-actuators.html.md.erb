@@ -7,7 +7,7 @@ The Apps Manager UI supports several production-ready endpoints from Spring Boot
 
 For more information about Spring Boot Actuator, see the [Spring Boot Actuator documentation](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready.html).
 
-<p class="note"><strong>Note:</strong> This feature requires Spring Boot v1.5 or later.</p>
+<p class="note important"><strong>Important:</strong> This feature requires Spring Boot v1.5 or later.</p>
 
 
 ## <a id='actuator'></a> Overview
@@ -17,7 +17,7 @@ The Apps Manager integration with Spring Boot does not use the standard Spring B
 By default, actuators are secure and cannot be accessed without explicit configuration by the user, even if [Spring Security](https://projects.spring.io/spring-security/) is not included. This allows users to take advantage of the Spring Boot Apps Manager integration without accidentally exposing their actuators without security.
 
 
-## <a id='endpoints'></a> Actuator Endpoints
+## <a id='endpoints'></a> Actuator endpoints
 
 The table below describes the Spring Boot Actuator endpoints supported by Apps Manager. To integrate these endpoints with Apps Manager, you must first [Activate Spring Boot Actuator for Your App](#activating-spring-boot-actuator).
 
@@ -92,7 +92,7 @@ The table below describes the Spring Boot Actuator endpoints supported by Apps M
 </table>
 
 
-## <a id="activating-spring-boot-actuator"></a> Activate Spring Boot Actuator for your App
+## <a id="activating-spring-boot-actuator"></a> Activate Spring Boot actuator for your app
 
 You must add a `spring-boot-starter-actuator` dependency to your app project for the production-ready HTTP endpoints to return values. For more information, see the [Enabling production-ready features](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-enabling) section of the Spring Boot documentation.
 
@@ -124,11 +124,11 @@ You must add a `spring-boot-starter-actuator` dependency to your app project for
 For more information, see [Cloud Foundry support](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-cloudfoundry) in the Spring Boot Actuator documentation.
 
 
-## <a id="info-endpoint"></a> Configure the Info Actuator
+## <a id="info-endpoint"></a> Configure the info actuator
 
 The `/info` endpoint provides information about the project build for your app, as well as its git details.
 
-### <a id="build-info"></a> Add Build Information
+### <a id="build-info"></a> Add build information
 
 To add build information to the `/info` endpoint, follow the instructions below that correspond to your project type.
 
@@ -165,10 +165,9 @@ springBoot  {
 }
 ```
 
-### <a id="git-info"></a> Add Git Information
+### <a id="git-info"></a> Add git information
 
 To add git information to the `/info` endpoint, follow these instructions:
-
 
 1. Add the following property to your `application.properties` file:
 

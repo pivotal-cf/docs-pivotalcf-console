@@ -8,7 +8,7 @@ This page explains how to manage you user roles with Apps Manager.
 <!-- This ensures that the following note only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
 <% if vars.disallow_saml_ldap_identity == true %>
 <% else %>
-<p class='note'><strong>Note:</strong> The procedures described here are not compatible with using SAML or LDAP for user identity management. To create and manage user accounts in a SAML or LDAP-enabled <%= vars.platform_name %> deployment, see <a href='https://docs.vmware.com/en/VMware-Tanzu-Application-Service/<%= vars.current_major_version %>/tas-for-vms/external-user-management.html'>Adding Existing SAML or LDAP Users to an <%= vars.platform_name %> Deployment</a>.</p>
+<p class='note important'><strong>Important:</strong> The procedures described here are not compatible with using SAML or LDAP for user identity management. To create and manage user accounts in a SAML or LDAP-enabled <%= vars.platform_name %> deployment, see <a href='https://docs.vmware.com/en/VMware-Tanzu-Application-Service/<%= vars.current_major_version %>/tas-for-vms/external-user-management.html'>Adding Existing SAML or LDAP users to an <%= vars.platform_name %> Deployment</a>.</p>
 <% end %>
 
 ## <a id='overview'></a> Overview
@@ -18,7 +18,7 @@ This page explains how to manage you user roles with Apps Manager.
 A user account can be assigned one or more roles. The combination of these roles defines the
 actions a user can perform in an org and within specific app spaces in that org. For information
 about the actions that each role allows, see
-[Orgs, Spaces, Roles, and Permissions](../concepts/roles.html). For example, to assign roles to
+[Orgs, spaces, roles, and permissions](../concepts/roles.html). For example, to assign roles to
 user accounts in a space, you must have Space Manager role assigned to the user in that space.
 
 You can also modify permissions for existing users by adding or removing the roles associated with
@@ -27,23 +27,23 @@ for each space that you want to change.
 
 Admins, Org Managers, and Space Managers can assign user roles with Apps Manager or with the Cloud
 Foundry Command Line Interface (cf CLI). For more information, see
-[Users and Roles](../cf-cli/getting-started.html#user-roles) in _Getting Started with the cf CLI_.
+[Users and roles](../cf-cli/getting-started.html#user-roles) in _Getting Started with the cf CLI_.
 
 <!-- This ensures that the following note only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
 <% if vars.disallow_multi_foundation == true %>
 <% else %>
 You can manage user roles across multiple foundations. For more information, see
-[Configuring Multi-Foundation Support in Apps Manager](https://docs.vmware.com/en/VMware-Tanzu-Application-Service/4.0/tas-for-vms/configure-multi-foundation.html).
+[Configuring Multi-foundation support in Apps Manager](https://docs.vmware.com/en/VMware-Tanzu-Application-Service/4.0/tas-for-vms/configure-multi-foundation.html).
 <% end %>
 
 
-## <a id='orgs-roles'></a> Manage Org Roles
+## <a id='orgs-roles'></a> Manage org roles
 
 Valid org roles are <%= vars.org_roles %>.
 
 To grant or revoke org roles:
 
-1. Go to the **Home** page
+1. Go to the **Home** page.
 
 1. Select an org.
 
@@ -52,7 +52,7 @@ To grant or revoke org roles:
 1. The **Members** panel displays all members of the org. Select a check box to grant an org role to a user, or clear a check box to revoke a role from a user.
 
 
-## <a id='space-roles'></a> Manage App Space Roles
+## <a id='space-roles'></a> Manage app space roles
 
 Valid app space roles are Space Manager, Space Developer, and Space Auditor.
 
@@ -68,7 +68,7 @@ To grant or revoke app space roles:
 	* **Space Auditors** have view-only access to all space information, settings, reports, and logs. Assign this role to users who need to view but not edit the app space.
 
 
-## <a id='invite'></a> Invite New Users
+## <a id='invite'></a> Invite new users
 
 <%= vars.enable_invitations %>
 
@@ -87,7 +87,7 @@ To invite new users to an org:
 1. Click **Send Invite**. The Apps Manager sends an email containing an invitation link to each email address that you specified.
 
 
-## <a id='removing_org'></a> Remove a User From an Org
+## <a id='removing_org'></a> Remove a user from an org
 
 Removing a user from org also removes them from all spaces in the org.
 
@@ -104,7 +104,7 @@ To remove a user from the org:
 1. Click **Remove** to confirm user account deletion from the org.
 
 
-## <a id='removing_space'></a> Remove a User From a Space
+## <a id='removing_space'></a> Remove a user from a space
 
 To remove a user from a space:
 
