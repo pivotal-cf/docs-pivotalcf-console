@@ -4,26 +4,23 @@ owner: Apps Manager
 ---
 
 
-Here you can learn how to view and manage orgs and spaces in Apps Manager.
-
-You can use Apps Manager to manage orgs and spaces. This includes creating and deleting orgs, domains, and spaces, managing member permissions, adding
-metadata, and more.
+You can view and manage orgs and spaces in Apps Manager. This includes creating and deleting orgs, domains, and spaces, managing member permissions, adding metadata, and more in a <%= vars.app_runtime_first %> environment.
 To manage a space, you must have Space Manager permissions in that space.
 
-For information about managing apps and service instances, see [Managing Apps and Service Instances Using Apps Manager][def].
+For information about managing apps and service instances, see [Managing apps and service instances using Apps Manager][def].
 
-<!-- This ensures that the note below only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
+<!-- This ensures that this note only appears in the TAS for VMs docs, not in the offline TAS docs. -->
 <% if vars.disallow_multi_foundation == true %>
 <% else %>
-For more information, see <a href="../operating/configure-multi-foundation.html">Configuring Multi-Foundation Support in Apps Manager</a>.
+For more information, see <a href="../operating/configure-multi-foundation.html">Configuring Multi-foundation support in Apps Manager</a>.
 <% end %>
 
 
 ## <a id='prerequisite'></a> Prerequisite
 
-To do the following, you must first log in to Apps Manager with an account that has adequate permissions.
+You must first log in to Apps Manager with an account that has adequate permissions.
 
-For more information, see [About Permissions](dev-console.html#permissions) in _Getting Started with Apps Manager_.
+For more information, see [About permissions](dev-console.html#permissions) in _Getting Started with Apps Manager_.
 
 
 ## <a id='view-org'></a> Manage an org
@@ -32,7 +29,7 @@ You can manage org resources, including the spaces, domains, and members associa
 
 You can manage an org by navigating to the org in Apps Manager.
 
-To go to an org, do one of the following:
+To go to an org:
 
 * On the Apps Manager home page, under **Orgs**, click the name of the org that you want to manage.
 
@@ -41,7 +38,7 @@ To go to an org, do one of the following:
 By default, the landing page for an org in Apps Manager is the org **Spaces** page. You can use the panel on the left side of the screen to go to other
 pages for resources in the org, such as domains and members.
 
-The following image shows an example of the landing page for an org in Apps Manager.
+This image shows an example of the landing page for an org in Apps Manager.
 
 ![alt-text="Apps Manager landing page for a org shows the spaces in the org and their statuses."](./images/org-spaces-page.png)
 
@@ -49,20 +46,20 @@ You can manage the resources in an org using Apps Manager.
 
 ### <a id='spaces'></a> Manage spaces
 
-In the org **Spaces** tab, you can do the following:
+In the org **Spaces** tab, you can:
 
-* See the following information for each space:
+* See the information for each space:
    * Name
    * Number of apps
    * Number of apps in running, stopped, and crashed states
    * Number of services
-   * Memory quota usage
+   * Memory quota use
 
 * Create a new space.
 
 ### <a id='domains'></a> Manage domains with Apps Manager
 
-In the org **Domains** page, you can do the following:
+In the org **Domains** page, you can:
 
 * See each **Domain** in your org.
 
@@ -73,13 +70,13 @@ Domains](../devguide/deploy-apps/routes-domains.html#private-domains) in _Config
 * Delete a domain by clicking the vertical three-dot icon and selecting **Delete**. You must have permission to manage the domain to delete it.
 
 * Create a new private domain by clicking **Add a Domain**. You must have Org Manager permissions to create a private domain.
-  <p class='note'><strong>Note:</strong> To create globally shared domains, you must have Admin permissions and use the Cloud Foundry Command Line Interface
-    (cf CLI). For more information, see <a href="../devguide/deploy-apps/routes-domains.html#create-a-shared-domain">Create a Shared Domain</a> in
-    <em>Configuring Routes and Domains</em>.</p>
+
+  <p class='note'><strong>Note:</strong> To create globally shared domains, you must have Admin permissions and use the Cloud Foundry Command Line Interface (cf CLI). For more information, see <a href="../devguide/deploy-apps/routes-domains.html#create-a-shared-domain">Create a shared domain</a> in
+    <em>Configuring routes and domains</em>.</p>
 
 ### <a id='manage-members-org'></a> Manage members
 
-In the org **Members** page, you can do the following:
+In the org **Members** page, you can:
 
 * Search for members of the org
 
@@ -93,7 +90,7 @@ In the org **Members** page, you can do the following:
 
 ### <a id='manage-settings-org'></a> Manage settings
 
-In the org **Settings** page, you can do the following:
+In the org **Settings** page, you can:
 
 * Change the org name
 
@@ -110,16 +107,16 @@ For more information about adding metadata to objects in <%= vars.app_runtime_fi
 
 To add labels or annotations to an org using Apps Manager:
 
-1. Click the **Settings** tab of the desired org and go to the **Metadata** section.
+1. Click the **Settings** tab of the org you want to change and go to the **Metadata** section.
 	![alt-text=""](./images/metadata.png)
 
-1. For **Labels**, complete the **Name** and **Value** fields. Or, select **Enter JSON** to enter the label in JSON.
+2. For **Labels**, fill in the **Name** and **Value** text boxes or click **Enter JSON** to enter the label in JSON.
 
-1. For **Annotations**, complete the **Name** and **Value** fields. Or, select **Enter JSON** to enter the annotation in JSON.
+3. For **Annotations**, fill in the **Name** and **Value** text boxes or click **Enter JSON** to enter the annotation in JSON.
 
-1. To add more labels or annotations, click **+** next to the **Labels** or **Annotations** field.
+4. To add more labels or annotations, click **+** next to **Labels** or **Annotations**.
 
-1. Click **Update Metadata**.
+5. Click **Update Metadata**.
 
 
 ## <a id='manage-space'></a> Manage a space
@@ -138,7 +135,7 @@ To go to the space, do one of the following:
 By default, the landing page for a space in Apps Manager is the space **Apps** page. You can use the panel on the left side of the screen to go to other
 pages for resources in the space, such as services and members.
 
-The following image shows an example of the landing page for a space in Apps Manager.
+This image shows an example of the landing page for a space in Apps Manager.
 
 ![alt-text="Apps Manager landing page for a space shows the apps in the space and their statuses."](./images/space-apps-view.png)
 
@@ -160,7 +157,7 @@ For more information about configuring services, see [Services](../services/over
 
 The **Members** page lists all members of the space. For each member, the page also lists the associated user roles.
 
-The following user roles can be assigned to space members on the **Members** page:
+You can assign these user roles to space members on the **Members** page:
 
 * **Space Manager**: Space Managers can invite and manage users in the space.
 
@@ -177,16 +174,16 @@ Services](../services/route-services.html).
 
 ### <a id='manage-settings-space'></a> Manage settings
 
-From the space **Settings** page, you can do the following:
+From the space **Settings** page, you can:
 
-* Modify the space name.
+* Edit the space name.
 
 * View the Application Security Groups (ASGs) associated with the space.
 
 * View the space's isolation segment assignment. For more information, see [Isolation Segments](../concepts/security.html#isolation-segments) in
 _<%= vars.app_runtime_abbr %> Security_.
 
-* Add metadata to the space. For more information, see [Add Metadata](#metadata-space).
+* Add metadata to the space. For more information, see [Add metadata](#metadata-space).
 
 * Delete the space.
 
@@ -194,19 +191,19 @@ _<%= vars.app_runtime_abbr %> Security_.
 
 You can add metadata, including labels and annotations spaces using Apps Manager.
 
-For more information about adding metadata to objects in <%= vars.app_runtime_abbr %>, see [Using Metadata](../adminguide/metadata.html).
+For more information about adding metadata to objects in <%= vars.app_runtime_abbr %>, see [Using metadata](../adminguide/metadata.html).
 
 To add labels or annotations to a space using Apps Manager:
 
-1. Click the **Settings** tab of the desired space and go to the **Metadata** section.
+1. Click the **Settings** tab of the space you want to change and go to the **Metadata** section.
 
-1. For **Labels**, complete the **Name** and **Value** fields. Or, select **Enter JSON** to enter the label in JSON.
+2. For **Labels**, fill in the **Name** and **Value** text boxes or click **Enter JSON** to enter the label in JSON.
 
-1. For **Annotations**, complete the **Name** and **Value** fields. Or, select **Enter JSON** to enter the annotation in JSON.
+3. For **Annotations**, complete the **Name** and **Value** text boxes or click **Enter JSON** to enter the annotation in JSON.
 
-1. To add more labels or annotations, click **+** next to the **Labels** or **Annotations** field.
+4. To add more labels or annotations, click **+** next to  **Labels** or **Annotations**.
 
-1. Click **Update Metadata**.
+5. Click **Update Metadata**.
 
 
 [def]: https://docs.vmware.com/en/VMware-Tanzu-Application-Service/3.0/tas-for-vms/manage-apps.html

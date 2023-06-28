@@ -3,7 +3,7 @@ title: Managing your user roles with Apps Manager
 owner: Apps Manager
 ---
 
-This page explains how to manage you user roles with Apps Manager.
+Here is how to manage you user roles with Apps Manager in <%= vars.app_runtime_first %>.
 
 <!-- This ensures that the following note only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
 <% if vars.disallow_saml_ldap_identity == true %>
@@ -15,14 +15,14 @@ This page explains how to manage you user roles with Apps Manager.
 
 <%= vars.platform_name %> uses role-based access control, with each role granting the permissions in either an org or an app space.
 
-A user account can be assigned one or more roles. The combination of these roles defines the
+You can assign one or more roles to a user account. The combination of these roles defines the
 actions a user can perform in an org and within specific app spaces in that org. For information
 about the actions that each role allows, see
 [Orgs, spaces, roles, and permissions](../concepts/roles.html). For example, to assign roles to
 user accounts in a space, you must have Space Manager role assigned to the user in that space.
 
-You can also modify permissions for existing users by adding or removing the roles associated with
-the user account. User roles are assigned on a per-space basis, so you must modify the user account
+You can also edit the permissions for existing users by adding or removing the roles associated with
+the user account. User roles are assigned on a per-space basis, so you must edit the user account
 for each space that you want to change.
 
 Admins, Org Managers, and Space Managers can assign user roles with Apps Manager or with the Cloud
@@ -47,9 +47,9 @@ To grant or revoke org roles:
 
 1. Select an org.
 
-1. In the panel on the left side of the screen, click **Members**. Edit the roles assigned to each user by selecting or clearing the check boxes under each user role. Apps Manager saves your changes automatically.
+1. In the panel on the left side of the screen, click **Members**. Edit the roles assigned to each user by selecting or deselecting the check boxes under each user role. Apps Manager saves your changes automatically.
 
-1. The **Members** panel displays all members of the org. Select a check box to grant an org role to a user, or clear a check box to revoke a role from a user.
+1. The **Members** panel displays all members of the org. Select a check box to grant an org role to a user, or deselect a check box to revoke a role from a user.
 
 
 ## <a id='space-roles'></a> Manage app space roles
@@ -62,8 +62,8 @@ To grant or revoke app space roles:
 
 1. In the panel on the left side of the screen, click **Members**. The **Members** panel displays all members of the space.
 
-1. Select a check box to grant an app space role to a user, or clear a check box to revoke a role from a user.
-	* **Space Managers** can invite and manage users and enable features for a given space. Assign this role to managers or other users who need to administer the account.
+1. Select a check box to grant an app space role to a user, or deselect a check box to revoke a role from a user.
+	* **Space Managers** can invite and manage users and enable features for a space. Assign this role to managers or other users who need to administer the account.
 	* **Space Developers** can create, delete, and manage apps and services, and have full access to all usage reports and logs. Space Developers can also edit apps, including the number of instances and memory footprint. Assign this role to app developers or other users who need to interact with apps and services.
 	* **Space Auditors** have view-only access to all space information, settings, reports, and logs. Assign this role to users who need to view but not edit the app space.
 
@@ -80,7 +80,7 @@ To invite new users to an org:
 
 1. Click **Invite New Members**. The **Invite New Team Member(s)** form appears.
 
-1. In the **Add Email Addresses** text field, enter the email addresses of the users that you want to invite. Enter multiple email addresses as a comma-delimited list.
+1. In the **Add Email Addresses** text box, enter the email addresses of the users that you want to invite. Enter multiple email addresses as a comma-separated list.
 
 1. The **Assign Org Roles** and **Assign Space Roles** tables list the current org and available spaces with check boxes corresponding to each possible user role. Select the check boxes that correspond to the permissions that you want to grant to the invited users.
 
@@ -99,9 +99,9 @@ To remove a user from the org:
 
 1. Locate the user account that you want to remove.
 
-1. Under the user's email address, click on the **Remove User** link. A warning dialog appears.
+2. Under the user's email address, click the **Remove User** link. A warning dialog box appears.
 
-1. Click **Remove** to confirm user account deletion from the org.
+3. Click **Remove** to confirm user account deletion from the org.
 
 
 ## <a id='removing_space'></a> Remove a user from a space
@@ -114,6 +114,6 @@ To remove a user from a space:
 
 1. Locate the user account that you want to remove.
 
-1. Under the user's email address, click on the **Remove User** link. A warning dialog appears.
+2. Under the user's email address, click the **Remove User** link. A warning dialog box appears.
 
-1. Click **Remove** to confirm user account deletion from the space.
+3. Click **Remove** to confirm user account deletion from the space.

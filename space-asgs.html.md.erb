@@ -5,31 +5,29 @@ owner: Apps Manager
 
 
 
-Application Security Groups (ASGs) are a collections of egress rules that
-specify the protocols, ports, and IP address ranges where app or task
-instances send traffic. The platform sets up rules to filter and log outbound network traffic from app and task instances. ASGs apply to both buildpack-based and Docker-based apps and tasks.
+Application Security Groups (ASGs) are a collections of egress rules that specify the protocols, ports, and IP address ranges where app or task instances send traffic. Apps Manager sets up rules to filter and log outbound network traffic from app and task instances in <%= vars.app_runtime_first %>. ASGs apply to both buildpack-based and Docker-based apps and tasks.
 
-When apps or tasks begin staging, they need traffic rules permissive enough to allow them to pull resources from the network. After an app or task is running, the traffic rules can be more restrictive and secure. To distinguish between these two security requirements, administrators can define one ASG for app and task staging, and another for app and task runtime. For more information about staging and running apps, see [Application Container Lifecycle](../devguide/deploy-apps/app-lifecycle.html).
+When apps or tasks begin staging, they need traffic rules permissive enough to allow them to pull resources from the network. After an app or task is running, the traffic rules can be more restrictive and secure. To distinguish between these two security requirements, administrators can define one ASG for app and task staging, and another for app and task runtime. For more information about staging and running apps, see [Application container lifecycle](../devguide/deploy-apps/app-lifecycle.html).
 
 To provide granular control when securing a deployment, an administrator can assign ASGs to apply to all app and task instances for the entire deployment, or assign ASGs to spaces to apply only to apps and tasks in a particular space.
 
-Only admin users can create and modify ASGs.
+Only admin users can create and edit ASGs.
 <%=vars.app_sec_groups_link_2 %>
 
 ## <a id="view-asgs"></a> Displaying ASGs for a space
 
-To view the ASGs associated with a space, perform the following steps.
+To view the ASGs associated with a space, follow these steps.
 
 1. Log in to Apps Manager.
 
-1. From the **Home** page, select the **Org** that contains the space you want to view.
+2. From the **Home** page, select the **Org** that contains the space you want to view.
 
-1. Select the **Space** you want to view.
+3. Select the **Space** you want to view.
 
-1. Click the **Settings** tab.
+4. Click the **Settings** tab.
 
-1. In the **Security Groups** section, Apps Manager displays ASGs associated with the selected space.
+5. In the **Security Groups** section, Apps Manager displays ASGs associated with the selected space.
 
-1. Click an ASG to expand its egress rules.
+6. Click an ASG to expand its egress rules.
 
 ![alt-text="The ASG Manager tab shows all ASGs with their destinations and protocols."](./images/space-asgs.png)

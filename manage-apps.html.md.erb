@@ -3,13 +3,13 @@ title: Managing your apps and service instances using Apps Manager
 owner: Apps Manager
 ---
 
-Apps Manager allows you to view and manage apps and service instances.
+Apps Manager allows you to view and manage apps and service instances in <%= vars.app_runtime_first %>.
 
 You can use Apps Manager to manage apps, service instances, service keys, and route services. This includes tasks such as scaling apps, binding apps to services, generating services keys, and more.
 
-For information about managing orgs and spaces, see [Managing orgs and spaces using Apps Manager](https://docs.vmware.com/en/VMware-Tanzu-Application-Service/2.11/tas-for-vms/manage-spaces.html).
+For information about managing orgs and spaces, see [Managing orgs and spaces using Apps Manager](https://docs.vmware.com/en/VMware-Tanzu-Application-Service/<%=vars.current_major_version %>/tas-for-vms/manage-spaces.html).
 
-<!-- This ensures that the following note only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
+<!-- This ensures that the following only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
 <% if vars.disallow_multi_foundation == true %>
 <% else %>
 You can manage apps and service instances across multiple foundations.
@@ -27,7 +27,7 @@ For more information, see [About Permissions](dev-console.html#permissions) in _
 
 This section describes how to manage an app in Apps Manager.
 
-You can do the following tasks to manage apps in Apps Manager:
+You can do these tasks to manage apps in Apps Manager:
 
 * View app summary information
 * Start and stop apps
@@ -40,7 +40,7 @@ You can do the following tasks to manage apps in Apps Manager:
 * View app revisions
 * Re-deploy app revisions
 * Delete apps
-* Terminate specific instances of apps
+* Stop specific instances of apps
 
 ### <a id="view"></a> View app overview
 
@@ -51,17 +51,17 @@ There are two ways to locate an app **Overview** page:
 * On the space page, click the app you want to manage.
 * Search for an app by entering its name in the search bar.
 
-The following image shows an example of an app **Overview** page.
+This image shows an example of an app **Overview** page.
 
-![alt-text="The Processes and Instances section contains memory statistics and the Enable Autoscaling button and the Scale button."](./images/app-page.png)
+![alt-text="The Processes and Instances section contains memory statistics. There are two buttons: Enable Autoscaling and Scale."](./images/app-page.png)
 
 ### <a id="start-stop"></a> Start, stop, or restage an app
 
 You can start, stop, and restage from the **Overview** page of the app. The start, stop, and restage buttons are located on the app **Overview** page next to the name of the app.
 
-The following image shows the stop, restart, and restage buttons.
+This image shows the stop, restart, and restage buttons.
 
-<%# To edit the following diagram, go to https://drive.google.com/file/d/1X4GPXIaf9gPIjkHiDHDxTZWWVY4Wt0qn/view?usp=sharing.
+<%# To edit this diagram, go to https://drive.google.com/file/d/1X4GPXIaf9gPIjkHiDHDxTZWWVY4Wt0qn/view?usp=sharing.
 You must be in the Pivotal org to edit the diagram.%>
 
 ![alt-text=""](./images/stop-restart-restage-app.png)
@@ -82,7 +82,7 @@ To manually scale an app:
 
     ![alt-text=""](./images/scale-app.png)
 
-2. Edit the number of **Instances**, the **Memory Limit**, and the **Disk Limit** as desired.
+2. Edit the number of **Instances**, the **Memory Limit**, and the **Disk Limit**.
 
 3. Click **Apply Changes**.
 
@@ -115,7 +115,7 @@ For more information about sidecar processes, see [Pushing apps with sidecar pro
 
 ### <a id='view-key-metrics'></a> View key metrics (beta)
 
-If Metric Store is installed, you can view the following key metrics for an app in the **Key Metrics** section of the app **Overview** page:
+If Metric Store is installed, you can view these key metrics for an app in the **Key Metrics** section of the app **Overview** page:
 
 * CPU
 * Memory
@@ -124,17 +124,16 @@ If Metric Store is installed, you can view the following key metrics for an app 
 * Request Rate
 * Request Errors
 
-For more information about each metric, see [Interpret Metrics](https://docs.pivotal.io/app-metrics/1-6/using.html#interpret-metrics)
-in _Monitoring and Troubleshooting Apps with Metrics_.
+For more information about each metric, see [PCF Metrics](https://docs.vmware.com/en/App-Metrics-for-VMware-Tanzu/1.6/app-metrics/GUID-using.html).
 
 For each metric, the app **Overview** page includes a graph that shows metric behavior over the past three hours.
 You can hover over the data points on the graph to view the value of the metric.
 The page also includes the average value for the metric over the past three hours.
 
 Metric Store is required for Apps Manager to display the **Key Metrics** section.
-For information about installing and configuring Metric Store, see [Metric Store](https://docs.pivotal.io/metric-store).
+For information about installing and configuring Metric Store, see [Metric Store](https://docs.vmware.com/en/Metric-Store/index.html).
 
-The following image is an example of an app **Overview** page, showing key metrics for the app.
+This image is an example of an app **Overview** page, showing key metrics for the app.
 
 ![alt-text="The Apps Manager app overview page shows the six key metrics: CPU, Disk, Request Latency, Request Rate, and Request Errors."](./images/app-page-with-metrics.png)
 
@@ -245,14 +244,14 @@ To create container-to-container networking policies:
 1. In the panel on the left side of the page, under **Networking**, click **Container Networking**. The page displays any container networking policies associated with the app.
 
 1. To add a new network policy, click **Create Policy** or **Add a network policy**.
-1. In the **Add Policy** window, configure the following:
+2. In the **Add Policy** window:
     *  For **Org**, select the org of the destination app.
     *  For **Space**, select the space of the destination app.
     *  For **App**, select the destination app.
     *  For **Protocol**, select **TCP** or **UDP**.
     *  For **Ports**, enter the ports at which to connect to the destination app. The allowed range is from `1` to `65535`. You can specify a single port, such as `8080`, or a range of ports, such as `8080-8090`.
 
-1. Click **Save**.
+3. Click **Save**.
 
 ### <a id="revisions"></a> Manage app revisions
 
@@ -364,15 +363,15 @@ To schedule a task:
 
 1. Enter a **Command**.
 
-1. Enter one or more **Cron Expressions** for your desired task schedule or schedules. For more information on cron expression syntax, see [Schedule a Job](http://docs.pivotal.io/pcf-scheduler/using-jobs.html#schedule-a-job) in _Scheduling Jobs_ in the Scheduler documentation.
+1. Enter one or more **Cron Expressions** for the task schedule or schedules you want. For more information about cron expression syntax, see [Schedule a Job](http://docs.pivotal.io/pcf-scheduler/using-jobs.html#schedule-a-job) in _Scheduling Jobs_ in the Scheduler documentation.
 
 1. Click **Create Job**.
 
-### <a id="view-settings"></a> View and manage Settings
+### <a id="view-settings"></a> View and manage settings
 
 To view settings for an app, in the panel on the left side of the page, under **Application**, click **Settings**.
 
-You can do the following from the **Settings** page:
+You can do the these tasks from the **Settings** page:
 
 * Rename the app.
 * View information about the buildpacks, start command, and stack.
@@ -390,11 +389,11 @@ To configure health checks for your app:
 
 1. In the panel on the left side of the page, under **Application**, click **Settings**.
 
-1. In the **Health Check** section, click the **Type** drop-down menu and select **port**, **http**, or **process**. Depending on which option you select, additional fields may appear.
+1. In the **Health Check** section, click the **Type** drop-down menu and select **port**, **http**, or **process**. Depending on which option you select, additional text boxes might appear.
 
 1. For **Type**, select **port**, **http**, or **process**.
 
-1. Complete the fields that appear based on your selection.
+1. Complete the text boxes that appear based on your selection.
 
 1. Click **Update**.
 
@@ -428,7 +427,7 @@ To add a user-provided environment variable:
 
 1. Click **Save**.
 
-<p class="note important"><strong>Important:</strong> Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry CLI <code>cf restage</code> command.</p>
+<p class="note important"><strong>Important:</strong> Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from Apps Manager or with the Cloud Foundry CLI <code>cf restage</code> command.</p>
 
 ### <a id="metadata"></a> Add metadata
 
@@ -436,11 +435,11 @@ You can add metadata, including labels and annotations, to apps and spaces using
 
 <% if vars.platform_code == "CF" || vars.platform_code == "PCF" %>
 
-For more information about adding metadata to objects in <%= vars.app_runtime_full %> (<%= vars.app_runtime_abbr %>), see [Using Metadata](../adminguide/metadata.html).
+For more information about adding metadata to objects in <%= vars.app_runtime_full %> (<%= vars.app_runtime_abbr %>), see [Using metadata](../adminguide/metadata.html).
 
 <% else %>
 
-For more information about adding metadata to objects in <%= vars.app_runtime_full %> (<%= vars.app_runtime_abbr %>), see [Using Metadata](https://docs.pivotal.io/platform/adminguide/metadata.html).
+For more information about adding metadata to objects in <%= vars.app_runtime_full %> (<%= vars.app_runtime_abbr %>), see [Using metadata](https://docs.vmware.com/en/VMware-Tanzu-Application-Service/2.11/tas-for-vms/metadata.ht).
 
 <% end %>
 
@@ -450,20 +449,20 @@ To add labels or annotations to an app using Apps Manager:
 
 1. In the panel on the left side of the page, under **Application**, click **Settings**.
 
-1. For **Labels**, provide a name and value pair or select **Enter JSON** to enter the label in JSON.
+1. For **Labels**, provide a name and value pair or click **Enter JSON** to enter the label in JSON.
 
-1. For **Annotations**, provide a name and value pair or select **Enter JSON** to enter the annotation in JSON.
+1. For **Annotations**, provide a name and value pair or click **Enter JSON** to enter the annotation in JSON.
 
-1. To add more labels or annotations, click **+** next to the **Labels** or **Annotations** field.
+2. To add more labels or annotations, click **+** next to **Labels** or **Annotations**.
 
-1. Click **Update Metadata**.
+3. Click **Update Metadata**.
 
 
 ## <a id='manage-service'></a> Manage a service instance
 
 This section describes how to manage service instances in Apps Manager.
 
-You can do the following tasks to manage service instances in Apps Manager:
+You can do these tasks to manage service instances in Apps Manager:
 
 * Bind or unbind apps.
 * Bind or unbind routes.
@@ -485,7 +484,7 @@ To locate the service instance **Overview** page:
 
 1. On the **Services** page, click the name of the service instance.
 
-The following image shows an example of a service instance **Overview** page.
+This image shows an example of a service instance **Overview** page.
 
 ![alt-text=""](./images/services-binding.png)
 
@@ -552,7 +551,7 @@ To rename or delete your service instance:
 
 1. Do one of these steps:
     * To change the service instance name, enter the new name and click **Update**.
-    * To add configuration parameters to the service instance, enter the parameters in the **Name** and **Value** fields and then click **Update**. Alternatively, enter your configuration parameters using the **Enter JSON** toggle and then click **Update**.
+    * To add configuration parameters to the service instance, enter the parameters in the **Name** and **Value** text boxes and then click **Update**. Alternatively, enter your configuration parameters using the **Enter JSON** toggle and then click **Update**.
     * To delete the service instance, click **Delete Service Instance**.
 
 <p class="note"><strong>Note:</strong> The service broker supports creating, updating, and deleting service instances asynchronously. When the service broker completes one of these operations, a status banner appears in Apps Manager.</p>
@@ -563,7 +562,7 @@ To rename or delete your service instance:
 
 For Spring Cloud Services (SCS) Config Server instances, Apps Manager lets you:
 
-* See the Git repos that the SCS Config Server uses to configure the client apps that it serves. For more information, see [Configuring with Git](https://docs.pivotal.io/spring-cloud-services/common/config-server/configuring-with-git.html) in the SCS documentation.
+* See the Git repos that the SCS Config Server uses to configure the client apps that it serves. For more information, see the [Spring Cloud Services for VMware Tanzu Documentation](https://docs.vmware.com/en/Spring-Cloud-Services-for-VMware-Tanzu/index.html).
 
 * Update client app configurations, by updating the local mirrors of their configuration repos.
 
@@ -585,11 +584,11 @@ The **Config** pane includes:
   * Passed in with `-c` flag to `cf create-service` and `cf update-service`
 
 * A **Synchronize Mirrors** button for the app configurations that the SCS Config Server serves
-  * Click this button to refresh the local Git repository mirrors. Refreshing the mirrors updates client app configuration settings, as described in [Mirror service](https://docs.pivotal.io/spring-cloud-services/common/config-server/mirror-service.html) in the SCS documentation.
+  * Click this button to refresh the local Git repository mirrors. Refreshing the mirrors updates client app configuration settings, as described in [Config Server mirror service](https://docs.vmware.com/en/Spring-Cloud-Services-for-VMware-Tanzu/3.1/spring-cloud-services/GUID-config-server-mirror-service.html) in the SCS documentation.
 
 * A **Manage** link to the SCS Config Server dashboard, at the `/dashboard` URL endpoint of the SCS service instance
   * Click this link to see the Git repos that the SCS Config Server uses to configure its apps.
-  * For more information about the SCS Config Server dashboard, see [Dashboard information](https://docs.pivotal.io/spring-cloud-services/common/config-server/using-the-dashboard.html#dashboard-information) in _Using the Dashboard_ in the SCS documentation.
+  * For more information about the SCS Config Server dashboard, see [Using the dashboard](https://docs.vmware.com/en/Spring-Cloud-Services-for-VMware-Tanzu/3.1/spring-cloud-services/GUID-service-registry-using-the-dashboard.html).
 
 ### <a id='configure-user-provided'></a> Configure user-provided service instance
 
@@ -626,7 +625,7 @@ To generate a new service key:
 1. Enter a **Service Key Name**.
 ![alt-text=""](./images/keys-create.png)
 
-1. (Optional) Click **Show Advanced Options**. Under **Arbitrary Parameters**, enter any additional service-specific configuration in the **Name** and **Value** fields.
+1. (Optional) Click **Show Advanced Options**. Under **Arbitrary Parameters**, enter any additional service-specific configuration in **Name** and **Value**.
 ![alt-text=""](./images/keys-create-adv.png)
 
 1. Click **Create** to generate the service key.
@@ -665,9 +664,9 @@ To bind a new service instance to a route:
 
 1. Select the service from the Marketplace.
     ![alt-text=""](./images/bind-route-new.png)
-2. Under **Bind to Route**, either bind the service instance to an existing route or click **Create Route** to create a new custom route. You must choose a Marketplace service compatible with route services for the **Bind to Route** field to appear.
+2. Under **Bind to Route**, either bind the service instance to an existing route or click **Create Route** to create a new custom route. You must choose a Marketplace service compatible with route services for the **Bind to Route** text box to appear.
 
-3. Complete the remaining fields and click **Add** to create the service instance.
+3. Fill in the remaining text boxes and click **Add** to create the service instance.
 
 ### <a id='old-route-services'></a> Bind an existing service instance to a route
 
@@ -680,11 +679,11 @@ To bind an existing service instance to a route:
 
     ![alt-text=""](./images/bind-route-old.png)
 
-1. Do one of the following steps:
+2. Do one of these steps:
     * For **Select a route to bind**, select an existing route.
     * For **Create Custom Route**, enter a new route.
 
-1. Click **Bind**.
+3. Click **Bind**.
 
 ### <a id='unbind-route-services'></a> Unbind a route from a service instance
 

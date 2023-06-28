@@ -3,7 +3,7 @@ title: Using Spring Boot Actuators with Apps Manager
 owner: Apps Manager
 ---
 
-Apps Manager views and manages app information from Spring Boot Actuator.
+Apps Manager for <%= vars.app_runtime_first %> views and manages app information from Spring Boot Actuator.
 
 
 ## <a id="prereq"></a> Prerequisites
@@ -21,7 +21,7 @@ The Apps Manager integration with Spring Boot Actuator requires:
 	![alt-text=""](./images/actuator-icon.png)
 
 
-## <a id="view-build"></a> View build and git information for your app
+## <a id="view-build"></a> View build and Git information for your app
 
 To view the data that your app sends to its `/info` Actuator endpoint, click the **Settings** tab.
 
@@ -34,7 +34,7 @@ In the upper right of the app page, Apps Manager displays the SHA of your app co
 
 ## <a id="view-app-health"></a> View app health
 
-To view the health-check data that your app sends to its `/health` Actuator endpoints:
+To view the health check data that your app sends to its `/health` Actuator endpoints:
 
 1. Select the **Overview** tab.
 
@@ -53,7 +53,7 @@ To trigger and view a thread dump from your app to its `/dump` Actuator endpoint
 
 	![alt-text=""](./images/thread_dump.png)
 
-You can click each thread to expand and view its details. You can also modify which threads appear on the page using the **Instance** and **Show** dropdowns.
+You can click each thread to expand and view its details. You can also change which threads appear on the page using the **Instance** and **Show** drop-down menus.
 
 
 ## <a id="view-trace"></a> View request traces
@@ -66,16 +66,16 @@ To retrieve and view tracing information from the `/trace` Actuator endpoint of 
 
 	![alt-text=""]( <%=vars.spring_trace %> )
 
-This page displays the last 100 requests from your app. You can click each individual request to expand and view its trace details. You can modify which requests appear on the page using the **Instance** dropdown.
+This page displays the last 100 requests from your app. You can click each individual request to expand and view its trace details. You can change which requests appear on the page using the **Instance** drop-down menu.
 
-By default, the **Trace** tab does not show requests and responses from Apps Manager polling app instances for data. To include these requests, clear the <%= vars.spring_trace_label %> check box next to the **Instance** dropdown.
+By default, the **Trace** tab does not show requests and responses from Apps Manager polling app instances for data. To include these requests, deselect the <%= vars.spring_trace_label %> check box next to the **Instance** drop-down menu.
 
 
 ## <a id="view-heap"></a> Download heap dump
 
 To trigger and view a heap dump from your app to its `/heapdump` endpoint.
 
-1. Select the settings dropdown for an instance of your app.
+1. Select the settings drop-down menu for an instance of your app.
 
 1. Click **Heap Dump**. This downloads a `.zip` file.
 
@@ -109,7 +109,7 @@ Apps Manager displays the default log level for each logger in gray.
 
 ![alt-text=""](./images/default-levels.png)
 
-You can modify the log level for a logger by clicking the desired level in the logger row, as shown in the following image. Whenever you set a log level, the following happens:
+You can edit the log level for a logger by clicking the level you want in the logger row, as shown in the following image. Whenever you set a log level, the following happens:
 
 * The log level displays in blue to indicate that it is user-configured.
 * Each child namespace of the logger inherits the log level.
@@ -125,7 +125,7 @@ You can reset log levels by clicking the white dot displayed on the current log 
 
 ![alt-text=""](./images/reset-logs.png)
 
-You can also filter which loggers you see using the **Filter Loggers** textbox.
+You can also filter which loggers you see using the **Filter Loggers** text box.
 
 ![alt-text=""](./images/filter-loggers.png)
 
@@ -146,7 +146,7 @@ Could not find resource for relative : /cloudfoundryapplication of full path: ht
 
 #### Explanation
 
-Apps Manager uses the `/cloudfoundryapplication` endpoint as the root for Spring Boot Actuator integrations. It calls this endpoint for an app when you view the app in the Apps Manager UI, regardless of whether you have [configured Spring Boot Actuator endpoints for Apps Manager](./spring-boot-actuators.html).
+Apps Manager uses the `/cloudfoundryapplication` endpoint as the root for Spring Boot Actuator integrations. It calls this endpoint for an app when you view the app in the Apps Manager UI, regardless of whether you have configured [Spring Boot Actuator endpoints for Apps Manager](./spring-boot-actuators.html).
 
 #### Solution
 
