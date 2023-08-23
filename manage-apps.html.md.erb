@@ -113,7 +113,7 @@ To view sidecar processes associated with your apps:
 1. Go to the app **Overview** page.
 
 1. Under **Processes and Instances**, see **Sidecars**. This section only appears if your app has any sidecar processes.
-  ![At the top of the image is the header "Processes and Instances". There are six white, rectangular rows. The top row contains the label "web (Revision 1)" on the left side, and two buttons on the right side: one white, rectangular button with a blue border that is labeled "Enable Autoscaling" in blue letters; and to the right of "Enable Autoscaling", one shorter, blue, rectangular button labeled "Scale" in white letters. The next row down contains the text "Instances  1", "Memory Allocated  256 MB", "Disk Allocated  1 GB", Sidecars  1". The next row down contains five column headers labeled, from left to right, "#", "CPU", "Memory", "Disk", and "Uptime". The next row down contains data for the previous column headers: under "#" is "0"; under "CPU" is "0%"; under "Memory" is "0 Bytes"; under "Disk" is "0 Bytes"; and under "Uptime" is "0 Minutes". To the far right of these is a gray "x" button. Following this data is a header labeled "Sidecars". The next row down has a green border on the left side. To the right of this green border is a downward-pointing carat, indicating a collapsable menu. To the right of this carat is the text "config-server". The next row down contains the text "Start Command: $./config-server".](./images/sidecars.png)
+  ![alt-text=""](./images/sidecars.png)
 
 For more information about sidecar processes, see [Pushing Apps with Sidecar Processes](../devguide/sidecars.html).
 
@@ -128,15 +128,14 @@ If Metric Store is installed, you can view the following key metrics for an app 
 * Request Rate
 * Request Errors
 
-For more information about each metric, see [Interpret Metrics](https://docs.pivotal.io/app-metrics/1-6/using.html#interpret-metrics)
-in _Monitoring and Troubleshooting Apps with Metrics_.
+For more information about each metric, see [Interpreting metrics](https://docs.vmware.com/en/App-Metrics-for-VMware-Tanzu/2.2/app-metrics/GUID-using.html) in _Monitoring and troubleshooting apps with Metrics_.
 
 For each metric, the app **Overview** page includes a graph that shows metric behavior over the past three hours.
 You can hover over the data points on the graph to view the value of the metric.
 The page also includes the average value for the metric over the past three hours.
 
 Metric Store is required for Apps Manager to display the **Key Metrics** section.
-For information about installing and configuring Metric Store, see [Metric Store](https://docs.pivotal.io/metric-store).
+For information about installing and configuring Metric Store, see [Metric Store](https://docs.vmware.com/en/Metric-Store/index.html).
 
 The following image is an example of an app **Overview** page, showing key metrics for the app.
 
@@ -439,15 +438,7 @@ To add a user-provided environment variable:
 
 You can add metadata, including labels and annotations, to apps and spaces using Apps Manager.
 
-<% if vars.platform_code == "CF" || vars.platform_code == "PCF" %>
-
-For more information about adding metadata to objects in <%= vars.app_runtime_full %> (<%= vars.app_runtime_abbr %>), see [Using Metadata](../adminguide/metadata.html).
-
-<% else %>
-
-For more information about adding metadata to objects in <%= vars.app_runtime_full %> (<%= vars.app_runtime_abbr %>), see [Using Metadata](https://docs.pivotal.io/platform/adminguide/metadata.html).
-
-<% end %>
+For more information about adding metadata to objects in <%= vars.app_runtime_first %>, see [Using metadata](../adminguide/metadata.html).
 
 To add labels or annotations to an app using Apps Manager:
 
@@ -570,7 +561,7 @@ To rename or delete your service instance:
 
 For Spring Cloud Services (SCS) Config Server instances, Apps Manager lets you:
 
-* See the Git repos that the SCS Config Server uses to configure the client apps that it serves. For more information, see [Configuring with Git](https://docs.pivotal.io/spring-cloud-services/common/config-server/configuring-with-git.html) in the SCS documentation.
+* See the Git repos that the SCS Config Server uses to configure the client apps that it serves. For more information, see [Configuring with Git](https://docs.vmware.com/en/Spring-Cloud-Services-for-VMware-Tanzu/index.html) in the Sprint Cloud Services documentation.
 
 * Update client app configurations, by updating the local mirrors of their configuration repos.
 
@@ -592,11 +583,11 @@ The **Config** pane includes:
   * Passed in with `-c` flag to `cf create-service` and `cf update-service`.
 
 * A **Synchronize Mirrors** button for the app configurations that the SCS Config Server serves.
-  * Click this button to refresh the local Git repository mirrors. Refreshing the mirrors updates client app configuration settings, as described in [Mirror Service](https://docs.pivotal.io/spring-cloud-services/common/config-server/mirror-service.html) in the SCS documentation.
+  * Click this button to refresh the local Git repository mirrors. Refreshing the mirrors updates client app configuration settings, as described in [Mirror Service](https://docs.vmware.com/en/Spring-Cloud-Services-for-VMware-Tanzu/3.1/spring-cloud-services/GUID-config-server-mirror-service.html) in the Spring Cloud Services documentation.
 
 * A **Manage** link to the SCS Config Server dashboard, at the `/dashboard` URL endpoint of the SCS service instance.
   * Click this link to see the Git repos that the SCS Config Server uses to configure its apps.
-  * For more information about the SCS Config Server dashboard, see [Dashboard Information](https://docs.pivotal.io/spring-cloud-services/common/config-server/using-the-dashboard.html#dashboard-information) in _Using the Dashboard_ in the SCS documentation.
+  * For more information about the Spring Cloud Services Config Server dashboard, see [Using the dashboard](https://docs.vmware.com/en/Spring-Cloud-Services-for-VMware-Tanzu/3.1/spring-cloud-services/GUID-service-registry-using-the-dashboard.html) in the Spring Cloud Services documentation.
 
 ### <a id='configure-user-provided'></a> Configure User-Provided Service Instance
 
@@ -610,18 +601,8 @@ To configure settings for a user-provided service instance:
     <p class="note"><strong>Note:</strong> The <strong>Configuration</strong> pane only appears for user-provided service instances.</p>
     ![alt-text="Configure settings for serevice instances."](./images/config-user-provided.png)
 1. Enter the **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**.
-    <% if vars.book_title != "Pivotal Web Services Documentation" %>
-    <p class="note breaking"><strong>Breaking Change:</strong> In TAS for VMs v2.10, aggregate syslog drains contain
-    only logs by default, and do not contain metrics. If you rely on metrics sent through aggregate syslog drains,
-    you must add <code>?include-metrics-deprecated=true</code> to your aggregate drain URLs to continue to receive
-    metrics in the drains.
-    <br><br>
-    For more information, see <a href="https://docs.pivotal.io/application-service/2-10/release-notes/runtime-rn.html#syslog-no-metrics">Aggregate Syslog Drains Contain Logs Only</a> in the <em>TAS for VMs v2.10 Release Notes</em>.</p>
-    <% end %>
 
 1. Click **Update Service**.
-<% else %>
-<% end %>
 
 
 ## <a id='manage-keys'></a> Manage Service Keys
