@@ -10,7 +10,7 @@ This topic tells you how to view and manage apps and service instances with Apps
 
 You can use Apps Manager to manage apps, service instances, service keys, and route services. This includes tasks such as scaling apps, binding apps to services, generating services keys, and more.
 
-For information about managing orgs and spaces, see [Managing Orgs and Spaces Using Apps Manager](https://docs.vmware.com/en/VMware-Tanzu-Application-Service/2.11/tas-for-vms/manage-spaces.html).
+For information about managing orgs and spaces, see [Managing Orgs and Spaces Using Apps Manager](https://docs.vmware.com/en/VMware-Tanzu-Application-Service/3.0/tas-for-vms/manage-spaces.html).
 
 <!-- This ensures that the following note only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
 <% if vars.disallow_multi_foundation == true %>
@@ -505,7 +505,7 @@ The following image shows an example of a service instance **Overview** page.
 
 <p class="note"><strong>Note:</strong> For services that use asynchronous bindings, Apps Manager displays the status of the service while the bind is still pending. Asynchronous bindings provide more flexibility for services that require additional time before returning a successful bind response.</p>
 
-To bind and app to a service:
+To bind an app to a service:
 
 1. On the service **Overview** page, click **Bind App**.
 
@@ -577,7 +577,7 @@ To rename or delete your service instance:
 
 For Spring Cloud Services (SCS) Config Server instances, Apps Manager lets you:
 
-* See the Git repos that the SCS Config Server uses to configure the client apps that it serves. For more information, see [Configuring with Git](https://docs.vmware.com/en/Spring-Cloud-Services-for-VMware-Tanzu/index.html) in the Sprint Cloud Services documentation.
+* See the Git repos that the SCS Config Server uses to configure the client apps that it serves. For more information, see [Configuring with Git](https://docs.vmware.com/en/Spring-Cloud-Services-for-VMware-Tanzu/index.html) in the Spring Cloud Services documentation.
 
 * Update client app configurations, by updating the local mirrors of their configuration repos.
 
@@ -615,7 +615,7 @@ To configure settings for a user-provided service instance:
 
 1. In the panel on the left side of the page, under **Service**, click **Configuration**.
     <p class="note"><strong>Note:</strong> The <strong>Configuration</strong> pane only appears for user-provided service instances.</p>
-    ![alt-text="Configure settings for serevice instances."](./images/config-user-provided.png)
+    ![alt-text="Configure settings for service instances."](./images/config-user-provided.png)
 1. Enter the **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**.
 
 1. Click **Update Service**.
@@ -693,7 +693,7 @@ To bind an existing service instance to a route:
 1. Go to **Bound Routes**, and click **Bind Route**.
     <p class="note"><strong>Note:</strong> If the service is not compatible with route services, the text "This service does not support route binding" appears under <strong>Bound Routes</strong>.</p>
 
-    ![alt-text=""][def]
+    ![alt-text=""][./images/bind-route-old.png]
 
 1. Do one of the following steps:
     * For **Select a route to bind**, select an existing route.
@@ -708,6 +708,3 @@ To unbind a route from a service instance:
 1. Go to the service **Overview** page.
 
 1. Go to **Bound Routes**, and click the **x** next to the name of the route.
-
-
-[def]: ./images/bind-route-old.png
