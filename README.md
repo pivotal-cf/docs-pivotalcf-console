@@ -1,6 +1,6 @@
 # Using the Apps Manager
 
-This guide explains how to using the web-based Apps Manager application for 
+This guide explains how to using the web-based Apps Manager application for
 managing users, organizations, spaces, and applications.
 
 This repo is one of several doc repositories that go into a complete documentation set.
@@ -18,8 +18,7 @@ content.
 
 If you are planning to initiate a large documentation effort, please coordinate
 with the docs team in advance to make sure we're not going to step on each
-other. You can reach the docs team by email at
-[labs-cf-docs@pivotal.io](mailto:labs-cf-docs@pivotal.io).
+other. You can reach the docs team #tas-docs-team on Slack.
 
 If you are trying to figure out where a particular bit of information should
 live, please reach out and ask. We're happy to help you ensure information
