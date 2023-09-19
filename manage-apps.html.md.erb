@@ -57,7 +57,7 @@ There are two ways to locate an app **Overview** page:
 
 The following image shows an example of an app **Overview** page.
 
-![="The example Apps Manager dashboard shows at the top heading the name of the example app, 'cf-nodejs', with a stop and refresh button to the right. A green status icon says 'Running'. The following image shows a horizontal series of tabs with the 'Overview' tab selected. The following 'Overview' pane shows an 'Events' section, 'App Summary' section, and 'Processes and Instances' section."](./images/app-page.png)
+![alt-text=""](./images/app-page.png)
 
 ### <a id="start-stop"></a> Start, Stop, or Restage an App
 
@@ -68,8 +68,7 @@ The following image shows the location of the start, stop, and restage buttons.
 <%# To edit the following diagram, go to https://drive.google.com/file/d/1X4GPXIaf9gPIjkHiDHDxTZWWVY4Wt0qn/view?usp=sharing.
 You must be in the Pivotal org to edit the diagram.%>
 
-![alt-text="The app name is shown to the left as a header 2 called 'app-0001-0000'. To the right of the app name is three buttons: one with a 'stop' icon, another with a 'restart' icon, and the last with a 'restage' icon."](./images/stop-restart-restage-app.png)
-
+![alt-text="The app name is shown to the left as a header 2 called 'app-0001-0000'. To the right of the app name are three buttons: Stop, Restart, and Restage."](./images/stop-restart-restage-app.png)
 
 For more information about starting, stopping, and restaging apps with the Cloud Foundry Command Line Interface (cf CLI), see [Starting, Restarting, and Restaging Apps](../devguide/deploy-apps/start-restart-restage.html).
 
@@ -85,11 +84,11 @@ To manually scale an app:
 
 1. Under **Processes and Instances**, click **Scale** to open the **Scale app** dialog.
 
-    ![="In the 'Processes and Instances' section of the 'Overview' pane, find the 'Scale' button to the right of each process."](./images/scale-app.png)
+    ![alt-text="In the Processes and Instances section of the Overview pane, the Scale button is located to the right of each process."](./images/scale-app.png)
 
-1. Edit the number of **Instances**, the **Memory Limit**, and the **Disk Limit** as desired.
+2. Edit the number of **Instances**, the **Memory Limit**, and the **Disk Limit** as desired.
 
-1. Click **Apply Changes**.
+3. Click **Apply Changes**.
 
 #### <a id="autoscale"></a> Enable App Autoscaler
 
@@ -101,7 +100,7 @@ To enable App Autoscaler for an app:
 
 1. Under **Processes and Instances**, click **Enable Autoscaling** to enable App Autoscaler.
 
-    ![alt-text="In the 'Processes and Instances' section of the 'Overview' pane, find 'Enable Autoscaling' two rows following the title of each process."](./images/enable-autoscaling.png)
+    ![alt-text=""](./images/enable-autoscaling.png)
 
 1. Click **Manage Autoscaling** to open App Autoscaler.
 
@@ -140,7 +139,7 @@ For information about installing and configuring Metric Store, see [Metric Store
 
 The following image is an example of an app **Overview** page, showing key metrics for the app.
 
-![alt-text="The example Apps Manager app overview page shows the six key metrics (CPU, Disk, Request Latency, Request Rate, and Request Errors"](./images/app-page-with-metrics.png)
+![alt-text="The example Apps Manager app overview page shows the six key metrics (CPU, Disk, Request Latency, Request Rate, and Request Errors)."](./images/app-page-with-metrics.png)
 
 ### <a id="bind-unbind-services"></a> Bind or Unbind Services
 
@@ -148,7 +147,9 @@ You can bind your app to new or existing service instances. You can also unbind 
 
 #### <a id="bind-existing-services"></a> Bind an App to an Existing Service
 
-<p class="note"><strong>Note:</strong> For services that use asynchronous bindings, Apps Manager displays the status of the service while the bind is still pending. Asynchronous bindings provide more flexibility for services that require additional time before returning a successful bind response.</p>
+<p class="note">
+<span class="note__title">Note</span>
+For services that use asynchronous bindings, Apps Manager displays the status of the service while the bind is still pending. Asynchronous bindings provide more flexibility for services that require additional time before returning a successful bind response.</p>
 
 To bind your app to an existing service:
 
@@ -176,21 +177,25 @@ To bind your app to a new service instance:
 1. In the panel on the left side of the page, under **Application**, click **Services**.
 
 1. Click **New Service**.<br>
+   
     ![alt-text=""](./images/new-service.png)
+
     <br>
-    <p class="note"><strong>Note:</strong> If you prefer to create the new service instance in the Marketplace, you can click <strong>View in Marketplace</strong> at any time.</p>
+    <p class="note">
+    <span class="note__title">Note</span>
+    If you prefer to create the new service instance in the Marketplace, you can click <strong>View in Marketplace</strong> at any time.</p>
 
-1. Click the service.
+2. Click the service.
 
-1. Select a plan and click **Select Plan**.
+3. Select a plan and click **Select Plan**.
 
-1. Under **Instance Name**, enter a name for the instance.
+4. Under **Instance Name**, enter a name for the instance.
 
-1. (Optional) For **Binding Name**, enter a binding name in all lowercase letters. For example, `bind-usr-serv`.
+5. (Optional) For **Binding Name**, enter a binding name in all lowercase letters. For example, `bind-usr-serv`.
 
-1. (Optional) For **Add Parameters**, specify additional parameters. For a list of supported configuration parameters, consult the documentation for the service.
+6. (Optional) For **Add Parameters**, specify additional parameters. For a list of supported configuration parameters, consult the documentation for the service.
 
-1. Click **Create**.
+7. Click **Create**.
 
 #### <a id="unbind-services"></a> Unbind a Service
 
@@ -254,7 +259,9 @@ Container networking policies enable app instances to communicate with each othe
 
 For more information about container-to-container networking in <%= vars.platform_name %>, see [Container-to-Container Networking](../concepts/understand-cf-networking.html).
 
-<p class="note"><strong>Note:</strong> To view and use the <strong>Networking</strong> tab, you must have either the <code>network.write</code> or <code>network.admin</code> UAA scope. If you do not see the <strong>Networking</strong> tab, request one of the previous scopes from your <%= vars.platform_name %> administrator.</p>
+<p class="note important">
+<span class="note__title">Important</span>
+To view and use the <strong>Networking</strong> tab, you must have either the <code>network.write</code> or <code>network.admin</code> UAA scope. If you do not see the <strong>Networking</strong> tab, request one of the previous scopes from your <%= vars.platform_name %> administrator.</p>
 
 To create container-to-container networking policies:
 
@@ -366,7 +373,7 @@ To run a task for an app:
 
 In the **Tasks** tab, click **Enable Scheduling** to bind the Scheduler service to your app. For more about Scheduler, see [Scheduling jobs](https://docs.vmware.com/en/Scheduler-for-VMware-Tanzu/1.6/scheduler-vmware-tanzu/GUID-index.html) in the Scheduler documentation.
 
-![The Apps Manager interface shows the Task tab enabled with a box beneath that says "The Scheduler Service has not been enabled yet." with an "Enable Scheduling" button beneath.](./images/enable-scheduling.png)
+![alt-text="The Apps Manager interface shows the Task tab enabled with a message: The Scheduler Service has not been enabled yet. The "Enable Scheduling" button apppears below the message."](./images/enable-scheduling.png)
 
 #### <a id="schedule-task"></a> Schedule a Task
 
@@ -448,7 +455,9 @@ To add a user-provided environment variable:
 
 1. Click **Save**.
 
-<p class="note"><strong>Note:</strong> Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p>
+class="note important">
+<span class="note__title">Important</span>
+Changes to environment variables, service bindings, and service unbindings require restarting the app to take effect. You can restart the app from the Apps Manager or with the Cloud Foundry Command Line Interface <code>cf restage</code> command.</p>
 
 ### <a id="metadata"></a> Add Metadata
 
@@ -483,7 +492,9 @@ You can do the following tasks to manage service instances in Apps Manager:
 * Manage service keys.
 * Rename or delete your service instance.
 
-<p class="note"><strong>Note:</strong> For services that use on-demand brokers, the service broker creates, updates, or deletes the service instance in the background and notifies you when it finishes.</p>
+<p class="note">
+<span class="note__title">Note</span>
+For services that use on-demand brokers, the service broker creates, updates, or deletes the service instance in the background and notifies you when it finishes.</p>
 
 ### <a id='view-service'></a> View Service Overview
 
@@ -503,7 +514,9 @@ The following image shows an example of a service instance **Overview** page.
 
 ### <a id='bind-app'></a> Bind an App
 
-<p class="note"><strong>Note:</strong> For services that use asynchronous bindings, Apps Manager displays the status of the service while the bind is still pending. Asynchronous bindings provide more flexibility for services that require additional time before returning a successful bind response.</p>
+<p class="note">
+<span class="note__title">Note</span>
+For services that use asynchronous bindings, Apps Manager displays the status of the service while the bind is still pending. Asynchronous bindings provide more flexibility for services that require additional time before returning a successful bind response.</p>
 
 To bind an app to a service:
 
@@ -534,11 +547,11 @@ To share a service instance:
 
 1. On the service **Overview** page, click **Share Service Instance**.
 
-    ![alt-text="The service instance button is located in the 'Overview' tab"](./images/share-service-instance-button.png)
+    ![alt-text="The service instance button is located in the Overview tab."](./images/share-service-instance-button.png)
 1. Select the spaces with which you want to share your service instance.
 
-    ![alt-text="The service instance slide-out shows check boxes next to each space and a Share button and Cancel button in the bottom right-hand corner"](./images/share-services-slideout.png)
-1. Click **Share**.
+    ![alt-text="The service instance slide-out shows check boxes next to each. The form also includes Share and Cancel buttons."](./images/share-services-slideout.png)
+2. Click **Share**.
 
 ### <a id='view-plan'></a> View or Change Your Service Plan
 
@@ -552,7 +565,9 @@ To view or change your service plan:
 
 1. To change your plan, select a new plan from the list and click **Select This Plan** or **Upgrade Your Account**.
 
-<p class="note"><strong>Note:</strong> Not all services support upgrading. If your service does not support upgrading, the service plan page only displays the selected plan.</p>
+<p class="note">
+<span class="note__title">Note</span>
+Not all services support upgrading. If your service does not support upgrading, the service plan page only displays the selected plan.</p>
 
 ### <a id='rename-service'></a> Rename or Delete Your Service Instance
 
@@ -569,7 +584,7 @@ To rename or delete your service instance:
     * To add configuration parameters to the service instance, enter the parameters in the **Name** and **Value** fields and then click **Update**. Alternatively, enter your configuration parameters using the **Enter JSON** toggle and then click **Update**.
     * To delete the service instance, click **Delete Service Instance**.
 
-<p class="note"><strong>Note:</strong> The service broker supports creating, updating, and deleting service instances asynchronously. When the service broker completes one of these operations, a status banner appears in Apps Manager.</p>
+The service broker supports creating, updating, and deleting service instances asynchronously. When the service broker completes one of these operations, a status banner appears in Apps Manager.
 
 <% if vars.platform_code == 'PCF' %>
 
@@ -588,9 +603,10 @@ To see and update this configuration and status information for an SCS Config Se
 1. Go to the service **Overview** page.
 
 1. In the panel on the left side of the page, under **Service**, click **Config**.
-    <p class="note"><strong>Note:</strong> The <strong>Configuration</strong> pane only appears for Spring Cloud Services instances.</p>
+The **Configuration** pane appears only for Spring Cloud Services instances.
 
     ![alt-text=""](./images/sc-config-server-instance.png)
+
 The **Config** pane includes:
 
 * The current status of the SCS Config Server.
@@ -614,11 +630,13 @@ To configure settings for a user-provided service instance:
 1. Go to the service **Overview** page.
 
 1. In the panel on the left side of the page, under **Service**, click **Configuration**.
-    <p class="note"><strong>Note:</strong> The <strong>Configuration</strong> pane only appears for user-provided service instances.</p>
+The **Configuration** pane only appears for user-provided service instances.
+
     ![alt-text="Configure settings for service instances."](./images/config-user-provided.png)
+
 1. Enter the **Credential Parameters**, **Syslog Drain Url**, and **Route Service Url**.
 
-1. Click **Update Service**.
+2. Click **Update Service**.
 <% else %>
 <% end %>
 
@@ -679,9 +697,11 @@ For more information about route services, see [Route Services](../services/rout
 To bind a new service instance to a route:
 
 1. Select the service from the Marketplace.
+
     ![alt-text=""](./images/bind-route-new.png)
-1. Under **Bind to Route**, either bind the service instance to an existing route or click **Create Route** to create a new custom route.
-    <p class="note"><strong>Note:</strong> You must choose a Marketplace service compatible with route services for the <strong>Bind to Route</strong> field to appear.</p>
+
+2. Under **Bind to Route**, either bind the service instance to an existing route or click **Create Route** to create a new custom route.
+You must choose a Marketplace service compatible with route services for the **Bind to Route** field to appear.
 
 1. Complete the remaining fields and click **Add** to create the service instance.
 
@@ -692,7 +712,7 @@ To bind an existing service instance to a route:
 1. Go to the service **Overview** page.
 
 1. Go to **Bound Routes**, and click **Bind Route**.
-    <p class="note"><strong>Note:</strong> If the service is not compatible with route services, the text "This service does not support route binding" appears under <strong>Bound Routes</strong>.</p>
+If the service is not compatible with route services, the text "This service does not support route binding" appears under **Bound Routes**.
 
     ![alt-text=""][./images/bind-route-old.png]
 
@@ -700,7 +720,7 @@ To bind an existing service instance to a route:
     * For **Select a route to bind**, select an existing route.
     * For **Create Custom Route**, enter a new route.
 
-1. Click **Bind**.
+2. Click **Bind**.
 
 ### <a id='unbind-route-services'></a> Unbind a Route from a Service Instance
 

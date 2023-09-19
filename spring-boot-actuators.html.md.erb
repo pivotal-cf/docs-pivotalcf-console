@@ -7,7 +7,9 @@ The Apps Manager UI supports several production-ready endpoints from Spring Boot
 
 For more information about Spring Boot Actuator, see the [Spring Boot Actuator documentation](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready.html).
 
-<p class="note"><strong>Note:</strong> This feature requires Spring Boot v1.5 or later.</p>
+<p class="note important">
+<span class="note__title">Important</span>
+This feature requires Spring Boot v1.5 or later.</p>
 
 The Apps Manager integration with Spring Boot does not use the standard Spring Boot Actuators. Instead, it uses a specific set of actuators that are secured using the Space Developer role for the space that the application runs in. Authentication and authorization are automatically delegated to the [Cloud Controller](../concepts/architecture/cloud-controller.html) and the [User Account and Authentication](../concepts/architecture/uaa.html) server without any configuration from the user.
 
