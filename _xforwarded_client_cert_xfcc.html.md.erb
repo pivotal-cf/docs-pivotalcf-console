@@ -1,12 +1,14 @@
  Under **TLS termination point**, configure <%= vars.product_name %> to handle `x-forwarded-client-cert` (XFCC) HTTP headers based on where TLS is terminated for the first time in your deployment.
     <%= image_tag 'networking_xforwarded-client-cert-xfcc.png' %>
      The following table indicates which option to choose based on your deployment layout.
-    <table class="nice">
+    <table class="table">
+    <thead>
     <tr>
       <th>If your deployment is configured as follows:</th>
       <th>Then select the following option:</th>
       <th>Additional notes:</th>
     </tr>
+    </thead>
     <tr>
       <td><ul><li>Load balancer is terminating TLS, and
       <li>Load balancer is configured to put the client certificate from a mutual authentication TLS handshake into the X-Forwarded-Client-Cert HTTP header
