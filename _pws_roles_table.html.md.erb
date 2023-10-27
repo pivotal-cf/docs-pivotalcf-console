@@ -1,4 +1,5 @@
-<table id='pws-roles-permissions' border='1' class='nice'>
+<table class='table'>
+	<thead>
 	<tr>
 		<th>Activity</th>
 		<th>Org Manager</th>
@@ -7,8 +8,10 @@
 		<th>Space Manager</th>
 		<th>Space Developer</th>
 		<th>Space Auditor</th>
-	</tr><tr>
-		<td>Scope of operation</td> 
+	</tr>
+	</thead>
+	<tr>
+		<td>Scope of operation</td>
 		<td>Org</td>
 		<td>Org</td>
 		<td>Org</td>
