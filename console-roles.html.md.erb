@@ -10,7 +10,7 @@ Here is how to manage you user roles with Apps Manager in <%= vars.app_runtime_f
 <% else %>
 <p class="note important">
 <span class="note__title">Important</span>
-The procedures described here are not compatible with using SAML or LDAP for user identity management. To create and manage user accounts in a SAML or LDAP-enabled <%= vars.platform_name %> deployment, see <a href='https://docs.vmware.com/en/VMware-Tanzu-Application-Service/<%= vars.current_major_version %>/tas-for-vms/external-user-management.html'>Adding Existing SAML or LDAP users to an <%= vars.platform_name %> Deployment</a>.</p>
+The procedures described here are not compatible with using SAML or LDAP for user identity management. To create and manage user accounts in a SAML or LDAP-enabled <%= vars.platform_name %> deployment, see <a href='https://docs.vmware.com/en/VMware-Tanzu-Application-Service/<%= vars.current_major_version %>/tas-for-vms/external-user-management.html'>Adding existing SAML or LDAP users to an <%= vars.platform_name %> deployment</a>.</p>
 <% end %>
 
 ## <a id='overview'></a> Overview
@@ -34,8 +34,7 @@ Foundry Command Line Interface (cf CLI). For more information, see
 <!-- This ensures that the following note only appears in the TAS for VMs docs, not in the offline TAS docs.  -->
 <% if vars.disallow_multi_foundation == true %>
 <% else %>
-You can manage user roles across multiple foundations. For more information, see
-[Configuring Multi-foundation support in Apps Manager](https://docs.vmware.com/en/VMware-Tanzu-Application-Service/4.0/tas-for-vms/configure-multi-foundation.html).
+You can manage user roles across multiple foundations. For more information, see <a href='https://docs.vmware.com/en/VMware-Tanzu-Application-Service/<%= vars.current_major_version %>/tas-for-vms/configure-multi-foundation.html'>Configuring multi-foundation support in Apps Manager</a>.
 <% end %>
 
 
