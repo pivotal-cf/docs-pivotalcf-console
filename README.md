@@ -4,10 +4,7 @@ This guide explains how to using the web-based Apps Manager application for
 managing users, organizations, spaces, and applications.
 
 This repo is one of several doc repositories that go into a complete documentation set.
-
-The contents here are structured as a topic repository intended to be
-compiled into a larger document with
-[Bookbinder](https://github.com/cloudfoundry-incubator/bookbinder).
+This repository publishes through the [docs-book-application-service](https://github.com/pivotal-cf/docs-book-application-service/) repository.
 
 ## Contributing to the Documentation
 
@@ -18,8 +15,7 @@ content.
 
 If you are planning to initiate a large documentation effort, please coordinate
 with the docs team in advance to make sure we're not going to step on each
-other. You can reach the docs team by email at
-[labs-cf-docs@pivotal.io](mailto:labs-cf-docs@pivotal.io).
+other. You can reach the docs team at #tas-docs-team on Slack.
 
 If you are trying to figure out where a particular bit of information should
 live, please reach out and ask. We're happy to help you ensure information
@@ -29,3 +25,17 @@ Note that content often lives in more than one context. Please make sure that
 any contribution you offer takes these multiple contexts into account. So, for
 example, if you are working on docs that are also used in open source,
 please do not refer to Pivotal's commercial offerings.
+
+## Branches map
+
+As of March 2023, the docs are built in DocWorks (https://docworks.vmware.com/md2docs/projects/all?permalink=bb679e5b-0711-499a-ad91-9bfab102dcff).
+
+| Branch | Status         | URL |
+|--------|----------------|-----|
+| master | in development | https://docs-staging.vmware.com/en/draft/VMware-Tanzu-Application-Service/6.0/tas-for-vms/metric-registrar-using.html |
+| 5.0    | published      | https://docs.vmware.com/en/VMware-Tanzu-Application-Service/5.0/tas-for-vms/concepts-overview.html  |
+| 4.0    | published      | https://docs.vmware.com/en/VMware-Tanzu-Application-Service/4.0/tas-for-vms/concepts-overview.html  |
+| 3.0    | EOGS           | https://docs.vmware.com/en/VMware-Tanzu-Application-Service/3.0/tas-for-vms/concepts-overview.html  |
+| 2.13   | published      | https://docs.vmware.com/en/VMware-Tanzu-Application-Service/2.13/tas-for-vms/concepts-overview.html |
+| 2.12   | EOGS           | https://docs.vmware.com/en/VMware-Tanzu-Application-Service/2.12/tas-for-vms/concepts-overview.html |
+| 2.11   | published      | https://docs.vmware.com/en/VMware-Tanzu-Application-Service/2.11/tas-for-vms/concepts-overview.html |
